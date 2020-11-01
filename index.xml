@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>j4ckofalltrades</title>
+    <link>j4ckofalltrades.github.io/</link>
+    <description>Recent content on j4ckofalltrades</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Nov 2020 14:25:03 +0800</lastBuildDate><atom:link href="j4ckofalltrades.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bio</title>
+      <link>j4ckofalltrades.github.io/about/</link>
+      <pubDate>Sun, 01 Nov 2020 14:26:17 +0800</pubDate>
+      
+      <guid>j4ckofalltrades.github.io/about/</guid>
+      <description>Jordan Duabe &amp;mdash; @j4ckofalltrades I&amp;rsquo;m a programmer, Linux geek, and command-line ninja from the 🇵🇭 (now based in 🇦🇺).
+I loved video games (still do) as a kid and that&amp;rsquo;s what got me into computers, programming, and tech in general. I&amp;rsquo;ve been a software engineer for the past couple of years with experience in web and mobile app development in a variety of programming languages and frameworks. I&amp;rsquo;ve also picked up some DevOps skills and tricks over the years; from writing shell scripts to setting up CI/CD pipelines.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>j4ckofalltrades.github.io/posts/first-post/</link>
+      <pubDate>Sun, 01 Nov 2020 14:25:03 +0800</pubDate>
+      
+      <guid>j4ckofalltrades.github.io/posts/first-post/</guid>
+      <description>Happy Halloween 🎃 🦇 👻
+Obligatory first post while getting everything set up, as you&amp;rsquo;ve probably seen in the blog footer this website is powered by Hugo with the Hugo-Coder theme and is hosted on GitHub.
+It&amp;rsquo;s really nice not having to worry about stylesheets and layouts because I have close to zero design skills and being able to just write stuff in Markdown is great.
+Not really sure why I wanted to start a blog 🤔 but here we are.</description>
+    </item>
+    
+  </channel>
+</rss>
