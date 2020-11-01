@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on j4ckofalltrades</title>
-    <link>j4ckofalltrades.github.io/posts/</link>
+    <link>https://j4ckofalltrades.github.io/posts/</link>
     <description>Recent content in Posts on j4ckofalltrades</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2020 14:25:03 +0800</lastBuildDate><atom:link href="j4ckofalltrades.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 Nov 2020 14:25:03 +0800</lastBuildDate><atom:link href="https://j4ckofalltrades.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hello World</title>
-      <link>j4ckofalltrades.github.io/posts/first-post/</link>
+      <link>https://j4ckofalltrades.github.io/posts/first-post/</link>
       <pubDate>Sun, 01 Nov 2020 14:25:03 +0800</pubDate>
       
-      <guid>j4ckofalltrades.github.io/posts/first-post/</guid>
+      <guid>https://j4ckofalltrades.github.io/posts/first-post/</guid>
       <description>Happy Halloween 🎃 🦇 👻
 Obligatory first post while getting everything set up, as you&amp;rsquo;ve probably seen in the blog footer this website is powered by Hugo with the Hugo-Coder theme and is hosted on GitHub.
 It&amp;rsquo;s really nice not having to worry about stylesheets and layouts because I have close to zero design skills and being able to just write stuff in Markdown is great.
