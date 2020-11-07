@@ -1,1 +1,1 @@
-# j4ckofalltrades.github.io
+Generated content for the [jduabe.rocks](https://jduabe.rocks) website (and blog)
