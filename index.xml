@@ -6,7 +6,18 @@
     <description>Recent content on j4ckofalltrades</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 01 Nov 2020 14:25:03 +0800</lastBuildDate><atom:link href="https://jduabe.rocks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jan 2021 12:50:21 +0800</lastBuildDate><atom:link href="https://jduabe.rocks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hacktoberfest 2020 Retrospective</title>
+      <link>https://jduabe.rocks/posts/hacktoberfest-2020/</link>
+      <pubDate>Sat, 23 Jan 2021 12:50:21 +0800</pubDate>
+      
+      <guid>https://jduabe.rocks/posts/hacktoberfest-2020/</guid>
+      <description>This one&amp;rsquo;s long overdue and when the swag arrived last week I figured I really need to get this done.
+The past year has been tough to say the least and getting to write code for fun while helping out the open-source community was a very welcome distraction.
+Though I have been programming for a while this was my first time participating in Hacktoberfest and contributing to open-source in general, it was nice to get to talk to and interact with maintainers and other like-minded individuals who are passionate about code and giving back to the community.</description>
+    </item>
+    
     <item>
       <title>Bio</title>
       <link>https://jduabe.rocks/about/</link>
