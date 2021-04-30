@@ -1,1 +1,1 @@
-Generated content for the [jduabe.rocks](https://jduabe.rocks) website (and blog)
+Personal website and blog at [jduabe.dev](https://jduabe.dev)
