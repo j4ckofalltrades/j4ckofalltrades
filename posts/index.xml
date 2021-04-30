@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on j4ckofalltrades</title>
-    <link>https://jduabe.rocks/posts/</link>
-    <description>Recent content in Posts on j4ckofalltrades</description>
+    <title>Posts on /home/j4ckofalltrades</title>
+    <link>https://jduabe.dev/posts/</link>
+    <description>Recent content in Posts on /home/j4ckofalltrades</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 23 Jan 2021 12:50:21 +0800</lastBuildDate><atom:link href="https://jduabe.rocks/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jan 2021 12:50:21 +0800</lastBuildDate><atom:link href="https://jduabe.dev/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hacktoberfest 2020 Retrospective</title>
-      <link>https://jduabe.rocks/posts/hacktoberfest-2020/</link>
+      <link>https://jduabe.dev/posts/hacktoberfest-2020/</link>
       <pubDate>Sat, 23 Jan 2021 12:50:21 +0800</pubDate>
       
-      <guid>https://jduabe.rocks/posts/hacktoberfest-2020/</guid>
+      <guid>https://jduabe.dev/posts/hacktoberfest-2020/</guid>
       <description>This one&amp;rsquo;s long overdue and when the swag arrived last week I figured I really need to get this done.
 The past year has been tough to say the least and getting to write code for fun while helping out the open-source community was a very welcome distraction.
 Though I have been programming for a while this was my first time participating in Hacktoberfest and contributing to open-source in general, it was nice to get to talk to and interact with maintainers and other like-minded individuals who are passionate about code and giving back to the community.</description>
@@ -20,10 +20,10 @@ Though I have been programming for a while this was my first time participating 
     
     <item>
       <title>Hello World</title>
-      <link>https://jduabe.rocks/posts/first-post/</link>
+      <link>https://jduabe.dev/posts/first-post/</link>
       <pubDate>Sun, 01 Nov 2020 14:25:03 +0800</pubDate>
       
-      <guid>https://jduabe.rocks/posts/first-post/</guid>
+      <guid>https://jduabe.dev/posts/first-post/</guid>
       <description>Happy Halloween 🎃 🦇 👻
 Obligatory first post while getting everything set up; this website is powered by Hugo with the hugo-coder theme and is hosted on GitHub Pages.
 More posts in the coming days (or weeks), stay tuned.</description>

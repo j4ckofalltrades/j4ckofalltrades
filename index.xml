@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>j4ckofalltrades</title>
-    <link>https://jduabe.rocks/</link>
-    <description>Recent content on j4ckofalltrades</description>
+    <title>/home/j4ckofalltrades</title>
+    <link>https://jduabe.dev/</link>
+    <description>Recent content on /home/j4ckofalltrades</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 23 Jan 2021 12:50:21 +0800</lastBuildDate><atom:link href="https://jduabe.rocks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 23 Jan 2021 12:50:21 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hacktoberfest 2020 Retrospective</title>
-      <link>https://jduabe.rocks/posts/hacktoberfest-2020/</link>
+      <link>https://jduabe.dev/posts/hacktoberfest-2020/</link>
       <pubDate>Sat, 23 Jan 2021 12:50:21 +0800</pubDate>
       
-      <guid>https://jduabe.rocks/posts/hacktoberfest-2020/</guid>
+      <guid>https://jduabe.dev/posts/hacktoberfest-2020/</guid>
       <description>This one&amp;rsquo;s long overdue and when the swag arrived last week I figured I really need to get this done.
 The past year has been tough to say the least and getting to write code for fun while helping out the open-source community was a very welcome distraction.
 Though I have been programming for a while this was my first time participating in Hacktoberfest and contributing to open-source in general, it was nice to get to talk to and interact with maintainers and other like-minded individuals who are passionate about code and giving back to the community.</description>
@@ -20,10 +20,10 @@ Though I have been programming for a while this was my first time participating 
     
     <item>
       <title>Bio</title>
-      <link>https://jduabe.rocks/about/</link>
+      <link>https://jduabe.dev/about/</link>
       <pubDate>Sun, 01 Nov 2020 14:26:17 +0800</pubDate>
       
-      <guid>https://jduabe.rocks/about/</guid>
+      <guid>https://jduabe.dev/about/</guid>
       <description>Jordan Duabe &amp;mdash; @j4ckofalltrades I&amp;rsquo;m a programmer, Linux geek, and command-line ninja from the 🇵🇭, currently based in 🇦🇺.
 The majority of my work experience has been writing code for web and mobile apps in a variety of programming languages and frameworks but I&amp;rsquo;ve also worked on DevOps-related stuff like setting up server environments and CI/CD pipelines.
 When I&amp;rsquo;m not writing code &amp;ndash; I&amp;rsquo;m either playing DotA or gaming on the Switch, tinkering with Raspberry Pi&amp;rsquo;s, or learning to play the ukulele.</description>
@@ -31,10 +31,10 @@ When I&amp;rsquo;m not writing code &amp;ndash; I&amp;rsquo;m either playing Dot
     
     <item>
       <title>Hello World</title>
-      <link>https://jduabe.rocks/posts/first-post/</link>
+      <link>https://jduabe.dev/posts/first-post/</link>
       <pubDate>Sun, 01 Nov 2020 14:25:03 +0800</pubDate>
       
-      <guid>https://jduabe.rocks/posts/first-post/</guid>
+      <guid>https://jduabe.dev/posts/first-post/</guid>
       <description>Happy Halloween 🎃 🦇 👻
 Obligatory first post while getting everything set up; this website is powered by Hugo with the hugo-coder theme and is hosted on GitHub Pages.
 More posts in the coming days (or weeks), stay tuned.</description>

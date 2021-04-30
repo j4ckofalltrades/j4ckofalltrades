@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on j4ckofalltrades</title>
-    <link>https://jduabe.rocks/categories/</link>
-    <description>Recent content in Categories on j4ckofalltrades</description>
+    <title>Categories on /home/j4ckofalltrades</title>
+    <link>https://jduabe.dev/categories/</link>
+    <description>Recent content in Categories on /home/j4ckofalltrades</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://jduabe.rocks/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language><atom:link href="https://jduabe.dev/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
