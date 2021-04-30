@@ -1,0 +1,97 @@
+baseurl = "https://jduabe.dev"
+title = "/home/j4ckofalltrades"
+
+theme = "hugo-coder"
+
+languagecode = "en"
+defaultcontentlanguage = "en"
+enableEmoji=true
+canonifyurls = true
+
+paginate = 20
+
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  author = "Jordan Duabe"
+  info = "Software Engineer | Linux geek | Command-line ninja"
+  description = "Jordan Duabe's personal website and blog"
+  keywords = "blog,programmer,personal"
+  gravatar = "jordan.duabe@gmail.com"
+
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  hideFooter = false
+  hideCredits = false
+  hideCopyright = false
+  since = 2020
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+  customCSS = []
+  customSCSS = []
+  customJS = []
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Mail"
+  icon = "fa fa-envelope fa-2x"
+  weight = 1
+  url = "mailto:jordan.duabe@gmail.com"
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 2
+  url = "https://github.com/j4ckofalltrades"
+[[params.social]]
+  name = "RSS"
+  icon = "fa fa-dev-to"
+  weight = 3
+  url = "https://dev.to/j4ckofalltrades"
+[[ params.social ]]
+  name="StackOverflow"
+  icon = "fa fa-stack-overflow fa-2x"
+  weight = 4
+  url = "https://stackoverflow.com/users/6155561/j4ckofalltrades"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa fa-linkedin fa-2x"
+  weight = 5
+  url = "https://linkedin.com/in/jordan-duabe"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa fa-twitter fa-2x"
+  weight = 6
+  url = "https://twitter.com/j4kofalltrades"
+[[params.social]]
+  name = "RSS"
+  icon = "fa fa-rss"
+  weight = 7
+  url = "https://jduabe.dev/index.xml"
+  rel = "alternate"
+  type = "application/rss+xml"
+
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+[[menu.main]]
+  name = "About"
+  weight = 2
+  url = "about/"
