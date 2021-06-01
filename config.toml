@@ -52,7 +52,7 @@ pygmentscodefencesguesssyntax = true
   name = "Mail"
   icon = "fa fa-envelope fa-2x"
   weight = 1
-  url = "mailto:jordan.duabe@gmail.com"
+  url = "mailto:me@jduabe.dev"
 [[params.social]]
   name = "Github"
   icon = "fa fa-github fa-2x"

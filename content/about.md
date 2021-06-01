@@ -12,7 +12,7 @@ I'm a programmer, Linux geek, and command-line ninja from the :philippines:,
 currently based in :australia:.
 
 The majority of my work experience has been writing code for web and mobile
-apps in a variety of programming languages and frameworks but I've also worked
+apps in a variety of programming languages and frameworks, but I've also worked
 on DevOps-related stuff like setting up server environments and CI/CD pipelines.
 
 When I'm not writing code -- I'm either playing DotA or gaming on the Switch,

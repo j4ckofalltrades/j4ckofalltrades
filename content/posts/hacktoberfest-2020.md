@@ -5,7 +5,7 @@ draft: false
 ---
 
 <figure>
-  <img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_500/v1611377061/blog/20210123/hacktoberfest_y899nk.jpg">
+  <img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_500/v1611377061/blog/20210123/hacktoberfest_y899nk.jpg" alt="hacktoberfest_shirt">
 </figure>
 
 This one's long overdue and when the swag arrived last week I figured I really
@@ -20,7 +20,7 @@ get to talk to and interact with maintainers and other like-minded individuals
 who are passionate about code and giving back to the community.
 
 Even with all the drama that surrounded this past year's iteration I'd say this
-was a positive experience overall and I look forward to joining this year's
+was a positive experience overall, and I look forward to joining this year's
 iteration.
 
 Here are some of the projects I found interesting and contributed to (and still
