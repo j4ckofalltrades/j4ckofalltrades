@@ -10,7 +10,7 @@ canonifyurls = true
 
 paginate = 20
 
-pygmentsstyle = "bw"
+pygmentsstyle = "monokai"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 

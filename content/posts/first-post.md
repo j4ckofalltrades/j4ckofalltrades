@@ -1,15 +1,8 @@
-+++ 
-draft = false
-date = 2020-11-01T14:25:03+08:00
-title = "Hello World"
-description = "First post"
-slug = ""
-authors = []
-tags = []
-categories = []
-externalLink = ""
-series = []
-+++
+--- 
+title: "Hello World"
+date: 2020-11-01T14:25:03+08:00
+draft: false
+---
 
 Happy Halloween :jack_o_lantern: :bat: :ghost:
 
