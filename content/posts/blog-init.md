@@ -30,7 +30,7 @@ The next step is setting up a GitHub repository that will house the content for
 the site and will be hosted directly from said repo.
 
 To get started, create a [new repo on Github](https://github.com/new) with the
-name *username*.github.io, where *username* is your GitHub username i.e.
+name *username*.github.io, where *username* is your GitHub username i.e. 
 *j4ckofalltrades*.
 
 *If the first part of the repository doesn’t exactly match your username,
@@ -117,8 +117,8 @@ The site should now be accessible at [http://localhost:1313/](http://localhost:1
 ## Setting up a publishing workflow with GitHub Actions
 
 Once everything looks good locally, the last step is to push the changes to the
-repo and publish the generated content. To automate the publish step, I used the
-[Hugo Setup Action](https://github.com/marketplace/actions/hugo-setup) and
+repo and publish the generated content. To automate the publish step, I used the 
+[Hugo Setup Action](https://github.com/marketplace/actions/hugo-setup) and 
 [GitHub Actions for GitHub Pages](https://github.com/marketplace/actions/github-pages-action#github-actions-for-github-pages)
 actions.
 
