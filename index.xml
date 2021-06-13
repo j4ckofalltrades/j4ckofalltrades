@@ -1,8 +1,28 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/j4ckofalltrades</title><link>https://jduabe.dev/</link><description>Recent content on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Jun 2021 21:42:31 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Projects</title><link>https://jduabe.dev/projects/</link><pubDate>Sat, 05 Jun 2021 14:56:11 +0800</pubDate><guid>https://jduabe.dev/projects/</guid><description>&lt;p>&lt;a href="https://github.com/wisetime-io/grpc-web-rx">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=wisetime-io&amp;amp;repo=grpc-web-rx&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/j4ckofalltrades/powerline-k8s">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&amp;amp;repo=powerline-k8s&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/j4ckofalltrades/steam-current-game">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&amp;amp;repo=steam-current-game&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/j4ckofalltrades/terminal-branch-win-title">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&amp;amp;repo=terminal-branch-win-title&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/j4ckofalltrades/dotfiles">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&amp;amp;repo=dotfiles&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p></description></item><item><title>blog.init()</title><link>https://jduabe.dev/posts/blog-init/</link><pubDate>Tue, 01 Jun 2021 21:42:31 +0800</pubDate><guid>https://jduabe.dev/posts/blog-init/</guid><description>&lt;p>This is a short write-up of how I got this blog up and running. There&amp;rsquo;s a lot of
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/j4ckofalltrades</title><link>https://jduabe.dev/</link><description>Recent content on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Jun 2021 21:42:31 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Projects</title><link>https://jduabe.dev/projects/</link><pubDate>Sat, 05 Jun 2021 14:56:11 +0800</pubDate><guid>https://jduabe.dev/projects/</guid><description>&lt;a href="https://github.com/wisetime-io/grpc-web-rx">
+&lt;img align="center"
+class="projects"
+src="https://github-readme-stats.vercel.app/api/pin/?username=wisetime-io&amp;repo=grpc-web-rx&amp;theme=dark" />
+&lt;/a>
+&lt;a href="https://github.com/j4ckofalltrades/steam-webapi-ts">
+&lt;img align="center"
+class="projects"
+src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&amp;repo=steam-webapi-ts&amp;theme=dark" />
+&lt;/a>
+&lt;a href="https://github.com/j4ckofalltrades/steam-current-game">
+&lt;img align="center"
+class="projects"
+src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&amp;repo=steam-current-game&amp;theme=dark" />
+&lt;/a>
+&lt;a href="https://github.com/j4ckofalltrades/powerline-k8s">
+&lt;img align="center"
+class="projects"
+src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&amp;repo=powerline-k8s&amp;theme=dark" />
+&lt;/a>
+&lt;a href="https://github.com/j4ckofalltrades/terminal-branch-win-title">
+&lt;img align="center"
+class="projects"
+src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&amp;repo=terminal-branch-win-title&amp;theme=dark" />
+&lt;/a></description></item><item><title>blog.init()</title><link>https://jduabe.dev/posts/blog-init/</link><pubDate>Tue, 01 Jun 2021 21:42:31 +0800</pubDate><guid>https://jduabe.dev/posts/blog-init/</guid><description>&lt;p>This is a short write-up of how I got this blog up and running. There&amp;rsquo;s a lot of
 options available out there &amp;ndash; from ready-to-go blogging platforms to building
 your own site with a static site generator &amp;ndash; I went with the latter option
 using &lt;a href="https://gohugo.io">Hugo&lt;/a> and hosting it on &lt;a href="https://pages.github.com">GitHub Pages&lt;/a>.&lt;/p>
@@ -180,7 +200,9 @@ the &lt;code>publish_branch&lt;/code> ) as this is where the generated content i
 worry if your site isn&amp;rsquo;t up yet. Just chill for a bit then press &lt;code>F5&lt;/code> like a
 madman to see check if it has completed.&lt;/em>&lt;/p>
 &lt;p>That&amp;rsquo;s all there is to it, time to get blogging.&lt;/p></description></item><item><title>Hacktoberfest 2020 Retrospective</title><link>https://jduabe.dev/posts/hacktoberfest-2020/</link><pubDate>Sat, 23 Jan 2021 12:50:21 +0800</pubDate><guid>https://jduabe.dev/posts/hacktoberfest-2020/</guid><description>&lt;figure>
-&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_500/v1611377061/blog/20210123/hacktoberfest_y899nk.jpg" alt="hacktoberfest_shirt">
+&lt;img
+src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_500/v1611377061/blog/20210123/hacktoberfest_y899nk.jpg"
+alt="hacktoberfest_shirt">
 &lt;/figure>
 &lt;p>This one&amp;rsquo;s long overdue and when the swag arrived last week I figured I really
 need to get this done.&lt;/p>
