@@ -122,7 +122,6 @@ repo and publish the generated content. To automate the publish step, I used the
 [GitHub Actions for GitHub Pages](https://github.com/marketplace/actions/github-pages-action#github-actions-for-github-pages)
 actions.
 
-
 Doing so is as simple as creating a `.github/workflows/gh-pages.yml` file in
 your repo with the following content:
 
