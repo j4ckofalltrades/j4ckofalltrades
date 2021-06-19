@@ -105,8 +105,8 @@ The resulting config should look something like:
 
    ```sh
    # create first post
-   $ hugo new posts/first-post.md
-   $ echo "Hello World" >> posts/hello-world.md
+   $ hugo new content/posts/first-post.md
+   $ echo "Hello World" >> content/posts/hello-world.md
    
    # run site locally
    $ hugo serve

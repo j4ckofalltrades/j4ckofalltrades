@@ -108,8 +108,8 @@ find this under Settings > Secrets for your repo. Give the secret a name e.g.
             NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     ```
 
-    This workflow will is triggered when a new release is created but you can
-    also configure it to be triggered when a different event happens e.g. when a
+    This workflow is triggered when a new release is created but you can also
+    configure it to be triggered when a different event happens e.g. when a
     new tag gets pushed. Refer to the [GitHub Actions documentation](https://docs.github.com/en/actions) 
     for more configuration options.
 
