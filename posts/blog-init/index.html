@@ -39,8 +39,8 @@ this site uses <a href=https://themes.gohugo.io/hugo-coder/>Coder</a>.</p><div c
 $ git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
 </code></pre></div></li><li><p>Update site configuration</p><p>Update <code>config.toml</code> using this <a href=https://github.com/luizdepra/hugo-coder/wiki/Configurations#complete-example>sample config</a>
 as a guide.</p></li><li><p>Add some content and run site locally</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># create first post</span>
-$ hugo new posts/first-post.md
-$ echo <span style=color:#e6db74>&#34;Hello World&#34;</span> &gt;&gt; posts/hello-world.md
+$ hugo new content/posts/first-post.md
+$ echo <span style=color:#e6db74>&#34;Hello World&#34;</span> &gt;&gt; content/posts/hello-world.md
    
 <span style=color:#75715e># run site locally</span>
 $ hugo serve
