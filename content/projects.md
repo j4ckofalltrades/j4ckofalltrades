@@ -26,8 +26,8 @@ draft: false
     src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&repo=powerline-k8s&theme=dark" />
 </a>
 
-<a href="https://github.com/j4ckofalltrades/terminal-branch-win-title">
+<a href="https://github.com/j4ckofalltrades/git-branch-win-title">
   <img align="center"
     class="projects"
-    src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&repo=terminal-branch-win-title&theme=dark" />
+    src="https://github-readme-stats.vercel.app/api/pin/?username=j4ckofalltrades&repo=git-branch-win-title&theme=dark" />
 </a>
