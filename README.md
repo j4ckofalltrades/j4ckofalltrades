@@ -19,11 +19,10 @@ Outside of tech, I’m also into:
 
 ### Stats 🔢
 
-[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=j4ckofalltrades&layout=compact&hide=html,css,scss,vim%20script&theme=solarized-dark)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=j4ckofalltrades&layout=compact&hide=html,css,scss,javascript,vim%20script,makefile&theme=solarized-dark)](https://github.com/anuraghazra/github-readme-stats)
 
 [![Stats](https://github-readme-stats.vercel.app/api?username=j4ckofalltrades&show_icons=true&count_private=true&theme=solarized-dark)](https://github.com/anuraghazra/github-readme-stats)
 
 ### Misc 🎮
 
 [![Steam Current Game](https://steam-current-game.vercel.app/api/?steamids=76561198311570174")](https://steam-current-game.vercel.app)
-
