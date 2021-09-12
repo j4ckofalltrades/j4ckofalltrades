@@ -1,0 +1,206 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="en"><meta name=color-scheme content="light dark"><meta name=author content="Jordan Duabe"><meta name=description content="This guide walks you through the necessary steps to upload your package to the Maven Central repository (and optionally to GitHub Packages registry) with some recommendations along the way.
+Setup OSSRH Repository     Sign up for a new account Create a new project ticket Claim your namespace by setting the groupId for your artifact  If you&rsquo;re using a free code hosting service like GitHub or Bitbucket:"><meta name=keywords content="blog,programmer,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Publishing to Maven Central"><meta name=twitter:description content="This guide walks you through the necessary steps to upload your package to the Maven Central repository (and optionally to GitHub Packages registry) with some recommendations along the way.
+Setup OSSRH Repository     Sign up for a new account Create a new project ticket Claim your namespace by setting the groupId for your artifact  If you&rsquo;re using a free code hosting service like GitHub or Bitbucket:"><meta property="og:title" content="Publishing to Maven Central"><meta property="og:description" content="This guide walks you through the necessary steps to upload your package to the Maven Central repository (and optionally to GitHub Packages registry) with some recommendations along the way.
+Setup OSSRH Repository     Sign up for a new account Create a new project ticket Claim your namespace by setting the groupId for your artifact  If you&rsquo;re using a free code hosting service like GitHub or Bitbucket:"><meta property="og:type" content="article"><meta property="og:url" content="https://jduabe.dev/posts/mvn-central-publish/"><meta property="article:published_time" content="2021-07-25T15:38:23+08:00"><meta property="article:modified_time" content="2021-07-25T15:38:23+08:00"><title>Publishing to Maven Central · /home/j4ckofalltrades</title><link rel=canonical href=https://jduabe.dev/posts/mvn-central-publish/><link rel=preload href="https://jduabe.dev/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=https://jduabe.dev/css/coder.min.144dbded64fa39be909de032d781daea652fbf3fad40384fd40f4dd1d28ccbcf.css integrity="sha256-FE297WT6Ob6QneAy14Ha6mUvvz+tQDhP1A9N0dKMy88=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://jduabe.dev/css/coder-dark.min.f37febc669ce189201c1918fac1948a254686c8d366a312c2d72b2bb71ad97d1.css integrity="sha256-83/rxmnOGJIBwZGPrBlIolRobI02ajEsLXKyu3Gtl9E=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://jduabe.dev/custom.css><link rel=icon type=image/png href=https://jduabe.dev/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://jduabe.dev/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=https://jduabe.dev/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=https://jduabe.dev/images/apple-touch-icon.png><script defer src=https://twemoji.maxcdn.com/v/13.0.2/twemoji.min.js integrity=sha384-wyB/MspSJ/r2bT2kCj44qtsYRYlpzO2oAPhRj5myrWD63dt6qWv4x8AZe7Fl3K3b crossorigin=anonymous></script><meta name=generator content="Hugo 0.77.0"></head><body class="preload-transitions colorscheme-auto" onload=twemoji.parse(document.body);><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jduabe.dev/>/home/j4ckofalltrades</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=https://jduabe.dev/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=https://jduabe.dev/about/>About</a></li><li class=navigation-item><a class=navigation-link href=https://jduabe.dev/projects/>Projects</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jduabe.dev/posts/mvn-central-publish/>Publishing to Maven Central</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i><time datetime=2021-07-25T15:38:23+08:00>July 25, 2021</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>5-minute read</span></div></div></header><div><p>This guide walks you through the necessary steps to upload your package to the
+<a href=https://repo.maven.apache.org/maven2>Maven Central</a> repository (and optionally
+to GitHub Packages registry) with some recommendations along the way.</p><h2 id=setup-ossrh-repository>Setup OSSRH Repository
+<a class=heading-link href=#setup-ossrh-repository><i class="fa fa-link" aria-hidden=true></i></a></h2><ul><li>Sign up for a <a href=https://issues.sonatype.org/secure/Signup!default.jspa>new account</a></li><li>Create a <a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&pid=10134">new project ticket</a></li><li>Claim your namespace by setting the <code>groupId</code> for your artifact</li></ul><p>If you&rsquo;re using a free code hosting service like GitHub or Bitbucket:</p><p><code>groupId: io.github.j4ckofalltrades</code></p><p>Alternatively if you want to use a custom domain, the group id should:</p><p><code>groupId: com.your-custom-domain</code></p><p>You will also need to prove ownership of the public repository or the custom
+domain. For the former you will be asked to create an empty repository using
+the ticket number for your created OSSRH ticket e.g. <code>OSSRH-73148</code>; for the
+latter you&rsquo;ll need to add a <code>TXT</code> record linked to the OSSRH ticket that was
+created to register your <code>groupId</code>.</p><h2 id=configure-gpgpgp-key>Configure GPG/PGP key
+<a class=heading-link href=#configure-gpgpgp-key><i class="fa fa-link" aria-hidden=true></i></a></h2><p>This will be used for signing your artifacts, at it is a requirement for
+publishing them to the Central Repository.</p><p>You&rsquo;ll need to generate a key pair and distribute it to a known key server
+(so that others can validate it).</p><p>The following examples show how to do this with <a href=https://gnupg.org>GPG</a>; you
+can <a href=https://gnupg.org>download</a> or install it using your package manager if
+it is not already available in your machine.</p><p>To generate a key pair, run:</p><p><code>$ gpg --gen-key</code></p><p>Fill in the details you are prompted for e.g. name, email, time of validity, and
+passphrase for the generated key. <strong>This passphrase and your private key are all
+that is needed to sign artifacts with your signature.</strong></p><p>Once the key pair is generated, you&rsquo;ll need to distribute your public key to a
+known key server i.e. <code>keyserver.ubuntu.com</code>. In order to do so, run the
+following commands:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># list gpg keys</span>
+$ gpg --list-keys
+
+<span style=color:#75715e># the line starting with **pub** shows your public key details</span>
+<span style=color:#75715e># copy the keyid and run the following command</span>
+$ gpg --keyserver keyserver.ubuntu.com --send-keys &lt;your_key_here&gt;
+</code></pre></div><p>To check that your key was successfully uploaded, you can search for it at
+<a href=https://keyserver.ubuntu.com>https://keyserver.ubuntu.com</a> using your public key (and prepending &lsquo;0x&rsquo; to it).</p><p>Other supported key servers are <code>keys.openpgp.org</code>, and <code>pgp.mit.edu</code>.</p><h2 id=configure-build-script>Configure build script
+<a class=heading-link href=#configure-build-script><i class="fa fa-link" aria-hidden=true></i></a></h2><p>In order to publish your artifact to the Central Repository, it will need to
+meet the following requirements:</p><ul><li>Project coordinates</li><li>Javadoc and sources jar</li><li>POM metadata (includes project name and description, url, SCM info, license)</li><li>Sign artifacts with GPG/PGP</li></ul><p>The configuration will vary slightly depending on the build tool you are using,
+below is an abridged sample configuration <code>build.gradle.kts</code> file (Kotlin DSL)
+used with <code>gradle</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=color:#75715e>// build.gradle.kts
+</span><span style=color:#75715e></span>
+<span style=color:#75715e>// project coordinates
+</span><span style=color:#75715e></span>group = <span style=color:#e6db74>&#34;io.github.j4ckofalltrades&#34;</span>
+version = <span style=color:#e6db74>&#34;1.0.0&#34;</span>
+
+<span style=color:#75715e>// generate KDoc and Javadoc using Dokka
+</span><span style=color:#75715e></span>tasks.withType&lt;DokkaTask&gt;().configureEach {
+    dokkaSourceSets {
+        named(<span style=color:#e6db74>&#34;main&#34;</span>) {
+            outputDirectory.<span style=color:#66d9ef>set</span>(<span style=color:#66d9ef>file</span>(<span style=color:#e6db74>&#34;docs&#34;</span>))
+            moduleName.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;steam-webapi&#34;</span>)
+            includes.from(<span style=color:#e6db74>&#34;Module.md&#34;</span>)
+            displayName.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;JVM&#34;</span>)
+            platform.<span style=color:#66d9ef>set</span>(org.jetbrains.dokka.Platform.jvm)
+            sourceLink {
+                localDirectory.<span style=color:#66d9ef>set</span>(<span style=color:#66d9ef>file</span>(<span style=color:#e6db74>&#34;src/main/kotlin&#34;</span>))
+                remoteUrl.<span style=color:#66d9ef>set</span>(
+                    URL(
+                        <span style=color:#e6db74>&#34;https://github.com/j4ckofalltrades/steam-webapi-kt&#34;</span> +
+                            <span style=color:#e6db74>&#34;/tree/main/lib/src/main/kotlin&#34;</span>
+                    )
+                )
+                remoteLineSuffix.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;#L&#34;</span>)
+            }
+        }
+    }
+}
+
+<span style=color:#75715e>// javadoc and sources jar
+</span><span style=color:#75715e></span>tasks {
+    <span style=color:#66d9ef>val</span> sourcesJar <span style=color:#66d9ef>by</span> registering(Jar<span style=color:#f92672>::</span><span style=color:#66d9ef>class</span>) {
+        dependsOn(JavaPlugin.CLASSES_TASK_NAME)
+        archiveClassifier.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;sources&#34;</span>)
+        archiveBaseName.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;steam-webapi-kt&#34;</span>)
+        from(sourceSets[<span style=color:#e6db74>&#34;main&#34;</span>].allSource)
+    }
+
+    <span style=color:#66d9ef>val</span> javadocJar <span style=color:#66d9ef>by</span> registering(Jar<span style=color:#f92672>::</span><span style=color:#66d9ef>class</span>) {
+        dependsOn(<span style=color:#e6db74>&#34;dokkaJavadoc&#34;</span>)
+        archiveClassifier.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;javadoc&#34;</span>)
+        archiveBaseName.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;steam-webapi-kt&#34;</span>)
+        from(<span style=color:#e6db74>&#34;docs&#34;</span>)
+    }
+
+    artifacts {
+        archives(sourcesJar)
+        archives(javadocJar)
+        archives(jar)
+    }
+}
+
+publishing {
+    publications {
+        create&lt;MavenPublication&gt;(<span style=color:#e6db74>&#34;mavenJava&#34;</span>) {
+            groupId = project.group.toString()
+            artifactId = rootProject.name
+            version = project.version.toString()
+
+            from(components[<span style=color:#e6db74>&#34;java&#34;</span>])
+            artifact(tasks[<span style=color:#e6db74>&#34;sourcesJar&#34;</span>])
+            artifact(tasks[<span style=color:#e6db74>&#34;javadocJar&#34;</span>])
+
+            <span style=color:#75715e>// POM metadata
+</span><span style=color:#75715e></span>            pom {
+                name.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;steam-webapi-kt&#34;</span>)
+                description.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;Steam WebAPI wrapper in Kotlin and Ktor&#34;</span>)
+                url.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;https://github.com/j4ckofalltrades/steam-webapi-kt&#34;</span>)
+                licenses {
+                    license {
+                        name.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;MIT&#34;</span>)
+                        url.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;https://opensource.org/licenses/MIT&#34;</span>)
+                    }
+                }
+                developers {
+                    developer {
+                        id.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;j4ckofalltrades&#34;</span>)
+                        name.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;Jordan Duabe&#34;</span>)
+                        email.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;me@jduabe.dev&#34;</span>)
+                    }
+                }
+                scm {
+                    connection.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;scm:git:git://github.com/j4ckofalltrades/steam-webapi-kt.git&#34;</span>)
+                    developerConnection.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;scm:git:ssh://github.com/j4ckofalltrades/steam-webapi-kt.git&#34;</span>)
+                    url.<span style=color:#66d9ef>set</span>(<span style=color:#e6db74>&#34;https://github.com/j4ckofalltrades/steam-webapi-kt&#34;</span>)
+                }
+            }
+        }
+    }
+    repositories {
+        <span style=color:#75715e>// Maven Central
+</span><span style=color:#75715e></span>        maven {
+            name = <span style=color:#e6db74>&#34;OSSRH&#34;</span>
+            url = uri(<span style=color:#e6db74>&#34;https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/&#34;</span>)
+            credentials {
+                username = System.getenv(<span style=color:#e6db74>&#34;OSSRH_USERNAME&#34;</span>)
+                password = System.getenv(<span style=color:#e6db74>&#34;OSSRH_PASSWORD&#34;</span>)
+            }
+        }
+        <span style=color:#75715e>// GitHub Packages
+</span><span style=color:#75715e></span>        maven {
+            name = <span style=color:#e6db74>&#34;GitHubPackages&#34;</span>
+            url = uri(<span style=color:#e6db74>&#34;https://maven.pkg.github.com/j4ckofalltrades/steam-webapi-kt&#34;</span>)
+            credentials {
+                username = System.getenv(<span style=color:#e6db74>&#34;GITHUB_ACTOR&#34;</span>)
+                password = System.getenv(<span style=color:#e6db74>&#34;GITHUB_TOKEN&#34;</span>)
+            }
+        }
+    }
+}
+
+<span style=color:#75715e>// sign artifact
+</span><span style=color:#75715e></span>signing {
+    setRequired({
+        gradle.taskGraph.hasTask(<span style=color:#e6db74>&#34;publishMavenJavaToOSSRHRepository&#34;</span>)
+    })
+
+    <span style=color:#66d9ef>val</span> signingKey = System.getenv(<span style=color:#e6db74>&#34;SIGNING_KEY&#34;</span>)
+    <span style=color:#66d9ef>val</span> signingPassword = System.getenv(<span style=color:#e6db74>&#34;SIGNING_PASSWORD&#34;</span>)
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign(publishing.publications[<span style=color:#e6db74>&#34;mavenJava&#34;</span>])
+}
+</code></pre></div><h2 id=publishing-to-maven-central>Publishing to Maven Central
+<a class=heading-link href=#publishing-to-maven-central><i class="fa fa-link" aria-hidden=true></i></a></h2><p>The configuration above uses the <a href=https://docs.gradle.org/current/userguide/signing_plugin.html#sec:in-memory-keys%5D>in-memory ascii-armored keys</a>
+approach for signing artifacts. Check out the docs for the <a href=https://docs.gradle.org/current/userguide/signing_plugin.html>Gradle Signing
+Plugin</a> to find
+out what best suits your use case.</p><p>Once everything is configured, publishing the articats is as simple as running:</p><p><code>$ gradle publish</code></p><p>Note that this will publish your artifacts to <strong>all</strong> target repositories, in
+order to publish to a specific repository you need to specify the repo <em>name</em>.
+Using the above configuration as an example:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=color:#75715e># publish to Maven Central</span>
+$ gradle publishMavenJavaPublicationToOSSRHRepository
+
+<span style=color:#75715e># publish to GitHub Packages</span>
+$ gradle publishMavenJavaPublicationToGitHubPackagesToRepository
+</code></pre></div><h2 id=releasing-artifacts>Releasing artifacts
+<a class=heading-link href=#releasing-artifacts><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Login to the <a href=https://s01.oss.sonatype.org/#stagingRepositories>Nexus staging repository</a>,
+where you should be able to see your <code>groupId</code> listed. In order to <em>sync</em> the
+artifacts to the Central Repository you&rsquo;ll need to click on the <code>Close</code> button
+which will close said staging repository.</p><p>The close operation will run a series of checks to ensure that the uploaded
+artifacts meet the <a href=#configure-build-script>requirements</a>.</p><p>If the release was successful, you should be able to see your artifacts in the
+Central Repository at <a href=https://repo1.maven.org/maven2/,>https://repo1.maven.org/maven2/,</a> typically within ~30
+minutes. Updates to <a href=https://search.maven.org>https://search.maven.org</a> can take up to a couple of hours.</p><h2 id=optional-automation-with-github-packages>(Optional) Automation with GitHub Packages
+<a class=heading-link href=#optional-automation-with-github-packages><i class="fa fa-link" aria-hidden=true></i></a></h2><p>You&rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
+Here&rsquo;s how to set it up using GitHub Actions.</p><p>You&rsquo;ll need to add your OSSRH credentials, and signing key details as secrets
+to your repository, you can find this under Settings > Secrets.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Publish to OSSRH and GitHub Package Registry</span>
+
+<span style=color:#f92672>on</span>:
+  <span style=color:#f92672>release</span>:
+    <span style=color:#f92672>types</span>: [<span style=color:#ae81ff>created]</span>
+
+<span style=color:#f92672>jobs</span>:
+  <span style=color:#f92672>publish</span>:
+    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+    <span style=color:#f92672>steps</span>:
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v2</span>
+      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-java@v2</span>
+        <span style=color:#f92672>with</span>:
+          <span style=color:#f92672>distribution</span>: <span style=color:#e6db74>&#39;adopt-openj9&#39;</span>
+          <span style=color:#f92672>java-version</span>: <span style=color:#e6db74>&#39;11&#39;</span>
+      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>./gradlew publish</span>
+        <span style=color:#f92672>env</span>:
+          <span style=color:#f92672>GITHUB_ACTOR</span>: <span style=color:#ae81ff>${{ github.actor }}</span>
+          <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
+          <span style=color:#f92672>OSSRH_USERNAME</span>: <span style=color:#ae81ff>${{ secrets.OSSRH_USERNAME }}</span>
+          <span style=color:#f92672>OSSRH_PASSWORD</span>: <span style=color:#ae81ff>${{ secrets.OSSRH_PASSWORD }}</span>
+          <span style=color:#f92672>SIGNING_KEY</span>: <span style=color:#ae81ff>${{ secrets.SIGNING_KEY }}</span>
+          <span style=color:#f92672>SIGNING_PASSWORD</span>: <span style=color:#ae81ff>${{ secrets.SIGNING_PASSWORD }}</span>
+</code></pre></div><p>The configuration samples used here can also be checked out in full at this <a href=https://github.com/j4ckofalltrades/steam-webapi-kt>GitHub
+repository</a>.</p><p>That&rsquo;s it, time to get publishing.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2020 -
+2021
+Jordan Duabe
+·
+Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=https://jduabe.dev/js/coder.min.f92783b4545b68f3523e5d6ad91d93f76818f9d0db2ffa13bda31b6119cde62b.js integrity="sha256-+SeDtFRbaPNSPl1q2R2T92gY+dDbL/oTvaMbYRnN5is="></script></body></html>
