@@ -8,10 +8,14 @@ Setup OSSRH Repository
 &lt;/a>
 &lt;/h2>
 &lt;ul>
-&lt;li>Sign up for a &lt;a href="https://issues.sonatype.org/secure/Signup!default.jspa">new account&lt;/a>&lt;/li>
-&lt;li>Create a &lt;a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134">new project ticket&lt;/a>&lt;/li>
-&lt;li>Claim your namespace by setting the &lt;code>groupId&lt;/code> for your artifact&lt;/li>
-&lt;/ul>
+&lt;li>
+&lt;p>Sign up for a &lt;a href="https://issues.sonatype.org/secure/Signup!default.jspa">new account&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a &lt;a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134">new project ticket&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Claim your namespace by setting the &lt;code>groupId&lt;/code> for your artifact&lt;/p>
 &lt;p>If you&amp;rsquo;re using a free code hosting service like GitHub or Bitbucket:&lt;/p>
 &lt;p>&lt;code>groupId: io.github.j4ckofalltrades&lt;/code>&lt;/p>
 &lt;p>Alternatively if you want to use a custom domain, the group id should:&lt;/p>
@@ -21,6 +25,8 @@ domain. For the former you will be asked to create an empty repository using
 the ticket number for your created OSSRH ticket e.g. &lt;code>OSSRH-73148&lt;/code>; for the
 latter you&amp;rsquo;ll need to add a &lt;code>TXT&lt;/code> record linked to the OSSRH ticket that was
 created to register your &lt;code>groupId&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;h2 id="configure-gpgpgp-key">
 Configure GPG/PGP key
 &lt;a class="heading-link" href="#configure-gpgpgp-key">
@@ -180,9 +186,9 @@ gradle.taskGraph.hasTask(&lt;span style="color:#e6db74">&amp;#34;publishMavenJav
 useInMemoryPgpKeys(signingKey, signingPassword)
 sign(publishing.publications[&lt;span style="color:#e6db74">&amp;#34;mavenJava&amp;#34;&lt;/span>])
 }
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="publishing-to-maven-central">
-Publishing to Maven Central
-&lt;a class="heading-link" href="#publishing-to-maven-central">
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="publishing-artifacts">
+Publishing artifacts
+&lt;a class="heading-link" href="#publishing-artifacts">
 &lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
 &lt;/a>
 &lt;/h2>
