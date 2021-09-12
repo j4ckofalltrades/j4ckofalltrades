@@ -23,6 +23,6 @@ Outside of tech, I’m also into:
 
 [![Stats](https://github-readme-stats.vercel.app/api?username=j4ckofalltrades&show_icons=true&count_private=true&theme=solarized-dark)](https://github.com/anuraghazra/github-readme-stats)
 
-### Misc 🎮
+### Now Playing 🎮
 
 [![Steam Current Game](https://steam-current-game.vercel.app/api/?steamids=76561198311570174")](https://steam-current-game.vercel.app)
