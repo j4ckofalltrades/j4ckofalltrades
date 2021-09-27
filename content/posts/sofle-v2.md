@@ -27,8 +27,7 @@ the Lily58, Corne, and Helix keyboards.
 [AEBoard Naevys](https://www.aeboards.com/naevy-switches) v1 (Tactile, lubed Krytox 205g0)
 
 - Nylon bottom, PC top
-- Stem: MPE tactile stem - Custom xixed PE - A proprietary MPE blend that
-enables smoothness and good shrinking rates
+- MPE tactile stem
 - 58g spring
 - 3 pin
 
