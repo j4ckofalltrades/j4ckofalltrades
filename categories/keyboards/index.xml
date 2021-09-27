@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>keyboards on /home/j4ckofalltrades</title><link>https://jduabe.dev/categories/keyboards/</link><description>Recent content in keyboards on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Sep 2021 20:24:42 +0800</lastBuildDate><atom:link href="https://jduabe.dev/categories/keyboards/index.xml" rel="self" type="application/rss+xml"/><item><title>Sofle V2</title><link>https://jduabe.dev/posts/sofle-v2/</link><pubDate>Mon, 27 Sep 2021 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/sofle-v2/</guid><description>&lt;h2 id="pcb-and-switches">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>keyboards on /home/j4ckofalltrades</title><link>https://jduabe.dev/categories/keyboards/</link><description>Recent content in keyboards on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Sep 2021 20:24:42 +0800</lastBuildDate><atom:link href="https://jduabe.dev/categories/keyboards/index.xml" rel="self" type="application/rss+xml"/><item><title>Sofle v2</title><link>https://jduabe.dev/posts/sofle-v2/</link><pubDate>Mon, 27 Sep 2021 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/sofle-v2/</guid><description>&lt;h2 id="pcb-and-switches">
 PCB and Switches
 &lt;a class="heading-link" href="#pcb-and-switches">
 &lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
@@ -52,10 +52,9 @@ Firmware
 &lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
 &lt;/a>
 &lt;/h2>
-&lt;p>Modified version of default Via-compatible keymap with focus on adding a
-standard navigation cluster layer plus some Vim-inspired features e.g. soft
-escape (&lt;code>Esc&lt;/code> when held, &lt;code>Ctrl&lt;/code> when tapped), using &lt;code>h&lt;/code>, &lt;code>j&lt;/code>, &lt;code>k&lt;/code>, &lt;code>l&lt;/code> as arrow
-keys.&lt;/p>
+&lt;p>QMK and Via compatible keymap with focus on adding a standard navigation cluster
+layer plus some Vim-inspired features e.g. soft escape (&lt;code>Esc&lt;/code> when held, &lt;code>Ctrl&lt;/code>
+when tapped), using &lt;code>h&lt;/code>, &lt;code>j&lt;/code>, &lt;code>k&lt;/code>, &lt;code>l&lt;/code> as arrow keys.&lt;/p>
 &lt;p>&lt;strong>Layout&lt;/strong>&lt;/p>
 &lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/a1f6519e723ad81ca151741b53a28b80">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/sofle/assets/soflekeyboard.png" alt="SofleKeyboard custom keymap">&lt;/p>
