@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>oss on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/oss/</link><description>Recent content in oss on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 23 Jan 2021 12:50:21 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/oss/index.xml" rel="self" type="application/rss+xml"/><item><title>Hacktoberfest 2020 Retrospective</title><link>https://jduabe.dev/posts/hacktoberfest-2020/</link><pubDate>Sat, 23 Jan 2021 12:50:21 +0800</pubDate><guid>https://jduabe.dev/posts/hacktoberfest-2020/</guid><description>&lt;figure>
+&lt;img
+src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_500/v1611377061/blog/20210123/hacktoberfest_y899nk.jpg"
+alt="hacktoberfest_shirt">
+&lt;/figure>
+&lt;p>This one&amp;rsquo;s long overdue and when the swag arrived last week I figured I really
+need to get this done.&lt;/p>
+&lt;p>The past year has been tough to say the least and getting to write code for
+fun while helping out the open-source community was a very welcome distraction.&lt;/p>
+&lt;p>Though I have been programming for a while this was my first time participating
+in Hacktoberfest and contributing to open-source in general, it was nice to
+get to talk to and interact with maintainers and other like-minded individuals
+who are passionate about code and giving back to the community.&lt;/p>
+&lt;p>Even with all the drama that surrounded this past year&amp;rsquo;s iteration I&amp;rsquo;d say this
+was a positive experience overall, and I look forward to joining this year&amp;rsquo;s
+iteration.&lt;/p>
+&lt;p>Here are some of the projects I found interesting and contributed to (and still
+try to contribute to):&lt;/p>
+&lt;p>&lt;a href="https://github.com/trinodb/trino">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=trinodb&amp;amp;repo=trino&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/strongbox/strongbox">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=strongbox&amp;amp;repo=strongbox&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/oshi/oshi">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=oshi&amp;amp;repo=oshi&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/jayehernandez/letra-extension">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=jayehernandez&amp;amp;repo=letra-extension&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
+&lt;p>Happy hacking!&lt;/p></description></item></channel></rss>

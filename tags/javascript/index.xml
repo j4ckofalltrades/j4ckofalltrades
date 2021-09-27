@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>javascript on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/javascript/</link><description>Recent content in javascript on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 19 Jun 2021 13:43:02 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>Publishing to the npm registry</title><link>https://jduabe.dev/posts/npm-publish/</link><pubDate>Sat, 19 Jun 2021 13:43:02 +0800</pubDate><guid>https://jduabe.dev/posts/npm-publish/</guid><description>&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;a href="https://npmjs.com">npm registry&lt;/a> with some recommendations along the way.&lt;/p>
+&lt;h2 id="setup-npm-account">
+Setup npm account
+&lt;a class="heading-link" href="#setup-npm-account">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Register for an &lt;a href="https://npmjs.com/signup">npm account&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Test your account by logging in using &lt;code>npm&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># you should be prompted for your username, password, and email address&lt;/span>
+&lt;span style="color:#75715e"># and an OTP if you&amp;#39;ve enabled 2FA&lt;/span>
+$ npm login
+&lt;span style="color:#75715e"># this should print out your npm username&lt;/span>
+$ npm whoami
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="dry-run-testing-your-package-locally">
+Dry-run (Testing your package locally)
+&lt;a class="heading-link" href="#dry-run-testing-your-package-locally">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Test out your package locally to ensure that everything works before publihsing
+it to the npm registry. You can do this by invoking &lt;code>npm install&lt;/code> and providing
+the path to your package e.g.:&lt;/p>
+&lt;p>&lt;code>$ npm install /path/to/your/package&lt;/code>&lt;/p>
+&lt;p>Another thing to do is to review the contents of the published package to make
+sure that it doesn&amp;rsquo;t include any sensitive or unnecessary information. You can
+perform a &lt;code>dry-run&lt;/code> with:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ npm publish --dry-run
+&lt;span style="color:#75715e"># output should look something like&lt;/span>
+npm notice
+npm notice &amp;lt;package_name@version&amp;gt;
+npm notice &lt;span style="color:#f92672">===&lt;/span> Tarball Contents &lt;span style="color:#f92672">===&lt;/span>
+npm notice &amp;lt;tarball_contents_here&amp;gt;
+npm notice &lt;span style="color:#f92672">===&lt;/span> Tarball Details &lt;span style="color:#f92672">===&lt;/span>
+npm notice &amp;lt;tarball_details_here&amp;gt;
+npm notice
++ &amp;lt;package_name@version&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Additionally you can create a &lt;code>.npmignore&lt;/code> file to exclude files that you don&amp;rsquo;t
+want to publish to the registry.&lt;/p>
+&lt;h2 id="publishing-to-the-npm-registry">
+Publishing to the npm registry
+&lt;a class="heading-link" href="#publishing-to-the-npm-registry">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>In your package&amp;rsquo;s root directory, execute:&lt;/p>
+&lt;p>&lt;code>$ npm publish&lt;/code>&lt;/p>
+&lt;p>If publishing a scoped public package, execute:&lt;/p>
+&lt;p>&lt;code>$ npm publish --access public&lt;/code>&lt;/p>
+&lt;p>When the publish process finishes, you should be able to see your public
+package page at &lt;a href="https://npmjs.com/package/your-package-name">https://npmjs.com/package/your-package-name&lt;/a>.&lt;/p>
+&lt;p>Congrats, you&amp;rsquo;ve successfully published your package to the npm registry. 🎉&lt;/p>
+&lt;h2 id="bonus-automation-with-github-packages">
+Bonus: Automation with GitHub Packages
+&lt;a class="heading-link" href="#bonus-automation-with-github-packages">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>You&amp;rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
+Here&amp;rsquo;s how to set it up using GitHub Actions.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Create a &lt;a href="https://docs.npmjs.com/creating-and-viewing-access-tokens">new npm access token&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add the access token as a secret to your target GitHub repository. You can
+find this under Settings &amp;gt; Secrets for your repo. Give the secret a name e.g.
+&lt;code>NPM_TOKEN&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a GitHub action workflow file in your repo at
+&lt;code>.github/workflows/npm-publish.yml&lt;/code> with the following contents:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Publish package to npm&lt;/span>
+&lt;span style="color:#f92672">on&lt;/span>:
+&lt;span style="color:#f92672">release&lt;/span>:
+&lt;span style="color:#f92672">types&lt;/span>: [&lt;span style="color:#ae81ff">created]&lt;/span>
+&lt;span style="color:#f92672">jobs&lt;/span>:
+&lt;span style="color:#f92672">build&lt;/span>:
+&lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-latest&lt;/span>
+&lt;span style="color:#f92672">permissions&lt;/span>:
+&lt;span style="color:#f92672">contents&lt;/span>: &lt;span style="color:#ae81ff">read&lt;/span>
+&lt;span style="color:#f92672">packages&lt;/span>: &lt;span style="color:#ae81ff">write&lt;/span>
+&lt;span style="color:#f92672">steps&lt;/span>:
+- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@v2&lt;/span>
+- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/setup-node@v1&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">node-version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;14.x&amp;#39;&lt;/span>
+&lt;span style="color:#f92672">registry-url&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;https://registry.npmjs.org&amp;#39;&lt;/span>
+- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">npm install&lt;/span>
+- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">npm test&lt;/span>
+- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">npm run build&lt;/span>
+&lt;span style="color:#75715e"># Publish to npm (append `--access public` for scoped packages)&lt;/span>
+- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">npm publish&lt;/span>
+&lt;span style="color:#f92672">env&lt;/span>:
+&lt;span style="color:#f92672">NODE_AUTH_TOKEN&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.NPM_TOKEN }}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>This workflow is triggered when a new release is created but you can also
+configure it to be triggered when a different event happens e.g. when a
+new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions">GitHub Actions documentation&lt;/a>
+for more configuration options.&lt;/p>
+&lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p>
+&lt;/li>
+&lt;/ol></description></item></channel></rss>

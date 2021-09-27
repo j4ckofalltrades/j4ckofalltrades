@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>pypi on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/pypi/</link><description>Recent content in pypi on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 12 Sep 2021 20:20:20 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/pypi/index.xml" rel="self" type="application/rss+xml"/><item><title>Writing a custom Powerline plugin</title><link>https://jduabe.dev/posts/powerline-plugin/</link><pubDate>Sun, 12 Sep 2021 20:20:20 +0800</pubDate><guid>https://jduabe.dev/posts/powerline-plugin/</guid><description>&lt;p>&lt;a href="https://github.com/powerline/powerline">Powerline&lt;/a> is a tool I use as part of
+my dev environment setup, and have my config backed up as part of my
+&lt;a href="https://github.com/j4ckofalltrades/dotfiles">dotfiles&lt;/a>.&lt;/p>
+&lt;p>It shows helpful information and context for stuff I&amp;rsquo;m working on, as well as
+providing some eye-candy for my command line environment.&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/dotfiles/master/env.png" alt="Env">&lt;/p>
+&lt;p>While it comes with a lot of integrations out of the box i.e. &lt;code>bash&lt;/code>, &lt;code>zsh&lt;/code>,
+&lt;code>tmux&lt;/code>, &lt;code>vim&lt;/code>, etc, it also provides a way for you to write your own &amp;ldquo;segments&amp;rdquo;.
+This should serve as a quick guide for rolling your own custom Powerline
+plugin.&lt;/p>
+&lt;h2 id="basic-structure-and-configuration">
+Basic structure and configuration
+&lt;a class="heading-link" href="#basic-structure-and-configuration">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Each powerline segment is a callable object. It is supposed to be either a
+Python function or &lt;code>powerline.segments.Segment&lt;/code> class.&lt;/p>
+&lt;p>I recently wrote my own custom one that displays the current Kubernetes
+context and namespace, which uses a &lt;code>Segment&lt;/code> class. Here is a shortened version
+which shows the basic structure.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">KubernetesSegment&lt;/span>(Segment):
+&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;Constructs the segment&amp;#39;s sections with the configured colorscheme and
+&lt;/span>&lt;span style="color:#e6db74"> visibility options applied.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span style="color:#a6e22e">@staticmethod&lt;/span>
+&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">kube_ctx_info&lt;/span>(pl):
+&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;Resolves the current active Kubernetes context (and namespace)
+&lt;/span>&lt;span style="color:#e6db74"> from `$KUBECONFIG`.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span style="color:#66d9ef">try&lt;/span>:
+current_context &lt;span style="color:#f92672">=&lt;/span> config&lt;span style="color:#f92672">.&lt;/span>list_kube_config_contexts()[&lt;span style="color:#ae81ff">1&lt;/span>]
+&lt;span style="color:#66d9ef">return&lt;/span> current_context[&lt;span style="color:#e6db74">&amp;#39;name&amp;#39;&lt;/span>] &lt;span style="color:#f92672">or&lt;/span> &lt;span style="color:#e6db74">&amp;#39;N/A&amp;#39;&lt;/span>, \
+current_context[&lt;span style="color:#e6db74">&amp;#39;context&amp;#39;&lt;/span>][&lt;span style="color:#e6db74">&amp;#39;namespace&amp;#39;&lt;/span>] &lt;span style="color:#f92672">or&lt;/span> &lt;span style="color:#e6db74">&amp;#39;default&amp;#39;&lt;/span>
+&lt;span style="color:#66d9ef">except&lt;/span> &lt;span style="color:#a6e22e">Exception&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> e:
+pl&lt;span style="color:#f92672">.&lt;/span>error(e)
+&lt;span style="color:#66d9ef">def&lt;/span> __call__(self, pl):
+pl&lt;span style="color:#f92672">.&lt;/span>debug(&lt;span style="color:#e6db74">&amp;#39;Running powerline-k8s...&amp;#39;&lt;/span>)
+sections &lt;span style="color:#f92672">=&lt;/span> []
+&lt;span style="color:#75715e"># additional logic to determine segment contents&lt;/span>
+sections&lt;span style="color:#f92672">.&lt;/span>append({
+&lt;span style="color:#e6db74">&amp;#39;contents&amp;#39;&lt;/span>: f&lt;span style="color:#e6db74">&amp;#39;u&amp;#39;&lt;/span>\U00002638&lt;span style="color:#e6db74">&amp;#39; &amp;#39;&lt;/span>,
+&lt;span style="color:#e6db74">&amp;#39;highlight_groups&amp;#39;&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;k8s&amp;#39;&lt;/span>,
+&lt;span style="color:#e6db74">&amp;#39;divider_highlight_group&amp;#39;&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;k8s:divider&amp;#39;&lt;/span>,
+})
+&lt;span style="color:#66d9ef">return&lt;/span> sections
+k8s &lt;span style="color:#f92672">=&lt;/span> with_docstring(KubernetesSegment(),
+&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;Return the current Kubernetes context and namespace.
+&lt;/span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;span style="color:#e6db74">It will show the current context and namespace from `$KUBECONFIG`.
+&lt;/span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;span style="color:#e6db74">Divider highlight group used: ``k8s:divider``.
+&lt;/span>&lt;span style="color:#e6db74">
+&lt;/span>&lt;span style="color:#e6db74">Highlight groups used: ``k8s``, ``k8s_context``, ``k8s_namespace``.
+&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;&lt;/span>)
+&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;Custom segment entry point.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;em>Make sure to add the &lt;a href="https://pypi.org/project/powerline-status">powerline-status&lt;/a>
+package as a dependency.&lt;/em>&lt;/p>
+&lt;p>Basically the class contains a function that returns a &lt;a href="https://powerline.readthedocs.io/en/latest/develop/segments.html#segment-dictionary">Segment dictionary&lt;/a>
+which tells &lt;code>Powerline&lt;/code> what to display. In this particular example, the
+following keys were used:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>contents&lt;/code>: Actual segment contents, excluding dividers and before/after.
+May be &lt;code>None&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>highlight_groups&lt;/code>, &lt;code>divider_highlight_group&lt;/code>: Used highlight groups.
+May be &lt;code>None&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>Highlight groups determine the &amp;lsquo;style&amp;rsquo; that is used for a particular segment
+e.g. background and foreground, divider color to clearly distinguish one segment
+from another.&lt;/p>
+&lt;p>The colors that are available to you will depend on the current colorscheme that
+you are using. In general you&amp;rsquo;ll need to add the &amp;ldquo;groups&amp;rdquo; definition to the
+colorscheme config file, which in this case was
+&lt;code>&amp;lt;powerline_dir&amp;gt;/colorschemes/solarized.json&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#f92672">&amp;#34;k8s&amp;#34;&lt;/span>: { &lt;span style="color:#f92672">&amp;#34;fg&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;solarized:blue&amp;#34;&lt;/span>, &lt;span style="color:#f92672">&amp;#34;bg&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;solarized:base02&amp;#34;&lt;/span>, &lt;span style="color:#f92672">&amp;#34;attrs&amp;#34;&lt;/span>: [] },
+&lt;span style="color:#f92672">&amp;#34;k8s:divider&amp;#34;&lt;/span>: { &lt;span style="color:#f92672">&amp;#34;fg&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;gray4&amp;#34;&lt;/span>, &lt;span style="color:#f92672">&amp;#34;bg&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;solarized:base02&amp;#34;&lt;/span>, &lt;span style="color:#f92672">&amp;#34;attrs&amp;#34;&lt;/span>: [] }
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Check out the Powerline docs for a more detailed view into
+&lt;a href="https://powerline.readthedocs.io/en/latest/configuration.html">configuration and customization&lt;/a>.&lt;/p>
+&lt;p>The next step is to let Powerline know of the new segment by adding it to the
+segment&amp;rsquo;s config file. To add the new segment to the current shell prompt, add
+the following entry to the &lt;code>&amp;lt;powerline_dir&amp;gt;/themes/shell/default.json&lt;/code> config
+file.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
+&lt;span style="color:#f92672">&amp;#34;function&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;k8s&amp;#34;&lt;/span>,
+&lt;span style="color:#f92672">&amp;#34;priority&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">30&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="installation">
+Installation
+&lt;a class="heading-link" href="#installation">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Once all configuration has been done it&amp;rsquo;s time to &amp;ldquo;install&amp;rdquo; the segment and try
+it out, you can do so by executing:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#960050;background-color:#1e0010">$&lt;/span> python3 &lt;span style="color:#f92672">-&lt;/span>m pip install &lt;span style="color:#f92672">--&lt;/span>editable &lt;span style="color:#f92672">.&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Installing the package in editable mode saves you from having to &amp;ldquo;re-install&amp;rdquo;
+to see the latest changes. If everything went well you should be able to see
+your new segment.&lt;/p>
+&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png" alt="">&lt;/p>
+&lt;h2 id="troubleshooting">
+Troubleshooting
+&lt;a class="heading-link" href="#troubleshooting">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Having issues with your plugin, try out the following:&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>Run &lt;code>powerline-lint&lt;/code> to check for errors in the configuration files i.e.
+colorscheme and/or segment config.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Restart powerline by running &lt;code>powerline-daemon --replace&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Configure logging with &lt;a href="https://powerline.readthedocs.io/en/master/develop/segments.html#powerlinelogger-class">PowerlineLogger&lt;/a>
+and &lt;a href="https://powerline.readthedocs.io/en/master/configuration/reference.html#config-common-log">where you want the logs to be written&lt;/a>
+for easier debugging.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>It is also worth checking out the &lt;a href="https://powerline.readthedocs.io/en/master/troubleshooting.html">Powerline docs&lt;/a> for other
+common issues that you may encounter.&lt;/p>
+&lt;h2 id="misc">
+Misc
+&lt;a class="heading-link" href="#misc">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Check out the full source on GitHub for the &lt;a href="https://github.com/j4ckofalltrades/powerline-k8s">powerline-k8s&lt;/a> plugin.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>If you want to share your custom Powerline segment, you might want to check
+out this guide about &lt;a href="https://jduabe.dev/posts/pypi-publish/">publishing packages to PyPI&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;/ul></description></item><item><title>Publishing to PyPI</title><link>https://jduabe.dev/posts/pypi-publish/</link><pubDate>Sun, 13 Jun 2021 22:08:53 +0800</pubDate><guid>https://jduabe.dev/posts/pypi-publish/</guid><description>&lt;p>This guide walks you through the necessary steps to upload your package to the
+🐍 Python Package Index (PyPI) with some recommendations along the way.&lt;/p>
+&lt;h2 id="dry-run-publishing-to-testpypi">
+Dry-run (Publishing to TestPyPI)
+&lt;a class="heading-link" href="#dry-run-publishing-to-testpypi">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>&lt;em>This step is optional but recommended.&lt;/em>&lt;/p>
+&lt;p>&lt;a href="https://test.pypi.org">TestPyPI&lt;/a> is a separate instance of the &lt;em>real&lt;/em> package
+index which is intended for testing and experimentation. This is a good way to
+test out your package before uploading to the real index.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Register an account for &lt;a href="https://test.pypi.org/account/register">TestPyPI&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a &lt;a href="https://test.pypi.org/manage/account/#api-tokens">TestPyPI API token&lt;/a>
+&amp;ndash; make sure to set the scope to &amp;ldquo;Entire account&amp;rdquo;&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Use &lt;a href="https://packaging.python.org/key_projects/#twine">twine&lt;/a> to upload your
+package&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install --upgrade twine
+&lt;span style="color:#75715e"># replace dist with the directory where your distribution archive is located&lt;/span>
+$ python3 -m twine upload --repository testpypi dist/*
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will be prompted for your TestPyPI username and password. Use the
+following values.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>username&lt;/th>
+&lt;th>password&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>__token__&lt;/code>&lt;/td>
+&lt;td>API token including the &lt;code>pypi-&lt;/code> prefix&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
+indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
+a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">[testpypi]
+username=__token__
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
+recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
+credentials such as API tokens and passwords. You can do so with:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ keyring set https://test.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the upload process has finished, you should be able to view your
+package on TestPyPI at &lt;a href="https://test.pypi.org/project/your-package-name">https://test.pypi.org/project/your-package-name&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Installing and testing out your package&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install &lt;span style="color:#ae81ff">\
+&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>--index-url https://test.pypi.org/simple/ --no-deps your-package
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the &lt;code>no-deps&lt;/code> flag is specified as one or more of your package&amp;rsquo;s
+dependencies might not be present in TestPyPI and may cause the installation
+to fail.&lt;/p>
+&lt;p>Once the installation has finished you can test it out by importing your
+package.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3
+&amp;gt;&amp;gt;&amp;gt; from example_package import your_function
+&amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span style="color:#f92672">()&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the import package will always be &lt;code>example_package&lt;/code> regardless of
+the &lt;code>name&lt;/code> you&amp;rsquo;ve configured for your package.&lt;/p>
+&lt;p>That&amp;rsquo;s it, you can now try and upload your package to the &lt;em>real&lt;/em> index.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="publishing-to-pypi">
+Publishing to PyPI
+&lt;a class="heading-link" href="#publishing-to-pypi">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The &lt;a href="#dry-run-publishing-to-testpypi">steps&lt;/a> are identical with how you would
+upload a package to TestPyPI. The main difference is that you&amp;rsquo;ll have to
+register an account and create an API token at &lt;a href="https://pypi.org">PyPI&lt;/a>, as the
+former is a separate instance of PyPI.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Register an account for &lt;a href="https://pypi.org/account/register">PyPI&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a &lt;a href="https://pypi.org/manage/account/#api-tokens">PyPI API token&lt;/a>
+&amp;ndash; make sure to set the scope to &amp;ldquo;Entire account&amp;rdquo;&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Use &lt;a href="https://packaging.python.org/key_projects/#twine">twine&lt;/a> to upload your
+package&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install --upgrade twine
+&lt;span style="color:#75715e"># replace dist with the directory where your distribution archive is located&lt;/span>
+$ python3 -m twine upload --repository pypi dist/*
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will be prompted for your PyPI username and password. Use the
+following values.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>username&lt;/th>
+&lt;th>password&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>__token__&lt;/code>&lt;/td>
+&lt;td>API token including the &lt;code>pypi-&lt;/code> prefix&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
+indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
+a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">[pypi]
+username=__token__
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
+recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
+credentials such as API tokens and passwords. You can do so with:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ keyring set https://upload.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>When the upload process finishes, you should be able to view your package
+on PyPI at &lt;a href="https://pypi.org/project/your-package-name">https://pypi.org/project/your-package-name&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Installing and testing out your package&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install your-package
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the installation has finished you can test it out by importing your
+package.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3
+&amp;gt;&amp;gt;&amp;gt; from example_package import your_function
+&amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span style="color:#f92672">()&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Congrats, you&amp;rsquo;ve successfully published your pacakge to PyPI. 🎉&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="bonus-automation-with-github-packages">
+Bonus: Automation with GitHub Packages
+&lt;a class="heading-link" href="#bonus-automation-with-github-packages">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>You&amp;rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
+Here&amp;rsquo;s how to set it up using GitHub Actions.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Create a &lt;a href="https://pypi.org/manage/account/#api-tokens">new PyPI API token&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add the API token as a secret to your target GitHub repository. You can find
+this under Settings &amp;gt; Secrets for your repo. Give the secret a name e.g.
+&lt;code>PYPI_API_TOKEN&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a GitHub action workflow file in your repo at
+&lt;code>.github/workflows/pypi-publish.yml&lt;/code> with the following contents:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Publish package to PyPI&lt;/span>
+&lt;span style="color:#f92672">on&lt;/span>:
+&lt;span style="color:#f92672">release&lt;/span>:
+&lt;span style="color:#f92672">types&lt;/span>: [&lt;span style="color:#ae81ff">created]&lt;/span>
+&lt;span style="color:#f92672">jobs&lt;/span>:
+&lt;span style="color:#f92672">build-n-publish&lt;/span>:
+&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build and publish to PyPI&lt;/span>
+&lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-18.04&lt;/span>
+&lt;span style="color:#f92672">steps&lt;/span>:
+- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@master&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Set up Python 3.7&lt;/span>
+&lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/setup-python@v1&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">python-version&lt;/span>: &lt;span style="color:#ae81ff">3.7&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Install pypa/build&lt;/span>
+&lt;span style="color:#f92672">run&lt;/span>: &amp;gt;-&lt;span style="color:#e6db74">
+&lt;/span>&lt;span style="color:#e6db74"> python -m
+&lt;/span>&lt;span style="color:#e6db74"> pip install
+&lt;/span>&lt;span style="color:#e6db74"> build
+&lt;/span>&lt;span style="color:#e6db74"> --user&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build a binary wheel and a source tarball&lt;/span>
+&lt;span style="color:#f92672">run&lt;/span>: &amp;gt;-&lt;span style="color:#e6db74">
+&lt;/span>&lt;span style="color:#e6db74"> python -m
+&lt;/span>&lt;span style="color:#e6db74"> build
+&lt;/span>&lt;span style="color:#e6db74"> --sdist
+&lt;/span>&lt;span style="color:#e6db74"> --wheel
+&lt;/span>&lt;span style="color:#e6db74"> --outdir dist/
+&lt;/span>&lt;span style="color:#e6db74"> .&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Publish package&lt;/span>
+&lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">pypa/gh-action-pypi-publish@release/v1&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">password&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.PYPI_API_TOKEN }}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>This workflow is triggered when a new release is created but you can also
+configure it to be triggered when a different event happens e.g. when a
+new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions">GitHub Actions documentation&lt;/a>
+for more configuration options.&lt;/p>
+&lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p>
+&lt;/li>
+&lt;/ol></description></item></channel></rss>

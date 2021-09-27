@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>hugo on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/hugo/</link><description>Recent content in hugo on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 01 Jun 2021 21:42:31 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>blog.init()</title><link>https://jduabe.dev/posts/blog-init/</link><pubDate>Tue, 01 Jun 2021 21:42:31 +0800</pubDate><guid>https://jduabe.dev/posts/blog-init/</guid><description>&lt;p>This is a short write-up of how I got this blog up and running. There&amp;rsquo;s a lot of
+options available out there &amp;ndash; from ready-to-go blogging platforms to building
+your own site with a static site generator &amp;ndash; I went with the latter option
+using &lt;a href="https://gohugo.io">Hugo&lt;/a> and hosting it on &lt;a href="https://pages.github.com">GitHub Pages&lt;/a>.&lt;/p>
+&lt;p>Being able to just write stuff in Markdown and not having to worry about styles
+and layouts (my design skills leave much to be desired) were the main reasons
+for going this route, not to mention the services you can use to host your blog
+for free.&lt;/p>
+&lt;p>Time to get started.&lt;/p>
+&lt;h2 id="acquiring-a-domain-name">
+Acquiring a domain name
+&lt;a class="heading-link" href="#acquiring-a-domain-name">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Arguably the hardest and most time-consuming step, usually a lot of back and
+forth going before you land on a domain name that you like and one that is
+available.&lt;/p>
+&lt;p>You&amp;rsquo;ll get one, eventually. 😄&lt;/p>
+&lt;h2 id="setting-up-a-github-repo">
+Setting up a GitHub repo
+&lt;a class="heading-link" href="#setting-up-a-github-repo">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The next step is setting up a GitHub repository that will house the content for
+the site and will be hosted directly from said repo.&lt;/p>
+&lt;p>To get started, create a &lt;a href="https://github.com/new">new repo on Github&lt;/a> with the
+name &lt;em>username&lt;/em>.github.io, where &lt;em>username&lt;/em> is your GitHub username i.e.
+&lt;em>j4ckofalltrades&lt;/em>.&lt;/p>
+&lt;p>&lt;em>If the first part of the repository doesn’t exactly match your username,
+it won’t work, so make sure to get it right.&lt;/em>&lt;/p>
+&lt;h2 id="linking-your-custom-domain-to-github-pages">
+Linking your custom domain to GitHub Pages
+&lt;a class="heading-link" href="#linking-your-custom-domain-to-github-pages">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The actual configuration will vary based on the domain name registrar that you
+used &amp;ndash; the following instructions are specific to &lt;a href="https://namecheap.com">Namecheap&lt;/a>.&lt;/p>
+&lt;p>Basically the following records need to be added to the custom domain:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>A&lt;/code> record for &lt;code>@&lt;/code> pointing to 185.199.108.153&lt;/li>
+&lt;li>&lt;code>A&lt;/code> record for &lt;code>@&lt;/code> pointing to 185.199.109.153&lt;/li>
+&lt;li>&lt;code>A&lt;/code> record for &lt;code>@&lt;/code> pointing to 185.199.110.153&lt;/li>
+&lt;li>&lt;code>A&lt;/code> record for &lt;code>@&lt;/code> pointing to 185.199.111.153&lt;/li>
+&lt;li>&lt;code>CNAME&lt;/code> record for &lt;code>www&lt;/code> pointing to your &lt;em>username&lt;/em>.github.io repo&lt;/li>
+&lt;/ul>
+&lt;p>The resulting config should look something like:&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Type&lt;/th>
+&lt;th>Host&lt;/th>
+&lt;th>Value&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>A&lt;/td>
+&lt;td>@&lt;/td>
+&lt;td>185.199.108.153&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>A&lt;/td>
+&lt;td>@&lt;/td>
+&lt;td>185.199.109.153&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>A&lt;/td>
+&lt;td>@&lt;/td>
+&lt;td>185.199.110.153&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>A&lt;/td>
+&lt;td>@&lt;/td>
+&lt;td>185.199.111.153&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>CNAME&lt;/td>
+&lt;td>www&lt;/td>
+&lt;td>&lt;em>username&lt;/em>.github.io&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;em>Normally, it takes around 30 minutes for newly-created records to take effect.&lt;/em>&lt;/p>
+&lt;h2 id="setting-up-hugo">
+Setting up Hugo
+&lt;a class="heading-link" href="#setting-up-hugo">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Install Hugo&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># on Linux distros with snapd support&lt;/span>
+$ snap install hugo
+&lt;span style="color:#75715e"># on Debian or Ubuntu&lt;/span>
+$ sudo apt-get install hugo
+&lt;span style="color:#75715e"># on Mac (using Homebrew)&lt;/span>
+$ brew install hugo
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Create new Hugo site and link to existing GitHub repo&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># replace username with your GitHub username&lt;/span>
+$ hugo new site username.github.io
+$ cd username.github.io
+$ git init
+$ git remote add &amp;lt;link_to_repo&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Adding a theme&lt;/p>
+&lt;p>There are tons to choose from at &lt;a href="https://themes.gohugo.io/">Hugo Themes&lt;/a>,
+this site uses &lt;a href="https://themes.gohugo.io/hugo-coder/">Coder&lt;/a>.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># add theme as a submodule to the hugo website&lt;/span>
+$ git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;li>
+&lt;p>Update site configuration&lt;/p>
+&lt;p>Update &lt;code>config.toml&lt;/code> using this &lt;a href="https://github.com/luizdepra/hugo-coder/wiki/Configurations#complete-example">sample config&lt;/a>
+as a guide.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add some content and run site locally&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># create first post&lt;/span>
+$ hugo new content/posts/first-post.md
+$ echo &lt;span style="color:#e6db74">&amp;#34;Hello World&amp;#34;&lt;/span> &amp;gt;&amp;gt; content/posts/hello-world.md
+&lt;span style="color:#75715e"># run site locally&lt;/span>
+$ hugo serve
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;p>The site should now be accessible at &lt;a href="http://localhost:1313/">http://localhost:1313/&lt;/a>.&lt;/p>
+&lt;h2 id="setting-up-a-publishing-workflow-with-github-actions">
+Setting up a publishing workflow with GitHub Actions
+&lt;a class="heading-link" href="#setting-up-a-publishing-workflow-with-github-actions">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Once everything looks good locally, the last step is to push the changes to the
+repo and publish the generated content. To automate the publish step, I used the
+&lt;a href="https://github.com/marketplace/actions/hugo-setup">Hugo Setup Action&lt;/a> and
+&lt;a href="https://github.com/marketplace/actions/github-pages-action#github-actions-for-github-pages">GitHub Actions for GitHub Pages&lt;/a>
+actions.&lt;/p>
+&lt;p>Doing so is as simple as creating a &lt;code>.github/workflows/gh-pages.yml&lt;/code> file in
+your repo with the following content:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">github pages&lt;/span>
+&lt;span style="color:#f92672">on&lt;/span>:
+&lt;span style="color:#f92672">push&lt;/span>:
+&lt;span style="color:#f92672">branches&lt;/span>:
+- &lt;span style="color:#ae81ff">main &lt;/span> &lt;span style="color:#75715e"># Set a branch to deploy&lt;/span>
+&lt;span style="color:#f92672">jobs&lt;/span>:
+&lt;span style="color:#f92672">deploy&lt;/span>:
+&lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-18.04&lt;/span>
+&lt;span style="color:#f92672">steps&lt;/span>:
+- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@v2&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">submodules&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span> &lt;span style="color:#75715e"># Fetch Hugo themes (true OR recursive)&lt;/span>
+&lt;span style="color:#f92672">fetch-depth&lt;/span>: &lt;span style="color:#ae81ff">0&lt;/span> &lt;span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Setup Hugo&lt;/span>
+&lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">peaceiris/actions-hugo@v2&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">hugo-version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;0.77.0&amp;#39;&lt;/span>
+&lt;span style="color:#f92672">extended&lt;/span>: &lt;span style="color:#66d9ef">true&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build&lt;/span>
+&lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">hugo --minify&lt;/span>
+- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Deploy&lt;/span>
+&lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">peaceiris/actions-gh-pages@v3&lt;/span>
+&lt;span style="color:#f92672">with&lt;/span>:
+&lt;span style="color:#f92672">github_token&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}&lt;/span>
+&lt;span style="color:#f92672">publish_dir&lt;/span>: &lt;span style="color:#ae81ff">./public&lt;/span>
+&lt;span style="color:#f92672">cname&lt;/span>: &lt;span style="color:#ae81ff">&amp;lt;custom_domain&amp;gt;&lt;/span> &lt;span style="color:#75715e"># your custom domain here&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>After you push your changes make sure to set the Source branch under your
+repo&amp;rsquo;s GitHub Pages settings to &lt;code>gh-pages&lt;/code> (default or to whatever you set as
+the &lt;code>publish_branch&lt;/code> ) as this is where the generated content is published.&lt;/p>
+&lt;p>&lt;em>Usually it takes a couple of hours for the DNS changes to propagate so don&amp;rsquo;t
+worry if your site isn&amp;rsquo;t up yet. Just chill for a bit then press &lt;code>F5&lt;/code> like a
+madman to see check if it has completed.&lt;/em>&lt;/p>
+&lt;p>That&amp;rsquo;s all there is to it, time to get blogging.&lt;/p></description></item></channel></rss>
