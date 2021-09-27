@@ -2,6 +2,13 @@
 title: "Writing a custom Powerline plugin"
 date: 2021-09-12T20:20:20+08:00
 draft: false
+categories:
+- dev
+tags:
+- kubernetes
+- powerline
+- pypi
+- python
 ---
 
 [Powerline](https://github.com/powerline/powerline) is a tool I use as part of

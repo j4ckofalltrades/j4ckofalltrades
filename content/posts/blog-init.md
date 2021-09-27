@@ -2,6 +2,11 @@
 title: "blog.init()"
 date: 2021-06-01T21:42:31+08:00
 draft: false
+categories:
+- dev
+tags:
+- github-pages
+- hugo
 ---
 
 This is a short write-up of how I got this blog up and running. There's a lot of

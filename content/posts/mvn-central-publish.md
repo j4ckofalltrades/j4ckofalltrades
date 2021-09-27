@@ -2,6 +2,13 @@
 title: "Publishing to Maven Central"
 date: 2021-07-25T15:38:23+08:00
 draft: false
+categories:
+- dev
+tags:
+- gradle
+- kotlin
+- ktor
+- ossrh
 ---
 
 This guide walks you through the necessary steps to upload your package to the 

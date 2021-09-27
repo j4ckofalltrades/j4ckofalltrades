@@ -2,6 +2,12 @@
 title: "Publishing to the npm registry"
 date: 2021-06-19T13:43:02+08:00
 draft: false
+categories:
+- dev
+tags:
+- javascript
+- npm
+- typescript
 ---
 
 This guide walks you through the necessary steps to upload your package to the

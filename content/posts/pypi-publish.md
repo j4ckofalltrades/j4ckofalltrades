@@ -2,6 +2,11 @@
 title: "Publishing to PyPI"
 date: 2021-06-13T22:08:53+08:00
 draft: false
+categories:
+- dev
+tags:
+- pypi
+- python
 ---
 
 This guide walks you through the necessary steps to upload your package to the

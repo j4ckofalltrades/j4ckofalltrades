@@ -1,13 +1,15 @@
 ---
-title: "Sofle V2"
+title: "Sofle v2"
 date: 2021-09-27T20:24:42+08:00
 draft: false
 categories:
 - keyboards
 tags:
-- split
 - ortholinear
 - sofle
+- split
+- qmk
+- via
 ---
 
 ## PCB and Switches
@@ -57,10 +59,9 @@ enables smoothness and good shrinking rates
 
 ## Firmware
 
-Modified version of default Via-compatible keymap with focus on adding a
-standard navigation cluster layer plus some Vim-inspired features e.g. soft
-escape (`Esc` when held, `Ctrl` when tapped), using `h`, `j`, `k`, `l` as arrow
-keys.
+QMK and Via compatible keymap with focus on adding a standard navigation cluster
+layer plus some Vim-inspired features e.g. soft escape (`Esc` when held, `Ctrl`
+when tapped), using `h`, `j`, `k`, `l` as arrow keys.
 
 **Layout**
 
