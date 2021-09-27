@@ -88,13 +88,13 @@ pygmentscodefencesguesssyntax = true
 
 # Menu links
 [[menu.main]]
-  name = "Blog"
+  name = "Profile"
   weight = 1
-  url  = "posts/"
+  url = "https://profile.jduabe.dev"
 [[menu.main]]
-  name = "About"
+  name = "Blog"
   weight = 2
-  url = "about/"
+  url  = "posts/"
 [[menu.main]]
   name = "Projects"
   weight = 3
