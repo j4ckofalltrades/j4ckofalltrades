@@ -1,6 +1,7 @@
 ---
 title: "Sofle v2"
 date: 2021-09-27T20:24:42+08:00
+description: Sofle v2 keyboard build
 draft: false
 categories:
 - keyboards
@@ -10,6 +11,8 @@ tags:
 - split
 - qmk
 - via
+images: 
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_400/v1631712479/keebs/sofle/sofle_t9qeaa.jpg
 ---
 
 ## PCB and Switches

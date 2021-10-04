@@ -1,5 +1,6 @@
 ---
 title: "Publishing to Maven Central"
+description: "Publishing to Maven Central"
 date: 2021-07-25T15:38:23+08:00
 draft: false
 categories:

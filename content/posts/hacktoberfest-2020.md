@@ -1,5 +1,6 @@
 ---
 title: "Hacktoberfest 2020 Retrospective"
+description: Hacktoberfest 2020 Retrospective
 date: 2021-01-23T12:50:21+08:00
 draft: false
 categories:

@@ -1,5 +1,6 @@
 ---
 title: "Publishing to PyPI"
+description: Guide for publishing packages to PyPI 
 date: 2021-06-13T22:08:53+08:00
 draft: false
 categories:

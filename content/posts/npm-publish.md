@@ -1,5 +1,6 @@
 ---
 title: "Publishing to the npm registry"
+description: Guide for publishing packages to the npm registry
 date: 2021-06-19T13:43:02+08:00
 draft: false
 categories:
