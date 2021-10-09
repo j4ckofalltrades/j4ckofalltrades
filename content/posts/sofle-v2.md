@@ -12,31 +12,25 @@ tags:
 - qmk
 - via
 images: 
-- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_400/v1631712479/keebs/sofle/sofle_t9qeaa.jpg
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_thumb,w_200,g_face/v1631712479/keebs/sofle/sofle_t9qeaa.jpg
 ---
 
-## PCB and Switches
-
-![pcb](https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745785/keebs/sofle/pcb_lks6a4.jpg)
-
-**PCB**
+![keeb](https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg)
 
 The [SofleKeyboard](https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html)
 is a 6×4+5 keys column-staggered split keyboard with encoder support. Based on
 the Lily58, Corne, and Helix keyboards.
 
-**Switches**
+## Build components
 
-[AEBoard Naevys](https://www.aeboards.com/naevy-switches) v1 (Tactile, lubed Krytox 205g0)
+**Switches**: AEBoard Naevy v1 (lubed Krytox 205g0)
 
-- Nylon bottom, PC top
-- MPE tactile stem
-- 58g spring
-- 3 pin
-
-## Keycaps
+**Keycaps**:  Katha Baybayin (KAT)
 
 <a>
+  <img align="center"
+    class="projects"
+    src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745785/keebs/sofle/pcb_lks6a4.jpg" />
   <img align="center"
     class="projects"
     src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745779/keebs/sofle/keycap3_iplas8.jpg" />
@@ -52,18 +46,12 @@ the Lily58, Corne, and Helix keyboards.
     src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745781/keebs/sofle/keycap2_l7acwc.jpg" />
 </a>
 
-**Katha Baybayin**
-
-- KAT profile
-- Smooth texture
-- 1.65mm thick PBT
-- Dye sublimated and reverse dye sublimated legends
-
 ## Firmware
 
-QMK and Via compatible keymap with focus on adding a standard navigation cluster
-layer plus some Vim-inspired features e.g. soft escape (`Esc` when held, `Ctrl`
-when tapped), using `h`, `j`, `k`, `l` as arrow keys.
+QMK and Via compatible [keymap](https://github.com/j4ckofalltrades/keebs/tree/master/sofle)
+with focus on adding a standard navigation cluster layer plus some Vim-inspired
+features e.g. soft escape (`Esc` when held, `Ctrl` when tapped), using `h`, `j`, `k`, `l`
+as arrow keys.
 
 **Layout**
 
@@ -90,7 +78,3 @@ View in [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/#/gists/a
 | Ctrl     | Right   | Brightness Up/Dn   |
 | Shift    | Left    | Mouse cursor L/R   |
 | Shift    | Right   | Mouse cursor Up/Dn |
-
-## Finished build
-
-![keeb](https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg)

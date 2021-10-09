@@ -9,7 +9,11 @@ tags:
 - javascript
 - npm
 - typescript
+images:
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_thumb,w_200,g_face/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png
 ---
+
+![npm](https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png)
 
 This guide walks you through the necessary steps to upload your package to the
 [npm registry](https://npmjs.com) with some recommendations along the way.

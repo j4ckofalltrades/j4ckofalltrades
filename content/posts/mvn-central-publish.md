@@ -10,7 +10,11 @@ tags:
 - kotlin
 - ktor
 - ossrh
+images:
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_thumb,w_200,g_face/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png
 ---
+
+![mvn](https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png)
 
 This guide walks you through the necessary steps to upload your package to the 
 [Maven Central](https://repo.maven.apache.org/maven2) repository (and optionally
