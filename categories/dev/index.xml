@@ -138,7 +138,8 @@ Misc
 &lt;p>If you want to share your custom Powerline segment, you might want to check
 out this guide about &lt;a href="https://jduabe.dev/posts/pypi-publish/">publishing packages to PyPI&lt;/a>.&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/mvn-central-publish/</guid><description>&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;/ul></description></item><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/mvn-central-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png" alt="mvn">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
 &lt;a href="https://repo.maven.apache.org/maven2">Maven Central&lt;/a> repository (and optionally
 to GitHub Packages registry) with some recommendations along the way.&lt;/p>
 &lt;h2 id="setup-ossrh-repository">
@@ -393,7 +394,8 @@ to your repository, you can find this under Settings &amp;gt; Secrets.&lt;/p>
 &lt;span style="color:#f92672">SIGNING_PASSWORD&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.SIGNING_PASSWORD }}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>The configuration samples used here can also be checked out in full at this &lt;a href="https://github.com/j4ckofalltrades/steam-webapi-kt">GitHub
 repository&lt;/a>.&lt;/p>
-&lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p></description></item><item><title>Publishing to the npm registry</title><link>https://jduabe.dev/posts/npm-publish/</link><pubDate>Sat, 19 Jun 2021 13:43:02 +0800</pubDate><guid>https://jduabe.dev/posts/npm-publish/</guid><description>&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p></description></item><item><title>Publishing to the npm registry</title><link>https://jduabe.dev/posts/npm-publish/</link><pubDate>Sat, 19 Jun 2021 13:43:02 +0800</pubDate><guid>https://jduabe.dev/posts/npm-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png" alt="npm">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
 &lt;a href="https://npmjs.com">npm registry&lt;/a> with some recommendations along the way.&lt;/p>
 &lt;h2 id="setup-npm-account">
 Setup npm account
@@ -501,7 +503,8 @@ new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions
 for more configuration options.&lt;/p>
 &lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Publishing to PyPI</title><link>https://jduabe.dev/posts/pypi-publish/</link><pubDate>Sun, 13 Jun 2021 22:08:53 +0800</pubDate><guid>https://jduabe.dev/posts/pypi-publish/</guid><description>&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;/ol></description></item><item><title>Publishing to PyPI</title><link>https://jduabe.dev/posts/pypi-publish/</link><pubDate>Sun, 13 Jun 2021 22:08:53 +0800</pubDate><guid>https://jduabe.dev/posts/pypi-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png" alt="pypi">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
 🐍 Python Package Index (PyPI) with some recommendations along the way.&lt;/p>
 &lt;h2 id="dry-run-publishing-to-testpypi">
 Dry-run (Publishing to TestPyPI)

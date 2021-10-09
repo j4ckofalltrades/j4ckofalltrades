@@ -138,7 +138,8 @@ Misc
 &lt;p>If you want to share your custom Powerline segment, you might want to check
 out this guide about &lt;a href="https://jduabe.dev/posts/pypi-publish/">publishing packages to PyPI&lt;/a>.&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Publishing to PyPI</title><link>https://jduabe.dev/posts/pypi-publish/</link><pubDate>Sun, 13 Jun 2021 22:08:53 +0800</pubDate><guid>https://jduabe.dev/posts/pypi-publish/</guid><description>&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;/ul></description></item><item><title>Publishing to PyPI</title><link>https://jduabe.dev/posts/pypi-publish/</link><pubDate>Sun, 13 Jun 2021 22:08:53 +0800</pubDate><guid>https://jduabe.dev/posts/pypi-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png" alt="pypi">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
 🐍 Python Package Index (PyPI) with some recommendations along the way.&lt;/p>
 &lt;h2 id="dry-run-publishing-to-testpypi">
 Dry-run (Publishing to TestPyPI)

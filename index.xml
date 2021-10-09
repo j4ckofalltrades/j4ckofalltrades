@@ -1,29 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/j4ckofalltrades</title><link>https://jduabe.dev/</link><description>Recent content on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Sep 2021 20:24:42 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Sofle v2</title><link>https://jduabe.dev/posts/sofle-v2/</link><pubDate>Mon, 27 Sep 2021 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/sofle-v2/</guid><description>&lt;h2 id="pcb-and-switches">
-PCB and Switches
-&lt;a class="heading-link" href="#pcb-and-switches">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
-&lt;/a>
-&lt;/h2>
-&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745785/keebs/sofle/pcb_lks6a4.jpg" alt="pcb">&lt;/p>
-&lt;p>&lt;strong>PCB&lt;/strong>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/j4ckofalltrades</title><link>https://jduabe.dev/</link><description>Recent content on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 27 Sep 2021 20:24:42 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Sofle v2</title><link>https://jduabe.dev/posts/sofle-v2/</link><pubDate>Mon, 27 Sep 2021 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/sofle-v2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg" alt="keeb">&lt;/p>
 &lt;p>The &lt;a href="https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html">SofleKeyboard&lt;/a>
 is a 6×4+5 keys column-staggered split keyboard with encoder support. Based on
 the Lily58, Corne, and Helix keyboards.&lt;/p>
-&lt;p>&lt;strong>Switches&lt;/strong>&lt;/p>
-&lt;p>&lt;a href="https://www.aeboards.com/naevy-switches">AEBoard Naevys&lt;/a> v1 (Tactile, lubed Krytox 205g0)&lt;/p>
-&lt;ul>
-&lt;li>Nylon bottom, PC top&lt;/li>
-&lt;li>MPE tactile stem&lt;/li>
-&lt;li>58g spring&lt;/li>
-&lt;li>3 pin&lt;/li>
-&lt;/ul>
-&lt;h2 id="keycaps">
-Keycaps
-&lt;a class="heading-link" href="#keycaps">
+&lt;h2 id="build-components">
+Build components
+&lt;a class="heading-link" href="#build-components">
 &lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
 &lt;/a>
 &lt;/h2>
+&lt;p>&lt;strong>Switches&lt;/strong>: AEBoard Naevy v1 (lubed Krytox 205g0)&lt;/p>
+&lt;p>&lt;strong>Keycaps&lt;/strong>: Katha Baybayin (KAT)&lt;/p>
 &lt;a>
+&lt;img align="center"
+class="projects"
+src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745785/keebs/sofle/pcb_lks6a4.jpg" />
 &lt;img align="center"
 class="projects"
 src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745779/keebs/sofle/keycap3_iplas8.jpg" />
@@ -38,22 +28,16 @@ src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632
 class="projects"
 src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745781/keebs/sofle/keycap2_l7acwc.jpg" />
 &lt;/a>
-&lt;p>&lt;strong>Katha Baybayin&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>KAT profile&lt;/li>
-&lt;li>Smooth texture&lt;/li>
-&lt;li>1.65mm thick PBT&lt;/li>
-&lt;li>Dye sublimated and reverse dye sublimated legends&lt;/li>
-&lt;/ul>
 &lt;h2 id="firmware">
 Firmware
 &lt;a class="heading-link" href="#firmware">
 &lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
 &lt;/a>
 &lt;/h2>
-&lt;p>QMK and Via compatible keymap with focus on adding a standard navigation cluster
-layer plus some Vim-inspired features e.g. soft escape (&lt;code>Esc&lt;/code> when held, &lt;code>Ctrl&lt;/code>
-when tapped), using &lt;code>h&lt;/code>, &lt;code>j&lt;/code>, &lt;code>k&lt;/code>, &lt;code>l&lt;/code> as arrow keys.&lt;/p>
+&lt;p>QMK and Via compatible &lt;a href="https://github.com/j4ckofalltrades/keebs/tree/master/sofle">keymap&lt;/a>
+with focus on adding a standard navigation cluster layer plus some Vim-inspired
+features e.g. soft escape (&lt;code>Esc&lt;/code> when held, &lt;code>Ctrl&lt;/code> when tapped), using &lt;code>h&lt;/code>, &lt;code>j&lt;/code>, &lt;code>k&lt;/code>, &lt;code>l&lt;/code>
+as arrow keys.&lt;/p>
 &lt;p>&lt;strong>Layout&lt;/strong>&lt;/p>
 &lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/a1f6519e723ad81ca151741b53a28b80">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/sofle/assets/soflekeyboard.png" alt="SofleKeyboard custom keymap">&lt;/p>
@@ -107,14 +91,7 @@ when tapped), using &lt;code>h&lt;/code>, &lt;code>j&lt;/code>, &lt;code>k&lt;/c
 &lt;td>Mouse cursor Up/Dn&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table>
-&lt;h2 id="finished-build">
-Finished build
-&lt;a class="heading-link" href="#finished-build">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
-&lt;/a>
-&lt;/h2>
-&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg" alt="keeb">&lt;/p></description></item><item><title>Writing a custom Powerline plugin</title><link>https://jduabe.dev/posts/powerline-plugin/</link><pubDate>Sun, 12 Sep 2021 20:20:20 +0800</pubDate><guid>https://jduabe.dev/posts/powerline-plugin/</guid><description>&lt;p>&lt;a href="https://github.com/powerline/powerline">Powerline&lt;/a> is a tool I use as part of
+&lt;/table></description></item><item><title>Writing a custom Powerline plugin</title><link>https://jduabe.dev/posts/powerline-plugin/</link><pubDate>Sun, 12 Sep 2021 20:20:20 +0800</pubDate><guid>https://jduabe.dev/posts/powerline-plugin/</guid><description>&lt;p>&lt;a href="https://github.com/powerline/powerline">Powerline&lt;/a> is a tool I use as part of
 my dev environment setup, and have my config backed up as part of my
 &lt;a href="https://github.com/j4ckofalltrades/dotfiles">dotfiles&lt;/a>.&lt;/p>
 &lt;p>It shows helpful information and context for stuff I&amp;rsquo;m working on, as well as
@@ -254,7 +231,8 @@ Misc
 &lt;p>If you want to share your custom Powerline segment, you might want to check
 out this guide about &lt;a href="https://jduabe.dev/posts/pypi-publish/">publishing packages to PyPI&lt;/a>.&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/mvn-central-publish/</guid><description>&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;/ul></description></item><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/mvn-central-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png" alt="mvn">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
 &lt;a href="https://repo.maven.apache.org/maven2">Maven Central&lt;/a> repository (and optionally
 to GitHub Packages registry) with some recommendations along the way.&lt;/p>
 &lt;h2 id="setup-ossrh-repository">
@@ -509,7 +487,8 @@ to your repository, you can find this under Settings &amp;gt; Secrets.&lt;/p>
 &lt;span style="color:#f92672">SIGNING_PASSWORD&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.SIGNING_PASSWORD }}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>The configuration samples used here can also be checked out in full at this &lt;a href="https://github.com/j4ckofalltrades/steam-webapi-kt">GitHub
 repository&lt;/a>.&lt;/p>
-&lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p></description></item><item><title>Publishing to the npm registry</title><link>https://jduabe.dev/posts/npm-publish/</link><pubDate>Sat, 19 Jun 2021 13:43:02 +0800</pubDate><guid>https://jduabe.dev/posts/npm-publish/</guid><description>&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p></description></item><item><title>Publishing to the npm registry</title><link>https://jduabe.dev/posts/npm-publish/</link><pubDate>Sat, 19 Jun 2021 13:43:02 +0800</pubDate><guid>https://jduabe.dev/posts/npm-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png" alt="npm">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
 &lt;a href="https://npmjs.com">npm registry&lt;/a> with some recommendations along the way.&lt;/p>
 &lt;h2 id="setup-npm-account">
 Setup npm account
@@ -617,7 +596,8 @@ new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions
 for more configuration options.&lt;/p>
 &lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Publishing to PyPI</title><link>https://jduabe.dev/posts/pypi-publish/</link><pubDate>Sun, 13 Jun 2021 22:08:53 +0800</pubDate><guid>https://jduabe.dev/posts/pypi-publish/</guid><description>&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;/ol></description></item><item><title>Publishing to PyPI</title><link>https://jduabe.dev/posts/pypi-publish/</link><pubDate>Sun, 13 Jun 2021 22:08:53 +0800</pubDate><guid>https://jduabe.dev/posts/pypi-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png" alt="pypi">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
 🐍 Python Package Index (PyPI) with some recommendations along the way.&lt;/p>
 &lt;h2 id="dry-run-publishing-to-testpypi">
 Dry-run (Publishing to TestPyPI)
