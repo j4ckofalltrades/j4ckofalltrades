@@ -9,7 +9,7 @@ tags:
 - pypi
 - python
 images:
-- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_thumb,w_200,g_face/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png
 ---
 
 ![pypi](https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png)

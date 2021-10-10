@@ -1,7 +1,7 @@
 ---
 title: "Sofle v2"
 date: 2021-09-27T20:24:42+08:00
-description: Sofle v2 keyboard build
+description: "Sofle v2 keyboard build"
 draft: false
 categories:
 - keyboards
@@ -12,7 +12,7 @@ tags:
 - qmk
 - via
 images: 
-- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_thumb,w_200,g_face/v1631712479/keebs/sofle/sofle_t9qeaa.jpg
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1631712479/keebs/sofle/sofle_t9qeaa.jpg
 ---
 
 ![keeb](https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg)
@@ -25,7 +25,7 @@ the Lily58, Corne, and Helix keyboards.
 
 **Switches**: AEBoard Naevy v1 (lubed Krytox 205g0)
 
-**Keycaps**:  Katha Baybayin (KAT)
+**Keycaps**: Katha Baybayin (KAT)
 
 <a>
   <img align="center"

@@ -11,7 +11,7 @@ tags:
 - ktor
 - ossrh
 images:
-- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_thumb,w_200,g_face/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png
 ---
 
 ![mvn](https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png)

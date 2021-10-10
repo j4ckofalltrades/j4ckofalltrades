@@ -10,7 +10,7 @@ tags:
 - npm
 - typescript
 images:
-- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_thumb,w_200,g_face/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png
 ---
 
 ![npm](https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png)
