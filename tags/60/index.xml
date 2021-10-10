@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>60% on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/60/</link><description>Recent content in 60% on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 10 Oct 2021 18:41:15 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/60/index.xml" rel="self" type="application/rss+xml"/><item><title>Anne Pro 2 (modded)</title><link>https://jduabe.dev/posts/annepro2/</link><pubDate>Sun, 10 Oct 2021 18:41:15 +0800</pubDate><guid>https://jduabe.dev/posts/annepro2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg" alt="">&lt;/p>
+&lt;h2 id="firmware">
+Firmware
+&lt;a class="heading-link" href="#firmware">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Modified version of default keymap plus some Vim-inspired features
+e.g. soft escape (Esc when held, Ctrl when tapped), and media controls.&lt;/p>
+&lt;p>Refer to &lt;a href="https://openannepro.github.io/install/">Open Anne Pro&lt;/a>
+for installation / flashing instructions.&lt;/p>
+&lt;p>&lt;strong>Layout&lt;/strong>&lt;/p>
+&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/f1c23fc1769c9bb0b1872d2272a1f268">Keyboard Layout Editor&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/anne-pro-2/assets/annepro2.png" alt="SofleKeyboard custom keymap">&lt;/p>
+&lt;p>&lt;strong>Features&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Mode for soft escape (&lt;code>Esc&lt;/code> when tapped, &lt;code>Ctrl&lt;/code> when held)&lt;/li>
+&lt;li>Toggling &lt;code>Ctrl&lt;/code> and &lt;code>Cmd&lt;/code> modifiers (Linux or Win vs Mac)&lt;/li>
+&lt;li>Media player controls&lt;/li>
+&lt;/ul></description></item></channel></rss>
