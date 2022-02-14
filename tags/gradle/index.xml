@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gradle on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/gradle/</link><description>Recent content in gradle on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 25 Jul 2021 15:38:23 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/gradle/index.xml" rel="self" type="application/rss+xml"/><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/mvn-central-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png" alt="mvn">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>gradle on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/gradle/</link><description>Recent content in gradle on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 25 Jul 2021 15:38:23 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/gradle/index.xml" rel="self" type="application/rss+xml"/><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/2021/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/2021/mvn-central-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png" alt="mvn">&lt;/p>
 &lt;p>This guide walks you through the necessary steps to upload your package to the
 &lt;a href="https://repo.maven.apache.org/maven2">Maven Central&lt;/a> repository (and optionally
 to GitHub Packages registry) with some recommendations along the way.&lt;/p>
@@ -219,7 +219,7 @@ which will close said staging repository.&lt;/p>
 &lt;p>The close operation will run a series of checks to ensure that the uploaded
 artifacts meet the &lt;a href="#configure-build-script">requirements&lt;/a>.&lt;/p>
 &lt;p>If the release was successful, you should be able to see your artifacts in the
-Central Repository at &lt;a href="https://repo1.maven.org/maven2/,">https://repo1.maven.org/maven2/,&lt;/a> typically within ~30
+Central Repository at &lt;a href="https://repo1.maven.org/maven2/">https://repo1.maven.org/maven2/&lt;/a> typically within ~30
 minutes. Updates to &lt;a href="https://search.maven.org">https://search.maven.org&lt;/a> can take up to a couple of hours.&lt;/p>
 &lt;h2 id="optional-automation-with-github-packages">
 (Optional) Automation with GitHub Packages
