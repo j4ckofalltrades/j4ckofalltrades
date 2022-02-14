@@ -252,7 +252,7 @@ The close operation will run a series of checks to ensure that the uploaded
 artifacts meet the [requirements](#configure-build-script).
 
 If the release was successful, you should be able to see your artifacts in the
-Central Repository at https://repo1.maven.org/maven2/, typically within ~30
+Central Repository at https://repo1.maven.org/maven2/ typically within ~30
 minutes. Updates to https://search.maven.org can take up to a couple of hours.
 
 ## (Optional) Automation with GitHub Packages

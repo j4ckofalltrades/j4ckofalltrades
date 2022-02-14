@@ -1,7 +1,7 @@
 ---
-title: "Anne Pro 2 (modded)"
+title: "Anne Pro 2"
 date: 2021-10-10T18:41:15+08:00
-description: "Modded Anne Pro 2 with QMK firmware"
+description: "Anne Pro 2 with QMK firmware"
 categories:
 images:
 tags:
@@ -11,6 +11,12 @@ draft: false
 ---
 
 ![](https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg)
+
+## Mods
+
+**Case**: 60% Wooden Case (Walnut)
+
+**Keycaps**: Light Gray and Milky Blanks (DSA)
 
 ## Firmware
 

@@ -2,20 +2,9 @@
 
 ## Jordan Duabe -- `@j4ckofalltrades`
 
-I’m a programmer, Linux geek, and command-line ninja from the 🇵🇭, currently based in 🇦🇺.
-
-The majority of my work experience has been writing code for web and mobile
-apps in a variety of programming languages and frameworks but I've also worked
-on DevOps-related stuff like setting up server environments and CI/CD pipelines.
-
-When I'm not writing code -- Im either playing DotA or gaming on the Switch,
-tinkering with Raspberry Pi's, or learning to play the ukulele.
-
-Outside of tech, I’m also into:
-
-- Mechanical keyboards ⌨️
-- Sneakers 👟
-- Alternative music scene 🤘 🎸 🥁
+- Programmer :computer:
+- Casual gamer :athletic_shoe:
+- Mechanical keyboard enthusiast :keyboard:
 
 ### :video_game: Now Playing 
 
