@@ -3,7 +3,7 @@
 ## Jordan Duabe -- `@j4ckofalltrades`
 
 - Programmer :computer:
-- Casual gamer :athletic_shoe:
+- Casual gamer :video_game:
 - Mechanical keyboard enthusiast :keyboard:
 
 ### :video_game: Now Playing 
