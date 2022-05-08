@@ -19,7 +19,7 @@ pygmentscodefencesguesssyntax = true
 
 [params]
   author = "Jordan Duabe"
-  info = "Software Engineer | Linux geek | Command-line ninja"
+  info = "Software Engineer | Casual gamer | Mechanical keyboard enthusiast"
   description = "Jordan Duabe's personal website and blog"
   keywords = "blog,programmer,personal"
   gravatar = "jordan.duabe@gmail.com"
@@ -27,7 +27,7 @@ pygmentscodefencesguesssyntax = true
   favicon_32 = "/img/favicon-32x32.png"
   favicon_16 = "/img/favicon-16x16.png"
 
-  hideFooter = false
+  hideFooter = true
   hideCredits = false
   hideCopyright = false
   since = 2020
@@ -37,7 +37,7 @@ pygmentscodefencesguesssyntax = true
   colorScheme = "auto"
   hidecolorschemetoggle = false
 
-  customCSS = ["/custom.css"]
+  customCSS = []
   customSCSS = []
   customJS = []
 
@@ -67,7 +67,7 @@ pygmentscodefencesguesssyntax = true
   name="StackOverflow"
   icon = "fa fa-stack-overflow fa-2x"
   weight = 4
-  url = "https://stackoverflow.com/users/story/6155561"
+  url = "https://stackoverflow.com/users/6155561/j4ckofalltrades?tab=profile"
 [[params.social]]
   name = "LinkedIn"
   icon = "fa fa-linkedin fa-2x"
@@ -95,7 +95,3 @@ pygmentscodefencesguesssyntax = true
   name = "Blog"
   weight = 2
   url  = "posts/"
-[[menu.main]]
-  name = "Projects"
-  weight = 3
-  url = "projects/"

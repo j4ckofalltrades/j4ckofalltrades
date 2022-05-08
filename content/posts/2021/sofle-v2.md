@@ -17,58 +17,30 @@ images:
 
 ![keeb](https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg)
 
-The [SofleKeyboard](https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html)
-is a 6×4+5 keys column-staggered split keyboard with encoder support. Based on
-the Lily58, Corne, and Helix keyboards.
+> The [SofleKeyboard](https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html)
+> is a 6×4+5 keys column-staggered split keyboard with encoder support. Based on the Lily58, Corne, and Helix keyboards.
 
-## Build components
+First time trying out ortholinear and split mechanical keyboards with this build.
 
-**Switches**: AEBoard Naevy v1 (lubed Krytox 205g0)
+I generally prefer tactile switches, so I went with **AEBoard Naevy v1**'s lubed with **Krytox 205g0** for this build.
+Tried out **Katha Baybayin** (KAT), and **Blank Ergo** (DSA) keycaps; both looked good but settled with the latter.
 
-**Keycaps**: Katha Baybayin (KAT)
+I think I spent more time messing around with my custom keymap than building the keyboard.
+Coming from mostly TKL layouts, it was going to take a bit of experimenting to find the
+sweet spot when dealing with fewer keys.
 
-<a>
-  <img align="center"
-    class="projects"
-    src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745785/keebs/sofle/pcb_lks6a4.jpg" />
-  <img align="center"
-    class="projects"
-    src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745779/keebs/sofle/keycap3_iplas8.jpg" />
-</a>
-<a>
-  <img align="center"
-    class="projects"
-    src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745779/keebs/sofle/keycap1_hvcq0v.jpg" />
-</a>
-<a>
-  <img align="center"
-    class="projects"
-    src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1632745781/keebs/sofle/keycap2_l7acwc.jpg" />
-</a>
+I settled on a layout not too far off from the default one, some notable additions were:
 
-## Firmware
-
-QMK and Via compatible [keymap](https://github.com/j4ckofalltrades/keebs/tree/master/sofle)
-with focus on adding a standard navigation cluster layer plus some Vim-inspired
-features e.g. soft escape (`Esc` when held, `Ctrl` when tapped), using `h`, `j`, `k`, `l`
-as arrow keys.
-
-**Layout**
-
-View in [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/#/gists/a1f6519e723ad81ca151741b53a28b80)
-
-![SofleKeyboard custom keymap](https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/sofle/assets/soflekeyboard.png)
-
-**Features**
-
-- Via support
 - Mode for soft escape (`Esc` when tapped, `Ctrl` when held) 
 - Vim-style navigation (`h` `j` `k` `l` as arrow keys)
 - Mode for standard navigation cluster
 - Toggling between layers when encoders are pressed
 - Encoder controls (additional layer/s when `Ctrl` or `Shift` is held)
 
-**Encoder controls**
+![SofleKeyboard custom keymap](https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/sofle-v2/assets/soflekeyboard.png)
+
+Aside from configuring the encoder actions (clockwise/counter-clockwise), it is also possible
+to add extra "layers" by combining them with modifiers. 
 
 | modifier | encoder | action             |
 | -------- | ------- | ------------------ |
@@ -78,3 +50,7 @@ View in [Keyboard Layout Editor](http://www.keyboard-layout-editor.com/#/gists/a
 | Ctrl     | Right   | Brightness Up/Dn   |
 | Shift    | Left    | Mouse cursor L/R   |
 | Shift    | Right   | Mouse cursor Up/Dn |
+
+One other area for tinkering is the OLED displays where you can show text, and even images e.g. [displaying your own logo](https://docs.qmk.fm/#/feature_oled_driver?id=logo-example).
+
+Check out the full custom keymap [here](https://github.com/j4ckofalltrades/keebs/tree/master/sofle-v2).
