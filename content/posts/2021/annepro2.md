@@ -1,5 +1,5 @@
 ---
-title: "Anne Pro 2"
+title: "Anne Pro 2 build"
 date: 2021-10-10T18:41:15+08:00
 description: "Anne Pro 2 with QMK firmware"
 categories:

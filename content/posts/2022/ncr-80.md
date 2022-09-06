@@ -1,5 +1,5 @@
 ---
-title: "NCR-80"
+title: "NCR-80 build"
 date: 2022-02-18T20:24:42+08:00
 description: "NCR-80 keyboard build"
 draft: false

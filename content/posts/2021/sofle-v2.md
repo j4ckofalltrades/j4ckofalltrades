@@ -1,5 +1,5 @@
 ---
-title: "Sofle v2"
+title: "Sofle v2 build"
 date: 2021-09-27T20:24:42+08:00
 description: "Sofle v2 keyboard build"
 draft: false

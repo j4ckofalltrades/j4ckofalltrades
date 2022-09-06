@@ -1,5 +1,5 @@
 --- 
-title: "Preonic"
+title: "Preonic build"
 date: 2022-02-13T20:12:42+08:00
 description: "OLKB Preonic keyboard build"
 draft: false
