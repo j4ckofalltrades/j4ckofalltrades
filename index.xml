@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/j4ckofalltrades</title><link>https://jduabe.dev/</link><description>Recent content on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Feb 2022 20:24:42 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>NCR-80</title><link>https://jduabe.dev/posts/2022/ncr-80/</link><pubDate>Fri, 18 Feb 2022 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2022/ncr-80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1645196848/keebs/ncr80/ncr-80_vnf9hq.jpg" alt="keeb">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/j4ckofalltrades</title><link>https://jduabe.dev/</link><description>Recent content on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 18 Feb 2022 20:24:42 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>NCR-80 build</title><link>https://jduabe.dev/posts/2022/ncr-80/</link><pubDate>Fri, 18 Feb 2022 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2022/ncr-80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1645196848/keebs/ncr80/ncr-80_vnf9hq.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;em>NCR-80 is a reimagination of the classic rebranded Cherry G81-3000 by NCR&lt;/em>&lt;/p>
 &lt;/blockquote>
@@ -13,7 +13,7 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;li>Vim-style arrow keys&lt;/li>
 &lt;li>Layers for Linux/Win and Mac&lt;/li>
 &lt;li>Home row modifiers e.g. &lt;code>MT(MOD_LCT , KC_A)&lt;/code>&lt;/li>
-&lt;/ul></description></item><item><title>Preonic</title><link>https://jduabe.dev/posts/2022/preonic/</link><pubDate>Sun, 13 Feb 2022 20:12:42 +0800</pubDate><guid>https://jduabe.dev/posts/2022/preonic/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1644727344/keebs/preonic/preonic_lmffaq.jpg" alt="keeb">&lt;/p>
+&lt;/ul></description></item><item><title>Preonic build</title><link>https://jduabe.dev/posts/2022/preonic/</link><pubDate>Sun, 13 Feb 2022 20:12:42 +0800</pubDate><guid>https://jduabe.dev/posts/2022/preonic/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1644727344/keebs/preonic/preonic_lmffaq.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>The original Preonic keyboard was praised for its build quality, compact form factor, and intuitive layout—and the new version is no different. However, this time around we&amp;rsquo;re offering the CNC-aluminum case in your choice of five colors, including the striking new purple colorway. What&amp;rsquo;s more, this version has a new ARM STM32 processor that provides more power to the PCBA and the USB-C connector. Another upgrade? The new Preonic has Kaihua hotswap sockets (which support grid 2x1u, 1x2u, and 2x2u bottom row layouts) so you can swap out your switches whenever you want without even picking up a soldering iron. Plus, If you’re new to keyboard kits, the compact Preonic is a great way to learn about keyboard programming.&lt;/p>
 &lt;/blockquote>
@@ -27,7 +27,7 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;li>Media player controls&lt;/li>
 &lt;/ul>
 &lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/da3d61376c9baa30491ca660bd1a2565">Keyboard Layout Editor&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/preonic/assets/preonic.png" alt="Preonic custom keymap">&lt;/p></description></item><item><title>ID80</title><link>https://jduabe.dev/posts/2022/id80/</link><pubDate>Sun, 23 Jan 2022 22:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2022/id80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1642946766/keebs/id80/id80_lxezxv.jpg" alt="keeb">&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/preonic/assets/preonic.png" alt="Preonic custom keymap">&lt;/p></description></item><item><title>ID80 build</title><link>https://jduabe.dev/posts/2022/id80/</link><pubDate>Sun, 23 Jan 2022 22:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2022/id80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1642946766/keebs/id80/id80_lxezxv.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.&lt;/p>
 &lt;/blockquote>
@@ -41,7 +41,7 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;ul>
 &lt;li>Soft escape (Esc when help, Ctrl when tapped)&lt;/li>
 &lt;li>Media controls on layer 1&lt;/li>
-&lt;/ul></description></item><item><title>Anne Pro 2</title><link>https://jduabe.dev/posts/2021/annepro2/</link><pubDate>Sun, 10 Oct 2021 18:41:15 +0800</pubDate><guid>https://jduabe.dev/posts/2021/annepro2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg" alt="">&lt;/p>
+&lt;/ul></description></item><item><title>Anne Pro 2 build</title><link>https://jduabe.dev/posts/2021/annepro2/</link><pubDate>Sun, 10 Oct 2021 18:41:15 +0800</pubDate><guid>https://jduabe.dev/posts/2021/annepro2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg" alt="">&lt;/p>
 &lt;h2 id="mods">
 Mods
 &lt;a class="heading-link" href="#mods">
@@ -68,7 +68,7 @@ for installation / flashing instructions.&lt;/p>
 &lt;li>Mode for soft escape (&lt;code>Esc&lt;/code> when tapped, &lt;code>Ctrl&lt;/code> when held)&lt;/li>
 &lt;li>Toggling &lt;code>Ctrl&lt;/code> and &lt;code>Cmd&lt;/code> modifiers (Linux or Win vs Mac)&lt;/li>
 &lt;li>Media player controls&lt;/li>
-&lt;/ul></description></item><item><title>Sofle v2</title><link>https://jduabe.dev/posts/2021/sofle-v2/</link><pubDate>Mon, 27 Sep 2021 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2021/sofle-v2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg" alt="keeb">&lt;/p>
+&lt;/ul></description></item><item><title>Sofle v2 build</title><link>https://jduabe.dev/posts/2021/sofle-v2/</link><pubDate>Mon, 27 Sep 2021 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2021/sofle-v2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>The &lt;a href="https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html">SofleKeyboard&lt;/a>
 is a 6×4+5 keys column-staggered split keyboard with encoder support. Based on the Lily58, Corne, and Helix keyboards.&lt;/p>
