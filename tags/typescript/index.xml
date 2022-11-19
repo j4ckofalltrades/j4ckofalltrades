@@ -56,7 +56,7 @@ Publishing to the npm registry
 &lt;p>If publishing a scoped public package, execute:&lt;/p>
 &lt;p>&lt;code>$ npm publish --access public&lt;/code>&lt;/p>
 &lt;p>When the publish process finishes, you should be able to see your public
-package page at &lt;a href="https://npmjs.com/package/your-package-name">https://npmjs.com/package/your-package-name&lt;/a>.&lt;/p>
+package page at npmjs.com/package/your-package-name.&lt;/p>
 &lt;p>Congrats, you&amp;rsquo;ve successfully published your package to the npm registry. 🎉&lt;/p>
 &lt;h2 id="bonus-automation-with-github-packages">
 Bonus: Automation with GitHub Packages

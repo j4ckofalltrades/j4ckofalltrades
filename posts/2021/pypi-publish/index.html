@@ -15,18 +15,18 @@ $ python3 -m twine upload --repository testpypi dist/*
 </code></pre></div><p>You will be prompted for your TestPyPI username and password. Use the
 following values.</p><table><thead><tr><th>username</th><th>password</th></tr></thead><tbody><tr><td><code>__token__</code></td><td>API token including the <code>pypi-</code> prefix</td></tr></tbody></table><p>Alternatively you can also use a <code>.pypirc</code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
-a <code>$HOME/.pypirc</code> file with the following contents:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>[testpypi]
-username=__token__
+a <code>$HOME/.pypirc</code> file with the following contents:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#f92672>[</span>testpypi<span style=color:#f92672>]</span>
+username<span style=color:#f92672>=</span>__token__
 </code></pre></div><p>You can also use the <code>password</code> field and paste in your API token but the
 recommended way is to use <code>keyring</code> (which is installed by Twine) for saving
-credentials such as API tokens and passwords. You can do so with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ keyring set https://test.pypi.org/legacy/ &lt;value_of_api_token&gt;
+credentials such as API tokens and passwords. You can do so with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>keyring set https://test.pypi.org/legacy/ &lt;value_of_api_token&gt;
 </code></pre></div><p>Once the upload process has finished, you should be able to view your
-package on TestPyPI at <a href=https://test.pypi.org/project/your-package-name>https://test.pypi.org/project/your-package-name</a>.</p></li><li><p>Installing and testing out your package</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ python3 -m pip install <span style=color:#ae81ff>\
+package on TestPyPI at <a href=https://test.pypi.org/project/your-package-name>https://test.pypi.org/project/your-package-name</a>.</p></li><li><p>Installing and testing out your package</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ python3 -m pip install <span style=color:#ae81ff>\
 </span><span style=color:#ae81ff></span>--index-url https://test.pypi.org/simple/ --no-deps your-package
 </code></pre></div><p>Note that the <code>no-deps</code> flag is specified as one or more of your package&rsquo;s
 dependencies might not be present in TestPyPI and may cause the installation
 to fail.</p><p>Once the installation has finished you can test it out by importing your
-package.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ python3
+package.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ python3
 &gt;&gt;&gt; from example_package import your_function
 &gt;&gt;&gt; your_function.do_something<span style=color:#f92672>()</span>
 </code></pre></div><p>Note that the import package will always be <code>example_package</code> regardless of
@@ -42,15 +42,15 @@ $ python3 -m twine upload --repository pypi dist/*
 </code></pre></div><p>You will be prompted for your PyPI username and password. Use the
 following values.</p><table><thead><tr><th>username</th><th>password</th></tr></thead><tbody><tr><td><code>__token__</code></td><td>API token including the <code>pypi-</code> prefix</td></tr></tbody></table><p>Alternatively you can also use a <code>.pypirc</code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
-a <code>$HOME/.pypirc</code> file with the following contents:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>[pypi]
-username=__token__
+a <code>$HOME/.pypirc</code> file with the following contents:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#f92672>[</span>pypi<span style=color:#f92672>]</span>
+username<span style=color:#f92672>=</span>__token__
 </code></pre></div><p>You can also use the <code>password</code> field and paste in your API token but the
 recommended way is to use <code>keyring</code> (which is installed by Twine) for saving
-credentials such as API tokens and passwords. You can do so with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ keyring set https://upload.pypi.org/legacy/ &lt;value_of_api_token&gt;
+credentials such as API tokens and passwords. You can do so with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>keyring set https://upload.pypi.org/legacy/ &lt;value_of_api_token&gt;
 </code></pre></div><p>When the upload process finishes, you should be able to view your package
-on PyPI at <a href=https://pypi.org/project/your-package-name>https://pypi.org/project/your-package-name</a></p></li><li><p>Installing and testing out your package</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ python3 -m pip install your-package
+on PyPI at <a href=https://pypi.org/project/your-package-name>https://pypi.org/project/your-package-name</a></p></li><li><p>Installing and testing out your package</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>python3 -m pip install your-package
 </code></pre></div><p>Once the installation has finished you can test it out by importing your
-package.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ python3
+package.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ python3
 &gt;&gt;&gt; from example_package import your_function
 &gt;&gt;&gt; your_function.do_something<span style=color:#f92672>()</span>
 </code></pre></div><p>Congrats, you&rsquo;ve successfully published your pacakge to PyPI. 🎉</p></li></ol><h2 id=bonus-automation-with-github-packages>Bonus: Automation with GitHub Packages

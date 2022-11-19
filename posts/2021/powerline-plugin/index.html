@@ -81,10 +81,10 @@ file.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;
 }
 </code></pre></div><h2 id=installation>Installation
 <a class=heading-link href=#installation><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Once all configuration has been done it&rsquo;s time to &ldquo;install&rdquo; the segment and try
-it out, you can do so by executing:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#960050;background-color:#1e0010>$</span> python3 <span style=color:#f92672>-</span>m pip install <span style=color:#f92672>--</span>editable <span style=color:#f92672>.</span>
+it out, you can do so by executing:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>python3 <span style=color:#f92672>-</span>m pip install <span style=color:#f92672>--</span>editable <span style=color:#f92672>.</span>
 </code></pre></div><p>Installing the package in editable mode saves you from having to &ldquo;re-install&rdquo;
 to see the latest changes. If everything went well you should be able to see
-your new segment.</p><p><img src=https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png alt></p><h2 id=troubleshooting>Troubleshooting
+your new segment.</p><p><img src=https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png alt=powerline-k8s></p><h2 id=troubleshooting>Troubleshooting
 <a class=heading-link href=#troubleshooting><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Having issues with your plugin, try out the following:</p><ul><li><p>Run <code>powerline-lint</code> to check for errors in the configuration files i.e.
 colorscheme and/or segment config.</p></li><li><p>Restart powerline by running <code>powerline-daemon --replace</code>.</p></li><li><p>Configure logging with <a href=https://powerline.readthedocs.io/en/master/develop/segments.html#powerlinelogger-class>PowerlineLogger</a>
 and <a href=https://powerline.readthedocs.io/en/master/configuration/reference.html#config-common-log>where you want the logs to be written</a>

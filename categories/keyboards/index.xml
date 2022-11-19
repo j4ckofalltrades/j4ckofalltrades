@@ -29,10 +29,8 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/da3d61376c9baa30491ca660bd1a2565">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/preonic/assets/preonic.png" alt="Preonic custom keymap">&lt;/p></description></item><item><title>ID80 build</title><link>https://jduabe.dev/posts/2022/id80/</link><pubDate>Sun, 23 Jan 2022 22:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2022/id80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1642946766/keebs/id80/id80_lxezxv.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
-&lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Featuring a seamless case design made from anodized aluminum, it also incorporates an integrated plate which holds switches in place. QMK programmable for custom key commands, and outfitted with a USB-C port for fast connectivity, this board is ready for work or play.&lt;/p>
+&lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.
+Featuring a seamless case design made from anodized aluminum, it also incorporates an integrated plate which holds switches in place. QMK programmable for custom key commands, and outfitted with a USB-C port for fast connectivity, this board is ready for work or play.&lt;/p>
 &lt;/blockquote>
 &lt;p>The 75% is a very popular keyboard layout, in part to its aesthetic and also functional &amp;ndash; just a tad bit wider than a 65% but with a full function row. The function row is especially enticing to me as most IDE shortcuts require function keys, and I don&amp;rsquo;t really use the arrow keys or the navigation cluster all that much.&lt;/p>
 &lt;p>I went for a clean, simple aesthetic for this build; an all black build with the aluminimum case and &lt;strong>ePBT Black on White&lt;/strong> keycaps.&lt;/p>

@@ -29,10 +29,8 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/da3d61376c9baa30491ca660bd1a2565">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/preonic/assets/preonic.png" alt="Preonic custom keymap">&lt;/p></description></item><item><title>ID80 build</title><link>https://jduabe.dev/posts/2022/id80/</link><pubDate>Sun, 23 Jan 2022 22:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2022/id80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1642946766/keebs/id80/id80_lxezxv.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
-&lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Featuring a seamless case design made from anodized aluminum, it also incorporates an integrated plate which holds switches in place. QMK programmable for custom key commands, and outfitted with a USB-C port for fast connectivity, this board is ready for work or play.&lt;/p>
+&lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.
+Featuring a seamless case design made from anodized aluminum, it also incorporates an integrated plate which holds switches in place. QMK programmable for custom key commands, and outfitted with a USB-C port for fast connectivity, this board is ready for work or play.&lt;/p>
 &lt;/blockquote>
 &lt;p>The 75% is a very popular keyboard layout, in part to its aesthetic and also functional &amp;ndash; just a tad bit wider than a 65% but with a full function row. The function row is especially enticing to me as most IDE shortcuts require function keys, and I don&amp;rsquo;t really use the arrow keys or the navigation cluster all that much.&lt;/p>
 &lt;p>I went for a clean, simple aesthetic for this build; an all black build with the aluminimum case and &lt;strong>ePBT Black on White&lt;/strong> keycaps.&lt;/p>
@@ -41,7 +39,7 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;ul>
 &lt;li>Soft escape (Esc when help, Ctrl when tapped)&lt;/li>
 &lt;li>Media controls on layer 1&lt;/li>
-&lt;/ul></description></item><item><title>Anne Pro 2 build</title><link>https://jduabe.dev/posts/2021/annepro2/</link><pubDate>Sun, 10 Oct 2021 18:41:15 +0800</pubDate><guid>https://jduabe.dev/posts/2021/annepro2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg" alt="">&lt;/p>
+&lt;/ul></description></item><item><title>Anne Pro 2 build</title><link>https://jduabe.dev/posts/2021/annepro2/</link><pubDate>Sun, 10 Oct 2021 18:41:15 +0800</pubDate><guid>https://jduabe.dev/posts/2021/annepro2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg" alt="kb">&lt;/p>
 &lt;h2 id="mods">
 Mods
 &lt;a class="heading-link" href="#mods">
@@ -60,10 +58,20 @@ Firmware
 e.g. soft escape (Esc when held, Ctrl when tapped), and media controls.&lt;/p>
 &lt;p>Refer to &lt;a href="https://openannepro.github.io/install/">Open Anne Pro&lt;/a>
 for installation / flashing instructions.&lt;/p>
-&lt;p>&lt;strong>Layout&lt;/strong>&lt;/p>
+&lt;h3 id="layout">
+Layout
+&lt;a class="heading-link" href="#layout">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
 &lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/f1c23fc1769c9bb0b1872d2272a1f268">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/anne-pro-2/assets/annepro2.png" alt="SofleKeyboard custom keymap">&lt;/p>
-&lt;p>&lt;strong>Features&lt;/strong>&lt;/p>
+&lt;h3 id="features">
+Features
+&lt;a class="heading-link" href="#features">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
 &lt;ul>
 &lt;li>Mode for soft escape (&lt;code>Esc&lt;/code> when tapped, &lt;code>Ctrl&lt;/code> when held)&lt;/li>
 &lt;li>Toggling &lt;code>Ctrl&lt;/code> and &lt;code>Cmd&lt;/code> modifiers (Linux or Win vs Mac)&lt;/li>
@@ -230,11 +238,11 @@ Installation
 &lt;/h2>
 &lt;p>Once all configuration has been done it&amp;rsquo;s time to &amp;ldquo;install&amp;rdquo; the segment and try
 it out, you can do so by executing:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#960050;background-color:#1e0010">$&lt;/span> python3 &lt;span style="color:#f92672">-&lt;/span>m pip install &lt;span style="color:#f92672">--&lt;/span>editable &lt;span style="color:#f92672">.&lt;/span>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">python3 &lt;span style="color:#f92672">-&lt;/span>m pip install &lt;span style="color:#f92672">--&lt;/span>editable &lt;span style="color:#f92672">.&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Installing the package in editable mode saves you from having to &amp;ldquo;re-install&amp;rdquo;
 to see the latest changes. If everything went well you should be able to see
 your new segment.&lt;/p>
-&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png" alt="powerline-k8s">&lt;/p>
 &lt;h2 id="troubleshooting">
 Troubleshooting
 &lt;a class="heading-link" href="#troubleshooting">
@@ -586,7 +594,7 @@ Publishing to the npm registry
 &lt;p>If publishing a scoped public package, execute:&lt;/p>
 &lt;p>&lt;code>$ npm publish --access public&lt;/code>&lt;/p>
 &lt;p>When the publish process finishes, you should be able to see your public
-package page at &lt;a href="https://npmjs.com/package/your-package-name">https://npmjs.com/package/your-package-name&lt;/a>.&lt;/p>
+package page at npmjs.com/package/your-package-name.&lt;/p>
 &lt;p>Congrats, you&amp;rsquo;ve successfully published your package to the npm registry. 🎉&lt;/p>
 &lt;h2 id="bonus-automation-with-github-packages">
 Bonus: Automation with GitHub Packages
@@ -683,25 +691,25 @@ following values.&lt;/p>
 &lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
 a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">[testpypi]
-username=__token__
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#f92672">[&lt;/span>testpypi&lt;span style="color:#f92672">]&lt;/span>
+username&lt;span style="color:#f92672">=&lt;/span>__token__
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
 recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
 credentials such as API tokens and passwords. You can do so with:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ keyring set https://test.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">keyring set https://test.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the upload process has finished, you should be able to view your
 package on TestPyPI at &lt;a href="https://test.pypi.org/project/your-package-name">https://test.pypi.org/project/your-package-name&lt;/a>.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Installing and testing out your package&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install &lt;span style="color:#ae81ff">\
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">$ python3 -m pip install &lt;span style="color:#ae81ff">\
 &lt;/span>&lt;span style="color:#ae81ff">&lt;/span>--index-url https://test.pypi.org/simple/ --no-deps your-package
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the &lt;code>no-deps&lt;/code> flag is specified as one or more of your package&amp;rsquo;s
 dependencies might not be present in TestPyPI and may cause the installation
 to fail.&lt;/p>
 &lt;p>Once the installation has finished you can test it out by importing your
 package.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">$ python3
 &amp;gt;&amp;gt;&amp;gt; from example_package import your_function
 &amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span style="color:#f92672">()&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the import package will always be &lt;code>example_package&lt;/code> regardless of
@@ -752,21 +760,21 @@ following values.&lt;/p>
 &lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
 a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">[pypi]
-username=__token__
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#f92672">[&lt;/span>pypi&lt;span style="color:#f92672">]&lt;/span>
+username&lt;span style="color:#f92672">=&lt;/span>__token__
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
 recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
 credentials such as API tokens and passwords. You can do so with:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ keyring set https://upload.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">keyring set https://upload.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>When the upload process finishes, you should be able to view your package
 on PyPI at &lt;a href="https://pypi.org/project/your-package-name">https://pypi.org/project/your-package-name&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Installing and testing out your package&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install your-package
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">python3 -m pip install your-package
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the installation has finished you can test it out by importing your
 package.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">$ python3
 &amp;gt;&amp;gt;&amp;gt; from example_package import your_function
 &amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span style="color:#f92672">()&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Congrats, you&amp;rsquo;ve successfully published your pacakge to PyPI. 🎉&lt;/p>
@@ -848,8 +856,8 @@ was a positive experience overall, and I look forward to joining this year&amp;r
 iteration.&lt;/p>
 &lt;p>Here are some of the projects I found interesting and contributed to (and still
 try to contribute to):&lt;/p>
-&lt;p>&lt;a href="https://github.com/trinodb/trino">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=trinodb&amp;amp;repo=trino&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/strongbox/strongbox">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=strongbox&amp;amp;repo=strongbox&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/oshi/oshi">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=oshi&amp;amp;repo=oshi&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/jayehernandez/letra-extension">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=jayehernandez&amp;amp;repo=letra-extension&amp;amp;theme=dark" alt="">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/trinodb/trino">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=trinodb&amp;amp;repo=trino&amp;amp;theme=dark" alt="trino">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/strongbox/strongbox">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=strongbox&amp;amp;repo=strongbox&amp;amp;theme=dark" alt="strongbox">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/oshi/oshi">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=oshi&amp;amp;repo=oshi&amp;amp;theme=dark" alt="oshi">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/jayehernandez/letra-extension">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=jayehernandez&amp;amp;repo=letra-extension&amp;amp;theme=dark" alt="letra-extension">&lt;/a>&lt;/p>
 &lt;p>Happy hacking!&lt;/p></description></item></channel></rss>

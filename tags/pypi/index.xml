@@ -96,11 +96,11 @@ Installation
 &lt;/h2>
 &lt;p>Once all configuration has been done it&amp;rsquo;s time to &amp;ldquo;install&amp;rdquo; the segment and try
 it out, you can do so by executing:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#960050;background-color:#1e0010">$&lt;/span> python3 &lt;span style="color:#f92672">-&lt;/span>m pip install &lt;span style="color:#f92672">--&lt;/span>editable &lt;span style="color:#f92672">.&lt;/span>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">python3 &lt;span style="color:#f92672">-&lt;/span>m pip install &lt;span style="color:#f92672">--&lt;/span>editable &lt;span style="color:#f92672">.&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Installing the package in editable mode saves you from having to &amp;ldquo;re-install&amp;rdquo;
 to see the latest changes. If everything went well you should be able to see
 your new segment.&lt;/p>
-&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png" alt="">&lt;/p>
+&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png" alt="powerline-k8s">&lt;/p>
 &lt;h2 id="troubleshooting">
 Troubleshooting
 &lt;a class="heading-link" href="#troubleshooting">
@@ -184,25 +184,25 @@ following values.&lt;/p>
 &lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
 a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">[testpypi]
-username=__token__
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#f92672">[&lt;/span>testpypi&lt;span style="color:#f92672">]&lt;/span>
+username&lt;span style="color:#f92672">=&lt;/span>__token__
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
 recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
 credentials such as API tokens and passwords. You can do so with:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ keyring set https://test.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">keyring set https://test.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the upload process has finished, you should be able to view your
 package on TestPyPI at &lt;a href="https://test.pypi.org/project/your-package-name">https://test.pypi.org/project/your-package-name&lt;/a>.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Installing and testing out your package&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install &lt;span style="color:#ae81ff">\
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">$ python3 -m pip install &lt;span style="color:#ae81ff">\
 &lt;/span>&lt;span style="color:#ae81ff">&lt;/span>--index-url https://test.pypi.org/simple/ --no-deps your-package
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the &lt;code>no-deps&lt;/code> flag is specified as one or more of your package&amp;rsquo;s
 dependencies might not be present in TestPyPI and may cause the installation
 to fail.&lt;/p>
 &lt;p>Once the installation has finished you can test it out by importing your
 package.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">$ python3
 &amp;gt;&amp;gt;&amp;gt; from example_package import your_function
 &amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span style="color:#f92672">()&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the import package will always be &lt;code>example_package&lt;/code> regardless of
@@ -253,21 +253,21 @@ following values.&lt;/p>
 &lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
 a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-fallback" data-lang="fallback">[pypi]
-username=__token__
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#f92672">[&lt;/span>pypi&lt;span style="color:#f92672">]&lt;/span>
+username&lt;span style="color:#f92672">=&lt;/span>__token__
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
 recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
 credentials such as API tokens and passwords. You can do so with:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ keyring set https://upload.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">keyring set https://upload.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>When the upload process finishes, you should be able to view your package
 on PyPI at &lt;a href="https://pypi.org/project/your-package-name">https://pypi.org/project/your-package-name&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Installing and testing out your package&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install your-package
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">python3 -m pip install your-package
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the installation has finished you can test it out by importing your
 package.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">$ python3
 &amp;gt;&amp;gt;&amp;gt; from example_package import your_function
 &amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span style="color:#f92672">()&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Congrats, you&amp;rsquo;ve successfully published your pacakge to PyPI. 🎉&lt;/p>

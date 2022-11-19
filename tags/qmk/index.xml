@@ -29,10 +29,8 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/da3d61376c9baa30491ca660bd1a2565">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/preonic/assets/preonic.png" alt="Preonic custom keymap">&lt;/p></description></item><item><title>ID80 build</title><link>https://jduabe.dev/posts/2022/id80/</link><pubDate>Sun, 23 Jan 2022 22:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2022/id80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1642946766/keebs/id80/id80_lxezxv.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
-&lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Featuring a seamless case design made from anodized aluminum, it also incorporates an integrated plate which holds switches in place. QMK programmable for custom key commands, and outfitted with a USB-C port for fast connectivity, this board is ready for work or play.&lt;/p>
+&lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.
+Featuring a seamless case design made from anodized aluminum, it also incorporates an integrated plate which holds switches in place. QMK programmable for custom key commands, and outfitted with a USB-C port for fast connectivity, this board is ready for work or play.&lt;/p>
 &lt;/blockquote>
 &lt;p>The 75% is a very popular keyboard layout, in part to its aesthetic and also functional &amp;ndash; just a tad bit wider than a 65% but with a full function row. The function row is especially enticing to me as most IDE shortcuts require function keys, and I don&amp;rsquo;t really use the arrow keys or the navigation cluster all that much.&lt;/p>
 &lt;p>I went for a clean, simple aesthetic for this build; an all black build with the aluminimum case and &lt;strong>ePBT Black on White&lt;/strong> keycaps.&lt;/p>
@@ -41,7 +39,7 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;ul>
 &lt;li>Soft escape (Esc when help, Ctrl when tapped)&lt;/li>
 &lt;li>Media controls on layer 1&lt;/li>
-&lt;/ul></description></item><item><title>Anne Pro 2 build</title><link>https://jduabe.dev/posts/2021/annepro2/</link><pubDate>Sun, 10 Oct 2021 18:41:15 +0800</pubDate><guid>https://jduabe.dev/posts/2021/annepro2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg" alt="">&lt;/p>
+&lt;/ul></description></item><item><title>Anne Pro 2 build</title><link>https://jduabe.dev/posts/2021/annepro2/</link><pubDate>Sun, 10 Oct 2021 18:41:15 +0800</pubDate><guid>https://jduabe.dev/posts/2021/annepro2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg" alt="kb">&lt;/p>
 &lt;h2 id="mods">
 Mods
 &lt;a class="heading-link" href="#mods">
@@ -60,10 +58,20 @@ Firmware
 e.g. soft escape (Esc when held, Ctrl when tapped), and media controls.&lt;/p>
 &lt;p>Refer to &lt;a href="https://openannepro.github.io/install/">Open Anne Pro&lt;/a>
 for installation / flashing instructions.&lt;/p>
-&lt;p>&lt;strong>Layout&lt;/strong>&lt;/p>
+&lt;h3 id="layout">
+Layout
+&lt;a class="heading-link" href="#layout">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
 &lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/f1c23fc1769c9bb0b1872d2272a1f268">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/anne-pro-2/assets/annepro2.png" alt="SofleKeyboard custom keymap">&lt;/p>
-&lt;p>&lt;strong>Features&lt;/strong>&lt;/p>
+&lt;h3 id="features">
+Features
+&lt;a class="heading-link" href="#features">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
 &lt;ul>
 &lt;li>Mode for soft escape (&lt;code>Esc&lt;/code> when tapped, &lt;code>Ctrl&lt;/code> when held)&lt;/li>
 &lt;li>Toggling &lt;code>Ctrl&lt;/code> and &lt;code>Cmd&lt;/code> modifiers (Linux or Win vs Mac)&lt;/li>

@@ -32,7 +32,7 @@ npm notice
 </code></pre></div><p>Additionally you can create a <code>.npmignore</code> file to exclude files that you don&rsquo;t
 want to publish to the registry.</p><h2 id=publishing-to-the-npm-registry>Publishing to the npm registry
 <a class=heading-link href=#publishing-to-the-npm-registry><i class="fa fa-link" aria-hidden=true></i></a></h2><p>In your package&rsquo;s root directory, execute:</p><p><code>$ npm publish</code></p><p>If publishing a scoped public package, execute:</p><p><code>$ npm publish --access public</code></p><p>When the publish process finishes, you should be able to see your public
-package page at <a href=https://npmjs.com/package/your-package-name>https://npmjs.com/package/your-package-name</a>.</p><p>Congrats, you&rsquo;ve successfully published your package to the npm registry. 🎉</p><h2 id=bonus-automation-with-github-packages>Bonus: Automation with GitHub Packages
+package page at npmjs.com/package/your-package-name.</p><p>Congrats, you&rsquo;ve successfully published your package to the npm registry. 🎉</p><h2 id=bonus-automation-with-github-packages>Bonus: Automation with GitHub Packages
 <a class=heading-link href=#bonus-automation-with-github-packages><i class="fa fa-link" aria-hidden=true></i></a></h2><p>You&rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
 Here&rsquo;s how to set it up using GitHub Actions.</p><ol><li><p>Create a <a href=https://docs.npmjs.com/creating-and-viewing-access-tokens>new npm access token</a></p></li><li><p>Add the access token as a secret to your target GitHub repository. You can
 find this under Settings > Secrets for your repo. Give the secret a name e.g.
