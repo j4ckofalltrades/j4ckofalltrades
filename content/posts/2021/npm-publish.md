@@ -33,7 +33,7 @@ This guide walks you through the necessary steps to upload your package to the
    $ npm whoami
    ```
 
-## Dry-run (Testing your package locally) 
+## Dry-run (Testing your package locally)
 
 Test out your package locally to ensure that everything works before publihsing
 it to the npm registry. You can do this by invoking `npm install` and providing
@@ -73,7 +73,7 @@ If publishing a scoped public package, execute:
 `$ npm publish --access public`
 
 When the publish process finishes, you should be able to see your public
-package page at https://npmjs.com/package/your-package-name.
+package page at npmjs.com/package/your-package-name.
 
 Congrats, you've successfully published your package to the npm registry. :tada:
 

@@ -29,7 +29,7 @@ plugin.
 ## Basic structure and configuration
 
 Each powerline segment is a callable object. It is supposed to be either a
-Python function or `powerline.segments.Segment` class. 
+Python function or `powerline.segments.Segment` class.
 
 I recently wrote my own custom one that displays the current Kubernetes
 context and namespace, which uses a `Segment` class. Here is a shortened version
@@ -129,14 +129,14 @@ Once all configuration has been done it's time to "install" the segment and try
 it out, you can do so by executing:
 
 ```python
-$ python3 -m pip install --editable .
+python3 -m pip install --editable .
 ```
 
 Installing the package in editable mode saves you from having to "re-install"
 to see the latest changes. If everything went well you should be able to see
 your new segment.
 
-![](https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png)
+![powerline-k8s](https://res.cloudinary.com/j4ckofalltrades/image/upload/v1623588713/foss/powerline-k8s_uc0cxj.png)
 
 ## Troubleshooting
 
@@ -155,7 +155,7 @@ for easier debugging.
 
 It is also worth checking out the [Powerline docs](
 https://powerline.readthedocs.io/en/master/troubleshooting.html) for other
-common issues that you may encounter. 
+common issues that you may encounter.
 
 ## Misc
 

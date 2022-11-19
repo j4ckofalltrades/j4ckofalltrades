@@ -17,7 +17,7 @@ images:
 This guide walks you through the necessary steps to upload your package to the
 :snake: Python Package Index (PyPI) with some recommendations along the way.
 
-## Dry-run (Publishing to TestPyPI) 
+## Dry-run (Publishing to TestPyPI)
 
 *This step is optional but recommended.*
 
@@ -43,24 +43,24 @@ package
     following values.
 
     | username    | password |
-    | ----------- | -------- | 
+    | ----------- | -------- |
     | `__token__` | API token including the `pypi-` prefix |
 
     Alternatively you can also use a `.pypirc` file to define your package
     indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
     a `$HOME/.pypirc` file with the following contents:
 
-    ```
+    ```shell
     [testpypi]
     username=__token__
     ```
-    
+
     You can also use the `password` field and paste in your API token but the
     recommended way is to use `keyring` (which is installed by Twine) for saving
     credentials such as API tokens and passwords. You can do so with:
 
-    ```sh
-    $ keyring set https://test.pypi.org/legacy/ <value_of_api_token>
+    ```shell
+    keyring set https://test.pypi.org/legacy/ <value_of_api_token>
     ```
 
     Once the upload process has finished, you should be able to view your
@@ -68,7 +68,7 @@ package
 
 4. Installing and testing out your package
 
-    ```sh
+    ```shell
     $ python3 -m pip install \
     --index-url https://test.pypi.org/simple/ --no-deps your-package
     ```
@@ -80,7 +80,7 @@ package
     Once the installation has finished you can test it out by importing your
     package.
 
-    ```sh
+    ```shell
     $ python3
     >>> from example_package import your_function
     >>> your_function.do_something()
@@ -116,39 +116,39 @@ package
     following values.
 
     | username    | password |
-    | ----------- | -------- | 
+    | ----------- | -------- |
     | `__token__` | API token including the `pypi-` prefix |
 
     Alternatively you can also use a `.pypirc` file to define your package
     indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
     a `$HOME/.pypirc` file with the following contents:
 
-    ```
+    ```shell
     [pypi]
     username=__token__
     ```
-    
+
     You can also use the `password` field and paste in your API token but the
     recommended way is to use `keyring` (which is installed by Twine) for saving
     credentials such as API tokens and passwords. You can do so with:
 
     ```sh
-    $ keyring set https://upload.pypi.org/legacy/ <value_of_api_token>
+    keyring set https://upload.pypi.org/legacy/ <value_of_api_token>
     ```
 
     When the upload process finishes, you should be able to view your package
     on PyPI at https://pypi.org/project/your-package-name
 
-5. Installing and testing out your package
+4. Installing and testing out your package
 
-    ```sh
-    $ python3 -m pip install your-package
+    ```shell
+    python3 -m pip install your-package
     ```
 
     Once the installation has finished you can test it out by importing your
     package.
 
-    ```sh
+    ```shell
     $ python3
     >>> from example_package import your_function
     >>> your_function.do_something()
@@ -211,7 +211,7 @@ this under Settings > Secrets for your repo. Give the secret a name e.g.
 
     This workflow is triggered when a new release is created but you can also
     configure it to be triggered when a different event happens e.g. when a
-    new tag gets pushed. Refer to the [GitHub Actions documentation](https://docs.github.com/en/actions) 
+    new tag gets pushed. Refer to the [GitHub Actions documentation](https://docs.github.com/en/actions)
     for more configuration options.
 
     That's it, time to get publishing.

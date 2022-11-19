@@ -34,12 +34,12 @@ iteration.
 Here are some of the projects I found interesting and contributed to (and still
 try to contribute to):
 
-[![](https://github-readme-stats.vercel.app/api/pin/?username=trinodb&repo=trino&theme=dark)](https://github.com/trinodb/trino)
+[![trino](https://github-readme-stats.vercel.app/api/pin/?username=trinodb&repo=trino&theme=dark)](https://github.com/trinodb/trino)
 
-[![](https://github-readme-stats.vercel.app/api/pin/?username=strongbox&repo=strongbox&theme=dark)](https://github.com/strongbox/strongbox)
+[![strongbox](https://github-readme-stats.vercel.app/api/pin/?username=strongbox&repo=strongbox&theme=dark)](https://github.com/strongbox/strongbox)
 
-[![](https://github-readme-stats.vercel.app/api/pin/?username=oshi&repo=oshi&theme=dark)](https://github.com/oshi/oshi)
+[![oshi](https://github-readme-stats.vercel.app/api/pin/?username=oshi&repo=oshi&theme=dark)](https://github.com/oshi/oshi)
 
-[![](https://github-readme-stats.vercel.app/api/pin/?username=jayehernandez&repo=letra-extension&theme=dark)](https://github.com/jayehernandez/letra-extension)
+[![letra-extension](https://github-readme-stats.vercel.app/api/pin/?username=jayehernandez&repo=letra-extension&theme=dark)](https://github.com/jayehernandez/letra-extension)
 
 Happy hacking!

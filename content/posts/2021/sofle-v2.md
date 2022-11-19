@@ -31,7 +31,7 @@ sweet spot when dealing with fewer keys.
 
 I settled on a layout not too far off from the default one, some notable additions were:
 
-- Mode for soft escape (`Esc` when tapped, `Ctrl` when held) 
+- Mode for soft escape (`Esc` when tapped, `Ctrl` when held)
 - Vim-style navigation (`h` `j` `k` `l` as arrow keys)
 - Mode for standard navigation cluster
 - Toggling between layers when encoders are pressed
@@ -40,7 +40,7 @@ I settled on a layout not too far off from the default one, some notable additio
 ![SofleKeyboard custom keymap](https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/sofle-v2/assets/soflekeyboard.png)
 
 Aside from configuring the encoder actions (clockwise/counter-clockwise), it is also possible
-to add extra "layers" by combining them with modifiers. 
+to add extra "layers" by combining them with modifiers.
 
 | modifier | encoder | action             |
 | -------- | ------- | ------------------ |
