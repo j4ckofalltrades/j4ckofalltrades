@@ -74,9 +74,15 @@ pygmentscodefencesguesssyntax = true
   weight = 5
   url = "https://twitter.com/j4kofalltrades"
 [[params.social]]
+  name = "Mastodon"
+  icon = "fa fa-mastodon fa-2x"
+  weight = 6
+  rel = "me"
+  url = "https://fosstodon.org/@j4ckofalltrades"
+[[params.social]]
   name = "RSS"
   icon = "fa fa-rss"
-  weight = 6
+  weight = 7
   url = "https://jduabe.dev/index.xml"
   rel = "alternate"
   type = "application/rss+xml"
