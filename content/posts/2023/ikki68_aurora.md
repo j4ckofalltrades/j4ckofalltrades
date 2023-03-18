@@ -23,13 +23,17 @@ images:
 
 This board is great bang for your buck, with a lot of configuration options with regards to mounting points -- it also has custom badges for more personalization.
 
-Keyboard layout is a standard 65%, with some common customizations I configured for most of my other boards:
+For this build I used some **Akko Diced Fruit Kiwi** switches that I won from a raffle at a meetup I attended from a while back. The switches came lubed and filmed, so that saved me a fair chunk of time. I really like the feel of these switches, very smooth to type on yet still being tactile -- you still feel that *bump* that let's you know your keypress has been registered.
+
+As for the keycaps, the **DCS Solarized Dark** really fits in well with the blue polycarbonate case. I'm a big fan of the color theme, and just had to get these -- one thing to note is that the keycaps are quite a bit thinner than the others that I have used though the overall look and feel is good.
+
+Keyboard layout is a standard-ish 65%, with some common customizations I configured for most of my other boards:
 
 - `Caps Lock` remapped as soft escape (Esc when held, Ctrl when tapped)
 - Vim-style arrow keys
 - Media player controls
 
-As well as home-row modifiers which I've adopted to all my other boards (since building the NCR-80).
+As well as home-row modifiers which I've adopted to all my other boards (since building the [NCR-80](/posts/2022/ncr-80)).
 
 ```bash
 # left side modifiers
