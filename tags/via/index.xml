@@ -5,13 +5,15 @@
 &lt;p>The Aurora uses a variable gasket structure where you can choose how many mounting points to use in order to adjust the amount of bounce / firmness to your liking. You can also customize the keyboard with one of many extra badge designs in several different colors!&lt;/p>
 &lt;/blockquote>
 &lt;p>This board is great bang for your buck, with a lot of configuration options with regards to mounting points &amp;ndash; it also has custom badges for more personalization.&lt;/p>
-&lt;p>Keyboard layout is a standard 65%, with some common customizations I configured for most of my other boards:&lt;/p>
+&lt;p>For this build I used some &lt;strong>Akko Diced Fruit Kiwi&lt;/strong> switches that I won from a raffle at a meetup I attended from a while back. The switches came lubed and filmed, so that saved me a fair chunk of time. I really like the feel of these switches, very smooth to type on yet still being tactile &amp;ndash; you still feel that &lt;em>bump&lt;/em> that let&amp;rsquo;s you know your keypress has been registered.&lt;/p>
+&lt;p>As for the keycaps, the &lt;strong>DCS Solarized Dark&lt;/strong> really fits in well with the blue polycarbonate case. I&amp;rsquo;m a big fan of the color theme, and just had to get these &amp;ndash; one thing to note is that the keycaps are quite a bit thinner than the others that I have used though the overall look and feel is good.&lt;/p>
+&lt;p>Keyboard layout is a standard-ish 65%, with some common customizations I configured for most of my other boards:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>Caps Lock&lt;/code> remapped as soft escape (Esc when held, Ctrl when tapped)&lt;/li>
 &lt;li>Vim-style arrow keys&lt;/li>
 &lt;li>Media player controls&lt;/li>
 &lt;/ul>
-&lt;p>As well as home-row modifiers which I&amp;rsquo;ve adopted to all my other boards (since building the NCR-80).&lt;/p>
+&lt;p>As well as home-row modifiers which I&amp;rsquo;ve adopted to all my other boards (since building the &lt;a href="https://jduabe.dev/posts/2022/ncr-80">NCR-80&lt;/a>).&lt;/p>
 &lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># left side modifiers&lt;/span>
 MT&lt;span style="color:#f92672">(&lt;/span>MOD_LCTL, KC_S&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LGUI, KC_D&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LALT, KC_F&lt;span style="color:#f92672">)&lt;/span>
 &lt;span style="color:#75715e"># right side modifiers&lt;/span>
