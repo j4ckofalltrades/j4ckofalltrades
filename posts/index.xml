@@ -1,4 +1,67 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on /home/j4ckofalltrades</title><link>https://jduabe.dev/posts/</link><description>Recent content in Posts on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 18 Feb 2023 12:21:19 +0800</lastBuildDate><atom:link href="https://jduabe.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Ikki68 Aurora build</title><link>https://jduabe.dev/posts/2023/ikki68_aurora/</link><pubDate>Sat, 18 Feb 2023 12:21:19 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ikki68_aurora/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1676740613/keebs/ikki68_aurora_xa8pcq.jpg" alt="keeb">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on /home/j4ckofalltrades</title><link>https://jduabe.dev/posts/</link><description>Recent content in Posts on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 25 Apr 2023 17:16:02 +0800</lastBuildDate><atom:link href="https://jduabe.dev/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>NCR-80 QMK/VIA firmware</title><link>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</link><pubDate>Tue, 25 Apr 2023 17:16:02 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</guid><description>&lt;p>Built the &lt;a href="https://jduabe.dev/posts/2022/ncr-80">NCR-80&lt;/a> last year, great-looking board especially if you like the
+retro aesthetic, and is a pleasure to type on.&lt;/p>
+&lt;p>One thing I did notice was that the product listing points to a Google Drive link to the pre-compiled &lt;a href="https://drive.google.com/drive/folders/1e3mjUg-N15SFVrExlBiI01-XOKpPm9ry?usp=sharing">QMK and VIA firmware&lt;/a>,
+but it hasn&amp;rsquo;t been added to the QMK and VIA repositories. I thought this would be a good weekend project (&lt;strong>Spoiler&lt;/strong>: it took longer than a weekend).&lt;/p>
+&lt;p>I wrote the steps of how I got it done (the steps also apply to any keyboard firmware).&lt;/p>
+&lt;h2 id="converting-kbfirmware-json-to-qmk">
+Converting KBFirmware JSON to QMK
+&lt;a class="heading-link" href="#converting-kbfirmware-json-to-qmk">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The starting point is to convert the KBFirmware JSON from the provided &amp;ldquo;QMK&amp;rdquo; files from the product listing, and then
+converting them to QMK formatted files.&lt;/p>
+&lt;p>There are a couple of tools that can be used for this purpose:&lt;/p>
+&lt;ul>
+&lt;li>Recommended: &lt;a href="https://noroadsleft.github.io/kbf_qmk_converter">KBFirmware JSON to QMK Parser&lt;/a>&lt;/li>
+&lt;li>Deprecated: &lt;a href="https://kbfirmware.com">Keyboard Firmware Builder&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>The resulting files will be the base of the QMK firmware for the keyboard.&lt;/p>
+&lt;h2 id="creating-a-qmk-pull-request">
+Creating a QMK pull request
+&lt;a class="heading-link" href="#creating-a-qmk-pull-request">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Make sure to read the &lt;a href="https://docs.qmk.fm/#/contributing?id=keyboards">contribution guide&lt;/a> as a first step.
+It is also a good idea to check out other supported keyboard firmware to get a feel for the directory structure, and conventions in use.&lt;/p>
+&lt;p>A keyboard firmware folder (simplified example) should look something like:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">mt
+|-- ncr80
+| |-- keymaps
+| |-- default
+| |-- keymap.c
+|-- info.json
+|-- readme.md
+&lt;span style="color:#e6db74">`&lt;/span>-- rules.mk
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>In cases where keyboards have multiple versions or revisions e.g. rev1, rev2 or hotswap/soldered, the directory structure
+will look different; refer to QMK&amp;rsquo;s contribution guide linked above.&lt;/p>
+&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/qmk/qmk_firmware/pull/19130">[Keyboard] Add NCR-80&lt;/a>&lt;/p>
+&lt;h2 id="creating-a-via-pull-request">
+Creating a VIA pull request
+&lt;a class="heading-link" href="#creating-a-via-pull-request">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>In order to add VIA support for a keyboard, it is required to enable the VIA feature in QMK, and adding a &lt;code>via&lt;/code>-compatible
+keymap for the keyboard. You can check out the QMK pull request linked above; look for the &lt;code>keymaps/via&lt;/code> directory.&lt;/p>
+&lt;p>Read the VIA docs for &lt;a href="https://www.caniusevia.com/docs/configuring_qmk">configuring QMK&lt;/a> for a more in-depth guide.
+I also recommend reading about the &lt;a href="https://www.caniusevia.com/docs/specification">VIA spec&lt;/a>.&lt;/p>
+&lt;p>It is also required to have the QMK pull request merged in before contributing to the VIA repository.&lt;/p>
+&lt;h2 id="via-v2-vs-v3-definitions">
+VIA V2 vs V3 definitions
+&lt;a class="heading-link" href="#via-v2-vs-v3-definitions">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>It is basically just a matter of copying the VIA &lt;code>json&lt;/code> files from the Drive link referenced at the start of this post.
+The main difference here is the location of the definitions depend on the version; &lt;code>V2&lt;/code> definitions are located in the
+&lt;code>src/&amp;lt;manufacturer&amp;gt;/&amp;lt;keyboard&amp;gt;&lt;/code> directory while the &lt;code>V3&lt;/code> definitions are in the &lt;code>v3/&amp;lt;manufacturer&amp;gt;/&amp;lt;keyboard&amp;gt;&lt;/code>.&lt;/p>
+&lt;p>If you have a &lt;code>V2&lt;/code> definition, you can convert it a &lt;code>V3&lt;/code> definition by running the &lt;code>scripts/build-all.ts&lt;/code> file in the
+&lt;a href="https://github.com/the-via/keyboards">via keyboards&lt;/a> repository.&lt;/p>
+&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/the-via/keyboards/pull/1548">Add support for NCR-80&lt;/a>&lt;/p>
+&lt;p>That&amp;rsquo;s it, once the pull request gets merged VIA should be able to detect your keyboard.&lt;/p>
+&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1676107180/keebs/ncr80/ncr-80-via_hlgb5c.png" alt="VIA NCR-80">&lt;/p></description></item><item><title>Ikki68 Aurora build</title><link>https://jduabe.dev/posts/2023/ikki68_aurora/</link><pubDate>Sat, 18 Feb 2023 12:21:19 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ikki68_aurora/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1676740613/keebs/ikki68_aurora_xa8pcq.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>Ikki68 Aurora is an affordable, injection molded, polycarbonate case, gasket-mount keyboard kit from Wuque Studio, the people behind Ikki68, OA Switches and more!&lt;/p>
 &lt;p>Every Aurora comes with a multi-layout, hot swap PCB powered by QMK and VIA. You can choose any or all of the following: split backspace, split right shift, split left shift, split spacebars and ISO enter&amp;hellip;no soldering required!&lt;/p>
