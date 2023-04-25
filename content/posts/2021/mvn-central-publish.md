@@ -16,13 +16,13 @@ images:
 
 ![mvn](https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png)
 
-This guide walks you through the necessary steps to upload your package to the 
+This guide walks you through the necessary steps to upload your package to the
 [Maven Central](https://repo.maven.apache.org/maven2) repository (and optionally
 to GitHub Packages registry) with some recommendations along the way.
 
 ## Setup OSSRH Repository
 
-- Sign up for a [new account](https://issues.sonatype.org/secure/Signup!default.jspa) 
+- Sign up for a [new account](https://issues.sonatype.org/secure/Signup!default.jspa)
 - Create a [new project ticket](https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&pid=10134)
 - Claim your namespace by setting the `groupId` for your artifact
 
@@ -35,7 +35,7 @@ to GitHub Packages registry) with some recommendations along the way.
   `groupId: com.your-custom-domain`
 
   You will also need to prove ownership of the public repository or the custom
-  domain. For the former you will be asked to create an empty repository using 
+  domain. For the former you will be asked to create an empty repository using
   the ticket number for your created OSSRH ticket e.g. `OSSRH-73148`; for the
   latter you'll need to add a `TXT` record linked to the OSSRH ticket that was
   created to register your `groupId`.
@@ -49,7 +49,7 @@ You'll need to generate a key pair and distribute it to a known key server
 (so that others can validate it).
 
 The following examples show how to do this with [GPG](https://gnupg.org); you
-can [download](https://gnupg.org) or install it using your package manager if 
+can [download](https://gnupg.org) or install it using your package manager if
 it is not already available in your machine.
 
 To generate a key pair, run:
@@ -73,7 +73,7 @@ $ gpg --list-keys
 $ gpg --keyserver keyserver.ubuntu.com --send-keys <your_key_here>
 ```
 
-To check that your key was successfully uploaded, you can search for it at 
+To check that your key was successfully uploaded, you can search for it at
 https://keyserver.ubuntu.com using your public key (and prepending '0x' to it).
 
 Other supported key servers are `keys.openpgp.org`, and `pgp.mit.edu`.
@@ -220,7 +220,7 @@ signing {
 ## Publishing artifacts
 
 The configuration above uses the [in-memory ascii-armored keys](
-https://docs.gradle.org/current/userguide/signing_plugin.html#sec:in-memory-keys]) 
+https://docs.gradle.org/current/userguide/signing_plugin.html#sec:in-memory-keys])
 approach for signing artifacts. Check out the docs for the [Gradle Signing
 Plugin](https://docs.gradle.org/current/userguide/signing_plugin.html) to find
 out what best suits your use case.
