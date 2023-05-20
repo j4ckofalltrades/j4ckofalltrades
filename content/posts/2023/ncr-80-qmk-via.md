@@ -53,7 +53,7 @@ mt
 In cases where keyboards have multiple versions or revisions e.g. rev1, rev2 or hotswap/soldered, the directory structure
 will look different; refer to QMK's contribution guide linked above.
 
-Link to the pull request on GitHub for reference: [[Keyboard] Add NCR-80](https://github.com/qmk/qmk_firmware/pull/19130)
+Link to the pull request on GitHub for reference: [\[Keyboard\] Add NCR-80](https://github.com/qmk/qmk_firmware/pull/19130)
 
 ## Creating a VIA pull request
 
