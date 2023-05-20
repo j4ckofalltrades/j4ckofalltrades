@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bash on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/bash/</link><description>Recent content in bash on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 20 May 2023 13:22:32 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>Programatically invoking JetBrains IDE actions</title><link>https://jduabe.dev/posts/2023/jetbrains-ide-actions/</link><pubDate>Sat, 20 May 2023 13:22:32 +0800</pubDate><guid>https://jduabe.dev/posts/2023/jetbrains-ide-actions/</guid><description>&lt;p>I&amp;rsquo;ve had a Stream Deck for a while now but haven&amp;rsquo;t really configured it
+for any coding related workflows. I use several JetBrains IDEs for work and
+personal use (Intellij, PyCharm, WebStorm to name a few), so I started looking
+into what the possible options were.&lt;/p>
+&lt;p>The simplest solution would be to just invoke keyboard shortcut for a specific
+but the downside of this approach is you can only have so much keycodes assigned
+(which may conflict with system shortcuts and possibly other apps), not to
+mention you&amp;rsquo;d have to change these when you switched keymaps or used another
+operating system.&lt;/p>
+&lt;p>Ideally there would be a command where you can provide an &lt;em>action&lt;/em> to the IDE,
+possibly through a plugin.&lt;/p>
+&lt;h2 id="ide-scripting-console">
+IDE Scripting Console
+&lt;a class="heading-link" href="#ide-scripting-console">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>While reading through the Intellij documentation, I
+stumbled upon the &lt;a href="https://www.jetbrains.com/help/idea/ide-scripting-console.html">IDE scripting console&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>The IDE Scripting Console can be used to write simple scripts that automate IntelliJ IDEA
+features and extract various information. With access to the IntelliJ platform API, you can
+think of it as a lightweight alternative to a plugin, which adds or modifies some behavior
+of the IDE.&lt;/p>
+&lt;p>By default, it supports scripts written in Kotlin, JavaScript, and Groovy. However, you can use any scripting language that is compliant with JSR 223, for example, Python, Ruby, Clojure, and so on.&lt;/p>
+&lt;/blockquote>
+&lt;p>This looks promising; I copied and modified some sample code from the docs to
+display a &amp;ldquo;Hello World&amp;rdquo; message in a dialog in the IDE.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="color:#66d9ef">import&lt;/span> com.intellij.openapi.ui.Messages
+&lt;span style="color:#66d9ef">val&lt;/span> b = bindings &lt;span style="color:#66d9ef">as&lt;/span> Map&amp;lt;String, Any&amp;gt;
+&lt;span style="color:#66d9ef">val&lt;/span> IDE = b[&lt;span style="color:#e6db74">&amp;#34;IDE&amp;#34;&lt;/span>] &lt;span style="color:#66d9ef">as&lt;/span> com.intellij.ide.script.IDE
+Messages.showInfoMessage(&lt;span style="color:#e6db74">&amp;#34;Hello World&amp;#34;&lt;/span>)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="invoking-actions">
+Invoking Actions
+&lt;a class="heading-link" href="#invoking-actions">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The next step was figuring out how to invoke &lt;em>actions&lt;/em> in the IDE.
+The Intellij Platform Plugin SDK defines the requirements in its
+&lt;a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html">Action system&lt;/a> documentation.&lt;/p>
+&lt;p>An &lt;code>ActionManager&lt;/code> instance is used to execute an IDE &lt;code>Action&lt;/code> that is referred
+to by its unique id &amp;ndash; this can either be a custom action from an installed plugin or the &lt;a href="https://github.com/JetBrains/intellij-community/tree/idea/231.8109.175/platform/ide-core/src/com/intellij/openapi/actionSystem/IdeActions.java">standard IntelliJ Platform actions&lt;/a>.&lt;/p>
+&lt;p>The following snippet executes the standard &lt;em>NextTab&lt;/em> action:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="color:#66d9ef">import&lt;/span> com.intellij.openapi.actionSystem.ActionManager
+&lt;span style="color:#66d9ef">import&lt;/span> com.intellij.openapi.actionSystem.AnAction
+&lt;span style="color:#66d9ef">val&lt;/span> b = bindings &lt;span style="color:#66d9ef">as&lt;/span> Map&amp;lt;String, Any&amp;gt;
+&lt;span style="color:#66d9ef">val&lt;/span> IDE = b[&lt;span style="color:#e6db74">&amp;#34;IDE&amp;#34;&lt;/span>] &lt;span style="color:#66d9ef">as&lt;/span> com.intellij.ide.script.IDE
+&lt;span style="color:#66d9ef">val&lt;/span> actionManager: ActionManager = ActionManager.getInstance()
+&lt;span style="color:#75715e">// move focus to the next editor tab
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">val&lt;/span> action: AnAction = actionManager.getAction(&lt;span style="color:#e6db74">&amp;#34;NextTab&amp;#34;&lt;/span>)
+actionManager.tryToExecute(action, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#66d9ef">false&lt;/span>)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="invoking-the-script-from-the-command-line">
+Invoking the script from the command line
+&lt;a class="heading-link" href="#invoking-the-script-from-the-command-line">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Up to now, I&amp;rsquo;ve been able to play around with the scripts from within the IDEs
+&amp;ndash; the next step is to find a way to invoke them externally.&lt;/p>
+&lt;p>Fortunately, this feature is already available since &lt;a href="https://youtrack.jetbrains.com/issue/IDEA-245847">version 2021.1&lt;/a>;
+it requires the command line scripts for the IDEs to be installed e.g.
+&lt;code>idea&lt;/code> for Intellij IDEA. This can be configured via the &lt;a href="https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox">JetBrains Toolbox&lt;/a>.&lt;/p>
+&lt;p>The command to run script(s) is &lt;code>idea ideScript &amp;lt;files&amp;gt;&lt;/code>.&lt;/p>
+&lt;p>Caveat: The script does not work (when invoked from the command line at least) unless
+the IDE action execution code is wrapped in the following snippet:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">IDE.application.invokeLater {
+&lt;span style="color:#75715e">// action execution code goes here
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>My guess is that it needs to be non-blocking, since it is invoked externally.
+One other thing to note is that if you have multiple windows of an IDE running,
+the action will be executed in the last active window.&lt;/p>
+&lt;h2 id="parameterizing-the-script">
+Parameterizing the script
+&lt;a class="heading-link" href="#parameterizing-the-script">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The last thing I wanted to add was to parameterize the script, where I could
+pass in the action name e.g. &amp;ldquo;Run tests&amp;rdquo; and the IDE where the aforementioned
+action would be executed.&lt;/p>
+&lt;p>I tried a couple of things; my first implementation involved passing the params
+as environment variables and parsing them in the script. That didn&amp;rsquo;t seem to
+work as when I tried to log the params they would always be &lt;code>null&lt;/code>. The next
+thing I tried was to reading the params from a text file which also did not work.&lt;/p>
+&lt;p>Eventually, my solution involved creating a shell script that:&lt;/p>
+&lt;ol>
+&lt;li>Requires (and parses) the IDE name and action name as arguments&lt;/li>
+&lt;li>Writes out the IDE script to a file (taking params into account)&lt;/li>
+&lt;li>Executes the IDE script&lt;/li>
+&lt;li>Deletes the IDE script file&lt;/li>
+&lt;/ol>
+&lt;p>So if I wanted to perform an action on an Intellij IDEA window, the command
+will look like &lt;code>ide-script.sh --ide idea --action action_name_to_perform&lt;/code>&lt;/p>
+&lt;h2 id="putting-it-all-together">
+Putting it all together
+&lt;a class="heading-link" href="#putting-it-all-together">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>As a side note, Intellij IDEA ships with Kotlin so the samples will work there
+&amp;ndash; it may work on other IDEs if the Kotlin plugin is installed but I haven&amp;rsquo;t
+tested that so YMMV.&lt;/p>
+&lt;p>I ended up using Groovy since that ships with the other IDEs I mentioned earlier
+and I&amp;rsquo;ve been able to verify that it works on WebStorm and PyCharm. As for
+operating systems, I&amp;rsquo;ve tested this script on both macOS and Linux. The steps
+should be similar on Windows; you also might be able to reuse the shell script
+if you are running WSL but I imagine you&amp;rsquo;ll need to update the path of the
+command-line IDE launchers.&lt;/p>
+&lt;script src="https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe.js">&lt;/script>
+&lt;p>You can find the full code on &lt;a href="https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe">GitHub&lt;/a>.&lt;/p>
+&lt;p>I hope others find this useful; now on to configuring the Stream Deck.&lt;/p></description></item></channel></rss>
