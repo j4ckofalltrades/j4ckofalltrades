@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>badger2040 on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/badger2040/</link><description>Recent content in badger2040 on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 16 Jun 2023 21:00:00 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/badger2040/index.xml" rel="self" type="application/rss+xml"/><item><title>Playing around with the Badger2040</title><link>https://jduabe.dev/posts/2023/programmable-badge/</link><pubDate>Fri, 16 Jun 2023 21:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/programmable-badge/</guid><description>&lt;p>&lt;a href="https://shop.pimoroni.com/products/badger-2040">Badger2040&lt;/a> is a programmable E Paper/eInk/EPD badge, powered by
+the &lt;a href="https://www.raspberrypi.com/products/rp2040">RP2040&lt;/a>.&lt;/p>
+&lt;p>Some of its features:&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>2.9&amp;quot; black and white E Ink® display (296 x 128 pixels)&lt;/em>&lt;/li>
+&lt;li>&lt;em>Powered by RP2040 (Dual Arm Cortex M0+ running at up to 133Mhz with 264kB of SRAM)&lt;/em>&lt;/li>
+&lt;li>&lt;em>2MB of QSPI flash supporting XiP&lt;/em>&lt;/li>
+&lt;li>&lt;em>Five front user buttons&lt;/em>&lt;/li>
+&lt;li>&lt;em>Reset and boot buttons (the boot button can also be used as a user button)&lt;/em>&lt;/li>
+&lt;li>&lt;em>USB-C connector for power and programming&lt;/em>&lt;/li>
+&lt;li>&lt;em>JST-PH connector for attaching a battery (input range 2.7V - 6V)&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>I got one to play around with and to use when attending meetups.&lt;/p>
+&lt;h2 id="programming">
+Programming
+&lt;a class="heading-link" href="#programming">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The Badger2040 ships with a custom &lt;a href="https://micropython.org/">MicroPython&lt;/a> build and a graphics library
+&lt;a href="https://github.com/pimoroni/pimoroni-pico/blob/main/micropython/modules/picographics/README.md">PicoGraphics&lt;/a> that
+contains useful utilities for drawing on the screen. There are also a couple of examples loaded on the device by
+default.&lt;/p>
+&lt;p>In order to write code or update / run the existing code samples, you&amp;rsquo;ll need to connect it to your computer and open
+up an IDE with MicroPython support i.e. &lt;a href="https://thonny.org/">Thonny&lt;/a>.&lt;/p>
+&lt;p>One thing to note is you opt to use a different IDE is to make sure to name the file as &lt;code>main.py&lt;/code> as it will be
+automatically run once uploaded to the device (this is the default behavior of the RP2040), otherwise your code will not
+be executed.&lt;/p>
+&lt;p>I ended up using &lt;a href="https://www.jetbrains.com/pycharm/">PyCharm&lt;/a> with the &lt;a href="https://plugins.jetbrains.com/plugin/9777-micropython">MicroPython&lt;/a>
+plugin, one extra step I needed to do was to point the plugin to the device which was located at &lt;code>/dev/ttyACM0&lt;/code>
+(if you&amp;rsquo;re on a Unix environment).&lt;/p>
+&lt;h2 id="drawing">
+Drawing
+&lt;a class="heading-link" href="#drawing">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>With the following built-in functions, we can draw text and shapes on the screen.&lt;/p>
+&lt;h3 id="constants">
+Constants
+&lt;a class="heading-link" href="#constants">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
+&lt;p>The screen dimensions are provided as constants.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+WIDTH &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>WIDTH &lt;span style="color:#75715e"># 296&lt;/span>
+HEIGHT &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>HEIGHT &lt;span style="color:#75715e"># 128&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="pen">
+Pen
+&lt;a class="heading-link" href="#pen">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
+&lt;p>There are 16 pen colours - or &amp;ldquo;shades of grey&amp;rdquo; - to choose, from 0 (black) to 15 (white).&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+display&lt;span style="color:#f92672">.&lt;/span>set_pen(
+colour &lt;span style="color:#75715e"># int: color from 0 to 15&lt;/span>
+)
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The thickness of the lines drawn on the screen can be also be configured.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+display&lt;span style="color:#f92672">.&lt;/span>set_thickness(
+value &lt;span style="color:#75715e"># int: thickness in pixels&lt;/span>
+)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="text">
+Text
+&lt;a class="heading-link" href="#text">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
+&lt;p>The font can be changed with the &lt;code>set_font&lt;/code> method and write using the &lt;code>text&lt;/code> function.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+&lt;span style="color:#75715e"># Available fonts&lt;/span>
+&lt;span style="color:#75715e">#&lt;/span>
+&lt;span style="color:#75715e"># Bitmap&lt;/span>
+&lt;span style="color:#75715e"># - bitmap6&lt;/span>
+&lt;span style="color:#75715e"># - bitmap8&lt;/span>
+&lt;span style="color:#75715e"># - bitmap14_outline&lt;/span>
+&lt;span style="color:#75715e">#&lt;/span>
+&lt;span style="color:#75715e"># Vector&lt;/span>
+&lt;span style="color:#75715e"># - sans&lt;/span>
+&lt;span style="color:#75715e"># - gothic&lt;/span>
+&lt;span style="color:#75715e"># - cursive&lt;/span>
+&lt;span style="color:#75715e"># - serif_italic&lt;/span>
+&lt;span style="color:#75715e"># - serif&lt;/span>
+display&lt;span style="color:#f92672">.&lt;/span>set_font(font)
+display&lt;span style="color:#f92672">.&lt;/span>text(
+text, &lt;span style="color:#75715e"># the text string to draw &lt;/span>
+x, &lt;span style="color:#75715e"># the destination X coordinate&lt;/span>
+y, &lt;span style="color:#75715e"># the destination Y coordinate&lt;/span>
+wordwrap, &lt;span style="color:#75715e"># number of pixels width before trying to break text into multiple lines&lt;/span>
+scale, &lt;span style="color:#75715e"># size&lt;/span>
+angle, &lt;span style="color:#75715e"># rotation angle (Vector only!)&lt;/span>
+spacing &lt;span style="color:#75715e"># letter spacing&lt;/span>
+)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="shapes">
+Shapes
+&lt;a class="heading-link" href="#shapes">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
+&lt;p>There are quite a few functions available here, I just included the ones I used. You can check out the full list in the
+&lt;a href="https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/modules/picographics">Pico Graphics function reference&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>Line&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+display&lt;span style="color:#f92672">.&lt;/span>line(x1, y1, x2, y2)
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Rectangle&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+display&lt;span style="color:#f92672">.&lt;/span>rectangle(x, y, width, height)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="putting-it-all-together">
+Putting it all together
+&lt;a class="heading-link" href="#putting-it-all-together">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;figure>
+&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1688813596/blog/badger2040_x9iaec.jpg" />
+&lt;figcaption style="font-style:italic; text-align: center; font-size: 16px; padding-bottom: 20px;">
+Badger2040 running the full "badge" code
+&lt;/figcaption>
+&lt;/figure>
+&lt;script src="https://gist.github.com/j4ckofalltrades/a4ec95b3e077fd7c294d20ef8095f480.js">&lt;/script></description></item></channel></rss>
