@@ -1,4 +1,241 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dev on /home/j4ckofalltrades</title><link>https://jduabe.dev/categories/dev/</link><description>Recent content in dev on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 12 Sep 2021 20:20:20 +0800</lastBuildDate><atom:link href="https://jduabe.dev/categories/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Writing a custom Powerline plugin</title><link>https://jduabe.dev/posts/2021/powerline-plugin/</link><pubDate>Sun, 12 Sep 2021 20:20:20 +0800</pubDate><guid>https://jduabe.dev/posts/2021/powerline-plugin/</guid><description>&lt;p>&lt;a href="https://github.com/powerline/powerline">Powerline&lt;/a> is a tool I use as part of
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>dev on /home/j4ckofalltrades</title><link>https://jduabe.dev/categories/dev/</link><description>Recent content in dev on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 16 Jun 2023 21:00:00 +0800</lastBuildDate><atom:link href="https://jduabe.dev/categories/dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Playing around with the Badger2040</title><link>https://jduabe.dev/posts/2023/programmable-badge/</link><pubDate>Fri, 16 Jun 2023 21:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/programmable-badge/</guid><description>&lt;p>&lt;a href="https://shop.pimoroni.com/products/badger-2040">Badger2040&lt;/a> is a programmable E Paper/eInk/EPD badge, powered by
+the &lt;a href="https://www.raspberrypi.com/products/rp2040">RP2040&lt;/a>.&lt;/p>
+&lt;p>Some of its features:&lt;/p>
+&lt;ul>
+&lt;li>&lt;em>2.9&amp;quot; black and white E Ink® display (296 x 128 pixels)&lt;/em>&lt;/li>
+&lt;li>&lt;em>Powered by RP2040 (Dual Arm Cortex M0+ running at up to 133Mhz with 264kB of SRAM)&lt;/em>&lt;/li>
+&lt;li>&lt;em>2MB of QSPI flash supporting XiP&lt;/em>&lt;/li>
+&lt;li>&lt;em>Five front user buttons&lt;/em>&lt;/li>
+&lt;li>&lt;em>Reset and boot buttons (the boot button can also be used as a user button)&lt;/em>&lt;/li>
+&lt;li>&lt;em>USB-C connector for power and programming&lt;/em>&lt;/li>
+&lt;li>&lt;em>JST-PH connector for attaching a battery (input range 2.7V - 6V)&lt;/em>&lt;/li>
+&lt;/ul>
+&lt;p>I got one to play around with and to use as a digital lanyard / badge when attending meetups.&lt;/p>
+&lt;h2 id="programming">
+Programming
+&lt;a class="heading-link" href="#programming">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The Badger2040 ships with a custom &lt;a href="https://micropython.org/">MicroPython&lt;/a> build and a graphics library
+&lt;a href="https://github.com/pimoroni/pimoroni-pico/blob/main/micropython/modules/picographics/README.md">PicoGraphics&lt;/a> that
+contains useful utilities for drawing on the screen. There are also a couple of examples loaded on the device by
+default.&lt;/p>
+&lt;p>In order to write code or update / run the existing code samples, you&amp;rsquo;ll need to connect it to your computer and open
+up an IDE with MicroPython support i.e. &lt;a href="https://thonny.org/">Thonny&lt;/a>.&lt;/p>
+&lt;p>One thing to note is you opt to use a different IDE is to make sure to name the file as &lt;code>main.py&lt;/code> as it will be
+automatically run once uploaded to the device (this is the default behavior of the RP2040), otherwise your code will not
+be executed.&lt;/p>
+&lt;p>I ended up using &lt;a href="https://www.jetbrains.com/pycharm/">PyCharm&lt;/a> with the &lt;a href="https://plugins.jetbrains.com/plugin/9777-micropython">MicroPython&lt;/a>
+plugin, one extra step I needed to do was to point the plugin to the device which was located at &lt;code>/dev/ttyACM0&lt;/code>
+(if you&amp;rsquo;re on a Unix environment).&lt;/p>
+&lt;h2 id="drawing">
+Drawing
+&lt;a class="heading-link" href="#drawing">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>With the following built-in functions, we can draw text and shapes on the screen.&lt;/p>
+&lt;h3 id="constants">
+Constants
+&lt;a class="heading-link" href="#constants">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
+&lt;p>The screen dimensions are provided as constants.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+WIDTH &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>WIDTH &lt;span style="color:#75715e"># 296&lt;/span>
+HEIGHT &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>HEIGHT &lt;span style="color:#75715e"># 128&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="pen">
+Pen
+&lt;a class="heading-link" href="#pen">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
+&lt;p>There are 16 pen colours - or &amp;ldquo;shades of grey&amp;rdquo; - to choose, from 0 (black) to 15 (white).&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+display&lt;span style="color:#f92672">.&lt;/span>set_pen(
+colour &lt;span style="color:#75715e"># int: color from 0 to 15&lt;/span>
+)
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>The thickness of the lines drawn on the screen can be also be configured.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+display&lt;span style="color:#f92672">.&lt;/span>set_thickness(
+value &lt;span style="color:#75715e"># int: thickness in pixels&lt;/span>
+)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="text">
+Text
+&lt;a class="heading-link" href="#text">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
+&lt;p>The font can be changed with the &lt;code>set_font&lt;/code> method and write using the &lt;code>text&lt;/code> function.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+&lt;span style="color:#75715e"># Available fonts&lt;/span>
+&lt;span style="color:#75715e">#&lt;/span>
+&lt;span style="color:#75715e"># Bitmap&lt;/span>
+&lt;span style="color:#75715e"># - bitmap6&lt;/span>
+&lt;span style="color:#75715e"># - bitmap8&lt;/span>
+&lt;span style="color:#75715e"># - bitmap14_outline&lt;/span>
+&lt;span style="color:#75715e">#&lt;/span>
+&lt;span style="color:#75715e"># Vector&lt;/span>
+&lt;span style="color:#75715e"># - sans&lt;/span>
+&lt;span style="color:#75715e"># - gothic&lt;/span>
+&lt;span style="color:#75715e"># - cursive&lt;/span>
+&lt;span style="color:#75715e"># - serif_italic&lt;/span>
+&lt;span style="color:#75715e"># - serif&lt;/span>
+display&lt;span style="color:#f92672">.&lt;/span>set_font(font)
+display&lt;span style="color:#f92672">.&lt;/span>text(
+text, &lt;span style="color:#75715e"># the text string to draw &lt;/span>
+x, &lt;span style="color:#75715e"># the destination X coordinate&lt;/span>
+y, &lt;span style="color:#75715e"># the destination Y coordinate&lt;/span>
+wordwrap, &lt;span style="color:#75715e"># number of pixels width before trying to break text into multiple lines&lt;/span>
+scale, &lt;span style="color:#75715e"># size&lt;/span>
+angle, &lt;span style="color:#75715e"># rotation angle (Vector only!)&lt;/span>
+spacing &lt;span style="color:#75715e"># letter spacing&lt;/span>
+)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="shapes">
+Shapes
+&lt;a class="heading-link" href="#shapes">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h3>
+&lt;p>There are quite a few functions available here, I just included the ones I used. You can check out the full list in the
+&lt;a href="https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/modules/picographics">Pico Graphics function reference&lt;/a>.&lt;/p>
+&lt;p>&lt;strong>Line&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+display&lt;span style="color:#f92672">.&lt;/span>line(x1, y1, x2, y2)
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Rectangle&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
+display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
+display&lt;span style="color:#f92672">.&lt;/span>rectangle(x, y, width, height)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="putting-it-all-together">
+Putting it all together
+&lt;a class="heading-link" href="#putting-it-all-together">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;figure>
+&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1688813596/blog/badger2040_x9iaec.jpg" />
+&lt;figcaption style="font-style:italic; text-align: center; font-size: 16px; padding-bottom: 20px;">
+Badger2040 running the full "badge" code
+&lt;/figcaption>
+&lt;/figure>
+&lt;script src="https://gist.github.com/j4ckofalltrades/a4ec95b3e077fd7c294d20ef8095f480.js">&lt;/script></description></item><item><title>Programatically invoking JetBrains IDE actions</title><link>https://jduabe.dev/posts/2023/jetbrains-ide-actions/</link><pubDate>Sat, 20 May 2023 13:22:32 +0800</pubDate><guid>https://jduabe.dev/posts/2023/jetbrains-ide-actions/</guid><description>&lt;p>I&amp;rsquo;ve had a Stream Deck for a while now but haven&amp;rsquo;t really configured it
+for any coding related workflows. I use several JetBrains IDEs for work and
+personal use (Intellij, PyCharm, WebStorm to name a few), so I started looking
+into what the possible options were.&lt;/p>
+&lt;p>The simplest solution would be to just invoke keyboard shortcut for a specific
+but the downside of this approach is you can only have so much keycodes assigned
+(which may conflict with system shortcuts and possibly other apps), not to
+mention you&amp;rsquo;d have to change these when you switched keymaps or used another
+operating system.&lt;/p>
+&lt;p>Ideally there would be a command where you can provide an &lt;em>action&lt;/em> to the IDE,
+possibly through a plugin.&lt;/p>
+&lt;h2 id="ide-scripting-console">
+IDE Scripting Console
+&lt;a class="heading-link" href="#ide-scripting-console">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>While reading through the Intellij documentation, I
+stumbled upon the &lt;a href="https://www.jetbrains.com/help/idea/ide-scripting-console.html">IDE scripting console&lt;/a>.&lt;/p>
+&lt;blockquote>
+&lt;p>The IDE Scripting Console can be used to write simple scripts that automate IntelliJ IDEA
+features and extract various information. With access to the IntelliJ platform API, you can
+think of it as a lightweight alternative to a plugin, which adds or modifies some behavior
+of the IDE.&lt;/p>
+&lt;p>By default, it supports scripts written in Kotlin, JavaScript, and Groovy. However, you can use any scripting language that is compliant with JSR 223, for example, Python, Ruby, Clojure, and so on.&lt;/p>
+&lt;/blockquote>
+&lt;p>This looks promising; I copied and modified some sample code from the docs to
+display a &amp;ldquo;Hello World&amp;rdquo; message in a dialog in the IDE.&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="color:#66d9ef">import&lt;/span> com.intellij.openapi.ui.Messages
+&lt;span style="color:#66d9ef">val&lt;/span> b = bindings &lt;span style="color:#66d9ef">as&lt;/span> Map&amp;lt;String, Any&amp;gt;
+&lt;span style="color:#66d9ef">val&lt;/span> IDE = b[&lt;span style="color:#e6db74">&amp;#34;IDE&amp;#34;&lt;/span>] &lt;span style="color:#66d9ef">as&lt;/span> com.intellij.ide.script.IDE
+Messages.showInfoMessage(&lt;span style="color:#e6db74">&amp;#34;Hello World&amp;#34;&lt;/span>)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="invoking-actions">
+Invoking Actions
+&lt;a class="heading-link" href="#invoking-actions">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The next step was figuring out how to invoke &lt;em>actions&lt;/em> in the IDE.
+The Intellij Platform Plugin SDK defines the requirements in its
+&lt;a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html">Action system&lt;/a> documentation.&lt;/p>
+&lt;p>An &lt;code>ActionManager&lt;/code> instance is used to execute an IDE &lt;code>Action&lt;/code> that is referred
+to by its unique id &amp;ndash; this can either be a custom action from an installed plugin or the &lt;a href="https://github.com/JetBrains/intellij-community/tree/idea/231.8109.175/platform/ide-core/src/com/intellij/openapi/actionSystem/IdeActions.java">standard IntelliJ Platform actions&lt;/a>.&lt;/p>
+&lt;p>The following snippet executes the standard &lt;em>NextTab&lt;/em> action:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="color:#66d9ef">import&lt;/span> com.intellij.openapi.actionSystem.ActionManager
+&lt;span style="color:#66d9ef">import&lt;/span> com.intellij.openapi.actionSystem.AnAction
+&lt;span style="color:#66d9ef">val&lt;/span> b = bindings &lt;span style="color:#66d9ef">as&lt;/span> Map&amp;lt;String, Any&amp;gt;
+&lt;span style="color:#66d9ef">val&lt;/span> IDE = b[&lt;span style="color:#e6db74">&amp;#34;IDE&amp;#34;&lt;/span>] &lt;span style="color:#66d9ef">as&lt;/span> com.intellij.ide.script.IDE
+&lt;span style="color:#66d9ef">val&lt;/span> actionManager: ActionManager = ActionManager.getInstance()
+&lt;span style="color:#75715e">// move focus to the next editor tab
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">val&lt;/span> action: AnAction = actionManager.getAction(&lt;span style="color:#e6db74">&amp;#34;NextTab&amp;#34;&lt;/span>)
+actionManager.tryToExecute(action, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#66d9ef">false&lt;/span>)
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="invoking-the-script-from-the-command-line">
+Invoking the script from the command line
+&lt;a class="heading-link" href="#invoking-the-script-from-the-command-line">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>Up to now, I&amp;rsquo;ve been able to play around with the scripts from within the IDEs
+&amp;ndash; the next step is to find a way to invoke them externally.&lt;/p>
+&lt;p>Fortunately, this feature is already available since &lt;a href="https://youtrack.jetbrains.com/issue/IDEA-245847">version 2021.1&lt;/a>;
+it requires the command line scripts for the IDEs to be installed e.g.
+&lt;code>idea&lt;/code> for Intellij IDEA. This can be configured via the &lt;a href="https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox">JetBrains Toolbox&lt;/a>.&lt;/p>
+&lt;p>The command to run script(s) is &lt;code>idea ideScript &amp;lt;files&amp;gt;&lt;/code>.&lt;/p>
+&lt;p>Caveat: The script does not work (when invoked from the command line at least) unless
+the IDE action execution code is wrapped in the following snippet:&lt;/p>
+&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">IDE.application.invokeLater {
+&lt;span style="color:#75715e">// action execution code goes here
+&lt;/span>&lt;span style="color:#75715e">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>My guess is that it needs to be non-blocking, since it is invoked externally.
+One other thing to note is that if you have multiple windows of an IDE running,
+the action will be executed in the last active window.&lt;/p>
+&lt;h2 id="parameterizing-the-script">
+Parameterizing the script
+&lt;a class="heading-link" href="#parameterizing-the-script">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>The last thing I wanted to add was to parameterize the script, where I could
+pass in the action name e.g. &amp;ldquo;Run tests&amp;rdquo; and the IDE where the aforementioned
+action would be executed.&lt;/p>
+&lt;p>I tried a couple of things; my first implementation involved passing the params
+as environment variables and parsing them in the script. That didn&amp;rsquo;t seem to
+work as when I tried to log the params they would always be &lt;code>null&lt;/code>. The next
+thing I tried was to reading the params from a text file which also did not work.&lt;/p>
+&lt;p>Eventually, my solution involved creating a shell script that:&lt;/p>
+&lt;ol>
+&lt;li>Requires (and parses) the IDE name and action name as arguments&lt;/li>
+&lt;li>Writes out the IDE script to a file (taking params into account)&lt;/li>
+&lt;li>Executes the IDE script&lt;/li>
+&lt;li>Deletes the IDE script file&lt;/li>
+&lt;/ol>
+&lt;p>So if I wanted to perform an action on an Intellij IDEA window, the command
+will look like &lt;code>ide-script.sh --ide idea --action action_name_to_perform&lt;/code>&lt;/p>
+&lt;h2 id="putting-it-all-together">
+Putting it all together
+&lt;a class="heading-link" href="#putting-it-all-together">
+&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;/a>
+&lt;/h2>
+&lt;p>As a side note, Intellij IDEA ships with Kotlin so the samples will work there
+&amp;ndash; it may work on other IDEs if the Kotlin plugin is installed but I haven&amp;rsquo;t
+tested that so YMMV.&lt;/p>
+&lt;p>I ended up using Groovy since that ships with the other IDEs I mentioned earlier
+and I&amp;rsquo;ve been able to verify that it works on WebStorm and PyCharm. As for
+operating systems, I&amp;rsquo;ve tested this script on both macOS and Linux. The steps
+should be similar on Windows; you also might be able to reuse the shell script
+if you are running WSL but I imagine you&amp;rsquo;ll need to update the path of the
+command-line IDE launchers.&lt;/p>
+&lt;script src="https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe.js">&lt;/script>
+&lt;p>You can find the full code on &lt;a href="https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe">GitHub&lt;/a>.&lt;/p>
+&lt;p>I hope others find this useful; now on to configuring the Stream Deck.&lt;/p></description></item><item><title>Writing a custom Powerline plugin</title><link>https://jduabe.dev/posts/2021/powerline-plugin/</link><pubDate>Sun, 12 Sep 2021 20:20:20 +0800</pubDate><guid>https://jduabe.dev/posts/2021/powerline-plugin/</guid><description>&lt;p>&lt;a href="https://github.com/powerline/powerline">Powerline&lt;/a> is a tool I use as part of
 my dev environment setup, and have my config backed up as part of my
 &lt;a href="https://github.com/j4ckofalltrades/dotfiles">dotfiles&lt;/a>.&lt;/p>
 &lt;p>It shows helpful information and context for stuff I&amp;rsquo;m working on, as well as

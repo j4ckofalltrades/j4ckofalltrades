@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tech on /home/j4ckofalltrades</title><link>https://jduabe.dev/categories/tech/</link><description>Recent content in tech on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 16 Jun 2023 21:00:00 +0800</lastBuildDate><atom:link href="https://jduabe.dev/categories/tech/index.xml" rel="self" type="application/rss+xml"/><item><title>Playing around with the Badger2040</title><link>https://jduabe.dev/posts/2023/programmable-badge/</link><pubDate>Fri, 16 Jun 2023 21:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/programmable-badge/</guid><description>&lt;p>&lt;a href="https://shop.pimoroni.com/products/badger-2040">Badger2040&lt;/a> is a programmable E Paper/eInk/EPD badge, powered by
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>eink on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/eink/</link><description>Recent content in eink on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Fri, 16 Jun 2023 21:00:00 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/eink/index.xml" rel="self" type="application/rss+xml"/><item><title>Playing around with the Badger2040</title><link>https://jduabe.dev/posts/2023/programmable-badge/</link><pubDate>Fri, 16 Jun 2023 21:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/programmable-badge/</guid><description>&lt;p>&lt;a href="https://shop.pimoroni.com/products/badger-2040">Badger2040&lt;/a> is a programmable E Paper/eInk/EPD badge, powered by
 the &lt;a href="https://www.raspberrypi.com/products/rp2040">RP2040&lt;/a>.&lt;/p>
 &lt;p>Some of its features:&lt;/p>
 &lt;ul>
@@ -10,7 +10,7 @@ the &lt;a href="https://www.raspberrypi.com/products/rp2040">RP2040&lt;/a>.&lt;/
 &lt;li>&lt;em>USB-C connector for power and programming&lt;/em>&lt;/li>
 &lt;li>&lt;em>JST-PH connector for attaching a battery (input range 2.7V - 6V)&lt;/em>&lt;/li>
 &lt;/ul>
-&lt;p>I got one to play around with and to use when attending meetups.&lt;/p>
+&lt;p>I got one to play around with and to use as a digital lanyard / badge when attending meetups.&lt;/p>
 &lt;h2 id="programming">
 Programming
 &lt;a class="heading-link" href="#programming">
