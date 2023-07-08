@@ -9,6 +9,8 @@ tags:
 - badger2040
 - rp2040
 - eink
+images:
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1688813596/blog/badger2040_x9iaec.jpg
 externalLink: ""
 ---
 
