@@ -1,7 +1,7 @@
 --- 
-date: 2023-04-25T17:16:02+08:00
 title: "NCR-80 QMK/VIA firmware"
 description: "QMK/VIA firmware for the NCR-80 keyboard"
+date: 2023-04-25T17:16:02+08:00
 draft: false
 categories:
 - keyboards
@@ -9,7 +9,7 @@ tags:
 - qmk
 - via
 images:
-- https://res.cloudinary.com/j4ckofalltrades/image/upload//c_limit,w_900,g_face/v1676107180/keebs/ncr80/ncr-80-via_hlgb5c.png
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1676107180/keebs/ncr80/ncr-80-via_hlgb5c.png
 ---
 
 Built the [NCR-80](https://jduabe.dev/posts/2022/ncr-80) last year, great-looking board especially if you like the

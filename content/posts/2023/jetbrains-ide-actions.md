@@ -1,13 +1,14 @@
 ---
-draft: false
-date: 2023-05-20T13:22:32+08:00
 title: "Programatically invoking JetBrains IDE actions"
 description: "Performing actions via the JetBrains IDE scripting console"
-tags:
-- programming
-- bash
+date: 2023-05-20T13:22:32+08:00
+draft: false
 categories:
-- programming
+- dev
+tags:
+- bash
+- ide
+- automation
 ---
 
 I've had a Stream Deck for a while now but haven't really configured it

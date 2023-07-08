@@ -1,13 +1,15 @@
 ---
-draft: false
-date: 2023-06-18T13:00:00+08:00
 title: "WAMK Meetup 2023"
 description: "WAMK Meetup 2023"
+date: 2023-06-18T13:00:00+08:00
+draft: false
 categories:
 - keyboards
 tags:
 - wamk
 - meetup
+images:
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1688804851/blog/wamk-2023/IMG_1532_uow8at.jpg
 externalLink: ""
 ---
 

@@ -1,13 +1,15 @@
 ---
 title: "Anne Pro 2 build"
-date: 2021-10-10T18:41:15+08:00
 description: "Anne Pro 2 with QMK firmware"
+date: 2021-10-10T18:41:15+08:00
+draft: false
 categories:
-images:
+- keyboards
 tags:
 - 60%
 - qmk
-draft: false
+images:
+- https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg
 ---
 
 ![kb](https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg)

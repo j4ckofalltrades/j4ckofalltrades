@@ -1,13 +1,14 @@
 ---
-draft: false
-date: 2023-06-16T21:00:00+08:00
 title: "Playing around with the Badger2040"
 description: "Creating a digital lanyard / badge with the Badger2040"
+date: 2023-06-16T21:00:00+08:00
+draft: false
 categories:
-- tech
+- dev
 tags:
 - badger2040
 - rp2040
+- eink
 externalLink: ""
 ---
 
@@ -24,7 +25,7 @@ Some of its features:
 - _USB-C connector for power and programming_
 - _JST-PH connector for attaching a battery (input range 2.7V - 6V)_
 
-I got one to play around with and to use when attending meetups.
+I got one to play around with and to use as a digital lanyard / badge when attending meetups.
 
 ## Programming
 
