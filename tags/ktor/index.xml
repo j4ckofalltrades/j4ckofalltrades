@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktor on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/ktor/</link><description>Recent content in ktor on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 25 Jul 2021 15:38:23 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/ktor/index.xml" rel="self" type="application/rss+xml"/><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/2021/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/2021/mvn-central-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png" alt="mvn">&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ktor on /home/jordan</title><link>https://jduabe.dev/tags/ktor/</link><description>Recent content in ktor on /home/jordan</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 25 Jul 2021 15:38:23 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/ktor/index.xml" rel="self" type="application/rss+xml"/><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/2021/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/2021/mvn-central-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png" alt="mvn">&lt;/p>
 &lt;p>This guide walks you through the necessary steps to upload your package to the
-&lt;a href="https://repo.maven.apache.org/maven2">Maven Central&lt;/a> repository (and optionally
+&lt;a href="https://repo.maven.apache.org/maven2" class="external-link" target="_blank" rel="noopener">Maven Central&lt;/a> repository (and optionally
 to GitHub Packages registry) with some recommendations along the way.&lt;/p>
 &lt;h2 id="setup-ossrh-repository">
 Setup OSSRH Repository
 &lt;a class="heading-link" href="#setup-ossrh-repository">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>Sign up for a &lt;a href="https://issues.sonatype.org/secure/Signup!default.jspa">new account&lt;/a>&lt;/p>
+&lt;p>Sign up for a &lt;a href="https://issues.sonatype.org/secure/Signup!default.jspa" class="external-link" target="_blank" rel="noopener">new account&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Create a &lt;a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134">new project ticket&lt;/a>&lt;/p>
+&lt;p>Create a &lt;a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134" class="external-link" target="_blank" rel="noopener">new project ticket&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Claim your namespace by setting the &lt;code>groupId&lt;/code> for your artifact&lt;/p>
@@ -31,15 +32,16 @@ created to register your &lt;code>groupId&lt;/code>.&lt;/p>
 &lt;h2 id="configure-gpgpgp-key">
 Configure GPG/PGP key
 &lt;a class="heading-link" href="#configure-gpgpgp-key">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>This will be used for signing your artifacts, at it is a requirement for
 publishing them to the Central Repository.&lt;/p>
 &lt;p>You&amp;rsquo;ll need to generate a key pair and distribute it to a known key server
 (so that others can validate it).&lt;/p>
-&lt;p>The following examples show how to do this with &lt;a href="https://gnupg.org">GPG&lt;/a>; you
-can &lt;a href="https://gnupg.org">download&lt;/a> or install it using your package manager if
+&lt;p>The following examples show how to do this with &lt;a href="https://gnupg.org" class="external-link" target="_blank" rel="noopener">GPG&lt;/a>; you
+can &lt;a href="https://gnupg.org" class="external-link" target="_blank" rel="noopener">download&lt;/a> or install it using your package manager if
 it is not already available in your machine.&lt;/p>
 &lt;p>To generate a key pair, run:&lt;/p>
 &lt;p>&lt;code>$ gpg --gen-key&lt;/code>&lt;/p>
@@ -49,18 +51,19 @@ that is needed to sign artifacts with your signature.&lt;/strong>&lt;/p>
 &lt;p>Once the key pair is generated, you&amp;rsquo;ll need to distribute your public key to a
 known key server i.e. &lt;code>keyserver.ubuntu.com&lt;/code>. In order to do so, run the
 following commands:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># list gpg keys&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># list gpg keys&lt;/span>
 $ gpg --list-keys
-&lt;span style="color:#75715e"># the line starting with **pub** shows your public key details&lt;/span>
-&lt;span style="color:#75715e"># copy the keyid and run the following command&lt;/span>
+&lt;span class="c1"># the line starting with **pub** shows your public key details&lt;/span>
+&lt;span class="c1"># copy the keyid and run the following command&lt;/span>
 $ gpg --keyserver keyserver.ubuntu.com --send-keys &amp;lt;your_key_here&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>To check that your key was successfully uploaded, you can search for it at
-&lt;a href="https://keyserver.ubuntu.com">https://keyserver.ubuntu.com&lt;/a> using your public key (and prepending &amp;lsquo;0x&amp;rsquo; to it).&lt;/p>
+&lt;a href="https://keyserver.ubuntu.com" class="external-link" target="_blank" rel="noopener">https://keyserver.ubuntu.com&lt;/a> using your public key (and prepending &amp;lsquo;0x&amp;rsquo; to it).&lt;/p>
 &lt;p>Other supported key servers are &lt;code>keys.openpgp.org&lt;/code>, and &lt;code>pgp.mit.edu&lt;/code>.&lt;/p>
 &lt;h2 id="configure-build-script">
 Configure build script
 &lt;a class="heading-link" href="#configure-build-script">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>In order to publish your artifact to the Central Repository, it will need to
@@ -74,127 +77,128 @@ meet the following requirements:&lt;/p>
 &lt;p>The configuration will vary slightly depending on the build tool you are using,
 below is an abridged sample configuration &lt;code>build.gradle.kts&lt;/code> file (Kotlin DSL)
 used with &lt;code>gradle&lt;/code>:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="color:#75715e">// build.gradle.kts
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>
-&lt;span style="color:#75715e">// project coordinates
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>group = &lt;span style="color:#e6db74">&amp;#34;io.github.j4ckofalltrades&amp;#34;&lt;/span>
-version = &lt;span style="color:#e6db74">&amp;#34;1.0.0&amp;#34;&lt;/span>
-&lt;span style="color:#75715e">// generate KDoc and Javadoc using Dokka
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>tasks.withType&amp;lt;DokkaTask&amp;gt;().configureEach {
-dokkaSourceSets {
-named(&lt;span style="color:#e6db74">&amp;#34;main&amp;#34;&lt;/span>) {
-outputDirectory.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#66d9ef">file&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;docs&amp;#34;&lt;/span>))
-moduleName.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;steam-webapi&amp;#34;&lt;/span>)
-includes.from(&lt;span style="color:#e6db74">&amp;#34;Module.md&amp;#34;&lt;/span>)
-displayName.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;JVM&amp;#34;&lt;/span>)
-platform.&lt;span style="color:#66d9ef">set&lt;/span>(org.jetbrains.dokka.Platform.jvm)
-sourceLink {
-localDirectory.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#66d9ef">file&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;src/main/kotlin&amp;#34;&lt;/span>))
-remoteUrl.&lt;span style="color:#66d9ef">set&lt;/span>(
-URL(
-&lt;span style="color:#e6db74">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span> +
-&lt;span style="color:#e6db74">&amp;#34;/tree/main/lib/src/main/kotlin&amp;#34;&lt;/span>
-)
-)
-remoteLineSuffix.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;#L&amp;#34;&lt;/span>)
-}
-}
-}
-}
-&lt;span style="color:#75715e">// javadoc and sources jar
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>tasks {
-&lt;span style="color:#66d9ef">val&lt;/span> sourcesJar &lt;span style="color:#66d9ef">by&lt;/span> registering(Jar&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#66d9ef">class&lt;/span>) {
-dependsOn(JavaPlugin.CLASSES_TASK_NAME)
-archiveClassifier.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;sources&amp;#34;&lt;/span>)
-archiveBaseName.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>)
-from(sourceSets[&lt;span style="color:#e6db74">&amp;#34;main&amp;#34;&lt;/span>].allSource)
-}
-&lt;span style="color:#66d9ef">val&lt;/span> javadocJar &lt;span style="color:#66d9ef">by&lt;/span> registering(Jar&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#66d9ef">class&lt;/span>) {
-dependsOn(&lt;span style="color:#e6db74">&amp;#34;dokkaJavadoc&amp;#34;&lt;/span>)
-archiveClassifier.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;javadoc&amp;#34;&lt;/span>)
-archiveBaseName.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>)
-from(&lt;span style="color:#e6db74">&amp;#34;docs&amp;#34;&lt;/span>)
-}
-artifacts {
-archives(sourcesJar)
-archives(javadocJar)
-archives(jar)
-}
-}
-publishing {
-publications {
-create&amp;lt;MavenPublication&amp;gt;(&lt;span style="color:#e6db74">&amp;#34;mavenJava&amp;#34;&lt;/span>) {
-groupId = project.group.toString()
-artifactId = rootProject.name
-version = project.version.toString()
-from(components[&lt;span style="color:#e6db74">&amp;#34;java&amp;#34;&lt;/span>])
-artifact(tasks[&lt;span style="color:#e6db74">&amp;#34;sourcesJar&amp;#34;&lt;/span>])
-artifact(tasks[&lt;span style="color:#e6db74">&amp;#34;javadocJar&amp;#34;&lt;/span>])
-&lt;span style="color:#75715e">// POM metadata
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> pom {
-name.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>)
-description.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Steam WebAPI wrapper in Kotlin and Ktor&amp;#34;&lt;/span>)
-url.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>)
-licenses {
-license {
-name.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;MIT&amp;#34;&lt;/span>)
-url.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;https://opensource.org/licenses/MIT&amp;#34;&lt;/span>)
-}
-}
-developers {
-developer {
-id.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;j4ckofalltrades&amp;#34;&lt;/span>)
-name.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Jordan Duabe&amp;#34;&lt;/span>)
-email.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;me@jduabe.dev&amp;#34;&lt;/span>)
-}
-}
-scm {
-connection.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;scm:git:git://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>)
-developerConnection.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;scm:git:ssh://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>)
-url.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>)
-}
-}
-}
-}
-repositories {
-&lt;span style="color:#75715e">// Maven Central
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> maven {
-name = &lt;span style="color:#e6db74">&amp;#34;OSSRH&amp;#34;&lt;/span>
-url = uri(&lt;span style="color:#e6db74">&amp;#34;https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/&amp;#34;&lt;/span>)
-credentials {
-username = System.getenv(&lt;span style="color:#e6db74">&amp;#34;OSSRH_USERNAME&amp;#34;&lt;/span>)
-password = System.getenv(&lt;span style="color:#e6db74">&amp;#34;OSSRH_PASSWORD&amp;#34;&lt;/span>)
-}
-}
-&lt;span style="color:#75715e">// GitHub Packages
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> maven {
-name = &lt;span style="color:#e6db74">&amp;#34;GitHubPackages&amp;#34;&lt;/span>
-url = uri(&lt;span style="color:#e6db74">&amp;#34;https://maven.pkg.github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>)
-credentials {
-username = System.getenv(&lt;span style="color:#e6db74">&amp;#34;GITHUB_ACTOR&amp;#34;&lt;/span>)
-password = System.getenv(&lt;span style="color:#e6db74">&amp;#34;GITHUB_TOKEN&amp;#34;&lt;/span>)
-}
-}
-}
-}
-&lt;span style="color:#75715e">// sign artifact
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>signing {
-setRequired({
-gradle.taskGraph.hasTask(&lt;span style="color:#e6db74">&amp;#34;publishMavenJavaToOSSRHRepository&amp;#34;&lt;/span>)
-})
-&lt;span style="color:#66d9ef">val&lt;/span> signingKey = System.getenv(&lt;span style="color:#e6db74">&amp;#34;SIGNING_KEY&amp;#34;&lt;/span>)
-&lt;span style="color:#66d9ef">val&lt;/span> signingPassword = System.getenv(&lt;span style="color:#e6db74">&amp;#34;SIGNING_PASSWORD&amp;#34;&lt;/span>)
-useInMemoryPgpKeys(signingKey, signingPassword)
-sign(publishing.publications[&lt;span style="color:#e6db74">&amp;#34;mavenJava&amp;#34;&lt;/span>])
-}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span class="c1">// build.gradle.kts
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// project coordinates
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">group&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;io.github.j4ckofalltrades&amp;#34;&lt;/span>
+&lt;span class="n">version&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;1.0.0&amp;#34;&lt;/span>
+&lt;span class="c1">// generate KDoc and Javadoc using Dokka
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">tasks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">withType&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">DokkaTask&lt;/span>&lt;span class="p">&amp;gt;().&lt;/span>&lt;span class="n">configureEach&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">dokkaSourceSets&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">named&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;main&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">outputDirectory&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;docs&amp;#34;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="n">moduleName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">includes&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Module.md&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">displayName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;JVM&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">platform&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">org&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">jetbrains&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">dokka&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Platform&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">sourceLink&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">localDirectory&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;src/main/kotlin&amp;#34;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="n">remoteUrl&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">URL&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s2">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span> &lt;span class="p">+&lt;/span>
+&lt;span class="s2">&amp;#34;/tree/main/lib/src/main/kotlin&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="n">remoteLineSuffix&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#L&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// javadoc and sources jar
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">tasks&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">sourcesJar&lt;/span> &lt;span class="k">by&lt;/span> &lt;span class="n">registering&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Jar&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">dependsOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">JavaPlugin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CLASSES_TASK_NAME&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveClassifier&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;sources&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveBaseName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sourceSets&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;main&amp;#34;&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">allSource&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">javadocJar&lt;/span> &lt;span class="k">by&lt;/span> &lt;span class="n">registering&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Jar&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">dependsOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;dokkaJavadoc&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveClassifier&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;javadoc&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveBaseName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;docs&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">artifacts&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">archives&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sourcesJar&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archives&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">javadocJar&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archives&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">jar&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">publishing&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">publications&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">create&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">MavenPublication&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="s2">&amp;#34;mavenJava&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">groupId&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">project&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">group&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">toString&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">artifactId&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">rootProject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>
+&lt;span class="n">version&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">project&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">version&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">toString&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">components&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;java&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="n">artifact&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tasks&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;sourcesJar&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="n">artifact&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tasks&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;javadocJar&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="c1">// POM metadata
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">pom&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">description&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Steam WebAPI wrapper in Kotlin and Ktor&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">licenses&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">license&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;MIT&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://opensource.org/licenses/MIT&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">developers&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">developer&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">id&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;j4ckofalltrades&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Jordan Duabe&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">email&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;me@jduabe.dev&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">scm&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">connection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;scm:git:git://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">developerConnection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;scm:git:ssh://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">repositories&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Maven Central
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">maven&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;OSSRH&amp;#34;&lt;/span>
+&lt;span class="n">url&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">credentials&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">username&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;OSSRH_USERNAME&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">password&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;OSSRH_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// GitHub Packages
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">maven&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;GitHubPackages&amp;#34;&lt;/span>
+&lt;span class="n">url&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://maven.pkg.github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">credentials&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">username&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GITHUB_ACTOR&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">password&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GITHUB_TOKEN&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// sign artifact
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">signing&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">setRequired&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="n">gradle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">taskGraph&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">hasTask&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;publishMavenJavaToOSSRHRepository&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">signingKey&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;SIGNING_KEY&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">signingPassword&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;SIGNING_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">useInMemoryPgpKeys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">signingKey&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">signingPassword&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">sign&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">publishing&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">publications&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;mavenJava&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="publishing-artifacts">
 Publishing artifacts
 &lt;a class="heading-link" href="#publishing-artifacts">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
-&lt;p>The configuration above uses the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html#sec:in-memory-keys%5D">in-memory ascii-armored keys&lt;/a>
-approach for signing artifacts. Check out the docs for the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html">Gradle Signing
+&lt;p>The configuration above uses the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html#sec:in-memory-keys]" class="external-link" target="_blank" rel="noopener">in-memory ascii-armored keys&lt;/a>
+approach for signing artifacts. Check out the docs for the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html" class="external-link" target="_blank" rel="noopener">Gradle Signing
 Plugin&lt;/a> to find
 out what best suits your use case.&lt;/p>
 &lt;p>Once everything is configured, publishing the articats is as simple as running:&lt;/p>
@@ -202,56 +206,60 @@ out what best suits your use case.&lt;/p>
 &lt;p>Note that this will publish your artifacts to &lt;strong>all&lt;/strong> target repositories, in
 order to publish to a specific repository you need to specify the repo &lt;em>name&lt;/em>.
 Using the above configuration as an example:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># publish to Maven Central&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># publish to Maven Central&lt;/span>
 $ gradle publishMavenJavaPublicationToOSSRHRepository
-&lt;span style="color:#75715e"># publish to GitHub Packages&lt;/span>
+&lt;span class="c1"># publish to GitHub Packages&lt;/span>
 $ gradle publishMavenJavaPublicationToGitHubPackagesToRepository
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="releasing-artifacts">
 Releasing artifacts
 &lt;a class="heading-link" href="#releasing-artifacts">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
-&lt;p>Login to the &lt;a href="https://s01.oss.sonatype.org/#stagingRepositories">Nexus staging repository&lt;/a>,
+&lt;p>Login to the &lt;a href="https://s01.oss.sonatype.org/#stagingRepositories" class="external-link" target="_blank" rel="noopener">Nexus staging repository&lt;/a>,
 where you should be able to see your &lt;code>groupId&lt;/code> listed. In order to &lt;em>sync&lt;/em> the
 artifacts to the Central Repository you&amp;rsquo;ll need to click on the &lt;code>Close&lt;/code> button
 which will close said staging repository.&lt;/p>
 &lt;p>The close operation will run a series of checks to ensure that the uploaded
-artifacts meet the &lt;a href="#configure-build-script">requirements&lt;/a>.&lt;/p>
+artifacts meet the &lt;a href="#configure-build-script" >requirements&lt;/a>.&lt;/p>
 &lt;p>If the release was successful, you should be able to see your artifacts in the
-Central Repository at &lt;a href="https://repo1.maven.org/maven2/">https://repo1.maven.org/maven2/&lt;/a> typically within ~30
-minutes. Updates to &lt;a href="https://search.maven.org">https://search.maven.org&lt;/a> can take up to a couple of hours.&lt;/p>
+Central Repository at &lt;a href="https://repo1.maven.org/maven2/" class="external-link" target="_blank" rel="noopener">https://repo1.maven.org/maven2/&lt;/a> typically within ~30
+minutes. Updates to &lt;a href="https://search.maven.org" class="external-link" target="_blank" rel="noopener">https://search.maven.org&lt;/a> can take up to a couple of hours.&lt;/p>
 &lt;h2 id="optional-automation-with-github-packages">
 (Optional) Automation with GitHub Packages
 &lt;a class="heading-link" href="#optional-automation-with-github-packages">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>You&amp;rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
 Here&amp;rsquo;s how to set it up using GitHub Actions.&lt;/p>
 &lt;p>You&amp;rsquo;ll need to add your OSSRH credentials, and signing key details as secrets
 to your repository, you can find this under Settings &amp;gt; Secrets.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Publish to OSSRH and GitHub Package Registry&lt;/span>
-&lt;span style="color:#f92672">on&lt;/span>:
-&lt;span style="color:#f92672">release&lt;/span>:
-&lt;span style="color:#f92672">types&lt;/span>: [&lt;span style="color:#ae81ff">created]&lt;/span>
-&lt;span style="color:#f92672">jobs&lt;/span>:
-&lt;span style="color:#f92672">publish&lt;/span>:
-&lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-latest&lt;/span>
-&lt;span style="color:#f92672">steps&lt;/span>:
-- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@v2&lt;/span>
-- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/setup-java@v2&lt;/span>
-&lt;span style="color:#f92672">with&lt;/span>:
-&lt;span style="color:#f92672">distribution&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;adopt-openj9&amp;#39;&lt;/span>
-&lt;span style="color:#f92672">java-version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;11&amp;#39;&lt;/span>
-- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">./gradlew publish&lt;/span>
-&lt;span style="color:#f92672">env&lt;/span>:
-&lt;span style="color:#f92672">GITHUB_ACTOR&lt;/span>: &lt;span style="color:#ae81ff">${{ github.actor }}&lt;/span>
-&lt;span style="color:#f92672">GITHUB_TOKEN&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}&lt;/span>
-&lt;span style="color:#f92672">OSSRH_USERNAME&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.OSSRH_USERNAME }}&lt;/span>
-&lt;span style="color:#f92672">OSSRH_PASSWORD&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.OSSRH_PASSWORD }}&lt;/span>
-&lt;span style="color:#f92672">SIGNING_KEY&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.SIGNING_KEY }}&lt;/span>
-&lt;span style="color:#f92672">SIGNING_PASSWORD&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.SIGNING_PASSWORD }}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>The configuration samples used here can also be checked out in full at this &lt;a href="https://github.com/j4ckofalltrades/steam-webapi-kt">GitHub
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Publish to OSSRH and GitHub Package Registry&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">release&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">types&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">created]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">publish&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/setup-java@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">distribution&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;adopt-openj9&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">java-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;11&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./gradlew publish&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_ACTOR&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ github.actor }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_TOKEN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.GITHUB_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">OSSRH_USERNAME&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.OSSRH_USERNAME }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">OSSRH_PASSWORD&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.OSSRH_PASSWORD }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">SIGNING_KEY&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.SIGNING_KEY }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">SIGNING_PASSWORD&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.SIGNING_PASSWORD }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The configuration samples used here can also be checked out in full at this &lt;a href="https://github.com/j4ckofalltrades/steam-webapi-kt" class="external-link" target="_blank" rel="noopener">GitHub
 repository&lt;/a>.&lt;/p>
 &lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p></description></item></channel></rss>

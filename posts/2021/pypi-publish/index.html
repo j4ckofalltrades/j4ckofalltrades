@@ -1,100 +1,319 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="en"><meta name=color-scheme content="light dark"><meta name=author content="Jordan Duabe"><meta name=description content="Guide for publishing packages to PyPI"><meta name=keywords content="blog,programmer,personal"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png"><meta name=twitter:title content="Publishing to PyPI"><meta name=twitter:description content="Guide for publishing packages to PyPI"><meta property="og:title" content="Publishing to PyPI"><meta property="og:description" content="Guide for publishing packages to PyPI"><meta property="og:type" content="article"><meta property="og:url" content="https://jduabe.dev/posts/2021/pypi-publish/"><meta property="og:image" content="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png"><meta property="article:published_time" content="2021-06-13T22:08:53+08:00"><meta property="article:modified_time" content="2021-06-13T22:08:53+08:00"><title>Publishing to PyPI · /home/j4ckofalltrades</title><link rel=canonical href=https://jduabe.dev/posts/2021/pypi-publish/><link rel=preload href="https://jduabe.dev/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=https://jduabe.dev/css/coder.min.8e2b2510f60e1715eae08d113a808dcdaf17f6f711edb9e969be38d0074d240d.css integrity="sha256-jislEPYOFxXq4I0ROoCNza8X9vcR7bnpab440AdNJA0=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://jduabe.dev/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=https://jduabe.dev/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://jduabe.dev/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=https://jduabe.dev/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=https://jduabe.dev/images/apple-touch-icon.png><script defer src=https://twemoji.maxcdn.com/v/13.0.2/twemoji.min.js integrity=sha384-wyB/MspSJ/r2bT2kCj44qtsYRYlpzO2oAPhRj5myrWD63dt6qWv4x8AZe7Fl3K3b crossorigin=anonymous></script><meta name=generator content="Hugo 0.77.0"></head><body class="preload-transitions colorscheme-auto" onload=twemoji.parse(document.body);><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jduabe.dev/>/home/j4ckofalltrades</a>
+<!doctype html><html lang=en>
+<head>
+<title>
+Publishing to PyPI · /home/jordan
+</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Jordan Duabe">
+<meta name=description content="Guide for publishing packages to PyPI">
+<meta name=keywords content="blog,programmer,personal">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:image content="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png">
+<meta name=twitter:title content="Publishing to PyPI">
+<meta name=twitter:description content="Guide for publishing packages to PyPI">
+<meta property="og:title" content="Publishing to PyPI">
+<meta property="og:description" content="Guide for publishing packages to PyPI">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jduabe.dev/posts/2021/pypi-publish/"><meta property="og:image" content="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2021-06-13T22:08:53+08:00">
+<meta property="article:modified_time" content="2021-06-13T22:08:53+08:00">
+<link rel=canonical href=https://jduabe.dev/posts/2021/pypi-publish/>
+<link rel=preload href="https://jduabe.dev/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=https://jduabe.dev/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=https://jduabe.dev/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/svg+xml href=https://jduabe.dev/images/favicon.svg sizes=any>
+<link rel=icon type=image/png href=https://jduabe.dev/img/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=https://jduabe.dev/img/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=https://jduabe.dev/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=https://jduabe.dev/images/apple-touch-icon.png>
+<link rel=manifest href=https://jduabe.dev/site.webmanifest>
+<link rel=mask-icon href=https://jduabe.dev/images/safari-pinned-tab.svg color=#5bbad5>
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=https://jduabe.dev/>
+/home/jordan
+</a>
 <input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=https://profile.jduabe.dev>Profile</a></li><li class=navigation-item><a class=navigation-link href=https://jduabe.dev/posts/>Blog</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jduabe.dev/posts/2021/pypi-publish/>Publishing to PyPI</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i><time datetime=2021-06-13T22:08:53+08:00>June 13, 2021</time></span>
-<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>4-minute read</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i><a href=https://jduabe.dev/categories/dev/>dev</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i><span class=tag><a href=https://jduabe.dev/tags/pypi/>pypi</a></span>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=https://jduabe.dev/about/>About</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://jduabe.dev/posts/>Blog</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://jduabe.dev/posts/2021/pypi-publish/>
+Publishing to PyPI
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2021-06-13T22:08:53+08:00>
+June 13, 2021
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+4-minute read
+</span>
+</div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
+<a href=https://jduabe.dev/categories/dev/>dev</a></div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=https://jduabe.dev/tags/pypi/>pypi</a>
+</span>
 <span class=separator>•</span>
-<span class=tag><a href=https://jduabe.dev/tags/python/>python</a></span></div></div></header><div><p><img src=https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png alt=pypi></p><p>This guide walks you through the necessary steps to upload your package to the
-🐍 Python Package Index (PyPI) with some recommendations along the way.</p><h2 id=dry-run-publishing-to-testpypi>Dry-run (Publishing to TestPyPI)
-<a class=heading-link href=#dry-run-publishing-to-testpypi><i class="fa fa-link" aria-hidden=true></i></a></h2><p><em>This step is optional but recommended.</em></p><p><a href=https://test.pypi.org>TestPyPI</a> is a separate instance of the <em>real</em> package
+<span class=tag>
+<a href=https://jduabe.dev/tags/python/>python</a>
+</span></div>
+</div>
+</header>
+<div class=post-content>
+<p><img src=https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png alt=pypi></p>
+<p>This guide walks you through the necessary steps to upload your package to the
+🐍 Python Package Index (PyPI) with some recommendations along the way.</p>
+<h2 id=dry-run-publishing-to-testpypi>
+Dry-run (Publishing to TestPyPI)
+<a class=heading-link href=#dry-run-publishing-to-testpypi>
+<i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span>
+</a>
+</h2>
+<p><em>This step is optional but recommended.</em></p>
+<p><a href=https://test.pypi.org class=external-link target=_blank rel=noopener>TestPyPI</a> is a separate instance of the <em>real</em> package
 index which is intended for testing and experimentation. This is a good way to
-test out your package before uploading to the real index.</p><ol><li><p>Register an account for <a href=https://test.pypi.org/account/register>TestPyPI</a></p></li><li><p>Create a <a href=https://test.pypi.org/manage/account/#api-tokens>TestPyPI API token</a>
-&ndash; make sure to set the scope to &ldquo;Entire account&rdquo;</p></li><li><p>Use <a href=https://packaging.python.org/key_projects/#twine>twine</a> to upload your
-package</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ python3 -m pip install --upgrade twine
-<span style=color:#75715e># replace dist with the directory where your distribution archive is located</span>
+test out your package before uploading to the real index.</p>
+<ol>
+<li>
+<p>Register an account for <a href=https://test.pypi.org/account/register class=external-link target=_blank rel=noopener>TestPyPI</a></p>
+</li>
+<li>
+<p>Create a <a href=https://test.pypi.org/manage/account/#api-tokens class=external-link target=_blank rel=noopener>TestPyPI API token</a>
+&ndash; make sure to set the scope to &ldquo;Entire account&rdquo;</p>
+</li>
+<li>
+<p>Use <a href=https://packaging.python.org/key_projects/#twine class=external-link target=_blank rel=noopener>twine</a> to upload your
+package</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>$ python3 -m pip install --upgrade twine
+<span class=c1># replace dist with the directory where your distribution archive is located</span>
 $ python3 -m twine upload --repository testpypi dist/*
 </code></pre></div><p>You will be prompted for your TestPyPI username and password. Use the
-following values.</p><table><thead><tr><th>username</th><th>password</th></tr></thead><tbody><tr><td><code>__token__</code></td><td>API token including the <code>pypi-</code> prefix</td></tr></tbody></table><p>Alternatively you can also use a <code>.pypirc</code> file to define your package
+following values.</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__token__</code></td>
+<td>API token including the <code>pypi-</code> prefix</td>
+</tr>
+</tbody>
+</table>
+<p>Alternatively you can also use a <code>.pypirc</code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
-a <code>$HOME/.pypirc</code> file with the following contents:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#f92672>[</span>testpypi<span style=color:#f92672>]</span>
-username<span style=color:#f92672>=</span>__token__
+a <code>$HOME/.pypirc</code> file with the following contents:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=o>[</span>testpypi<span class=o>]</span>
+<span class=nv>username</span><span class=o>=</span>__token__
 </code></pre></div><p>You can also use the <code>password</code> field and paste in your API token but the
 recommended way is to use <code>keyring</code> (which is installed by Twine) for saving
-credentials such as API tokens and passwords. You can do so with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>keyring set https://test.pypi.org/legacy/ &lt;value_of_api_token&gt;
+credentials such as API tokens and passwords. You can do so with:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>keyring <span class=nb>set</span> https://test.pypi.org/legacy/ &lt;value_of_api_token&gt;
 </code></pre></div><p>Once the upload process has finished, you should be able to view your
-package on TestPyPI at <a href=https://test.pypi.org/project/your-package-name>https://test.pypi.org/project/your-package-name</a>.</p></li><li><p>Installing and testing out your package</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ python3 -m pip install <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>--index-url https://test.pypi.org/simple/ --no-deps your-package
+package on TestPyPI at <a href=https://test.pypi.org/project/your-package-name class=external-link target=_blank rel=noopener>https://test.pypi.org/project/your-package-name</a>.</p>
+</li>
+<li>
+<p>Installing and testing out your package</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ python3 -m pip install <span class=se>\
+</span><span class=se></span>--index-url https://test.pypi.org/simple/ --no-deps your-package
 </code></pre></div><p>Note that the <code>no-deps</code> flag is specified as one or more of your package&rsquo;s
 dependencies might not be present in TestPyPI and may cause the installation
-to fail.</p><p>Once the installation has finished you can test it out by importing your
-package.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ python3
+to fail.</p>
+<p>Once the installation has finished you can test it out by importing your
+package.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ python3
 &gt;&gt;&gt; from example_package import your_function
-&gt;&gt;&gt; your_function.do_something<span style=color:#f92672>()</span>
+&gt;&gt;&gt; your_function.do_something<span class=o>()</span>
 </code></pre></div><p>Note that the import package will always be <code>example_package</code> regardless of
-the <code>name</code> you&rsquo;ve configured for your package.</p><p>That&rsquo;s it, you can now try and upload your package to the <em>real</em> index.</p></li></ol><h2 id=publishing-to-pypi>Publishing to PyPI
-<a class=heading-link href=#publishing-to-pypi><i class="fa fa-link" aria-hidden=true></i></a></h2><p>The <a href=#dry-run-publishing-to-testpypi>steps</a> are identical with how you would
+the <code>name</code> you&rsquo;ve configured for your package.</p>
+<p>That&rsquo;s it, you can now try and upload your package to the <em>real</em> index.</p>
+</li>
+</ol>
+<h2 id=publishing-to-pypi>
+Publishing to PyPI
+<a class=heading-link href=#publishing-to-pypi>
+<i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span>
+</a>
+</h2>
+<p>The <a href=#dry-run-publishing-to-testpypi>steps</a> are identical with how you would
 upload a package to TestPyPI. The main difference is that you&rsquo;ll have to
-register an account and create an API token at <a href=https://pypi.org>PyPI</a>, as the
-former is a separate instance of PyPI.</p><ol><li><p>Register an account for <a href=https://pypi.org/account/register>PyPI</a></p></li><li><p>Create a <a href=https://pypi.org/manage/account/#api-tokens>PyPI API token</a>
-&ndash; make sure to set the scope to &ldquo;Entire account&rdquo;</p></li><li><p>Use <a href=https://packaging.python.org/key_projects/#twine>twine</a> to upload your
-package</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>$ python3 -m pip install --upgrade twine
-<span style=color:#75715e># replace dist with the directory where your distribution archive is located</span>
+register an account and create an API token at <a href=https://pypi.org class=external-link target=_blank rel=noopener>PyPI</a>, as the
+former is a separate instance of PyPI.</p>
+<ol>
+<li>
+<p>Register an account for <a href=https://pypi.org/account/register class=external-link target=_blank rel=noopener>PyPI</a></p>
+</li>
+<li>
+<p>Create a <a href=https://pypi.org/manage/account/#api-tokens class=external-link target=_blank rel=noopener>PyPI API token</a>
+&ndash; make sure to set the scope to &ldquo;Entire account&rdquo;</p>
+</li>
+<li>
+<p>Use <a href=https://packaging.python.org/key_projects/#twine class=external-link target=_blank rel=noopener>twine</a> to upload your
+package</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>$ python3 -m pip install --upgrade twine
+<span class=c1># replace dist with the directory where your distribution archive is located</span>
 $ python3 -m twine upload --repository pypi dist/*
 </code></pre></div><p>You will be prompted for your PyPI username and password. Use the
-following values.</p><table><thead><tr><th>username</th><th>password</th></tr></thead><tbody><tr><td><code>__token__</code></td><td>API token including the <code>pypi-</code> prefix</td></tr></tbody></table><p>Alternatively you can also use a <code>.pypirc</code> file to define your package
+following values.</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>__token__</code></td>
+<td>API token including the <code>pypi-</code> prefix</td>
+</tr>
+</tbody>
+</table>
+<p>Alternatively you can also use a <code>.pypirc</code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
-a <code>$HOME/.pypirc</code> file with the following contents:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#f92672>[</span>pypi<span style=color:#f92672>]</span>
-username<span style=color:#f92672>=</span>__token__
+a <code>$HOME/.pypirc</code> file with the following contents:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell><span class=o>[</span>pypi<span class=o>]</span>
+<span class=nv>username</span><span class=o>=</span>__token__
 </code></pre></div><p>You can also use the <code>password</code> field and paste in your API token but the
 recommended way is to use <code>keyring</code> (which is installed by Twine) for saving
-credentials such as API tokens and passwords. You can do so with:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>keyring set https://upload.pypi.org/legacy/ &lt;value_of_api_token&gt;
+credentials such as API tokens and passwords. You can do so with:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-sh data-lang=sh>keyring <span class=nb>set</span> https://upload.pypi.org/legacy/ &lt;value_of_api_token&gt;
 </code></pre></div><p>When the upload process finishes, you should be able to view your package
-on PyPI at <a href=https://pypi.org/project/your-package-name>https://pypi.org/project/your-package-name</a></p></li><li><p>Installing and testing out your package</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>python3 -m pip install your-package
+on PyPI at <a href=https://pypi.org/project/your-package-name class=external-link target=_blank rel=noopener>https://pypi.org/project/your-package-name</a></p>
+</li>
+<li>
+<p>Installing and testing out your package</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>python3 -m pip install your-package
 </code></pre></div><p>Once the installation has finished you can test it out by importing your
-package.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell>$ python3
+package.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>$ python3
 &gt;&gt;&gt; from example_package import your_function
-&gt;&gt;&gt; your_function.do_something<span style=color:#f92672>()</span>
-</code></pre></div><p>Congrats, you&rsquo;ve successfully published your pacakge to PyPI. 🎉</p></li></ol><h2 id=bonus-automation-with-github-packages>Bonus: Automation with GitHub Packages
-<a class=heading-link href=#bonus-automation-with-github-packages><i class="fa fa-link" aria-hidden=true></i></a></h2><p>You&rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
-Here&rsquo;s how to set it up using GitHub Actions.</p><ol><li><p>Create a <a href=https://pypi.org/manage/account/#api-tokens>new PyPI API token</a></p></li><li><p>Add the API token as a secret to your target GitHub repository. You can find
+&gt;&gt;&gt; your_function.do_something<span class=o>()</span>
+</code></pre></div><p>Congrats, you&rsquo;ve successfully published your pacakge to PyPI. 🎉</p>
+</li>
+</ol>
+<h2 id=bonus-automation-with-github-packages>
+Bonus: Automation with GitHub Packages
+<a class=heading-link href=#bonus-automation-with-github-packages>
+<i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span>
+</a>
+</h2>
+<p>You&rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
+Here&rsquo;s how to set it up using GitHub Actions.</p>
+<ol>
+<li>
+<p>Create a <a href=https://pypi.org/manage/account/#api-tokens class=external-link target=_blank rel=noopener>new PyPI API token</a></p>
+</li>
+<li>
+<p>Add the API token as a secret to your target GitHub repository. You can find
 this under Settings > Secrets for your repo. Give the secret a name e.g.
-<code>PYPI_API_TOKEN</code>.</p></li><li><p>Create a GitHub action workflow file in your repo at
-<code>.github/workflows/pypi-publish.yml</code> with the following contents:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Publish package to PyPI</span>
-   
-<span style=color:#f92672>on</span>:
-<span style=color:#f92672>release</span>:
-    <span style=color:#f92672>types</span>: [<span style=color:#ae81ff>created]</span>
-   
-<span style=color:#f92672>jobs</span>:
-<span style=color:#f92672>build-n-publish</span>:
-    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build and publish to PyPI</span>
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-18.04</span>
-    <span style=color:#f92672>steps</span>:
-    - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
-   
-    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Set up Python 3.7</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-python@v1</span>
-        <span style=color:#f92672>with</span>:
-        <span style=color:#f92672>python-version</span>: <span style=color:#ae81ff>3.7</span>
-   
-    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Install pypa/build</span>
-        <span style=color:#f92672>run</span>: &gt;-<span style=color:#e6db74>
-</span><span style=color:#e6db74>        python -m
-</span><span style=color:#e6db74>        pip install
-</span><span style=color:#e6db74>        build
-</span><span style=color:#e6db74>        --user</span>        
-    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build a binary wheel and a source tarball</span>
-        <span style=color:#f92672>run</span>: &gt;-<span style=color:#e6db74>
-</span><span style=color:#e6db74>        python -m
-</span><span style=color:#e6db74>        build
-</span><span style=color:#e6db74>        --sdist
-</span><span style=color:#e6db74>        --wheel
-</span><span style=color:#e6db74>        --outdir dist/
-</span><span style=color:#e6db74>        .</span>        
-    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Publish package</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>pypa/gh-action-pypi-publish@release/v1</span>
-        <span style=color:#f92672>with</span>:
-        <span style=color:#f92672>password</span>: <span style=color:#ae81ff>${{ secrets.PYPI_API_TOKEN }}</span>
-</code></pre></div><p>This workflow is triggered when a new release is created but you can also
+<code>PYPI_API_TOKEN</code>.</p>
+</li>
+<li>
+<p>Create a GitHub action workflow file in your repo at
+<code>.github/workflows/pypi-publish.yml</code> with the following contents:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Publish package to PyPI</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>on</span><span class=p>:</span><span class=w>
+</span><span class=w></span><span class=nt>release</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span><span class=nt>types</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=l>created]</span><span class=w>
+</span><span class=w>
+</span><span class=w></span><span class=nt>jobs</span><span class=p>:</span><span class=w>
+</span><span class=w></span><span class=nt>build-n-publish</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Build and publish to PyPI</span><span class=w>
+</span><span class=w>    </span><span class=nt>runs-on</span><span class=p>:</span><span class=w> </span><span class=l>ubuntu-18.04</span><span class=w>
+</span><span class=w>    </span><span class=nt>steps</span><span class=p>:</span><span class=w>
+</span><span class=w>    </span>- <span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/checkout@master</span><span class=w>
+</span><span class=w>
+</span><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Set up Python 3.7</span><span class=w>
+</span><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>actions/setup-python@v1</span><span class=w>
+</span><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span><span class=w>        </span><span class=nt>python-version</span><span class=p>:</span><span class=w> </span><span class=m>3.7</span><span class=w>
+</span><span class=w>
+</span><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Install pypa/build</span><span class=w>
+</span><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>&gt;-</span><span class=sd>
+</span><span class=sd>        python -m
+</span><span class=sd>        pip install
+</span><span class=sd>        build
+</span><span class=sd>        --user</span><span class=w>        
+</span><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Build a binary wheel and a source tarball</span><span class=w>
+</span><span class=w>        </span><span class=nt>run</span><span class=p>:</span><span class=w> </span><span class=p>&gt;-</span><span class=sd>
+</span><span class=sd>        python -m
+</span><span class=sd>        build
+</span><span class=sd>        --sdist
+</span><span class=sd>        --wheel
+</span><span class=sd>        --outdir dist/
+</span><span class=sd>        .</span><span class=w>        
+</span><span class=w>    </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>Publish package</span><span class=w>
+</span><span class=w>        </span><span class=nt>uses</span><span class=p>:</span><span class=w> </span><span class=l>pypa/gh-action-pypi-publish@release/v1</span><span class=w>
+</span><span class=w>        </span><span class=nt>with</span><span class=p>:</span><span class=w>
+</span><span class=w>        </span><span class=nt>password</span><span class=p>:</span><span class=w> </span><span class=l>${{ secrets.PYPI_API_TOKEN }}</span><span class=w>
+</span></code></pre></div><p>This workflow is triggered when a new release is created but you can also
 configure it to be triggered when a different event happens e.g. when a
-new tag gets pushed. Refer to the <a href=https://docs.github.com/en/actions>GitHub Actions documentation</a>
-for more configuration options.</p><p>That&rsquo;s it, time to get publishing.</p></li></ol></div><footer></footer></article></section></div></main><script src=https://jduabe.dev/js/coder.min.a350362441276ec5c1671926420497bb8e52b63ead1d51d3c9bc4342d0039526.js integrity="sha256-o1A2JEEnbsXBZxkmQgSXu45Stj6tHVHTybxDQtADlSY="></script></body></html>
+new tag gets pushed. Refer to the <a href=https://docs.github.com/en/actions class=external-link target=_blank rel=noopener>GitHub Actions documentation</a>
+for more configuration options.</p>
+<p>That&rsquo;s it, time to get publishing.</p>
+</li>
+</ol>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+©
+2020 -
+2023
+Jordan Duabe
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+</section>
+</footer>
+</main>
+<script src=https://jduabe.dev/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D+Uk="></script>
+</body>
+</html>

@@ -1,65 +1,69 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>qmk on /home/j4ckofalltrades</title><link>https://jduabe.dev/tags/qmk/</link><description>Recent content in qmk on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 25 Apr 2023 17:16:02 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/qmk/index.xml" rel="self" type="application/rss+xml"/><item><title>NCR-80 QMK/VIA firmware</title><link>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</link><pubDate>Tue, 25 Apr 2023 17:16:02 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</guid><description>&lt;p>Built the &lt;a href="https://jduabe.dev/posts/2022/ncr-80">NCR-80&lt;/a> last year, great-looking board especially if you like the
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>qmk on /home/jordan</title><link>https://jduabe.dev/tags/qmk/</link><description>Recent content in qmk on /home/jordan</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 25 Apr 2023 17:16:02 +0800</lastBuildDate><atom:link href="https://jduabe.dev/tags/qmk/index.xml" rel="self" type="application/rss+xml"/><item><title>NCR-80 QMK/VIA firmware</title><link>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</link><pubDate>Tue, 25 Apr 2023 17:16:02 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</guid><description>&lt;p>Built the &lt;a href="https://jduabe.dev/posts/2022/ncr-80" class="external-link" target="_blank" rel="noopener">NCR-80&lt;/a> last year, great-looking board especially if you like the
 retro aesthetic, and is a pleasure to type on.&lt;/p>
-&lt;p>One thing I did notice was that the product listing points to a Google Drive link to the pre-compiled &lt;a href="https://drive.google.com/drive/folders/1e3mjUg-N15SFVrExlBiI01-XOKpPm9ry?usp=sharing">QMK and VIA firmware&lt;/a>,
+&lt;p>One thing I did notice was that the product listing points to a Google Drive link to the pre-compiled &lt;a href="https://drive.google.com/drive/folders/1e3mjUg-N15SFVrExlBiI01-XOKpPm9ry?usp=sharing" class="external-link" target="_blank" rel="noopener">QMK and VIA firmware&lt;/a>,
 but it hasn&amp;rsquo;t been added to the QMK and VIA repositories. I thought this would be a good weekend project (&lt;strong>Spoiler&lt;/strong>: it took longer than a weekend).&lt;/p>
 &lt;p>I wrote the steps of how I got it done (the steps also apply to any keyboard firmware).&lt;/p>
 &lt;h2 id="converting-kbfirmware-json-to-qmk">
 Converting KBFirmware JSON to QMK
 &lt;a class="heading-link" href="#converting-kbfirmware-json-to-qmk">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>The starting point is to convert the KBFirmware JSON from the provided &amp;ldquo;QMK&amp;rdquo; files from the product listing, and then
 converting them to QMK formatted files.&lt;/p>
 &lt;p>There are a couple of tools that can be used for this purpose:&lt;/p>
 &lt;ul>
-&lt;li>Recommended: &lt;a href="https://noroadsleft.github.io/kbf_qmk_converter">KBFirmware JSON to QMK Parser&lt;/a>&lt;/li>
-&lt;li>Deprecated: &lt;a href="https://kbfirmware.com">Keyboard Firmware Builder&lt;/a>&lt;/li>
+&lt;li>Recommended: &lt;a href="https://noroadsleft.github.io/kbf_qmk_converter" class="external-link" target="_blank" rel="noopener">KBFirmware JSON to QMK Parser&lt;/a>&lt;/li>
+&lt;li>Deprecated: &lt;a href="https://kbfirmware.com" class="external-link" target="_blank" rel="noopener">Keyboard Firmware Builder&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>The resulting files will be the base of the QMK firmware for the keyboard.&lt;/p>
 &lt;h2 id="creating-a-qmk-pull-request">
 Creating a QMK pull request
 &lt;a class="heading-link" href="#creating-a-qmk-pull-request">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
-&lt;p>Make sure to read the &lt;a href="https://docs.qmk.fm/#/contributing?id=keyboards">contribution guide&lt;/a> as a first step.
+&lt;p>Make sure to read the &lt;a href="https://docs.qmk.fm/#/contributing?id=keyboards" class="external-link" target="_blank" rel="noopener">contribution guide&lt;/a> as a first step.
 It is also a good idea to check out other supported keyboard firmware to get a feel for the directory structure, and conventions in use.&lt;/p>
 &lt;p>A keyboard firmware folder (simplified example) should look something like:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">mt
-|-- ncr80
-| |-- keymaps
-| |-- default
-| |-- keymap.c
-|-- info.json
-|-- readme.md
-&lt;span style="color:#e6db74">`&lt;/span>-- rules.mk
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">mt
+&lt;span class="p">|&lt;/span>-- ncr80
+&lt;span class="p">|&lt;/span> &lt;span class="p">|&lt;/span>-- keymaps
+&lt;span class="p">|&lt;/span> &lt;span class="p">|&lt;/span>-- default
+&lt;span class="p">|&lt;/span> &lt;span class="p">|&lt;/span>-- keymap.c
+&lt;span class="p">|&lt;/span>-- info.json
+&lt;span class="p">|&lt;/span>-- readme.md
+&lt;span class="sb">`&lt;/span>-- rules.mk
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>In cases where keyboards have multiple versions or revisions e.g. rev1, rev2 or hotswap/soldered, the directory structure
 will look different; refer to QMK&amp;rsquo;s contribution guide linked above.&lt;/p>
-&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/qmk/qmk_firmware/pull/19130">[Keyboard] Add NCR-80&lt;/a>&lt;/p>
+&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/qmk/qmk_firmware/pull/19130" class="external-link" target="_blank" rel="noopener">[Keyboard] Add NCR-80&lt;/a>&lt;/p>
 &lt;h2 id="creating-a-via-pull-request">
 Creating a VIA pull request
 &lt;a class="heading-link" href="#creating-a-via-pull-request">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>In order to add VIA support for a keyboard, it is required to enable the VIA feature in QMK, and adding a &lt;code>via&lt;/code>-compatible
 keymap for the keyboard. You can check out the QMK pull request linked above; look for the &lt;code>keymaps/via&lt;/code> directory.&lt;/p>
-&lt;p>Read the VIA docs for &lt;a href="https://www.caniusevia.com/docs/configuring_qmk">configuring QMK&lt;/a> for a more in-depth guide.
-I also recommend reading about the &lt;a href="https://www.caniusevia.com/docs/specification">VIA spec&lt;/a>.&lt;/p>
+&lt;p>Read the VIA docs for &lt;a href="https://www.caniusevia.com/docs/configuring_qmk" class="external-link" target="_blank" rel="noopener">configuring QMK&lt;/a> for a more in-depth guide.
+I also recommend reading about the &lt;a href="https://www.caniusevia.com/docs/specification" class="external-link" target="_blank" rel="noopener">VIA spec&lt;/a>.&lt;/p>
 &lt;p>It is also required to have the QMK pull request merged in before contributing to the VIA repository.&lt;/p>
 &lt;h2 id="via-v2-vs-v3-definitions">
 VIA V2 vs V3 definitions
 &lt;a class="heading-link" href="#via-v2-vs-v3-definitions">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>It is basically just a matter of copying the VIA &lt;code>json&lt;/code> files from the Drive link referenced at the start of this post.
 The main difference here is the location of the definitions depend on the version; &lt;code>V2&lt;/code> definitions are located in the
 &lt;code>src/&amp;lt;manufacturer&amp;gt;/&amp;lt;keyboard&amp;gt;&lt;/code> directory while the &lt;code>V3&lt;/code> definitions are in the &lt;code>v3/&amp;lt;manufacturer&amp;gt;/&amp;lt;keyboard&amp;gt;&lt;/code>.&lt;/p>
 &lt;p>If you have a &lt;code>V2&lt;/code> definition, you can convert it a &lt;code>V3&lt;/code> definition by running the &lt;code>scripts/build-all.ts&lt;/code> file in the
-&lt;a href="https://github.com/the-via/keyboards">via keyboards&lt;/a> repository.&lt;/p>
-&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/the-via/keyboards/pull/1548">Add support for NCR-80&lt;/a>&lt;/p>
+&lt;a href="https://github.com/the-via/keyboards" class="external-link" target="_blank" rel="noopener">via keyboards&lt;/a> repository.&lt;/p>
+&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/the-via/keyboards/pull/1548" class="external-link" target="_blank" rel="noopener">Add support for NCR-80&lt;/a>&lt;/p>
 &lt;p>That&amp;rsquo;s it, once the pull request gets merged VIA should be able to detect your keyboard.&lt;/p>
 &lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1676107180/keebs/ncr80/ncr-80-via_hlgb5c.png" alt="VIA NCR-80">&lt;/p></description></item><item><title>Ikki68 Aurora build</title><link>https://jduabe.dev/posts/2023/ikki68_aurora/</link><pubDate>Sat, 18 Feb 2023 12:21:19 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ikki68_aurora/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1676740613/keebs/ikki68_aurora_xa8pcq.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
@@ -76,21 +80,21 @@ The main difference here is the location of the definitions depend on the versio
 &lt;li>Vim-style arrow keys&lt;/li>
 &lt;li>Media player controls&lt;/li>
 &lt;/ul>
-&lt;p>As well as home-row modifiers which I&amp;rsquo;ve adopted to all my other boards (since building the &lt;a href="https://jduabe.dev/posts/2022/ncr-80">NCR-80&lt;/a>).&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># left side modifiers&lt;/span>
-MT&lt;span style="color:#f92672">(&lt;/span>MOD_LCTL, KC_S&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LGUI, KC_D&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LALT, KC_F&lt;span style="color:#f92672">)&lt;/span>
-&lt;span style="color:#75715e"># right side modifiers&lt;/span>
-MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_RGUI, KC_K&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_RCTL, KC_L&lt;span style="color:#f92672">)&lt;/span>
+&lt;p>As well as home-row modifiers which I&amp;rsquo;ve adopted to all my other boards (since building the &lt;a href="https://jduabe.dev/posts/2022/ncr-80" >NCR-80&lt;/a>).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># left side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_LCTL, KC_S&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LGUI, KC_D&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LALT, KC_F&lt;span class="o">)&lt;/span>
+&lt;span class="c1"># right side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_RALT, KC_J&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RGUI, KC_K&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RCTL, KC_L&lt;span class="o">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>NCR-80 build</title><link>https://jduabe.dev/posts/2022/ncr-80/</link><pubDate>Fri, 18 Feb 2022 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2022/ncr-80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1645196848/keebs/ncr80/ncr-80_vnf9hq.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;em>NCR-80 is a reimagination of the classic rebranded Cherry G81-3000 by NCR&lt;/em>&lt;/p>
 &lt;/blockquote>
 &lt;p>I used &lt;strong>Durock Shrimp&lt;/strong> switches for this build, just spring-lubed with &lt;strong>Krytox 205g0&lt;/strong>, and &lt;strong>Katha Baybayin&lt;/strong> keycaps.&lt;/p>
 &lt;p>I had to be a little bit creative with the keymaps, given I generally use Ctrl, Alt, and Meta keys for keyboard shortcuts. I used Mod-Tap on the home row keys to work around this.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># left side modifiers&lt;/span>
-MT&lt;span style="color:#f92672">(&lt;/span>MOD_LCTL, KC_S&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LGUI, KC_D&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LALT, KC_F&lt;span style="color:#f92672">)&lt;/span>
-&lt;span style="color:#75715e"># right side modifiers&lt;/span>
-MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_RGUI, KC_K&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_RCTL, KC_L&lt;span style="color:#f92672">)&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># left side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_LCTL, KC_S&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LGUI, KC_D&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LALT, KC_F&lt;span class="o">)&lt;/span>
+&lt;span class="c1"># right side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_RALT, KC_J&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RGUI, KC_K&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RCTL, KC_L&lt;span class="o">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;code>Caps Lock&lt;/code> remapped as soft escape (Esc when held, Ctrl when tapped)&lt;/li>
 &lt;li>Vim-style arrow keys&lt;/li>
@@ -109,7 +113,7 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;li>Vim-style arrow keys&lt;/li>
 &lt;li>Media player controls&lt;/li>
 &lt;/ul>
-&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/da3d61376c9baa30491ca660bd1a2565">Keyboard Layout Editor&lt;/a>&lt;/p>
+&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/da3d61376c9baa30491ca660bd1a2565" class="external-link" target="_blank" rel="noopener">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/preonic/assets/preonic.png" alt="Preonic custom keymap">&lt;/p></description></item><item><title>ID80 build</title><link>https://jduabe.dev/posts/2022/id80/</link><pubDate>Sun, 23 Jan 2022 22:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2022/id80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1642946766/keebs/id80/id80_lxezxv.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.
@@ -126,7 +130,8 @@ Featuring a seamless case design made from anodized aluminum, it also incorporat
 &lt;h2 id="mods">
 Mods
 &lt;a class="heading-link" href="#mods">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>&lt;strong>Case&lt;/strong>: 60% Wooden Case (Walnut)&lt;/p>
@@ -134,25 +139,28 @@ Mods
 &lt;h2 id="firmware">
 Firmware
 &lt;a class="heading-link" href="#firmware">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>Modified version of default keymap plus some Vim-inspired features
 e.g. soft escape (Esc when held, Ctrl when tapped), and media controls.&lt;/p>
-&lt;p>Refer to &lt;a href="https://openannepro.github.io/install/">Open Anne Pro&lt;/a>
+&lt;p>Refer to &lt;a href="https://openannepro.github.io/install/" class="external-link" target="_blank" rel="noopener">Open Anne Pro&lt;/a>
 for installation / flashing instructions.&lt;/p>
 &lt;h3 id="layout">
 Layout
 &lt;a class="heading-link" href="#layout">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h3>
-&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/f1c23fc1769c9bb0b1872d2272a1f268">Keyboard Layout Editor&lt;/a>&lt;/p>
+&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/f1c23fc1769c9bb0b1872d2272a1f268" class="external-link" target="_blank" rel="noopener">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/anne-pro-2/assets/annepro2.png" alt="SofleKeyboard custom keymap">&lt;/p>
 &lt;h3 id="features">
 Features
 &lt;a class="heading-link" href="#features">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h3>
 &lt;ul>
@@ -161,7 +169,7 @@ Features
 &lt;li>Media player controls&lt;/li>
 &lt;/ul></description></item><item><title>Sofle v2 build</title><link>https://jduabe.dev/posts/2021/sofle-v2/</link><pubDate>Mon, 27 Sep 2021 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2021/sofle-v2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
-&lt;p>The &lt;a href="https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html">SofleKeyboard&lt;/a>
+&lt;p>The &lt;a href="https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html" class="external-link" target="_blank" rel="noopener">SofleKeyboard&lt;/a>
 is a 6×4+5 keys column-staggered split keyboard with encoder support. Based on the Lily58, Corne, and Helix keyboards.&lt;/p>
 &lt;/blockquote>
 &lt;p>First time trying out ortholinear and split mechanical keyboards with this build.&lt;/p>
@@ -222,5 +230,5 @@ to add extra &amp;ldquo;layers&amp;rdquo; by combining them with modifiers.&lt;/
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>One other area for tinkering is the OLED displays where you can show text, and even images e.g. &lt;a href="https://docs.qmk.fm/#/feature_oled_driver?id=logo-example">displaying your own logo&lt;/a>.&lt;/p>
-&lt;p>Check out the full custom keymap &lt;a href="https://github.com/j4ckofalltrades/keebs/tree/master/sofle-v2">here&lt;/a>.&lt;/p></description></item></channel></rss>
+&lt;p>One other area for tinkering is the OLED displays where you can show text, and even images e.g. &lt;a href="https://docs.qmk.fm/#/feature_oled_driver?id=logo-example" class="external-link" target="_blank" rel="noopener">displaying your own logo&lt;/a>.&lt;/p>
+&lt;p>Check out the full custom keymap &lt;a href="https://github.com/j4ckofalltrades/keebs/tree/master/sofle-v2" class="external-link" target="_blank" rel="noopener">here&lt;/a>.&lt;/p></description></item></channel></rss>

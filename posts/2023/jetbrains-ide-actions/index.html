@@ -1,67 +1,242 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="en"><meta name=color-scheme content="light dark"><meta name=author content="Jordan Duabe"><meta name=description content="Performing actions via the JetBrains IDE scripting console"><meta name=keywords content="blog,programmer,personal"><meta name=twitter:card content="summary"><meta name=twitter:title content="Programatically invoking JetBrains IDE actions"><meta name=twitter:description content="Performing actions via the JetBrains IDE scripting console"><meta property="og:title" content="Programatically invoking JetBrains IDE actions"><meta property="og:description" content="Performing actions via the JetBrains IDE scripting console"><meta property="og:type" content="article"><meta property="og:url" content="https://jduabe.dev/posts/2023/jetbrains-ide-actions/"><meta property="article:published_time" content="2023-05-20T13:22:32+08:00"><meta property="article:modified_time" content="2023-05-20T13:22:32+08:00"><title>Programatically invoking JetBrains IDE actions · /home/j4ckofalltrades</title><link rel=canonical href=https://jduabe.dev/posts/2023/jetbrains-ide-actions/><link rel=preload href="https://jduabe.dev/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=https://jduabe.dev/css/coder.min.8e2b2510f60e1715eae08d113a808dcdaf17f6f711edb9e969be38d0074d240d.css integrity="sha256-jislEPYOFxXq4I0ROoCNza8X9vcR7bnpab440AdNJA0=" crossorigin=anonymous media=screen><link rel=stylesheet href=https://jduabe.dev/css/coder-dark.min.aa883b9ce35a8ff4a2a5008619005175e842bb18a8a9f9cc2bbcf44dab2d91fa.css integrity="sha256-qog7nONaj/SipQCGGQBRdehCuxioqfnMK7z0Tastkfo=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=https://jduabe.dev/img/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=https://jduabe.dev/img/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=https://jduabe.dev/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=https://jduabe.dev/images/apple-touch-icon.png><script defer src=https://twemoji.maxcdn.com/v/13.0.2/twemoji.min.js integrity=sha384-wyB/MspSJ/r2bT2kCj44qtsYRYlpzO2oAPhRj5myrWD63dt6qWv4x8AZe7Fl3K3b crossorigin=anonymous></script><meta name=generator content="Hugo 0.77.0"></head><body class="preload-transitions colorscheme-auto" onload=twemoji.parse(document.body);><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=https://jduabe.dev/>/home/j4ckofalltrades</a>
+<!doctype html><html lang=en>
+<head>
+<title>
+Programatically invoking JetBrains IDE actions · /home/jordan
+</title>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Jordan Duabe">
+<meta name=description content="Performing actions via the JetBrains IDE scripting console">
+<meta name=keywords content="blog,programmer,personal">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Programatically invoking JetBrains IDE actions">
+<meta name=twitter:description content="Performing actions via the JetBrains IDE scripting console">
+<meta property="og:title" content="Programatically invoking JetBrains IDE actions">
+<meta property="og:description" content="Performing actions via the JetBrains IDE scripting console">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jduabe.dev/posts/2023/jetbrains-ide-actions/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2023-05-20T13:22:32+08:00">
+<meta property="article:modified_time" content="2023-05-20T13:22:32+08:00">
+<link rel=canonical href=https://jduabe.dev/posts/2023/jetbrains-ide-actions/>
+<link rel=preload href="https://jduabe.dev/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=https://jduabe.dev/css/coder.min.135e22c97ff685fe983fc60048e309ced8f00d8d38f536aa67dba8a13a03dfa4.css integrity="sha256-E14iyX/2hf6YP8YASOMJztjwDY049TaqZ9uooToD36Q=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=https://jduabe.dev/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/svg+xml href=https://jduabe.dev/images/favicon.svg sizes=any>
+<link rel=icon type=image/png href=https://jduabe.dev/img/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=https://jduabe.dev/img/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=https://jduabe.dev/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=https://jduabe.dev/images/apple-touch-icon.png>
+<link rel=manifest href=https://jduabe.dev/site.webmanifest>
+<link rel=mask-icon href=https://jduabe.dev/images/safari-pinned-tab.svg color=#5bbad5>
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=https://jduabe.dev/>
+/home/jordan
+</a>
 <input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=https://profile.jduabe.dev>Profile</a></li><li class=navigation-item><a class=navigation-link href=https://jduabe.dev/posts/>Blog</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://jduabe.dev/posts/2023/jetbrains-ide-actions/>Programatically invoking JetBrains IDE actions</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i><time datetime=2023-05-20T13:22:32+08:00>May 20, 2023</time></span>
-<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>4-minute read</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i><a href=https://jduabe.dev/categories/dev/>dev</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i><span class=tag><a href=https://jduabe.dev/tags/bash/>bash</a></span>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=https://jduabe.dev/about/>About</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=https://jduabe.dev/posts/>Blog</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://jduabe.dev/posts/2023/jetbrains-ide-actions/>
+Programatically invoking JetBrains IDE actions
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2023-05-20T13:22:32+08:00>
+May 20, 2023
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+4-minute read
+</span>
+</div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
+<a href=https://jduabe.dev/categories/dev/>dev</a></div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=https://jduabe.dev/tags/bash/>bash</a>
+</span>
 <span class=separator>•</span>
-<span class=tag><a href=https://jduabe.dev/tags/ide/>ide</a></span>
+<span class=tag>
+<a href=https://jduabe.dev/tags/ide/>ide</a>
+</span>
 <span class=separator>•</span>
-<span class=tag><a href=https://jduabe.dev/tags/automation/>automation</a></span></div></div></header><div><p>I&rsquo;ve had a Stream Deck for a while now but haven&rsquo;t really configured it
+<span class=tag>
+<a href=https://jduabe.dev/tags/automation/>automation</a>
+</span></div>
+</div>
+</header>
+<div class=post-content>
+<p>I&rsquo;ve had a Stream Deck for a while now but haven&rsquo;t really configured it
 for any coding related workflows. I use several JetBrains IDEs for work and
 personal use (Intellij, PyCharm, WebStorm to name a few), so I started looking
-into what the possible options were.</p><p>The simplest solution would be to just invoke keyboard shortcut for a specific
+into what the possible options were.</p>
+<p>The simplest solution would be to just invoke keyboard shortcut for a specific
 but the downside of this approach is you can only have so much keycodes assigned
 (which may conflict with system shortcuts and possibly other apps), not to
 mention you&rsquo;d have to change these when you switched keymaps or used another
-operating system.</p><p>Ideally there would be a command where you can provide an <em>action</em> to the IDE,
-possibly through a plugin.</p><h2 id=ide-scripting-console>IDE Scripting Console
-<a class=heading-link href=#ide-scripting-console><i class="fa fa-link" aria-hidden=true></i></a></h2><p>While reading through the Intellij documentation, I
-stumbled upon the <a href=https://www.jetbrains.com/help/idea/ide-scripting-console.html>IDE scripting console</a>.</p><blockquote><p>The IDE Scripting Console can be used to write simple scripts that automate IntelliJ IDEA
+operating system.</p>
+<p>Ideally there would be a command where you can provide an <em>action</em> to the IDE,
+possibly through a plugin.</p>
+<h2 id=ide-scripting-console>
+IDE Scripting Console
+<a class=heading-link href=#ide-scripting-console>
+<i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span>
+</a>
+</h2>
+<p>While reading through the Intellij documentation, I
+stumbled upon the <a href=https://www.jetbrains.com/help/idea/ide-scripting-console.html class=external-link target=_blank rel=noopener>IDE scripting console</a>.</p>
+<blockquote>
+<p>The IDE Scripting Console can be used to write simple scripts that automate IntelliJ IDEA
 features and extract various information. With access to the IntelliJ platform API, you can
 think of it as a lightweight alternative to a plugin, which adds or modifies some behavior
-of the IDE.</p><p>By default, it supports scripts written in Kotlin, JavaScript, and Groovy. However, you can use any scripting language that is compliant with JSR 223, for example, Python, Ruby, Clojure, and so on.</p></blockquote><p>This looks promising; I copied and modified some sample code from the docs to
-display a &ldquo;Hello World&rdquo; message in a dialog in the IDE.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=color:#66d9ef>import</span> com.intellij.openapi.ui.Messages
+of the IDE.</p>
+<p>By default, it supports scripts written in Kotlin, JavaScript, and Groovy. However, you can use any scripting language that is compliant with JSR 223, for example, Python, Ruby, Clojure, and so on.</p>
+</blockquote>
+<p>This looks promising; I copied and modified some sample code from the docs to
+display a &ldquo;Hello World&rdquo; message in a dialog in the IDE.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin><span class=k>import</span> <span class=nn>com.intellij.openapi.ui.Messages</span>
 
-<span style=color:#66d9ef>val</span> b = bindings <span style=color:#66d9ef>as</span> Map&lt;String, Any&gt;
-<span style=color:#66d9ef>val</span> IDE = b[<span style=color:#e6db74>&#34;IDE&#34;</span>] <span style=color:#66d9ef>as</span> com.intellij.ide.script.IDE
+<span class=k>val</span> <span class=py>b</span> <span class=p>=</span> <span class=n>bindings</span> <span class=k>as</span> <span class=n>Map</span><span class=p>&lt;</span><span class=n>String</span><span class=p>,</span> <span class=n>Any</span><span class=p>&gt;</span>
+<span class=k>val</span> <span class=py>IDE</span> <span class=p>=</span> <span class=n>b</span><span class=p>[</span><span class=s2>&#34;IDE&#34;</span><span class=p>]</span> <span class=k>as</span> <span class=n>com</span><span class=p>.</span><span class=n>intellij</span><span class=p>.</span><span class=n>ide</span><span class=p>.</span><span class=n>script</span><span class=p>.</span><span class=n>IDE</span>
 
-Messages.showInfoMessage(<span style=color:#e6db74>&#34;Hello World&#34;</span>)
-</code></pre></div><h2 id=invoking-actions>Invoking Actions
-<a class=heading-link href=#invoking-actions><i class="fa fa-link" aria-hidden=true></i></a></h2><p>The next step was figuring out how to invoke <em>actions</em> in the IDE.
+<span class=n>Messages</span><span class=p>.</span><span class=n>showInfoMessage</span><span class=p>(</span><span class=s2>&#34;Hello World&#34;</span><span class=p>)</span>
+</code></pre></div><h2 id=invoking-actions>
+Invoking Actions
+<a class=heading-link href=#invoking-actions>
+<i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span>
+</a>
+</h2>
+<p>The next step was figuring out how to invoke <em>actions</em> in the IDE.
 The Intellij Platform Plugin SDK defines the requirements in its
-<a href=https://plugins.jetbrains.com/docs/intellij/basic-action-system.html>Action system</a> documentation.</p><p>An <code>ActionManager</code> instance is used to execute an IDE <code>Action</code> that is referred
-to by its unique id &ndash; this can either be a custom action from an installed plugin or the <a href=https://github.com/JetBrains/intellij-community/tree/idea/231.8109.175/platform/ide-core/src/com/intellij/openapi/actionSystem/IdeActions.java>standard IntelliJ Platform actions</a>.</p><p>The following snippet executes the standard <em>NextTab</em> action:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin><span style=color:#66d9ef>import</span> com.intellij.openapi.actionSystem.ActionManager
-<span style=color:#66d9ef>import</span> com.intellij.openapi.actionSystem.AnAction
+<a href=https://plugins.jetbrains.com/docs/intellij/basic-action-system.html class=external-link target=_blank rel=noopener>Action system</a> documentation.</p>
+<p>An <code>ActionManager</code> instance is used to execute an IDE <code>Action</code> that is referred
+to by its unique id &ndash; this can either be a custom action from an installed plugin or the <a href=https://github.com/JetBrains/intellij-community/tree/idea/231.8109.175/platform/ide-core/src/com/intellij/openapi/actionSystem/IdeActions.java class=external-link target=_blank rel=noopener>standard IntelliJ Platform actions</a>.</p>
+<p>The following snippet executes the standard <em>NextTab</em> action:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin><span class=k>import</span> <span class=nn>com.intellij.openapi.actionSystem.ActionManager</span>
+<span class=k>import</span> <span class=nn>com.intellij.openapi.actionSystem.AnAction</span>
 
-<span style=color:#66d9ef>val</span> b = bindings <span style=color:#66d9ef>as</span> Map&lt;String, Any&gt;
-<span style=color:#66d9ef>val</span> IDE = b[<span style=color:#e6db74>&#34;IDE&#34;</span>] <span style=color:#66d9ef>as</span> com.intellij.ide.script.IDE
+<span class=k>val</span> <span class=py>b</span> <span class=p>=</span> <span class=n>bindings</span> <span class=k>as</span> <span class=n>Map</span><span class=p>&lt;</span><span class=n>String</span><span class=p>,</span> <span class=n>Any</span><span class=p>&gt;</span>
+<span class=k>val</span> <span class=py>IDE</span> <span class=p>=</span> <span class=n>b</span><span class=p>[</span><span class=s2>&#34;IDE&#34;</span><span class=p>]</span> <span class=k>as</span> <span class=n>com</span><span class=p>.</span><span class=n>intellij</span><span class=p>.</span><span class=n>ide</span><span class=p>.</span><span class=n>script</span><span class=p>.</span><span class=n>IDE</span>
 
-<span style=color:#66d9ef>val</span> actionManager: ActionManager = ActionManager.getInstance()
-<span style=color:#75715e>// move focus to the next editor tab
-</span><span style=color:#75715e></span><span style=color:#66d9ef>val</span> action: AnAction = actionManager.getAction(<span style=color:#e6db74>&#34;NextTab&#34;</span>)
-actionManager.tryToExecute(action, <span style=color:#66d9ef>null</span>, <span style=color:#66d9ef>null</span>, <span style=color:#66d9ef>null</span>, <span style=color:#66d9ef>false</span>)
-</code></pre></div><h2 id=invoking-the-script-from-the-command-line>Invoking the script from the command line
-<a class=heading-link href=#invoking-the-script-from-the-command-line><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Up to now, I&rsquo;ve been able to play around with the scripts from within the IDEs
-&ndash; the next step is to find a way to invoke them externally.</p><p>Fortunately, this feature is already available since <a href=https://youtrack.jetbrains.com/issue/IDEA-245847>version 2021.1</a>;
+<span class=k>val</span> <span class=py>actionManager</span><span class=p>:</span> <span class=n>ActionManager</span> <span class=p>=</span> <span class=n>ActionManager</span><span class=p>.</span><span class=n>getInstance</span><span class=p>()</span>
+<span class=c1>// move focus to the next editor tab
+</span><span class=c1></span><span class=k>val</span> <span class=py>action</span><span class=p>:</span> <span class=n>AnAction</span> <span class=p>=</span> <span class=n>actionManager</span><span class=p>.</span><span class=n>getAction</span><span class=p>(</span><span class=s2>&#34;NextTab&#34;</span><span class=p>)</span>
+<span class=n>actionManager</span><span class=p>.</span><span class=n>tryToExecute</span><span class=p>(</span><span class=n>action</span><span class=p>,</span> <span class=k>null</span><span class=p>,</span> <span class=k>null</span><span class=p>,</span> <span class=k>null</span><span class=p>,</span> <span class=k>false</span><span class=p>)</span>
+</code></pre></div><h2 id=invoking-the-script-from-the-command-line>
+Invoking the script from the command line
+<a class=heading-link href=#invoking-the-script-from-the-command-line>
+<i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span>
+</a>
+</h2>
+<p>Up to now, I&rsquo;ve been able to play around with the scripts from within the IDEs
+&ndash; the next step is to find a way to invoke them externally.</p>
+<p>Fortunately, this feature is already available since <a href=https://youtrack.jetbrains.com/issue/IDEA-245847 class=external-link target=_blank rel=noopener>version 2021.1</a>;
 it requires the command line scripts for the IDEs to be installed e.g.
-<code>idea</code> for Intellij IDEA. This can be configured via the <a href=https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox>JetBrains Toolbox</a>.</p><p>The command to run script(s) is <code>idea ideScript &lt;files></code>.</p><p>Caveat: The script does not work (when invoked from the command line at least) unless
-the IDE action execution code is wrapped in the following snippet:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>IDE.application.invokeLater {
-  <span style=color:#75715e>// action execution code goes here 
-</span><span style=color:#75715e></span>}
+<code>idea</code> for Intellij IDEA. This can be configured via the <a href=https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox class=external-link target=_blank rel=noopener>JetBrains Toolbox</a>.</p>
+<p>The command to run script(s) is <code>idea ideScript &lt;files></code>.</p>
+<p>Caveat: The script does not work (when invoked from the command line at least) unless
+the IDE action execution code is wrapped in the following snippet:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-kotlin data-lang=kotlin><span class=n>IDE</span><span class=p>.</span><span class=n>application</span><span class=p>.</span><span class=n>invokeLater</span> <span class=p>{</span>
+  <span class=c1>// action execution code goes here 
+</span><span class=c1></span><span class=p>}</span>
 </code></pre></div><p>My guess is that it needs to be non-blocking, since it is invoked externally.
 One other thing to note is that if you have multiple windows of an IDE running,
-the action will be executed in the last active window.</p><h2 id=parameterizing-the-script>Parameterizing the script
-<a class=heading-link href=#parameterizing-the-script><i class="fa fa-link" aria-hidden=true></i></a></h2><p>The last thing I wanted to add was to parameterize the script, where I could
+the action will be executed in the last active window.</p>
+<h2 id=parameterizing-the-script>
+Parameterizing the script
+<a class=heading-link href=#parameterizing-the-script>
+<i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span>
+</a>
+</h2>
+<p>The last thing I wanted to add was to parameterize the script, where I could
 pass in the action name e.g. &ldquo;Run tests&rdquo; and the IDE where the aforementioned
-action would be executed.</p><p>I tried a couple of things; my first implementation involved passing the params
+action would be executed.</p>
+<p>I tried a couple of things; my first implementation involved passing the params
 as environment variables and parsing them in the script. That didn&rsquo;t seem to
 work as when I tried to log the params they would always be <code>null</code>. The next
-thing I tried was to reading the params from a text file which also did not work.</p><p>Eventually, my solution involved creating a shell script that:</p><ol><li>Requires (and parses) the IDE name and action name as arguments</li><li>Writes out the IDE script to a file (taking params into account)</li><li>Executes the IDE script</li><li>Deletes the IDE script file</li></ol><p>So if I wanted to perform an action on an Intellij IDEA window, the command
-will look like <code>ide-script.sh --ide idea --action action_name_to_perform</code></p><h2 id=putting-it-all-together>Putting it all together
-<a class=heading-link href=#putting-it-all-together><i class="fa fa-link" aria-hidden=true></i></a></h2><p>As a side note, Intellij IDEA ships with Kotlin so the samples will work there
+thing I tried was to reading the params from a text file which also did not work.</p>
+<p>Eventually, my solution involved creating a shell script that:</p>
+<ol>
+<li>Requires (and parses) the IDE name and action name as arguments</li>
+<li>Writes out the IDE script to a file (taking params into account)</li>
+<li>Executes the IDE script</li>
+<li>Deletes the IDE script file</li>
+</ol>
+<p>So if I wanted to perform an action on an Intellij IDEA window, the command
+will look like <code>ide-script.sh --ide idea --action action_name_to_perform</code></p>
+<h2 id=putting-it-all-together>
+Putting it all together
+<a class=heading-link href=#putting-it-all-together>
+<i class="fa fa-link" aria-hidden=true title="Link to heading"></i>
+<span class=sr-only>Link to heading</span>
+</a>
+</h2>
+<p>As a side note, Intellij IDEA ships with Kotlin so the samples will work there
 &ndash; it may work on other IDEs if the Kotlin plugin is installed but I haven&rsquo;t
-tested that so YMMV.</p><p>I ended up using Groovy since that ships with the other IDEs I mentioned earlier
+tested that so YMMV.</p>
+<p>I ended up using Groovy since that ships with the other IDEs I mentioned earlier
 and I&rsquo;ve been able to verify that it works on WebStorm and PyCharm. As for
 operating systems, I&rsquo;ve tested this script on both macOS and Linux. The steps
 should be similar on Windows; you also might be able to reuse the shell script
 if you are running WSL but I imagine you&rsquo;ll need to update the path of the
-command-line IDE launchers.</p><script src=https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe.js></script><p>You can find the full code on <a href=https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe>GitHub</a>.</p><p>I hope others find this useful; now on to configuring the Stream Deck.</p></div><footer></footer></article></section></div></main><script src=https://jduabe.dev/js/coder.min.a350362441276ec5c1671926420497bb8e52b63ead1d51d3c9bc4342d0039526.js integrity="sha256-o1A2JEEnbsXBZxkmQgSXu45Stj6tHVHTybxDQtADlSY="></script></body></html>
+command-line IDE launchers.</p>
+<script src=https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe.js></script>
+<p>You can find the full code on <a href=https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe class=external-link target=_blank rel=noopener>GitHub</a>.</p>
+<p>I hope others find this useful; now on to configuring the Stream Deck.</p>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+©
+2020 -
+2023
+Jordan Duabe
+·
+Powered by <a href=https://gohugo.io/ target=_blank rel=noopener>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/ target=_blank rel=noopener>Coder</a>.
+</section>
+</footer>
+</main>
+<script src=https://jduabe.dev/js/coder.min.369d90111ae4409b4e51de5efd23a46b92663fcc82dc9a0efde7f70bffc3f949.js integrity="sha256-Np2QERrkQJtOUd5e/SOka5JmP8yC3JoO/ef3C//D+Uk="></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/j4ckofalltrades</title><link>https://jduabe.dev/</link><description>Recent content on /home/j4ckofalltrades</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 18 Jun 2023 13:00:00 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>WAMK Meetup 2023</title><link>https://jduabe.dev/posts/2023/wamk-2023-meetup/</link><pubDate>Sun, 18 Jun 2023 13:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/wamk-2023-meetup/</guid><description>&lt;p>I brought my Preonic and StackOverflow The Key macropad to the meetup, as well a &lt;a href="https://shop.pimoroni.com/products/badger-2040">Badger2040&lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/jordan</title><link>https://jduabe.dev/</link><description>Recent content on /home/jordan</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 18 Jun 2023 13:00:00 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>WAMK Meetup 2023</title><link>https://jduabe.dev/posts/2023/wamk-2023-meetup/</link><pubDate>Sun, 18 Jun 2023 13:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/wamk-2023-meetup/</guid><description>&lt;p>I brought my Preonic and StackOverflow The Key macropad to the meetup, as well a &lt;a href="https://shop.pimoroni.com/products/badger-2040" class="external-link" target="_blank" rel="noopener">Badger2040&lt;/a>
 I configured as a digital lanyard.&lt;/p>
 &lt;figure>
 &lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_scale,q_auto,w_1024/v1688804851/blog/wamk-2023/IMG_1532_uow8at.jpg">
@@ -43,11 +43,11 @@ From L to R (top to bottom): JTD Works Ovinnik, S60 Proto, Finderworks Tengu, F1
 Sega Dreamcast running "Typing of the Dead" game with a 60% and 65% keyboard as controllers
 &lt;/figcaption>
 &lt;figure>
-&lt;p>A lot of boards on display were also using the &lt;a href="https://www.keebzncables.com/products/ice-kachang-tactile-switches">Ice Kachang&lt;/a>
+&lt;p>A lot of boards on display were also using the &lt;a href="https://www.keebzncables.com/products/ice-kachang-tactile-switches" class="external-link" target="_blank" rel="noopener">Ice Kachang&lt;/a>
 switches, which are really nice tactile switches.
-What&amp;rsquo;s cool is that they&amp;rsquo;re from a local keyboard enthusiast from Perth, go and check out &lt;a href="https://www.keebzncables.com">Keebz and Cables&lt;/a>.&lt;/p>
-&lt;p>Until the next meetup.&lt;/p></description></item><item><title>Playing around with the Badger2040</title><link>https://jduabe.dev/posts/2023/programmable-badge/</link><pubDate>Fri, 16 Jun 2023 21:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/programmable-badge/</guid><description>&lt;p>&lt;a href="https://shop.pimoroni.com/products/badger-2040">Badger2040&lt;/a> is a programmable E Paper/eInk/EPD badge, powered by
-the &lt;a href="https://www.raspberrypi.com/products/rp2040">RP2040&lt;/a>.&lt;/p>
+What&amp;rsquo;s cool is that they&amp;rsquo;re from a local keyboard enthusiast from Perth, go and check out &lt;a href="https://www.keebzncables.com" class="external-link" target="_blank" rel="noopener">Keebz and Cables&lt;/a>.&lt;/p>
+&lt;p>Until the next meetup.&lt;/p></description></item><item><title>Playing around with the Badger2040</title><link>https://jduabe.dev/posts/2023/programmable-badge/</link><pubDate>Fri, 16 Jun 2023 21:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/programmable-badge/</guid><description>&lt;p>&lt;a href="https://shop.pimoroni.com/products/badger-2040" class="external-link" target="_blank" rel="noopener">Badger2040&lt;/a> is a programmable E Paper/eInk/EPD badge, powered by
+the &lt;a href="https://www.raspberrypi.com/products/rp2040" class="external-link" target="_blank" rel="noopener">RP2040&lt;/a>.&lt;/p>
 &lt;p>Some of its features:&lt;/p>
 &lt;ul>
 &lt;li>&lt;em>2.9&amp;quot; black and white E Ink® display (296 x 128 pixels)&lt;/em>&lt;/li>
@@ -62,108 +62,115 @@ the &lt;a href="https://www.raspberrypi.com/products/rp2040">RP2040&lt;/a>.&lt;/
 &lt;h2 id="programming">
 Programming
 &lt;a class="heading-link" href="#programming">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
-&lt;p>The Badger2040 ships with a custom &lt;a href="https://micropython.org/">MicroPython&lt;/a> build and a graphics library
-&lt;a href="https://github.com/pimoroni/pimoroni-pico/blob/main/micropython/modules/picographics/README.md">PicoGraphics&lt;/a> that
+&lt;p>The Badger2040 ships with a custom &lt;a href="https://micropython.org/" class="external-link" target="_blank" rel="noopener">MicroPython&lt;/a> build and a graphics library
+&lt;a href="https://github.com/pimoroni/pimoroni-pico/blob/main/micropython/modules/picographics/README.md" class="external-link" target="_blank" rel="noopener">PicoGraphics&lt;/a> that
 contains useful utilities for drawing on the screen. There are also a couple of examples loaded on the device by
 default.&lt;/p>
 &lt;p>In order to write code or update / run the existing code samples, you&amp;rsquo;ll need to connect it to your computer and open
-up an IDE with MicroPython support i.e. &lt;a href="https://thonny.org/">Thonny&lt;/a>.&lt;/p>
+up an IDE with MicroPython support i.e. &lt;a href="https://thonny.org/" class="external-link" target="_blank" rel="noopener">Thonny&lt;/a>.&lt;/p>
 &lt;p>One thing to note is you opt to use a different IDE is to make sure to name the file as &lt;code>main.py&lt;/code> as it will be
 automatically run once uploaded to the device (this is the default behavior of the RP2040), otherwise your code will not
 be executed.&lt;/p>
-&lt;p>I ended up using &lt;a href="https://www.jetbrains.com/pycharm/">PyCharm&lt;/a> with the &lt;a href="https://plugins.jetbrains.com/plugin/9777-micropython">MicroPython&lt;/a>
+&lt;p>I ended up using &lt;a href="https://www.jetbrains.com/pycharm/" class="external-link" target="_blank" rel="noopener">PyCharm&lt;/a> with the &lt;a href="https://plugins.jetbrains.com/plugin/9777-micropython" class="external-link" target="_blank" rel="noopener">MicroPython&lt;/a>
 plugin, one extra step I needed to do was to point the plugin to the device which was located at &lt;code>/dev/ttyACM0&lt;/code>
 (if you&amp;rsquo;re on a Unix environment).&lt;/p>
 &lt;h2 id="drawing">
 Drawing
 &lt;a class="heading-link" href="#drawing">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>With the following built-in functions, we can draw text and shapes on the screen.&lt;/p>
 &lt;h3 id="constants">
 Constants
 &lt;a class="heading-link" href="#constants">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h3>
 &lt;p>The screen dimensions are provided as constants.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
-WIDTH &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>WIDTH &lt;span style="color:#75715e"># 296&lt;/span>
-HEIGHT &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>HEIGHT &lt;span style="color:#75715e"># 128&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">badger2040&lt;/span>
+&lt;span class="n">WIDTH&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">badger2040&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">WIDTH&lt;/span> &lt;span class="c1"># 296&lt;/span>
+&lt;span class="n">HEIGHT&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">badger2040&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">HEIGHT&lt;/span> &lt;span class="c1"># 128&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="pen">
 Pen
 &lt;a class="heading-link" href="#pen">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h3>
 &lt;p>There are 16 pen colours - or &amp;ldquo;shades of grey&amp;rdquo; - to choose, from 0 (black) to 15 (white).&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
-display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
-display&lt;span style="color:#f92672">.&lt;/span>set_pen(
-colour &lt;span style="color:#75715e"># int: color from 0 to 15&lt;/span>
-)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">badger2040&lt;/span>
+&lt;span class="n">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">badger2040&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Badger2040&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">display&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">set_pen&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">colour&lt;/span> &lt;span class="c1"># int: color from 0 to 15&lt;/span>
+&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>The thickness of the lines drawn on the screen can be also be configured.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
-display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
-display&lt;span style="color:#f92672">.&lt;/span>set_thickness(
-value &lt;span style="color:#75715e"># int: thickness in pixels&lt;/span>
-)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">badger2040&lt;/span>
+&lt;span class="n">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">badger2040&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Badger2040&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">display&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">set_thickness&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">value&lt;/span> &lt;span class="c1"># int: thickness in pixels&lt;/span>
+&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="text">
 Text
 &lt;a class="heading-link" href="#text">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h3>
 &lt;p>The font can be changed with the &lt;code>set_font&lt;/code> method and write using the &lt;code>text&lt;/code> function.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
-display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
-&lt;span style="color:#75715e"># Available fonts&lt;/span>
-&lt;span style="color:#75715e">#&lt;/span>
-&lt;span style="color:#75715e"># Bitmap&lt;/span>
-&lt;span style="color:#75715e"># - bitmap6&lt;/span>
-&lt;span style="color:#75715e"># - bitmap8&lt;/span>
-&lt;span style="color:#75715e"># - bitmap14_outline&lt;/span>
-&lt;span style="color:#75715e">#&lt;/span>
-&lt;span style="color:#75715e"># Vector&lt;/span>
-&lt;span style="color:#75715e"># - sans&lt;/span>
-&lt;span style="color:#75715e"># - gothic&lt;/span>
-&lt;span style="color:#75715e"># - cursive&lt;/span>
-&lt;span style="color:#75715e"># - serif_italic&lt;/span>
-&lt;span style="color:#75715e"># - serif&lt;/span>
-display&lt;span style="color:#f92672">.&lt;/span>set_font(font)
-display&lt;span style="color:#f92672">.&lt;/span>text(
-text, &lt;span style="color:#75715e"># the text string to draw &lt;/span>
-x, &lt;span style="color:#75715e"># the destination X coordinate&lt;/span>
-y, &lt;span style="color:#75715e"># the destination Y coordinate&lt;/span>
-wordwrap, &lt;span style="color:#75715e"># number of pixels width before trying to break text into multiple lines&lt;/span>
-scale, &lt;span style="color:#75715e"># size&lt;/span>
-angle, &lt;span style="color:#75715e"># rotation angle (Vector only!)&lt;/span>
-spacing &lt;span style="color:#75715e"># letter spacing&lt;/span>
-)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">badger2040&lt;/span>
+&lt;span class="n">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">badger2040&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Badger2040&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="c1"># Available fonts&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># Bitmap&lt;/span>
+&lt;span class="c1"># - bitmap6&lt;/span>
+&lt;span class="c1"># - bitmap8&lt;/span>
+&lt;span class="c1"># - bitmap14_outline&lt;/span>
+&lt;span class="c1">#&lt;/span>
+&lt;span class="c1"># Vector&lt;/span>
+&lt;span class="c1"># - sans&lt;/span>
+&lt;span class="c1"># - gothic&lt;/span>
+&lt;span class="c1"># - cursive&lt;/span>
+&lt;span class="c1"># - serif_italic&lt;/span>
+&lt;span class="c1"># - serif&lt;/span>
+&lt;span class="n">display&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">set_font&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">font&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">display&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">text&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">text&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># the text string to draw &lt;/span>
+&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># the destination X coordinate&lt;/span>
+&lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># the destination Y coordinate&lt;/span>
+&lt;span class="n">wordwrap&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># number of pixels width before trying to break text into multiple lines&lt;/span>
+&lt;span class="n">scale&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># size&lt;/span>
+&lt;span class="n">angle&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="c1"># rotation angle (Vector only!)&lt;/span>
+&lt;span class="n">spacing&lt;/span> &lt;span class="c1"># letter spacing&lt;/span>
+&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="shapes">
 Shapes
 &lt;a class="heading-link" href="#shapes">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h3>
 &lt;p>There are quite a few functions available here, I just included the ones I used. You can check out the full list in the
-&lt;a href="https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/modules/picographics">Pico Graphics function reference&lt;/a>.&lt;/p>
+&lt;a href="https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/modules/picographics" class="external-link" target="_blank" rel="noopener">Pico Graphics function reference&lt;/a>.&lt;/p>
 &lt;p>&lt;strong>Line&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
-display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
-display&lt;span style="color:#f92672">.&lt;/span>line(x1, y1, x2, y2)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">badger2040&lt;/span>
+&lt;span class="n">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">badger2040&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Badger2040&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">display&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">line&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y2&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Rectangle&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#f92672">import&lt;/span> badger2040
-display &lt;span style="color:#f92672">=&lt;/span> badger2040&lt;span style="color:#f92672">.&lt;/span>Badger2040()
-display&lt;span style="color:#f92672">.&lt;/span>rectangle(x, y, width, height)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="kn">import&lt;/span> &lt;span class="nn">badger2040&lt;/span>
+&lt;span class="n">display&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">badger2040&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">Badger2040&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">display&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">rectangle&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">y&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">width&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">height&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="putting-it-all-together">
 Putting it all together
 &lt;a class="heading-link" href="#putting-it-all-together">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;figure>
@@ -186,11 +193,12 @@ possibly through a plugin.&lt;/p>
 &lt;h2 id="ide-scripting-console">
 IDE Scripting Console
 &lt;a class="heading-link" href="#ide-scripting-console">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>While reading through the Intellij documentation, I
-stumbled upon the &lt;a href="https://www.jetbrains.com/help/idea/ide-scripting-console.html">IDE scripting console&lt;/a>.&lt;/p>
+stumbled upon the &lt;a href="https://www.jetbrains.com/help/idea/ide-scripting-console.html" class="external-link" target="_blank" rel="noopener">IDE scripting console&lt;/a>.&lt;/p>
 &lt;blockquote>
 &lt;p>The IDE Scripting Console can be used to write simple scripts that automate IntelliJ IDEA
 features and extract various information. With access to the IntelliJ platform API, you can
@@ -200,54 +208,57 @@ of the IDE.&lt;/p>
 &lt;/blockquote>
 &lt;p>This looks promising; I copied and modified some sample code from the docs to
 display a &amp;ldquo;Hello World&amp;rdquo; message in a dialog in the IDE.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="color:#66d9ef">import&lt;/span> com.intellij.openapi.ui.Messages
-&lt;span style="color:#66d9ef">val&lt;/span> b = bindings &lt;span style="color:#66d9ef">as&lt;/span> Map&amp;lt;String, Any&amp;gt;
-&lt;span style="color:#66d9ef">val&lt;/span> IDE = b[&lt;span style="color:#e6db74">&amp;#34;IDE&amp;#34;&lt;/span>] &lt;span style="color:#66d9ef">as&lt;/span> com.intellij.ide.script.IDE
-Messages.showInfoMessage(&lt;span style="color:#e6db74">&amp;#34;Hello World&amp;#34;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span class="k">import&lt;/span> &lt;span class="nn">com.intellij.openapi.ui.Messages&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">b&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">bindings&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">Map&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">IDE&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;IDE&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">com&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">intellij&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">ide&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">script&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">IDE&lt;/span>
+&lt;span class="n">Messages&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">showInfoMessage&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Hello World&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="invoking-actions">
 Invoking Actions
 &lt;a class="heading-link" href="#invoking-actions">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>The next step was figuring out how to invoke &lt;em>actions&lt;/em> in the IDE.
 The Intellij Platform Plugin SDK defines the requirements in its
-&lt;a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html">Action system&lt;/a> documentation.&lt;/p>
+&lt;a href="https://plugins.jetbrains.com/docs/intellij/basic-action-system.html" class="external-link" target="_blank" rel="noopener">Action system&lt;/a> documentation.&lt;/p>
 &lt;p>An &lt;code>ActionManager&lt;/code> instance is used to execute an IDE &lt;code>Action&lt;/code> that is referred
-to by its unique id &amp;ndash; this can either be a custom action from an installed plugin or the &lt;a href="https://github.com/JetBrains/intellij-community/tree/idea/231.8109.175/platform/ide-core/src/com/intellij/openapi/actionSystem/IdeActions.java">standard IntelliJ Platform actions&lt;/a>.&lt;/p>
+to by its unique id &amp;ndash; this can either be a custom action from an installed plugin or the &lt;a href="https://github.com/JetBrains/intellij-community/tree/idea/231.8109.175/platform/ide-core/src/com/intellij/openapi/actionSystem/IdeActions.java" class="external-link" target="_blank" rel="noopener">standard IntelliJ Platform actions&lt;/a>.&lt;/p>
 &lt;p>The following snippet executes the standard &lt;em>NextTab&lt;/em> action:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="color:#66d9ef">import&lt;/span> com.intellij.openapi.actionSystem.ActionManager
-&lt;span style="color:#66d9ef">import&lt;/span> com.intellij.openapi.actionSystem.AnAction
-&lt;span style="color:#66d9ef">val&lt;/span> b = bindings &lt;span style="color:#66d9ef">as&lt;/span> Map&amp;lt;String, Any&amp;gt;
-&lt;span style="color:#66d9ef">val&lt;/span> IDE = b[&lt;span style="color:#e6db74">&amp;#34;IDE&amp;#34;&lt;/span>] &lt;span style="color:#66d9ef">as&lt;/span> com.intellij.ide.script.IDE
-&lt;span style="color:#66d9ef">val&lt;/span> actionManager: ActionManager = ActionManager.getInstance()
-&lt;span style="color:#75715e">// move focus to the next editor tab
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#66d9ef">val&lt;/span> action: AnAction = actionManager.getAction(&lt;span style="color:#e6db74">&amp;#34;NextTab&amp;#34;&lt;/span>)
-actionManager.tryToExecute(action, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#66d9ef">null&lt;/span>, &lt;span style="color:#66d9ef">false&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span class="k">import&lt;/span> &lt;span class="nn">com.intellij.openapi.actionSystem.ActionManager&lt;/span>
+&lt;span class="k">import&lt;/span> &lt;span class="nn">com.intellij.openapi.actionSystem.AnAction&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">b&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">bindings&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">Map&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">String&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">Any&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">IDE&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">b&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;IDE&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">com&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">intellij&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">ide&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">script&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">IDE&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">actionManager&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">ActionManager&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">ActionManager&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getInstance&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="c1">// move focus to the next editor tab
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="k">val&lt;/span> &lt;span class="py">action&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">AnAction&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">actionManager&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getAction&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;NextTab&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">actionManager&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">tryToExecute&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">action&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">null&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="k">false&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="invoking-the-script-from-the-command-line">
 Invoking the script from the command line
 &lt;a class="heading-link" href="#invoking-the-script-from-the-command-line">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>Up to now, I&amp;rsquo;ve been able to play around with the scripts from within the IDEs
 &amp;ndash; the next step is to find a way to invoke them externally.&lt;/p>
-&lt;p>Fortunately, this feature is already available since &lt;a href="https://youtrack.jetbrains.com/issue/IDEA-245847">version 2021.1&lt;/a>;
+&lt;p>Fortunately, this feature is already available since &lt;a href="https://youtrack.jetbrains.com/issue/IDEA-245847" class="external-link" target="_blank" rel="noopener">version 2021.1&lt;/a>;
 it requires the command line scripts for the IDEs to be installed e.g.
-&lt;code>idea&lt;/code> for Intellij IDEA. This can be configured via the &lt;a href="https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox">JetBrains Toolbox&lt;/a>.&lt;/p>
+&lt;code>idea&lt;/code> for Intellij IDEA. This can be configured via the &lt;a href="https://www.jetbrains.com/help/idea/working-with-the-ide-features-from-command-line.html#toolbox" class="external-link" target="_blank" rel="noopener">JetBrains Toolbox&lt;/a>.&lt;/p>
 &lt;p>The command to run script(s) is &lt;code>idea ideScript &amp;lt;files&amp;gt;&lt;/code>.&lt;/p>
 &lt;p>Caveat: The script does not work (when invoked from the command line at least) unless
 the IDE action execution code is wrapped in the following snippet:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">IDE.application.invokeLater {
-&lt;span style="color:#75715e">// action execution code goes here
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span class="n">IDE&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">application&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">invokeLater&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// action execution code goes here
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>My guess is that it needs to be non-blocking, since it is invoked externally.
 One other thing to note is that if you have multiple windows of an IDE running,
 the action will be executed in the last active window.&lt;/p>
 &lt;h2 id="parameterizing-the-script">
 Parameterizing the script
 &lt;a class="heading-link" href="#parameterizing-the-script">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>The last thing I wanted to add was to parameterize the script, where I could
@@ -269,7 +280,8 @@ will look like &lt;code>ide-script.sh --ide idea --action action_name_to_perform
 &lt;h2 id="putting-it-all-together">
 Putting it all together
 &lt;a class="heading-link" href="#putting-it-all-together">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>As a side note, Intellij IDEA ships with Kotlin so the samples will work there
@@ -282,69 +294,73 @@ should be similar on Windows; you also might be able to reuse the shell script
 if you are running WSL but I imagine you&amp;rsquo;ll need to update the path of the
 command-line IDE launchers.&lt;/p>
 &lt;script src="https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe.js">&lt;/script>
-&lt;p>You can find the full code on &lt;a href="https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe">GitHub&lt;/a>.&lt;/p>
-&lt;p>I hope others find this useful; now on to configuring the Stream Deck.&lt;/p></description></item><item><title>NCR-80 QMK/VIA firmware</title><link>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</link><pubDate>Tue, 25 Apr 2023 17:16:02 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</guid><description>&lt;p>Built the &lt;a href="https://jduabe.dev/posts/2022/ncr-80">NCR-80&lt;/a> last year, great-looking board especially if you like the
+&lt;p>You can find the full code on &lt;a href="https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe" class="external-link" target="_blank" rel="noopener">GitHub&lt;/a>.&lt;/p>
+&lt;p>I hope others find this useful; now on to configuring the Stream Deck.&lt;/p></description></item><item><title>NCR-80 QMK/VIA firmware</title><link>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</link><pubDate>Tue, 25 Apr 2023 17:16:02 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ncr-80-qmk-via/</guid><description>&lt;p>Built the &lt;a href="https://jduabe.dev/posts/2022/ncr-80" class="external-link" target="_blank" rel="noopener">NCR-80&lt;/a> last year, great-looking board especially if you like the
 retro aesthetic, and is a pleasure to type on.&lt;/p>
-&lt;p>One thing I did notice was that the product listing points to a Google Drive link to the pre-compiled &lt;a href="https://drive.google.com/drive/folders/1e3mjUg-N15SFVrExlBiI01-XOKpPm9ry?usp=sharing">QMK and VIA firmware&lt;/a>,
+&lt;p>One thing I did notice was that the product listing points to a Google Drive link to the pre-compiled &lt;a href="https://drive.google.com/drive/folders/1e3mjUg-N15SFVrExlBiI01-XOKpPm9ry?usp=sharing" class="external-link" target="_blank" rel="noopener">QMK and VIA firmware&lt;/a>,
 but it hasn&amp;rsquo;t been added to the QMK and VIA repositories. I thought this would be a good weekend project (&lt;strong>Spoiler&lt;/strong>: it took longer than a weekend).&lt;/p>
 &lt;p>I wrote the steps of how I got it done (the steps also apply to any keyboard firmware).&lt;/p>
 &lt;h2 id="converting-kbfirmware-json-to-qmk">
 Converting KBFirmware JSON to QMK
 &lt;a class="heading-link" href="#converting-kbfirmware-json-to-qmk">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>The starting point is to convert the KBFirmware JSON from the provided &amp;ldquo;QMK&amp;rdquo; files from the product listing, and then
 converting them to QMK formatted files.&lt;/p>
 &lt;p>There are a couple of tools that can be used for this purpose:&lt;/p>
 &lt;ul>
-&lt;li>Recommended: &lt;a href="https://noroadsleft.github.io/kbf_qmk_converter">KBFirmware JSON to QMK Parser&lt;/a>&lt;/li>
-&lt;li>Deprecated: &lt;a href="https://kbfirmware.com">Keyboard Firmware Builder&lt;/a>&lt;/li>
+&lt;li>Recommended: &lt;a href="https://noroadsleft.github.io/kbf_qmk_converter" class="external-link" target="_blank" rel="noopener">KBFirmware JSON to QMK Parser&lt;/a>&lt;/li>
+&lt;li>Deprecated: &lt;a href="https://kbfirmware.com" class="external-link" target="_blank" rel="noopener">Keyboard Firmware Builder&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>The resulting files will be the base of the QMK firmware for the keyboard.&lt;/p>
 &lt;h2 id="creating-a-qmk-pull-request">
 Creating a QMK pull request
 &lt;a class="heading-link" href="#creating-a-qmk-pull-request">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
-&lt;p>Make sure to read the &lt;a href="https://docs.qmk.fm/#/contributing?id=keyboards">contribution guide&lt;/a> as a first step.
+&lt;p>Make sure to read the &lt;a href="https://docs.qmk.fm/#/contributing?id=keyboards" class="external-link" target="_blank" rel="noopener">contribution guide&lt;/a> as a first step.
 It is also a good idea to check out other supported keyboard firmware to get a feel for the directory structure, and conventions in use.&lt;/p>
 &lt;p>A keyboard firmware folder (simplified example) should look something like:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">mt
-|-- ncr80
-| |-- keymaps
-| |-- default
-| |-- keymap.c
-|-- info.json
-|-- readme.md
-&lt;span style="color:#e6db74">`&lt;/span>-- rules.mk
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">mt
+&lt;span class="p">|&lt;/span>-- ncr80
+&lt;span class="p">|&lt;/span> &lt;span class="p">|&lt;/span>-- keymaps
+&lt;span class="p">|&lt;/span> &lt;span class="p">|&lt;/span>-- default
+&lt;span class="p">|&lt;/span> &lt;span class="p">|&lt;/span>-- keymap.c
+&lt;span class="p">|&lt;/span>-- info.json
+&lt;span class="p">|&lt;/span>-- readme.md
+&lt;span class="sb">`&lt;/span>-- rules.mk
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>In cases where keyboards have multiple versions or revisions e.g. rev1, rev2 or hotswap/soldered, the directory structure
 will look different; refer to QMK&amp;rsquo;s contribution guide linked above.&lt;/p>
-&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/qmk/qmk_firmware/pull/19130">[Keyboard] Add NCR-80&lt;/a>&lt;/p>
+&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/qmk/qmk_firmware/pull/19130" class="external-link" target="_blank" rel="noopener">[Keyboard] Add NCR-80&lt;/a>&lt;/p>
 &lt;h2 id="creating-a-via-pull-request">
 Creating a VIA pull request
 &lt;a class="heading-link" href="#creating-a-via-pull-request">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>In order to add VIA support for a keyboard, it is required to enable the VIA feature in QMK, and adding a &lt;code>via&lt;/code>-compatible
 keymap for the keyboard. You can check out the QMK pull request linked above; look for the &lt;code>keymaps/via&lt;/code> directory.&lt;/p>
-&lt;p>Read the VIA docs for &lt;a href="https://www.caniusevia.com/docs/configuring_qmk">configuring QMK&lt;/a> for a more in-depth guide.
-I also recommend reading about the &lt;a href="https://www.caniusevia.com/docs/specification">VIA spec&lt;/a>.&lt;/p>
+&lt;p>Read the VIA docs for &lt;a href="https://www.caniusevia.com/docs/configuring_qmk" class="external-link" target="_blank" rel="noopener">configuring QMK&lt;/a> for a more in-depth guide.
+I also recommend reading about the &lt;a href="https://www.caniusevia.com/docs/specification" class="external-link" target="_blank" rel="noopener">VIA spec&lt;/a>.&lt;/p>
 &lt;p>It is also required to have the QMK pull request merged in before contributing to the VIA repository.&lt;/p>
 &lt;h2 id="via-v2-vs-v3-definitions">
 VIA V2 vs V3 definitions
 &lt;a class="heading-link" href="#via-v2-vs-v3-definitions">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>It is basically just a matter of copying the VIA &lt;code>json&lt;/code> files from the Drive link referenced at the start of this post.
 The main difference here is the location of the definitions depend on the version; &lt;code>V2&lt;/code> definitions are located in the
 &lt;code>src/&amp;lt;manufacturer&amp;gt;/&amp;lt;keyboard&amp;gt;&lt;/code> directory while the &lt;code>V3&lt;/code> definitions are in the &lt;code>v3/&amp;lt;manufacturer&amp;gt;/&amp;lt;keyboard&amp;gt;&lt;/code>.&lt;/p>
 &lt;p>If you have a &lt;code>V2&lt;/code> definition, you can convert it a &lt;code>V3&lt;/code> definition by running the &lt;code>scripts/build-all.ts&lt;/code> file in the
-&lt;a href="https://github.com/the-via/keyboards">via keyboards&lt;/a> repository.&lt;/p>
-&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/the-via/keyboards/pull/1548">Add support for NCR-80&lt;/a>&lt;/p>
+&lt;a href="https://github.com/the-via/keyboards" class="external-link" target="_blank" rel="noopener">via keyboards&lt;/a> repository.&lt;/p>
+&lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/the-via/keyboards/pull/1548" class="external-link" target="_blank" rel="noopener">Add support for NCR-80&lt;/a>&lt;/p>
 &lt;p>That&amp;rsquo;s it, once the pull request gets merged VIA should be able to detect your keyboard.&lt;/p>
 &lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1676107180/keebs/ncr80/ncr-80-via_hlgb5c.png" alt="VIA NCR-80">&lt;/p></description></item><item><title>Ikki68 Aurora build</title><link>https://jduabe.dev/posts/2023/ikki68_aurora/</link><pubDate>Sat, 18 Feb 2023 12:21:19 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ikki68_aurora/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1676740613/keebs/ikki68_aurora_xa8pcq.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
@@ -361,21 +377,21 @@ The main difference here is the location of the definitions depend on the versio
 &lt;li>Vim-style arrow keys&lt;/li>
 &lt;li>Media player controls&lt;/li>
 &lt;/ul>
-&lt;p>As well as home-row modifiers which I&amp;rsquo;ve adopted to all my other boards (since building the &lt;a href="https://jduabe.dev/posts/2022/ncr-80">NCR-80&lt;/a>).&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># left side modifiers&lt;/span>
-MT&lt;span style="color:#f92672">(&lt;/span>MOD_LCTL, KC_S&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LGUI, KC_D&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LALT, KC_F&lt;span style="color:#f92672">)&lt;/span>
-&lt;span style="color:#75715e"># right side modifiers&lt;/span>
-MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_RGUI, KC_K&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_RCTL, KC_L&lt;span style="color:#f92672">)&lt;/span>
+&lt;p>As well as home-row modifiers which I&amp;rsquo;ve adopted to all my other boards (since building the &lt;a href="https://jduabe.dev/posts/2022/ncr-80" >NCR-80&lt;/a>).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># left side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_LCTL, KC_S&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LGUI, KC_D&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LALT, KC_F&lt;span class="o">)&lt;/span>
+&lt;span class="c1"># right side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_RALT, KC_J&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RGUI, KC_K&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RCTL, KC_L&lt;span class="o">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div></description></item><item><title>NCR-80 build</title><link>https://jduabe.dev/posts/2022/ncr-80/</link><pubDate>Fri, 18 Feb 2022 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2022/ncr-80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1645196848/keebs/ncr80/ncr-80_vnf9hq.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;em>NCR-80 is a reimagination of the classic rebranded Cherry G81-3000 by NCR&lt;/em>&lt;/p>
 &lt;/blockquote>
 &lt;p>I used &lt;strong>Durock Shrimp&lt;/strong> switches for this build, just spring-lubed with &lt;strong>Krytox 205g0&lt;/strong>, and &lt;strong>Katha Baybayin&lt;/strong> keycaps.&lt;/p>
 &lt;p>I had to be a little bit creative with the keymaps, given I generally use Ctrl, Alt, and Meta keys for keyboard shortcuts. I used Mod-Tap on the home row keys to work around this.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#75715e"># left side modifiers&lt;/span>
-MT&lt;span style="color:#f92672">(&lt;/span>MOD_LCTL, KC_S&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LGUI, KC_D&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_LALT, KC_F&lt;span style="color:#f92672">)&lt;/span>
-&lt;span style="color:#75715e"># right side modifiers&lt;/span>
-MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_RGUI, KC_K&lt;span style="color:#f92672">)&lt;/span>, MT&lt;span style="color:#f92672">(&lt;/span>MOD_RCTL, KC_L&lt;span style="color:#f92672">)&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># left side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_LCTL, KC_S&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LGUI, KC_D&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LALT, KC_F&lt;span class="o">)&lt;/span>
+&lt;span class="c1"># right side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_RALT, KC_J&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RGUI, KC_K&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RCTL, KC_L&lt;span class="o">)&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>&lt;code>Caps Lock&lt;/code> remapped as soft escape (Esc when held, Ctrl when tapped)&lt;/li>
 &lt;li>Vim-style arrow keys&lt;/li>
@@ -394,7 +410,7 @@ MT&lt;span style="color:#f92672">(&lt;/span>MOD_RALT, KC_J&lt;span style="color:
 &lt;li>Vim-style arrow keys&lt;/li>
 &lt;li>Media player controls&lt;/li>
 &lt;/ul>
-&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/da3d61376c9baa30491ca660bd1a2565">Keyboard Layout Editor&lt;/a>&lt;/p>
+&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/da3d61376c9baa30491ca660bd1a2565" class="external-link" target="_blank" rel="noopener">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/preonic/assets/preonic.png" alt="Preonic custom keymap">&lt;/p></description></item><item><title>ID80 build</title><link>https://jduabe.dev/posts/2022/id80/</link><pubDate>Sun, 23 Jan 2022 22:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2022/id80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1642946766/keebs/id80/id80_lxezxv.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.
@@ -411,7 +427,8 @@ Featuring a seamless case design made from anodized aluminum, it also incorporat
 &lt;h2 id="mods">
 Mods
 &lt;a class="heading-link" href="#mods">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>&lt;strong>Case&lt;/strong>: 60% Wooden Case (Walnut)&lt;/p>
@@ -419,25 +436,28 @@ Mods
 &lt;h2 id="firmware">
 Firmware
 &lt;a class="heading-link" href="#firmware">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>Modified version of default keymap plus some Vim-inspired features
 e.g. soft escape (Esc when held, Ctrl when tapped), and media controls.&lt;/p>
-&lt;p>Refer to &lt;a href="https://openannepro.github.io/install/">Open Anne Pro&lt;/a>
+&lt;p>Refer to &lt;a href="https://openannepro.github.io/install/" class="external-link" target="_blank" rel="noopener">Open Anne Pro&lt;/a>
 for installation / flashing instructions.&lt;/p>
 &lt;h3 id="layout">
 Layout
 &lt;a class="heading-link" href="#layout">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h3>
-&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/f1c23fc1769c9bb0b1872d2272a1f268">Keyboard Layout Editor&lt;/a>&lt;/p>
+&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/f1c23fc1769c9bb0b1872d2272a1f268" class="external-link" target="_blank" rel="noopener">Keyboard Layout Editor&lt;/a>&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/anne-pro-2/assets/annepro2.png" alt="SofleKeyboard custom keymap">&lt;/p>
 &lt;h3 id="features">
 Features
 &lt;a class="heading-link" href="#features">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h3>
 &lt;ul>
@@ -446,7 +466,7 @@ Features
 &lt;li>Media player controls&lt;/li>
 &lt;/ul></description></item><item><title>Sofle v2 build</title><link>https://jduabe.dev/posts/2021/sofle-v2/</link><pubDate>Mon, 27 Sep 2021 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2021/sofle-v2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
-&lt;p>The &lt;a href="https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html">SofleKeyboard&lt;/a>
+&lt;p>The &lt;a href="https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html" class="external-link" target="_blank" rel="noopener">SofleKeyboard&lt;/a>
 is a 6×4+5 keys column-staggered split keyboard with encoder support. Based on the Lily58, Corne, and Helix keyboards.&lt;/p>
 &lt;/blockquote>
 &lt;p>First time trying out ortholinear and split mechanical keyboards with this build.&lt;/p>
@@ -507,10 +527,10 @@ to add extra &amp;ldquo;layers&amp;rdquo; by combining them with modifiers.&lt;/
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>One other area for tinkering is the OLED displays where you can show text, and even images e.g. &lt;a href="https://docs.qmk.fm/#/feature_oled_driver?id=logo-example">displaying your own logo&lt;/a>.&lt;/p>
-&lt;p>Check out the full custom keymap &lt;a href="https://github.com/j4ckofalltrades/keebs/tree/master/sofle-v2">here&lt;/a>.&lt;/p></description></item><item><title>Writing a custom Powerline plugin</title><link>https://jduabe.dev/posts/2021/powerline-plugin/</link><pubDate>Sun, 12 Sep 2021 20:20:20 +0800</pubDate><guid>https://jduabe.dev/posts/2021/powerline-plugin/</guid><description>&lt;p>&lt;a href="https://github.com/powerline/powerline">Powerline&lt;/a> is a tool I use as part of
+&lt;p>One other area for tinkering is the OLED displays where you can show text, and even images e.g. &lt;a href="https://docs.qmk.fm/#/feature_oled_driver?id=logo-example" class="external-link" target="_blank" rel="noopener">displaying your own logo&lt;/a>.&lt;/p>
+&lt;p>Check out the full custom keymap &lt;a href="https://github.com/j4ckofalltrades/keebs/tree/master/sofle-v2" class="external-link" target="_blank" rel="noopener">here&lt;/a>.&lt;/p></description></item><item><title>Writing a custom Powerline plugin</title><link>https://jduabe.dev/posts/2021/powerline-plugin/</link><pubDate>Sun, 12 Sep 2021 20:20:20 +0800</pubDate><guid>https://jduabe.dev/posts/2021/powerline-plugin/</guid><description>&lt;p>&lt;a href="https://github.com/powerline/powerline" class="external-link" target="_blank" rel="noopener">Powerline&lt;/a> is a tool I use as part of
 my dev environment setup, and have my config backed up as part of my
-&lt;a href="https://github.com/j4ckofalltrades/dotfiles">dotfiles&lt;/a>.&lt;/p>
+&lt;a href="https://github.com/j4ckofalltrades/dotfiles" class="external-link" target="_blank" rel="noopener">dotfiles&lt;/a>.&lt;/p>
 &lt;p>It shows helpful information and context for stuff I&amp;rsquo;m working on, as well as
 providing some eye-candy for my command line environment.&lt;/p>
 &lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/dotfiles/master/env.png" alt="Env">&lt;/p>
@@ -521,7 +541,8 @@ plugin.&lt;/p>
 &lt;h2 id="basic-structure-and-configuration">
 Basic structure and configuration
 &lt;a class="heading-link" href="#basic-structure-and-configuration">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>Each powerline segment is a callable object. It is supposed to be either a
@@ -529,42 +550,42 @@ Python function or &lt;code>powerline.segments.Segment&lt;/code> class.&lt;/p>
 &lt;p>I recently wrote my own custom one that displays the current Kubernetes
 context and namespace, which uses a &lt;code>Segment&lt;/code> class. Here is a shortened version
 which shows the basic structure.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#66d9ef">class&lt;/span> &lt;span style="color:#a6e22e">KubernetesSegment&lt;/span>(Segment):
-&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;Constructs the segment&amp;#39;s sections with the configured colorscheme and
-&lt;/span>&lt;span style="color:#e6db74"> visibility options applied.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span style="color:#a6e22e">@staticmethod&lt;/span>
-&lt;span style="color:#66d9ef">def&lt;/span> &lt;span style="color:#a6e22e">kube_ctx_info&lt;/span>(pl):
-&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;Resolves the current active Kubernetes context (and namespace)
-&lt;/span>&lt;span style="color:#e6db74"> from `$KUBECONFIG`.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;span style="color:#66d9ef">try&lt;/span>:
-current_context &lt;span style="color:#f92672">=&lt;/span> config&lt;span style="color:#f92672">.&lt;/span>list_kube_config_contexts()[&lt;span style="color:#ae81ff">1&lt;/span>]
-&lt;span style="color:#66d9ef">return&lt;/span> current_context[&lt;span style="color:#e6db74">&amp;#39;name&amp;#39;&lt;/span>] &lt;span style="color:#f92672">or&lt;/span> &lt;span style="color:#e6db74">&amp;#39;N/A&amp;#39;&lt;/span>, \
-current_context[&lt;span style="color:#e6db74">&amp;#39;context&amp;#39;&lt;/span>][&lt;span style="color:#e6db74">&amp;#39;namespace&amp;#39;&lt;/span>] &lt;span style="color:#f92672">or&lt;/span> &lt;span style="color:#e6db74">&amp;#39;default&amp;#39;&lt;/span>
-&lt;span style="color:#66d9ef">except&lt;/span> &lt;span style="color:#a6e22e">Exception&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> e:
-pl&lt;span style="color:#f92672">.&lt;/span>error(e)
-&lt;span style="color:#66d9ef">def&lt;/span> __call__(self, pl):
-pl&lt;span style="color:#f92672">.&lt;/span>debug(&lt;span style="color:#e6db74">&amp;#39;Running powerline-k8s...&amp;#39;&lt;/span>)
-sections &lt;span style="color:#f92672">=&lt;/span> []
-&lt;span style="color:#75715e"># additional logic to determine segment contents&lt;/span>
-sections&lt;span style="color:#f92672">.&lt;/span>append({
-&lt;span style="color:#e6db74">&amp;#39;contents&amp;#39;&lt;/span>: f&lt;span style="color:#e6db74">&amp;#39;u&amp;#39;&lt;/span>\U00002638&lt;span style="color:#e6db74">&amp;#39; &amp;#39;&lt;/span>,
-&lt;span style="color:#e6db74">&amp;#39;highlight_groups&amp;#39;&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;k8s&amp;#39;&lt;/span>,
-&lt;span style="color:#e6db74">&amp;#39;divider_highlight_group&amp;#39;&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;k8s:divider&amp;#39;&lt;/span>,
-})
-&lt;span style="color:#66d9ef">return&lt;/span> sections
-k8s &lt;span style="color:#f92672">=&lt;/span> with_docstring(KubernetesSegment(),
-&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;Return the current Kubernetes context and namespace.
-&lt;/span>&lt;span style="color:#e6db74">
-&lt;/span>&lt;span style="color:#e6db74">It will show the current context and namespace from `$KUBECONFIG`.
-&lt;/span>&lt;span style="color:#e6db74">
-&lt;/span>&lt;span style="color:#e6db74">Divider highlight group used: ``k8s:divider``.
-&lt;/span>&lt;span style="color:#e6db74">
-&lt;/span>&lt;span style="color:#e6db74">Highlight groups used: ``k8s``, ``k8s_context``, ``k8s_namespace``.
-&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;&lt;/span>)
-&lt;span style="color:#e6db74">&amp;#34;&amp;#34;&amp;#34;Custom segment entry point.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;em>Make sure to add the &lt;a href="https://pypi.org/project/powerline-status">powerline-status&lt;/a>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="k">class&lt;/span> &lt;span class="nc">KubernetesSegment&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Segment&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Constructs the segment&amp;#39;s sections with the configured colorscheme and
+&lt;/span>&lt;span class="s2"> visibility options applied.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="nd">@staticmethod&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="nf">kube_ctx_info&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">pl&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Resolves the current active Kubernetes context (and namespace)
+&lt;/span>&lt;span class="s2"> from `$KUBECONFIG`.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;span class="k">try&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">current_context&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">config&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">list_kube_config_contexts&lt;/span>&lt;span class="p">()[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">current_context&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;name&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="ow">or&lt;/span> &lt;span class="s1">&amp;#39;N/A&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> \
+&lt;span class="n">current_context&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s1">&amp;#39;context&amp;#39;&lt;/span>&lt;span class="p">][&lt;/span>&lt;span class="s1">&amp;#39;namespace&amp;#39;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="ow">or&lt;/span> &lt;span class="s1">&amp;#39;default&amp;#39;&lt;/span>
+&lt;span class="k">except&lt;/span> &lt;span class="ne">Exception&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="n">e&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;span class="n">pl&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">error&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">e&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">def&lt;/span> &lt;span class="fm">__call__&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="bp">self&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">pl&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;span class="n">pl&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">debug&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;Running powerline-k8s...&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">sections&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[]&lt;/span>
+&lt;span class="c1"># additional logic to determine segment contents&lt;/span>
+&lt;span class="n">sections&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">append&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="s1">&amp;#39;contents&amp;#39;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;u&amp;#39;&lt;/span>\&lt;span class="n">U00002638&lt;/span>&lt;span class="s1">&amp;#39; &amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;highlight_groups&amp;#39;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;k8s&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="s1">&amp;#39;divider_highlight_group&amp;#39;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s1">&amp;#39;k8s:divider&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="k">return&lt;/span> &lt;span class="n">sections&lt;/span>
+&lt;span class="n">k8s&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">with_docstring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">KubernetesSegment&lt;/span>&lt;span class="p">(),&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Return the current Kubernetes context and namespace.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2">It will show the current context and namespace from `$KUBECONFIG`.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2">Divider highlight group used: ``k8s:divider``.
+&lt;/span>&lt;span class="s2">
+&lt;/span>&lt;span class="s2">Highlight groups used: ``k8s``, ``k8s_context``, ``k8s_namespace``.
+&lt;/span>&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="s2">&amp;#34;&amp;#34;&amp;#34;Custom segment entry point.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;em>Make sure to add the &lt;a href="https://pypi.org/project/powerline-status" class="external-link" target="_blank" rel="noopener">powerline-status&lt;/a>
 package as a dependency.&lt;/em>&lt;/p>
-&lt;p>Basically the class contains a function that returns a &lt;a href="https://powerline.readthedocs.io/en/latest/develop/segments.html#segment-dictionary">Segment dictionary&lt;/a>
+&lt;p>Basically the class contains a function that returns a &lt;a href="https://powerline.readthedocs.io/en/latest/develop/segments.html#segment-dictionary" class="external-link" target="_blank" rel="noopener">Segment dictionary&lt;/a>
 which tells &lt;code>Powerline&lt;/code> what to display. In this particular example, the
 following keys were used:&lt;/p>
 &lt;ul>
@@ -584,29 +605,30 @@ from another.&lt;/p>
 you are using. In general you&amp;rsquo;ll need to add the &amp;ldquo;groups&amp;rdquo; definition to the
 colorscheme config file, which in this case was
 &lt;code>&amp;lt;powerline_dir&amp;gt;/colorschemes/solarized.json&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
-&lt;span style="color:#f92672">&amp;#34;k8s&amp;#34;&lt;/span>: { &lt;span style="color:#f92672">&amp;#34;fg&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;solarized:blue&amp;#34;&lt;/span>, &lt;span style="color:#f92672">&amp;#34;bg&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;solarized:base02&amp;#34;&lt;/span>, &lt;span style="color:#f92672">&amp;#34;attrs&amp;#34;&lt;/span>: [] },
-&lt;span style="color:#f92672">&amp;#34;k8s:divider&amp;#34;&lt;/span>: { &lt;span style="color:#f92672">&amp;#34;fg&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;gray4&amp;#34;&lt;/span>, &lt;span style="color:#f92672">&amp;#34;bg&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;solarized:base02&amp;#34;&lt;/span>, &lt;span style="color:#f92672">&amp;#34;attrs&amp;#34;&lt;/span>: [] }
-}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;k8s&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;fg&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;solarized:blue&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;bg&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;solarized:base02&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;attrs&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[]&lt;/span> &lt;span class="p">},&lt;/span>
+&lt;span class="nt">&amp;#34;k8s:divider&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nt">&amp;#34;fg&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;gray4&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;bg&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;solarized:base02&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nt">&amp;#34;attrs&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">[]&lt;/span> &lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Check out the Powerline docs for a more detailed view into
-&lt;a href="https://powerline.readthedocs.io/en/latest/configuration.html">configuration and customization&lt;/a>.&lt;/p>
+&lt;a href="https://powerline.readthedocs.io/en/latest/configuration.html" class="external-link" target="_blank" rel="noopener">configuration and customization&lt;/a>.&lt;/p>
 &lt;p>The next step is to let Powerline know of the new segment by adding it to the
 segment&amp;rsquo;s config file. To add the new segment to the current shell prompt, add
 the following entry to the &lt;code>&amp;lt;powerline_dir&amp;gt;/themes/shell/default.json&lt;/code> config
 file.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-json" data-lang="json">{
-&lt;span style="color:#f92672">&amp;#34;function&amp;#34;&lt;/span>: &lt;span style="color:#e6db74">&amp;#34;k8s&amp;#34;&lt;/span>,
-&lt;span style="color:#f92672">&amp;#34;priority&amp;#34;&lt;/span>: &lt;span style="color:#ae81ff">30&lt;/span>
-}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="p">{&lt;/span>
+&lt;span class="nt">&amp;#34;function&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;k8s&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;span class="nt">&amp;#34;priority&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">30&lt;/span>
+&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="installation">
 Installation
 &lt;a class="heading-link" href="#installation">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>Once all configuration has been done it&amp;rsquo;s time to &amp;ldquo;install&amp;rdquo; the segment and try
 it out, you can do so by executing:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">python3 &lt;span style="color:#f92672">-&lt;/span>m pip install &lt;span style="color:#f92672">--&lt;/span>editable &lt;span style="color:#f92672">.&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="n">python3&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="n">m&lt;/span> &lt;span class="n">pip&lt;/span> &lt;span class="n">install&lt;/span> &lt;span class="o">--&lt;/span>&lt;span class="n">editable&lt;/span> &lt;span class="o">.&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Installing the package in editable mode saves you from having to &amp;ldquo;re-install&amp;rdquo;
 to see the latest changes. If everything went well you should be able to see
 your new segment.&lt;/p>
@@ -614,7 +636,8 @@ your new segment.&lt;/p>
 &lt;h2 id="troubleshooting">
 Troubleshooting
 &lt;a class="heading-link" href="#troubleshooting">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>Having issues with your plugin, try out the following:&lt;/p>
@@ -627,43 +650,45 @@ colorscheme and/or segment config.&lt;/p>
 &lt;p>Restart powerline by running &lt;code>powerline-daemon --replace&lt;/code>.&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Configure logging with &lt;a href="https://powerline.readthedocs.io/en/master/develop/segments.html#powerlinelogger-class">PowerlineLogger&lt;/a>
-and &lt;a href="https://powerline.readthedocs.io/en/master/configuration/reference.html#config-common-log">where you want the logs to be written&lt;/a>
+&lt;p>Configure logging with &lt;a href="https://powerline.readthedocs.io/en/master/develop/segments.html#powerlinelogger-class" class="external-link" target="_blank" rel="noopener">PowerlineLogger&lt;/a>
+and &lt;a href="https://powerline.readthedocs.io/en/master/configuration/reference.html#config-common-log" class="external-link" target="_blank" rel="noopener">where you want the logs to be written&lt;/a>
 for easier debugging.&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>It is also worth checking out the &lt;a href="https://powerline.readthedocs.io/en/master/troubleshooting.html">Powerline docs&lt;/a> for other
+&lt;p>It is also worth checking out the &lt;a href="https://powerline.readthedocs.io/en/master/troubleshooting.html" class="external-link" target="_blank" rel="noopener">Powerline docs&lt;/a> for other
 common issues that you may encounter.&lt;/p>
 &lt;h2 id="misc">
 Misc
 &lt;a class="heading-link" href="#misc">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>Check out the full source on GitHub for the &lt;a href="https://github.com/j4ckofalltrades/powerline-k8s">powerline-k8s&lt;/a> plugin.&lt;/p>
+&lt;p>Check out the full source on GitHub for the &lt;a href="https://github.com/j4ckofalltrades/powerline-k8s" class="external-link" target="_blank" rel="noopener">powerline-k8s&lt;/a> plugin.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>If you want to share your custom Powerline segment, you might want to check
-out this guide about &lt;a href="https://jduabe.dev/posts/pypi-publish/">publishing packages to PyPI&lt;/a>.&lt;/p>
+out this guide about &lt;a href="https://jduabe.dev/posts/pypi-publish/" >publishing packages to PyPI&lt;/a>.&lt;/p>
 &lt;/li>
 &lt;/ul></description></item><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/2021/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/2021/mvn-central-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png" alt="mvn">&lt;/p>
 &lt;p>This guide walks you through the necessary steps to upload your package to the
-&lt;a href="https://repo.maven.apache.org/maven2">Maven Central&lt;/a> repository (and optionally
+&lt;a href="https://repo.maven.apache.org/maven2" class="external-link" target="_blank" rel="noopener">Maven Central&lt;/a> repository (and optionally
 to GitHub Packages registry) with some recommendations along the way.&lt;/p>
 &lt;h2 id="setup-ossrh-repository">
 Setup OSSRH Repository
 &lt;a class="heading-link" href="#setup-ossrh-repository">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;ul>
 &lt;li>
-&lt;p>Sign up for a &lt;a href="https://issues.sonatype.org/secure/Signup!default.jspa">new account&lt;/a>&lt;/p>
+&lt;p>Sign up for a &lt;a href="https://issues.sonatype.org/secure/Signup!default.jspa" class="external-link" target="_blank" rel="noopener">new account&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Create a &lt;a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134">new project ticket&lt;/a>&lt;/p>
+&lt;p>Create a &lt;a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134" class="external-link" target="_blank" rel="noopener">new project ticket&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Claim your namespace by setting the &lt;code>groupId&lt;/code> for your artifact&lt;/p>
@@ -681,15 +706,16 @@ created to register your &lt;code>groupId&lt;/code>.&lt;/p>
 &lt;h2 id="configure-gpgpgp-key">
 Configure GPG/PGP key
 &lt;a class="heading-link" href="#configure-gpgpgp-key">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>This will be used for signing your artifacts, at it is a requirement for
 publishing them to the Central Repository.&lt;/p>
 &lt;p>You&amp;rsquo;ll need to generate a key pair and distribute it to a known key server
 (so that others can validate it).&lt;/p>
-&lt;p>The following examples show how to do this with &lt;a href="https://gnupg.org">GPG&lt;/a>; you
-can &lt;a href="https://gnupg.org">download&lt;/a> or install it using your package manager if
+&lt;p>The following examples show how to do this with &lt;a href="https://gnupg.org" class="external-link" target="_blank" rel="noopener">GPG&lt;/a>; you
+can &lt;a href="https://gnupg.org" class="external-link" target="_blank" rel="noopener">download&lt;/a> or install it using your package manager if
 it is not already available in your machine.&lt;/p>
 &lt;p>To generate a key pair, run:&lt;/p>
 &lt;p>&lt;code>$ gpg --gen-key&lt;/code>&lt;/p>
@@ -699,18 +725,19 @@ that is needed to sign artifacts with your signature.&lt;/strong>&lt;/p>
 &lt;p>Once the key pair is generated, you&amp;rsquo;ll need to distribute your public key to a
 known key server i.e. &lt;code>keyserver.ubuntu.com&lt;/code>. In order to do so, run the
 following commands:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># list gpg keys&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># list gpg keys&lt;/span>
 $ gpg --list-keys
-&lt;span style="color:#75715e"># the line starting with **pub** shows your public key details&lt;/span>
-&lt;span style="color:#75715e"># copy the keyid and run the following command&lt;/span>
+&lt;span class="c1"># the line starting with **pub** shows your public key details&lt;/span>
+&lt;span class="c1"># copy the keyid and run the following command&lt;/span>
 $ gpg --keyserver keyserver.ubuntu.com --send-keys &amp;lt;your_key_here&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>To check that your key was successfully uploaded, you can search for it at
-&lt;a href="https://keyserver.ubuntu.com">https://keyserver.ubuntu.com&lt;/a> using your public key (and prepending &amp;lsquo;0x&amp;rsquo; to it).&lt;/p>
+&lt;a href="https://keyserver.ubuntu.com" class="external-link" target="_blank" rel="noopener">https://keyserver.ubuntu.com&lt;/a> using your public key (and prepending &amp;lsquo;0x&amp;rsquo; to it).&lt;/p>
 &lt;p>Other supported key servers are &lt;code>keys.openpgp.org&lt;/code>, and &lt;code>pgp.mit.edu&lt;/code>.&lt;/p>
 &lt;h2 id="configure-build-script">
 Configure build script
 &lt;a class="heading-link" href="#configure-build-script">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>In order to publish your artifact to the Central Repository, it will need to
@@ -724,127 +751,128 @@ meet the following requirements:&lt;/p>
 &lt;p>The configuration will vary slightly depending on the build tool you are using,
 below is an abridged sample configuration &lt;code>build.gradle.kts&lt;/code> file (Kotlin DSL)
 used with &lt;code>gradle&lt;/code>:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span style="color:#75715e">// build.gradle.kts
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>
-&lt;span style="color:#75715e">// project coordinates
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>group = &lt;span style="color:#e6db74">&amp;#34;io.github.j4ckofalltrades&amp;#34;&lt;/span>
-version = &lt;span style="color:#e6db74">&amp;#34;1.0.0&amp;#34;&lt;/span>
-&lt;span style="color:#75715e">// generate KDoc and Javadoc using Dokka
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>tasks.withType&amp;lt;DokkaTask&amp;gt;().configureEach {
-dokkaSourceSets {
-named(&lt;span style="color:#e6db74">&amp;#34;main&amp;#34;&lt;/span>) {
-outputDirectory.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#66d9ef">file&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;docs&amp;#34;&lt;/span>))
-moduleName.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;steam-webapi&amp;#34;&lt;/span>)
-includes.from(&lt;span style="color:#e6db74">&amp;#34;Module.md&amp;#34;&lt;/span>)
-displayName.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;JVM&amp;#34;&lt;/span>)
-platform.&lt;span style="color:#66d9ef">set&lt;/span>(org.jetbrains.dokka.Platform.jvm)
-sourceLink {
-localDirectory.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#66d9ef">file&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;src/main/kotlin&amp;#34;&lt;/span>))
-remoteUrl.&lt;span style="color:#66d9ef">set&lt;/span>(
-URL(
-&lt;span style="color:#e6db74">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span> +
-&lt;span style="color:#e6db74">&amp;#34;/tree/main/lib/src/main/kotlin&amp;#34;&lt;/span>
-)
-)
-remoteLineSuffix.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;#L&amp;#34;&lt;/span>)
-}
-}
-}
-}
-&lt;span style="color:#75715e">// javadoc and sources jar
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>tasks {
-&lt;span style="color:#66d9ef">val&lt;/span> sourcesJar &lt;span style="color:#66d9ef">by&lt;/span> registering(Jar&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#66d9ef">class&lt;/span>) {
-dependsOn(JavaPlugin.CLASSES_TASK_NAME)
-archiveClassifier.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;sources&amp;#34;&lt;/span>)
-archiveBaseName.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>)
-from(sourceSets[&lt;span style="color:#e6db74">&amp;#34;main&amp;#34;&lt;/span>].allSource)
-}
-&lt;span style="color:#66d9ef">val&lt;/span> javadocJar &lt;span style="color:#66d9ef">by&lt;/span> registering(Jar&lt;span style="color:#f92672">::&lt;/span>&lt;span style="color:#66d9ef">class&lt;/span>) {
-dependsOn(&lt;span style="color:#e6db74">&amp;#34;dokkaJavadoc&amp;#34;&lt;/span>)
-archiveClassifier.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;javadoc&amp;#34;&lt;/span>)
-archiveBaseName.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>)
-from(&lt;span style="color:#e6db74">&amp;#34;docs&amp;#34;&lt;/span>)
-}
-artifacts {
-archives(sourcesJar)
-archives(javadocJar)
-archives(jar)
-}
-}
-publishing {
-publications {
-create&amp;lt;MavenPublication&amp;gt;(&lt;span style="color:#e6db74">&amp;#34;mavenJava&amp;#34;&lt;/span>) {
-groupId = project.group.toString()
-artifactId = rootProject.name
-version = project.version.toString()
-from(components[&lt;span style="color:#e6db74">&amp;#34;java&amp;#34;&lt;/span>])
-artifact(tasks[&lt;span style="color:#e6db74">&amp;#34;sourcesJar&amp;#34;&lt;/span>])
-artifact(tasks[&lt;span style="color:#e6db74">&amp;#34;javadocJar&amp;#34;&lt;/span>])
-&lt;span style="color:#75715e">// POM metadata
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> pom {
-name.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>)
-description.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Steam WebAPI wrapper in Kotlin and Ktor&amp;#34;&lt;/span>)
-url.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>)
-licenses {
-license {
-name.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;MIT&amp;#34;&lt;/span>)
-url.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;https://opensource.org/licenses/MIT&amp;#34;&lt;/span>)
-}
-}
-developers {
-developer {
-id.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;j4ckofalltrades&amp;#34;&lt;/span>)
-name.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;Jordan Duabe&amp;#34;&lt;/span>)
-email.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;me@jduabe.dev&amp;#34;&lt;/span>)
-}
-}
-scm {
-connection.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;scm:git:git://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>)
-developerConnection.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;scm:git:ssh://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>)
-url.&lt;span style="color:#66d9ef">set&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>)
-}
-}
-}
-}
-repositories {
-&lt;span style="color:#75715e">// Maven Central
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> maven {
-name = &lt;span style="color:#e6db74">&amp;#34;OSSRH&amp;#34;&lt;/span>
-url = uri(&lt;span style="color:#e6db74">&amp;#34;https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/&amp;#34;&lt;/span>)
-credentials {
-username = System.getenv(&lt;span style="color:#e6db74">&amp;#34;OSSRH_USERNAME&amp;#34;&lt;/span>)
-password = System.getenv(&lt;span style="color:#e6db74">&amp;#34;OSSRH_PASSWORD&amp;#34;&lt;/span>)
-}
-}
-&lt;span style="color:#75715e">// GitHub Packages
-&lt;/span>&lt;span style="color:#75715e">&lt;/span> maven {
-name = &lt;span style="color:#e6db74">&amp;#34;GitHubPackages&amp;#34;&lt;/span>
-url = uri(&lt;span style="color:#e6db74">&amp;#34;https://maven.pkg.github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>)
-credentials {
-username = System.getenv(&lt;span style="color:#e6db74">&amp;#34;GITHUB_ACTOR&amp;#34;&lt;/span>)
-password = System.getenv(&lt;span style="color:#e6db74">&amp;#34;GITHUB_TOKEN&amp;#34;&lt;/span>)
-}
-}
-}
-}
-&lt;span style="color:#75715e">// sign artifact
-&lt;/span>&lt;span style="color:#75715e">&lt;/span>signing {
-setRequired({
-gradle.taskGraph.hasTask(&lt;span style="color:#e6db74">&amp;#34;publishMavenJavaToOSSRHRepository&amp;#34;&lt;/span>)
-})
-&lt;span style="color:#66d9ef">val&lt;/span> signingKey = System.getenv(&lt;span style="color:#e6db74">&amp;#34;SIGNING_KEY&amp;#34;&lt;/span>)
-&lt;span style="color:#66d9ef">val&lt;/span> signingPassword = System.getenv(&lt;span style="color:#e6db74">&amp;#34;SIGNING_PASSWORD&amp;#34;&lt;/span>)
-useInMemoryPgpKeys(signingKey, signingPassword)
-sign(publishing.publications[&lt;span style="color:#e6db74">&amp;#34;mavenJava&amp;#34;&lt;/span>])
-}
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span class="c1">// build.gradle.kts
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// project coordinates
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">group&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;io.github.j4ckofalltrades&amp;#34;&lt;/span>
+&lt;span class="n">version&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;1.0.0&amp;#34;&lt;/span>
+&lt;span class="c1">// generate KDoc and Javadoc using Dokka
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">tasks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">withType&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">DokkaTask&lt;/span>&lt;span class="p">&amp;gt;().&lt;/span>&lt;span class="n">configureEach&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">dokkaSourceSets&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">named&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;main&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">outputDirectory&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;docs&amp;#34;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="n">moduleName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">includes&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Module.md&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">displayName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;JVM&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">platform&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">org&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">jetbrains&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">dokka&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Platform&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">sourceLink&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">localDirectory&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;src/main/kotlin&amp;#34;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="n">remoteUrl&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">URL&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s2">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span> &lt;span class="p">+&lt;/span>
+&lt;span class="s2">&amp;#34;/tree/main/lib/src/main/kotlin&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="n">remoteLineSuffix&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#L&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// javadoc and sources jar
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">tasks&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">sourcesJar&lt;/span> &lt;span class="k">by&lt;/span> &lt;span class="n">registering&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Jar&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">dependsOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">JavaPlugin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CLASSES_TASK_NAME&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveClassifier&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;sources&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveBaseName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sourceSets&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;main&amp;#34;&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">allSource&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">javadocJar&lt;/span> &lt;span class="k">by&lt;/span> &lt;span class="n">registering&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Jar&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">dependsOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;dokkaJavadoc&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveClassifier&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;javadoc&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveBaseName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;docs&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">artifacts&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">archives&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sourcesJar&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archives&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">javadocJar&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archives&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">jar&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">publishing&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">publications&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">create&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">MavenPublication&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="s2">&amp;#34;mavenJava&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">groupId&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">project&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">group&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">toString&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">artifactId&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">rootProject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>
+&lt;span class="n">version&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">project&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">version&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">toString&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">components&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;java&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="n">artifact&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tasks&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;sourcesJar&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="n">artifact&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tasks&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;javadocJar&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="c1">// POM metadata
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">pom&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">description&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Steam WebAPI wrapper in Kotlin and Ktor&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">licenses&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">license&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;MIT&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://opensource.org/licenses/MIT&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">developers&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">developer&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">id&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;j4ckofalltrades&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Jordan Duabe&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">email&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;me@jduabe.dev&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">scm&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">connection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;scm:git:git://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">developerConnection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;scm:git:ssh://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">repositories&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Maven Central
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">maven&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;OSSRH&amp;#34;&lt;/span>
+&lt;span class="n">url&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">credentials&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">username&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;OSSRH_USERNAME&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">password&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;OSSRH_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// GitHub Packages
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">maven&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;GitHubPackages&amp;#34;&lt;/span>
+&lt;span class="n">url&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://maven.pkg.github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">credentials&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">username&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GITHUB_ACTOR&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">password&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GITHUB_TOKEN&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// sign artifact
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">signing&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">setRequired&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="n">gradle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">taskGraph&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">hasTask&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;publishMavenJavaToOSSRHRepository&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">signingKey&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;SIGNING_KEY&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">signingPassword&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;SIGNING_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">useInMemoryPgpKeys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">signingKey&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">signingPassword&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">sign&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">publishing&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">publications&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;mavenJava&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="p">}&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="publishing-artifacts">
 Publishing artifacts
 &lt;a class="heading-link" href="#publishing-artifacts">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
-&lt;p>The configuration above uses the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html#sec:in-memory-keys%5D">in-memory ascii-armored keys&lt;/a>
-approach for signing artifacts. Check out the docs for the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html">Gradle Signing
+&lt;p>The configuration above uses the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html#sec:in-memory-keys]" class="external-link" target="_blank" rel="noopener">in-memory ascii-armored keys&lt;/a>
+approach for signing artifacts. Check out the docs for the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html" class="external-link" target="_blank" rel="noopener">Gradle Signing
 Plugin&lt;/a> to find
 out what best suits your use case.&lt;/p>
 &lt;p>Once everything is configured, publishing the articats is as simple as running:&lt;/p>
@@ -852,84 +880,90 @@ out what best suits your use case.&lt;/p>
 &lt;p>Note that this will publish your artifacts to &lt;strong>all&lt;/strong> target repositories, in
 order to publish to a specific repository you need to specify the repo &lt;em>name&lt;/em>.
 Using the above configuration as an example:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># publish to Maven Central&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># publish to Maven Central&lt;/span>
 $ gradle publishMavenJavaPublicationToOSSRHRepository
-&lt;span style="color:#75715e"># publish to GitHub Packages&lt;/span>
+&lt;span class="c1"># publish to GitHub Packages&lt;/span>
 $ gradle publishMavenJavaPublicationToGitHubPackagesToRepository
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="releasing-artifacts">
 Releasing artifacts
 &lt;a class="heading-link" href="#releasing-artifacts">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
-&lt;p>Login to the &lt;a href="https://s01.oss.sonatype.org/#stagingRepositories">Nexus staging repository&lt;/a>,
+&lt;p>Login to the &lt;a href="https://s01.oss.sonatype.org/#stagingRepositories" class="external-link" target="_blank" rel="noopener">Nexus staging repository&lt;/a>,
 where you should be able to see your &lt;code>groupId&lt;/code> listed. In order to &lt;em>sync&lt;/em> the
 artifacts to the Central Repository you&amp;rsquo;ll need to click on the &lt;code>Close&lt;/code> button
 which will close said staging repository.&lt;/p>
 &lt;p>The close operation will run a series of checks to ensure that the uploaded
-artifacts meet the &lt;a href="#configure-build-script">requirements&lt;/a>.&lt;/p>
+artifacts meet the &lt;a href="#configure-build-script" >requirements&lt;/a>.&lt;/p>
 &lt;p>If the release was successful, you should be able to see your artifacts in the
-Central Repository at &lt;a href="https://repo1.maven.org/maven2/">https://repo1.maven.org/maven2/&lt;/a> typically within ~30
-minutes. Updates to &lt;a href="https://search.maven.org">https://search.maven.org&lt;/a> can take up to a couple of hours.&lt;/p>
+Central Repository at &lt;a href="https://repo1.maven.org/maven2/" class="external-link" target="_blank" rel="noopener">https://repo1.maven.org/maven2/&lt;/a> typically within ~30
+minutes. Updates to &lt;a href="https://search.maven.org" class="external-link" target="_blank" rel="noopener">https://search.maven.org&lt;/a> can take up to a couple of hours.&lt;/p>
 &lt;h2 id="optional-automation-with-github-packages">
 (Optional) Automation with GitHub Packages
 &lt;a class="heading-link" href="#optional-automation-with-github-packages">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>You&amp;rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
 Here&amp;rsquo;s how to set it up using GitHub Actions.&lt;/p>
 &lt;p>You&amp;rsquo;ll need to add your OSSRH credentials, and signing key details as secrets
 to your repository, you can find this under Settings &amp;gt; Secrets.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Publish to OSSRH and GitHub Package Registry&lt;/span>
-&lt;span style="color:#f92672">on&lt;/span>:
-&lt;span style="color:#f92672">release&lt;/span>:
-&lt;span style="color:#f92672">types&lt;/span>: [&lt;span style="color:#ae81ff">created]&lt;/span>
-&lt;span style="color:#f92672">jobs&lt;/span>:
-&lt;span style="color:#f92672">publish&lt;/span>:
-&lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-latest&lt;/span>
-&lt;span style="color:#f92672">steps&lt;/span>:
-- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@v2&lt;/span>
-- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/setup-java@v2&lt;/span>
-&lt;span style="color:#f92672">with&lt;/span>:
-&lt;span style="color:#f92672">distribution&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;adopt-openj9&amp;#39;&lt;/span>
-&lt;span style="color:#f92672">java-version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;11&amp;#39;&lt;/span>
-- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">./gradlew publish&lt;/span>
-&lt;span style="color:#f92672">env&lt;/span>:
-&lt;span style="color:#f92672">GITHUB_ACTOR&lt;/span>: &lt;span style="color:#ae81ff">${{ github.actor }}&lt;/span>
-&lt;span style="color:#f92672">GITHUB_TOKEN&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.GITHUB_TOKEN }}&lt;/span>
-&lt;span style="color:#f92672">OSSRH_USERNAME&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.OSSRH_USERNAME }}&lt;/span>
-&lt;span style="color:#f92672">OSSRH_PASSWORD&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.OSSRH_PASSWORD }}&lt;/span>
-&lt;span style="color:#f92672">SIGNING_KEY&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.SIGNING_KEY }}&lt;/span>
-&lt;span style="color:#f92672">SIGNING_PASSWORD&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.SIGNING_PASSWORD }}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>The configuration samples used here can also be checked out in full at this &lt;a href="https://github.com/j4ckofalltrades/steam-webapi-kt">GitHub
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Publish to OSSRH and GitHub Package Registry&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">release&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">types&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">created]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">publish&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/setup-java@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">distribution&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;adopt-openj9&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">java-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;11&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./gradlew publish&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_ACTOR&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ github.actor }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_TOKEN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.GITHUB_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">OSSRH_USERNAME&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.OSSRH_USERNAME }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">OSSRH_PASSWORD&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.OSSRH_PASSWORD }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">SIGNING_KEY&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.SIGNING_KEY }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">SIGNING_PASSWORD&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.SIGNING_PASSWORD }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The configuration samples used here can also be checked out in full at this &lt;a href="https://github.com/j4ckofalltrades/steam-webapi-kt" class="external-link" target="_blank" rel="noopener">GitHub
 repository&lt;/a>.&lt;/p>
 &lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p></description></item><item><title>Publishing to the npm registry</title><link>https://jduabe.dev/posts/2021/npm-publish/</link><pubDate>Sat, 19 Jun 2021 13:43:02 +0800</pubDate><guid>https://jduabe.dev/posts/2021/npm-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png" alt="npm">&lt;/p>
 &lt;p>This guide walks you through the necessary steps to upload your package to the
-&lt;a href="https://npmjs.com">npm registry&lt;/a> with some recommendations along the way.&lt;/p>
+&lt;a href="https://npmjs.com" class="external-link" target="_blank" rel="noopener">npm registry&lt;/a> with some recommendations along the way.&lt;/p>
 &lt;h2 id="setup-npm-account">
 Setup npm account
 &lt;a class="heading-link" href="#setup-npm-account">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;ol>
 &lt;li>
-&lt;p>Register for an &lt;a href="https://npmjs.com/signup">npm account&lt;/a>&lt;/p>
+&lt;p>Register for an &lt;a href="https://npmjs.com/signup" class="external-link" target="_blank" rel="noopener">npm account&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Test your account by logging in using &lt;code>npm&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">&lt;span style="color:#75715e"># you should be prompted for your username, password, and email address&lt;/span>
-&lt;span style="color:#75715e"># and an OTP if you&amp;#39;ve enabled 2FA&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># you should be prompted for your username, password, and email address&lt;/span>
+&lt;span class="c1"># and an OTP if you&amp;#39;ve enabled 2FA&lt;/span>
 $ npm login
-&lt;span style="color:#75715e"># this should print out your npm username&lt;/span>
+&lt;span class="c1"># this should print out your npm username&lt;/span>
 $ npm whoami
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ol>
 &lt;h2 id="dry-run-testing-your-package-locally">
 Dry-run (Testing your package locally)
 &lt;a class="heading-link" href="#dry-run-testing-your-package-locally">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>Test out your package locally to ensure that everything works before publihsing
@@ -939,13 +973,13 @@ the path to your package e.g.:&lt;/p>
 &lt;p>Another thing to do is to review the contents of the published package to make
 sure that it doesn&amp;rsquo;t include any sensitive or unnecessary information. You can
 perform a &lt;code>dry-run&lt;/code> with:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ npm publish --dry-run
-&lt;span style="color:#75715e"># output should look something like&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">$ npm publish --dry-run
+&lt;span class="c1"># output should look something like&lt;/span>
 npm notice
 npm notice &amp;lt;package_name@version&amp;gt;
-npm notice &lt;span style="color:#f92672">===&lt;/span> Tarball Contents &lt;span style="color:#f92672">===&lt;/span>
+npm &lt;span class="nv">notice&lt;/span> &lt;span class="o">===&lt;/span> Tarball &lt;span class="nv">Contents&lt;/span> &lt;span class="o">===&lt;/span>
 npm notice &amp;lt;tarball_contents_here&amp;gt;
-npm notice &lt;span style="color:#f92672">===&lt;/span> Tarball Details &lt;span style="color:#f92672">===&lt;/span>
+npm &lt;span class="nv">notice&lt;/span> &lt;span class="o">===&lt;/span> Tarball &lt;span class="nv">Details&lt;/span> &lt;span class="o">===&lt;/span>
 npm notice &amp;lt;tarball_details_here&amp;gt;
 npm notice
 + &amp;lt;package_name@version&amp;gt;
@@ -954,7 +988,8 @@ want to publish to the registry.&lt;/p>
 &lt;h2 id="publishing-to-the-npm-registry">
 Publishing to the npm registry
 &lt;a class="heading-link" href="#publishing-to-the-npm-registry">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>In your package&amp;rsquo;s root directory, execute:&lt;/p>
@@ -967,14 +1002,15 @@ package page at npmjs.com/package/your-package-name.&lt;/p>
 &lt;h2 id="bonus-automation-with-github-packages">
 Bonus: Automation with GitHub Packages
 &lt;a class="heading-link" href="#bonus-automation-with-github-packages">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>You&amp;rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
 Here&amp;rsquo;s how to set it up using GitHub Actions.&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>Create a &lt;a href="https://docs.npmjs.com/creating-and-viewing-access-tokens">new npm access token&lt;/a>&lt;/p>
+&lt;p>Create a &lt;a href="https://docs.npmjs.com/creating-and-viewing-access-tokens" class="external-link" target="_blank" rel="noopener">new npm access token&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Add the access token as a secret to your target GitHub repository. You can
@@ -984,32 +1020,34 @@ find this under Settings &amp;gt; Secrets for your repo. Give the secret a name 
 &lt;li>
 &lt;p>Create a GitHub action workflow file in your repo at
 &lt;code>.github/workflows/npm-publish.yml&lt;/code> with the following contents:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Publish package to npm&lt;/span>
-&lt;span style="color:#f92672">on&lt;/span>:
-&lt;span style="color:#f92672">release&lt;/span>:
-&lt;span style="color:#f92672">types&lt;/span>: [&lt;span style="color:#ae81ff">created]&lt;/span>
-&lt;span style="color:#f92672">jobs&lt;/span>:
-&lt;span style="color:#f92672">build&lt;/span>:
-&lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-latest&lt;/span>
-&lt;span style="color:#f92672">permissions&lt;/span>:
-&lt;span style="color:#f92672">contents&lt;/span>: &lt;span style="color:#ae81ff">read&lt;/span>
-&lt;span style="color:#f92672">packages&lt;/span>: &lt;span style="color:#ae81ff">write&lt;/span>
-&lt;span style="color:#f92672">steps&lt;/span>:
-- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@v2&lt;/span>
-- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/setup-node@v1&lt;/span>
-&lt;span style="color:#f92672">with&lt;/span>:
-&lt;span style="color:#f92672">node-version&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;14.x&amp;#39;&lt;/span>
-&lt;span style="color:#f92672">registry-url&lt;/span>: &lt;span style="color:#e6db74">&amp;#39;https://registry.npmjs.org&amp;#39;&lt;/span>
-- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">npm install&lt;/span>
-- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">npm test&lt;/span>
-- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">npm run build&lt;/span>
-&lt;span style="color:#75715e"># Publish to npm (append `--access public` for scoped packages)&lt;/span>
-- &lt;span style="color:#f92672">run&lt;/span>: &lt;span style="color:#ae81ff">npm publish&lt;/span>
-&lt;span style="color:#f92672">env&lt;/span>:
-&lt;span style="color:#f92672">NODE_AUTH_TOKEN&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.NPM_TOKEN }}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>This workflow is triggered when a new release is created but you can also
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Publish package to npm&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">release&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">types&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">created]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">build&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">permissions&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">contents&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">read&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">packages&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">write&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/setup-node@v1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">node-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;14.x&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">registry-url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;https://registry.npmjs.org&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">npm install&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">npm test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">npm run build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Publish to npm (append `--access public` for scoped packages)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">npm publish&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">NODE_AUTH_TOKEN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.NPM_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This workflow is triggered when a new release is created but you can also
 configure it to be triggered when a different event happens e.g. when a
-new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions">GitHub Actions documentation&lt;/a>
+new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions" class="external-link" target="_blank" rel="noopener">GitHub Actions documentation&lt;/a>
 for more configuration options.&lt;/p>
 &lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p>
 &lt;/li>
@@ -1019,26 +1057,27 @@ for more configuration options.&lt;/p>
 &lt;h2 id="dry-run-publishing-to-testpypi">
 Dry-run (Publishing to TestPyPI)
 &lt;a class="heading-link" href="#dry-run-publishing-to-testpypi">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>&lt;em>This step is optional but recommended.&lt;/em>&lt;/p>
-&lt;p>&lt;a href="https://test.pypi.org">TestPyPI&lt;/a> is a separate instance of the &lt;em>real&lt;/em> package
+&lt;p>&lt;a href="https://test.pypi.org" class="external-link" target="_blank" rel="noopener">TestPyPI&lt;/a> is a separate instance of the &lt;em>real&lt;/em> package
 index which is intended for testing and experimentation. This is a good way to
 test out your package before uploading to the real index.&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>Register an account for &lt;a href="https://test.pypi.org/account/register">TestPyPI&lt;/a>&lt;/p>
+&lt;p>Register an account for &lt;a href="https://test.pypi.org/account/register" class="external-link" target="_blank" rel="noopener">TestPyPI&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Create a &lt;a href="https://test.pypi.org/manage/account/#api-tokens">TestPyPI API token&lt;/a>
+&lt;p>Create a &lt;a href="https://test.pypi.org/manage/account/#api-tokens" class="external-link" target="_blank" rel="noopener">TestPyPI API token&lt;/a>
 &amp;ndash; make sure to set the scope to &amp;ldquo;Entire account&amp;rdquo;&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Use &lt;a href="https://packaging.python.org/key_projects/#twine">twine&lt;/a> to upload your
+&lt;p>Use &lt;a href="https://packaging.python.org/key_projects/#twine" class="external-link" target="_blank" rel="noopener">twine&lt;/a> to upload your
 package&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install --upgrade twine
-&lt;span style="color:#75715e"># replace dist with the directory where your distribution archive is located&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install --upgrade twine
+&lt;span class="c1"># replace dist with the directory where your distribution archive is located&lt;/span>
 $ python3 -m twine upload --repository testpypi dist/*
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>You will be prompted for your TestPyPI username and password. Use the
 following values.&lt;/p>
@@ -1059,27 +1098,27 @@ following values.&lt;/p>
 &lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
 a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#f92672">[&lt;/span>testpypi&lt;span style="color:#f92672">]&lt;/span>
-username&lt;span style="color:#f92672">=&lt;/span>__token__
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="o">[&lt;/span>testpypi&lt;span class="o">]&lt;/span>
+&lt;span class="nv">username&lt;/span>&lt;span class="o">=&lt;/span>__token__
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
 recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
 credentials such as API tokens and passwords. You can do so with:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">keyring set https://test.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">keyring &lt;span class="nb">set&lt;/span> https://test.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the upload process has finished, you should be able to view your
-package on TestPyPI at &lt;a href="https://test.pypi.org/project/your-package-name">https://test.pypi.org/project/your-package-name&lt;/a>.&lt;/p>
+package on TestPyPI at &lt;a href="https://test.pypi.org/project/your-package-name" class="external-link" target="_blank" rel="noopener">https://test.pypi.org/project/your-package-name&lt;/a>.&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Installing and testing out your package&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">$ python3 -m pip install &lt;span style="color:#ae81ff">\
-&lt;/span>&lt;span style="color:#ae81ff">&lt;/span>--index-url https://test.pypi.org/simple/ --no-deps your-package
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ python3 -m pip install &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>--index-url https://test.pypi.org/simple/ --no-deps your-package
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the &lt;code>no-deps&lt;/code> flag is specified as one or more of your package&amp;rsquo;s
 dependencies might not be present in TestPyPI and may cause the installation
 to fail.&lt;/p>
 &lt;p>Once the installation has finished you can test it out by importing your
 package.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">$ python3
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ python3
 &amp;gt;&amp;gt;&amp;gt; from example_package import your_function
-&amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span style="color:#f92672">()&lt;/span>
+&amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span class="o">()&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the import package will always be &lt;code>example_package&lt;/code> regardless of
 the &lt;code>name&lt;/code> you&amp;rsquo;ve configured for your package.&lt;/p>
 &lt;p>That&amp;rsquo;s it, you can now try and upload your package to the &lt;em>real&lt;/em> index.&lt;/p>
@@ -1088,26 +1127,27 @@ the &lt;code>name&lt;/code> you&amp;rsquo;ve configured for your package.&lt;/p>
 &lt;h2 id="publishing-to-pypi">
 Publishing to PyPI
 &lt;a class="heading-link" href="#publishing-to-pypi">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
-&lt;p>The &lt;a href="#dry-run-publishing-to-testpypi">steps&lt;/a> are identical with how you would
+&lt;p>The &lt;a href="#dry-run-publishing-to-testpypi" >steps&lt;/a> are identical with how you would
 upload a package to TestPyPI. The main difference is that you&amp;rsquo;ll have to
-register an account and create an API token at &lt;a href="https://pypi.org">PyPI&lt;/a>, as the
+register an account and create an API token at &lt;a href="https://pypi.org" class="external-link" target="_blank" rel="noopener">PyPI&lt;/a>, as the
 former is a separate instance of PyPI.&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>Register an account for &lt;a href="https://pypi.org/account/register">PyPI&lt;/a>&lt;/p>
+&lt;p>Register an account for &lt;a href="https://pypi.org/account/register" class="external-link" target="_blank" rel="noopener">PyPI&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Create a &lt;a href="https://pypi.org/manage/account/#api-tokens">PyPI API token&lt;/a>
+&lt;p>Create a &lt;a href="https://pypi.org/manage/account/#api-tokens" class="external-link" target="_blank" rel="noopener">PyPI API token&lt;/a>
 &amp;ndash; make sure to set the scope to &amp;ldquo;Entire account&amp;rdquo;&lt;/p>
 &lt;/li>
 &lt;li>
-&lt;p>Use &lt;a href="https://packaging.python.org/key_projects/#twine">twine&lt;/a> to upload your
+&lt;p>Use &lt;a href="https://packaging.python.org/key_projects/#twine" class="external-link" target="_blank" rel="noopener">twine&lt;/a> to upload your
 package&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install --upgrade twine
-&lt;span style="color:#75715e"># replace dist with the directory where your distribution archive is located&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install --upgrade twine
+&lt;span class="c1"># replace dist with the directory where your distribution archive is located&lt;/span>
 $ python3 -m twine upload --repository pypi dist/*
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>You will be prompted for your PyPI username and password. Use the
 following values.&lt;/p>
@@ -1128,37 +1168,38 @@ following values.&lt;/p>
 &lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
 indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
 a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">&lt;span style="color:#f92672">[&lt;/span>pypi&lt;span style="color:#f92672">]&lt;/span>
-username&lt;span style="color:#f92672">=&lt;/span>__token__
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="o">[&lt;/span>pypi&lt;span class="o">]&lt;/span>
+&lt;span class="nv">username&lt;/span>&lt;span class="o">=&lt;/span>__token__
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
 recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
 credentials such as API tokens and passwords. You can do so with:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-sh" data-lang="sh">keyring set https://upload.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">keyring &lt;span class="nb">set&lt;/span> https://upload.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>When the upload process finishes, you should be able to view your package
-on PyPI at &lt;a href="https://pypi.org/project/your-package-name">https://pypi.org/project/your-package-name&lt;/a>&lt;/p>
+on PyPI at &lt;a href="https://pypi.org/project/your-package-name" class="external-link" target="_blank" rel="noopener">https://pypi.org/project/your-package-name&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Installing and testing out your package&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">python3 -m pip install your-package
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">python3 -m pip install your-package
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the installation has finished you can test it out by importing your
 package.&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-shell" data-lang="shell">$ python3
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ python3
 &amp;gt;&amp;gt;&amp;gt; from example_package import your_function
-&amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span style="color:#f92672">()&lt;/span>
+&amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span class="o">()&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Congrats, you&amp;rsquo;ve successfully published your pacakge to PyPI. 🎉&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;h2 id="bonus-automation-with-github-packages">
 Bonus: Automation with GitHub Packages
 &lt;a class="heading-link" href="#bonus-automation-with-github-packages">
-&lt;i class="fa fa-link" aria-hidden="true">&lt;/i>
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
 &lt;/a>
 &lt;/h2>
 &lt;p>You&amp;rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
 Here&amp;rsquo;s how to set it up using GitHub Actions.&lt;/p>
 &lt;ol>
 &lt;li>
-&lt;p>Create a &lt;a href="https://pypi.org/manage/account/#api-tokens">new PyPI API token&lt;/a>&lt;/p>
+&lt;p>Create a &lt;a href="https://pypi.org/manage/account/#api-tokens" class="external-link" target="_blank" rel="noopener">new PyPI API token&lt;/a>&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Add the API token as a secret to your target GitHub repository. You can find
@@ -1168,41 +1209,45 @@ this under Settings &amp;gt; Secrets for your repo. Give the secret a name e.g.
 &lt;li>
 &lt;p>Create a GitHub action workflow file in your repo at
 &lt;code>.github/workflows/pypi-publish.yml&lt;/code> with the following contents:&lt;/p>
-&lt;div class="highlight">&lt;pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Publish package to PyPI&lt;/span>
-&lt;span style="color:#f92672">on&lt;/span>:
-&lt;span style="color:#f92672">release&lt;/span>:
-&lt;span style="color:#f92672">types&lt;/span>: [&lt;span style="color:#ae81ff">created]&lt;/span>
-&lt;span style="color:#f92672">jobs&lt;/span>:
-&lt;span style="color:#f92672">build-n-publish&lt;/span>:
-&lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build and publish to PyPI&lt;/span>
-&lt;span style="color:#f92672">runs-on&lt;/span>: &lt;span style="color:#ae81ff">ubuntu-18.04&lt;/span>
-&lt;span style="color:#f92672">steps&lt;/span>:
-- &lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/checkout@master&lt;/span>
-- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Set up Python 3.7&lt;/span>
-&lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">actions/setup-python@v1&lt;/span>
-&lt;span style="color:#f92672">with&lt;/span>:
-&lt;span style="color:#f92672">python-version&lt;/span>: &lt;span style="color:#ae81ff">3.7&lt;/span>
-- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Install pypa/build&lt;/span>
-&lt;span style="color:#f92672">run&lt;/span>: &amp;gt;-&lt;span style="color:#e6db74">
-&lt;/span>&lt;span style="color:#e6db74"> python -m
-&lt;/span>&lt;span style="color:#e6db74"> pip install
-&lt;/span>&lt;span style="color:#e6db74"> build
-&lt;/span>&lt;span style="color:#e6db74"> --user&lt;/span>
-- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Build a binary wheel and a source tarball&lt;/span>
-&lt;span style="color:#f92672">run&lt;/span>: &amp;gt;-&lt;span style="color:#e6db74">
-&lt;/span>&lt;span style="color:#e6db74"> python -m
-&lt;/span>&lt;span style="color:#e6db74"> build
-&lt;/span>&lt;span style="color:#e6db74"> --sdist
-&lt;/span>&lt;span style="color:#e6db74"> --wheel
-&lt;/span>&lt;span style="color:#e6db74"> --outdir dist/
-&lt;/span>&lt;span style="color:#e6db74"> .&lt;/span>
-- &lt;span style="color:#f92672">name&lt;/span>: &lt;span style="color:#ae81ff">Publish package&lt;/span>
-&lt;span style="color:#f92672">uses&lt;/span>: &lt;span style="color:#ae81ff">pypa/gh-action-pypi-publish@release/v1&lt;/span>
-&lt;span style="color:#f92672">with&lt;/span>:
-&lt;span style="color:#f92672">password&lt;/span>: &lt;span style="color:#ae81ff">${{ secrets.PYPI_API_TOKEN }}&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>This workflow is triggered when a new release is created but you can also
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Publish package to PyPI&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">release&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">types&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">created]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">build-n-publish&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Build and publish to PyPI&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-18.04&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@master&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Set up Python 3.7&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/setup-python@v1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">python-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">3.7&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Install pypa/build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">&amp;gt;-&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;span class="sd"> python -m
+&lt;/span>&lt;span class="sd"> pip install
+&lt;/span>&lt;span class="sd"> build
+&lt;/span>&lt;span class="sd"> --user&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Build a binary wheel and a source tarball&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">&amp;gt;-&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;span class="sd"> python -m
+&lt;/span>&lt;span class="sd"> build
+&lt;/span>&lt;span class="sd"> --sdist
+&lt;/span>&lt;span class="sd"> --wheel
+&lt;/span>&lt;span class="sd"> --outdir dist/
+&lt;/span>&lt;span class="sd"> .&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Publish package&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">pypa/gh-action-pypi-publish@release/v1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">password&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.PYPI_API_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This workflow is triggered when a new release is created but you can also
 configure it to be triggered when a different event happens e.g. when a
-new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions">GitHub Actions documentation&lt;/a>
+new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions" class="external-link" target="_blank" rel="noopener">GitHub Actions documentation&lt;/a>
 for more configuration options.&lt;/p>
 &lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p>
 &lt;/li>
@@ -1224,8 +1269,22 @@ was a positive experience overall, and I look forward to joining this year&amp;r
 iteration.&lt;/p>
 &lt;p>Here are some of the projects I found interesting and contributed to (and still
 try to contribute to):&lt;/p>
-&lt;p>&lt;a href="https://github.com/trinodb/trino">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=trinodb&amp;amp;repo=trino&amp;amp;theme=dark" alt="trino">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/strongbox/strongbox">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=strongbox&amp;amp;repo=strongbox&amp;amp;theme=dark" alt="strongbox">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/oshi/oshi">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=oshi&amp;amp;repo=oshi&amp;amp;theme=dark" alt="oshi">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://github.com/jayehernandez/letra-extension">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=jayehernandez&amp;amp;repo=letra-extension&amp;amp;theme=dark" alt="letra-extension">&lt;/a>&lt;/p>
-&lt;p>Happy hacking!&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a href="https://github.com/trinodb/trino" class="external-link" target="_blank" rel="noopener">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=trinodb&amp;amp;repo=trino&amp;amp;theme=dark" alt="trino">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/strongbox/strongbox" class="external-link" target="_blank" rel="noopener">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=strongbox&amp;amp;repo=strongbox&amp;amp;theme=dark" alt="strongbox">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/oshi/oshi" class="external-link" target="_blank" rel="noopener">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=oshi&amp;amp;repo=oshi&amp;amp;theme=dark" alt="oshi">&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://github.com/jayehernandez/letra-extension" class="external-link" target="_blank" rel="noopener">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=jayehernandez&amp;amp;repo=letra-extension&amp;amp;theme=dark" alt="letra-extension">&lt;/a>&lt;/p>
+&lt;p>Happy hacking!&lt;/p></description></item><item><title/><link>https://jduabe.dev/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jduabe.dev/about/</guid><description>&lt;h1 id="about">
+About
+&lt;a class="heading-link" href="#about">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h1>
+&lt;p>Polyglot developer with 10+ years of industry experience.&lt;/p>
+&lt;p>Proficient across a diverse range of tech stacks and well-versed in every phase
+of the application lifecycle; from designing APIs, implementing microservices,
+and building UIs for web and mobile applications to configuring CI/CD pipelines,
+managing Kubernetes clusters, and monitoring production systems.&lt;/p>
+&lt;p>Interests include building custom mechanical keyboards, playing video games,
+and hiking. Also dabbles in GIS (Geographic Information Systems), linguistics,
+and music theory.&lt;/p></description></item></channel></rss>
