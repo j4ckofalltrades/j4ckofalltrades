@@ -1,5 +1,5 @@
 baseurl = "https://jduabe.dev"
-title = "/home/j4ckofalltrades"
+title = "/home/jordan"
 
 theme = "hugo-coder"
 
@@ -10,16 +10,16 @@ canonifyurls = true
 
 paginate = 20
 
-pygmentsstyle = "monokai"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+[markup.highlight]
+  noClasses = false
+  style = "github-dark"
 
 [markup.goldmark.renderer]
   unsafe = true
 
 [params]
   author = "Jordan Duabe"
-  info = "Software Engineer | Casual gamer | Mechanical keyboard enthusiast"
+  info = "Polyglot developer and open-source enthusiast"
   description = "Personal website and blog"
   keywords = "blog,programmer,personal"
   gravatar = "jordan.duabe@gmail.com"
@@ -71,17 +71,22 @@ pygmentscodefencesguesssyntax = true
   url = "https://fosstodon.org/@j4ckofalltrades"
 [[params.social]]
   name = "RSS"
-  icon = "fa fa-rss"
+  icon = "fa fa-rss fa-2x"
   weight = 5
   url = "https://jduabe.dev/index.xml"
   rel = "alternate"
   type = "application/rss+xml"
+[[params.social]]
+  name = "Key"
+  icon = "fa fa-key fa-2x"
+  weight = 6
+  url = "key.asc"
 
 # Menu links
 [[menu.main]]
-  name = "Profile"
+  name = "About"
   weight = 1
-  url = "https://profile.jduabe.dev"
+  url = "about/"
 [[menu.main]]
   name = "Blog"
   weight = 2

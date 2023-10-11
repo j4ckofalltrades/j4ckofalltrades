@@ -1,8 +1,15 @@
 # Jordan Duabe -- `@j4ckofalltrades`
 
-Full stack dev from the :philippines:, currently based in :australia:. Proficient in a variety of programming languages and frameworks.
+Polyglot developer with 10+ years of industry experience.
 
-Interests include video games, mechanical keyboards, and hiking. Also dabbles in music theory, GIS (Geographic Information Systems), and linguistics.
+Proficient across a diverse range of tech stacks and well-versed in every phase
+of the application lifecycle; from designing APIs, implementing microservices,
+and building UIs for web and mobile applications to configuring CI/CD pipelines,
+managing Kubernetes clusters, and monitoring production systems.
+
+Interests include building custom mechanical keyboards, playing video games,
+and hiking. Also dabbles in GIS (Geographic Information Systems), linguistics,
+and music theory.
 
 ## :1234: Stats
 
