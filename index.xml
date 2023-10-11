@@ -362,7 +362,14 @@ The main difference here is the location of the definitions depend on the versio
 &lt;a href="https://github.com/the-via/keyboards" class="external-link" target="_blank" rel="noopener">via keyboards&lt;/a> repository.&lt;/p>
 &lt;p>Link to the pull request on GitHub for reference: &lt;a href="https://github.com/the-via/keyboards/pull/1548" class="external-link" target="_blank" rel="noopener">Add support for NCR-80&lt;/a>&lt;/p>
 &lt;p>That&amp;rsquo;s it, once the pull request gets merged VIA should be able to detect your keyboard.&lt;/p>
-&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1676107180/keebs/ncr80/ncr-80-via_hlgb5c.png" alt="VIA NCR-80">&lt;/p></description></item><item><title>Ikki68 Aurora build</title><link>https://jduabe.dev/posts/2023/ikki68_aurora/</link><pubDate>Sat, 18 Feb 2023 12:21:19 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ikki68_aurora/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1676740613/keebs/ikki68_aurora_xa8pcq.jpg" alt="keeb">&lt;/p>
+&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/v1676107180/keebs/ncr80/ncr-80-via_hlgb5c.png" alt="VIA NCR-80">&lt;/p></description></item><item><title>About</title><link>https://jduabe.dev/about/</link><pubDate>Sat, 18 Feb 2023 12:21:19 +0800</pubDate><guid>https://jduabe.dev/about/</guid><description>&lt;p>Polyglot developer with 10+ years of industry experience.&lt;/p>
+&lt;p>Proficient across a diverse range of tech stacks and well-versed in every phase
+of the application lifecycle; from designing APIs, implementing microservices,
+and building UIs for web and mobile applications to configuring CI/CD pipelines,
+managing Kubernetes clusters, and monitoring production systems.&lt;/p>
+&lt;p>Interests include building custom mechanical keyboards, playing video games,
+and hiking. Also dabbles in GIS (Geographic Information Systems), linguistics,
+and music theory.&lt;/p></description></item><item><title>Ikki68 Aurora build</title><link>https://jduabe.dev/posts/2023/ikki68_aurora/</link><pubDate>Sat, 18 Feb 2023 12:21:19 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ikki68_aurora/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1676740613/keebs/ikki68_aurora_xa8pcq.jpg" alt="keeb">&lt;/p>
 &lt;blockquote>
 &lt;p>Ikki68 Aurora is an affordable, injection molded, polycarbonate case, gasket-mount keyboard kit from Wuque Studio, the people behind Ikki68, OA Switches and more!&lt;/p>
 &lt;p>Every Aurora comes with a multi-layout, hot swap PCB powered by QMK and VIA. You can choose any or all of the following: split backspace, split right shift, split left shift, split spacebars and ISO enter&amp;hellip;no soldering required!&lt;/p>
@@ -1273,18 +1280,4 @@ try to contribute to):&lt;/p>
 &lt;p>&lt;a href="https://github.com/strongbox/strongbox" class="external-link" target="_blank" rel="noopener">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=strongbox&amp;amp;repo=strongbox&amp;amp;theme=dark" alt="strongbox">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://github.com/oshi/oshi" class="external-link" target="_blank" rel="noopener">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=oshi&amp;amp;repo=oshi&amp;amp;theme=dark" alt="oshi">&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://github.com/jayehernandez/letra-extension" class="external-link" target="_blank" rel="noopener">&lt;img src="https://github-readme-stats.vercel.app/api/pin/?username=jayehernandez&amp;amp;repo=letra-extension&amp;amp;theme=dark" alt="letra-extension">&lt;/a>&lt;/p>
-&lt;p>Happy hacking!&lt;/p></description></item><item><title/><link>https://jduabe.dev/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://jduabe.dev/about/</guid><description>&lt;h1 id="about">
-About
-&lt;a class="heading-link" href="#about">
-&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
-&lt;span class="sr-only">Link to heading&lt;/span>
-&lt;/a>
-&lt;/h1>
-&lt;p>Polyglot developer with 10+ years of industry experience.&lt;/p>
-&lt;p>Proficient across a diverse range of tech stacks and well-versed in every phase
-of the application lifecycle; from designing APIs, implementing microservices,
-and building UIs for web and mobile applications to configuring CI/CD pipelines,
-managing Kubernetes clusters, and monitoring production systems.&lt;/p>
-&lt;p>Interests include building custom mechanical keyboards, playing video games,
-and hiking. Also dabbles in GIS (Geographic Information Systems), linguistics,
-and music theory.&lt;/p></description></item></channel></rss>
+&lt;p>Happy hacking!&lt;/p></description></item></channel></rss>
