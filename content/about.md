@@ -1,4 +1,9 @@
-# About
+--- 
+title: "About"
+date: 2023-02-18T12:21:19+08:00
+description: "Short bio"
+draft: false
+---
 
 Polyglot developer with 10+ years of industry experience.
 
