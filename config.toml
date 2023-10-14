@@ -70,16 +70,21 @@ paginate = 20
   rel = "me"
   url = "https://fosstodon.org/@j4ckofalltrades"
 [[params.social]]
+  name = "YouTube"
+  icon = "fa fa-youtube fa-2x"
+  weight = 5
+  url = "https://youtube.com/@j4ckofalltrades"
+[[params.social]]
   name = "RSS"
   icon = "fa fa-rss fa-2x"
-  weight = 5
+  weight = 6
   url = "https://jduabe.dev/index.xml"
   rel = "alternate"
   type = "application/rss+xml"
 [[params.social]]
   name = "Key"
   icon = "fa fa-key fa-2x"
-  weight = 6
+  weight = 7
   url = "key.asc"
 
 # Menu links
@@ -91,3 +96,7 @@ paginate = 20
   name = "Blog"
   weight = 2
   url  = "posts/"
+[[menu.main]]
+  name = "Projects"
+  weight = 3
+  url  = "projects/"
