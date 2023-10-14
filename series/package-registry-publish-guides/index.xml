@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Package registry publish guides on /home/jordan</title><link>https://jduabe.dev/series/package-registry-publish-guides/</link><description>Recent content in Package registry publish guides on /home/jordan</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 25 Jul 2021 15:38:23 +0800</lastBuildDate><atom:link href="https://jduabe.dev/series/package-registry-publish-guides/index.xml" rel="self" type="application/rss+xml"/><item><title>Publishing to Maven Central</title><link>https://jduabe.dev/posts/2021/mvn-central-publish/</link><pubDate>Sun, 25 Jul 2021 15:38:23 +0800</pubDate><guid>https://jduabe.dev/posts/2021/mvn-central-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/mvn-publish_jfglsn.png" alt="mvn">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;a href="https://repo.maven.apache.org/maven2" class="external-link" target="_blank" rel="noopener">Maven Central&lt;/a> repository (and optionally
+to GitHub Packages registry) with some recommendations along the way.&lt;/p>
+&lt;h2 id="setup-ossrh-repository">
+Setup OSSRH Repository
+&lt;a class="heading-link" href="#setup-ossrh-repository">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>Sign up for a &lt;a href="https://issues.sonatype.org/secure/Signup!default.jspa" class="external-link" target="_blank" rel="noopener">new account&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a &lt;a href="https://issues.sonatype.org/secure/CreateIssue.jspa?issuetype=21&amp;amp;pid=10134" class="external-link" target="_blank" rel="noopener">new project ticket&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Claim your namespace by setting the &lt;code>groupId&lt;/code> for your artifact&lt;/p>
+&lt;p>If you&amp;rsquo;re using a free code hosting service like GitHub or Bitbucket:&lt;/p>
+&lt;p>&lt;code>groupId: io.github.j4ckofalltrades&lt;/code>&lt;/p>
+&lt;p>Alternatively if you want to use a custom domain, the group id should:&lt;/p>
+&lt;p>&lt;code>groupId: com.your-custom-domain&lt;/code>&lt;/p>
+&lt;p>You will also need to prove ownership of the public repository or the custom
+domain. For the former you will be asked to create an empty repository using
+the ticket number for your created OSSRH ticket e.g. &lt;code>OSSRH-73148&lt;/code>; for the
+latter you&amp;rsquo;ll need to add a &lt;code>TXT&lt;/code> record linked to the OSSRH ticket that was
+created to register your &lt;code>groupId&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="configure-gpgpgp-key">
+Configure GPG/PGP key
+&lt;a class="heading-link" href="#configure-gpgpgp-key">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>This will be used for signing your artifacts, at it is a requirement for
+publishing them to the Central Repository.&lt;/p>
+&lt;p>You&amp;rsquo;ll need to generate a key pair and distribute it to a known key server
+(so that others can validate it).&lt;/p>
+&lt;p>The following examples show how to do this with &lt;a href="https://gnupg.org" class="external-link" target="_blank" rel="noopener">GPG&lt;/a>; you
+can &lt;a href="https://gnupg.org" class="external-link" target="_blank" rel="noopener">download&lt;/a> or install it using your package manager if
+it is not already available in your machine.&lt;/p>
+&lt;p>To generate a key pair, run:&lt;/p>
+&lt;p>&lt;code>$ gpg --gen-key&lt;/code>&lt;/p>
+&lt;p>Fill in the details you are prompted for e.g. name, email, time of validity, and
+passphrase for the generated key. &lt;strong>This passphrase and your private key are all
+that is needed to sign artifacts with your signature.&lt;/strong>&lt;/p>
+&lt;p>Once the key pair is generated, you&amp;rsquo;ll need to distribute your public key to a
+known key server i.e. &lt;code>keyserver.ubuntu.com&lt;/code>. In order to do so, run the
+following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># list gpg keys&lt;/span>
+$ gpg --list-keys
+&lt;span class="c1"># the line starting with **pub** shows your public key details&lt;/span>
+&lt;span class="c1"># copy the keyid and run the following command&lt;/span>
+$ gpg --keyserver keyserver.ubuntu.com --send-keys &amp;lt;your_key_here&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>To check that your key was successfully uploaded, you can search for it at
+&lt;a href="https://keyserver.ubuntu.com" class="external-link" target="_blank" rel="noopener">https://keyserver.ubuntu.com&lt;/a> using your public key (and prepending &amp;lsquo;0x&amp;rsquo; to it).&lt;/p>
+&lt;p>Other supported key servers are &lt;code>keys.openpgp.org&lt;/code>, and &lt;code>pgp.mit.edu&lt;/code>.&lt;/p>
+&lt;h2 id="configure-build-script">
+Configure build script
+&lt;a class="heading-link" href="#configure-build-script">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>In order to publish your artifact to the Central Repository, it will need to
+meet the following requirements:&lt;/p>
+&lt;ul>
+&lt;li>Project coordinates&lt;/li>
+&lt;li>Javadoc and sources jar&lt;/li>
+&lt;li>POM metadata (includes project name and description, url, SCM info, license)&lt;/li>
+&lt;li>Sign artifacts with GPG/PGP&lt;/li>
+&lt;/ul>
+&lt;p>The configuration will vary slightly depending on the build tool you are using,
+below is an abridged sample configuration &lt;code>build.gradle.kts&lt;/code> file (Kotlin DSL)
+used with &lt;code>gradle&lt;/code>:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-kotlin" data-lang="kotlin">&lt;span class="c1">// build.gradle.kts
+&lt;/span>&lt;span class="c1">&lt;/span>
+&lt;span class="c1">// project coordinates
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">group&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;io.github.j4ckofalltrades&amp;#34;&lt;/span>
+&lt;span class="n">version&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;1.0.0&amp;#34;&lt;/span>
+&lt;span class="c1">// generate KDoc and Javadoc using Dokka
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">tasks&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">withType&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">DokkaTask&lt;/span>&lt;span class="p">&amp;gt;().&lt;/span>&lt;span class="n">configureEach&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">dokkaSourceSets&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">named&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;main&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">outputDirectory&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;docs&amp;#34;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="n">moduleName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">includes&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Module.md&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">displayName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;JVM&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">platform&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">org&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">jetbrains&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">dokka&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">Platform&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">jvm&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">sourceLink&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">localDirectory&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="k">file&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;src/main/kotlin&amp;#34;&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;span class="n">remoteUrl&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="n">URL&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;span class="s2">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span> &lt;span class="p">+&lt;/span>
+&lt;span class="s2">&amp;#34;/tree/main/lib/src/main/kotlin&amp;#34;&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="p">)&lt;/span>
+&lt;span class="n">remoteLineSuffix&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;#L&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// javadoc and sources jar
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">tasks&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">sourcesJar&lt;/span> &lt;span class="k">by&lt;/span> &lt;span class="n">registering&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Jar&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">dependsOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">JavaPlugin&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">CLASSES_TASK_NAME&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveClassifier&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;sources&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveBaseName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sourceSets&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;main&amp;#34;&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="n">allSource&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">javadocJar&lt;/span> &lt;span class="k">by&lt;/span> &lt;span class="n">registering&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">Jar&lt;/span>&lt;span class="o">::&lt;/span>&lt;span class="k">class&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">dependsOn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;dokkaJavadoc&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveClassifier&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;javadoc&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archiveBaseName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;docs&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">artifacts&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">archives&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">sourcesJar&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archives&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">javadocJar&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">archives&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">jar&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">publishing&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">publications&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">create&lt;/span>&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="n">MavenPublication&lt;/span>&lt;span class="p">&amp;gt;(&lt;/span>&lt;span class="s2">&amp;#34;mavenJava&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">groupId&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">project&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">group&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">toString&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">artifactId&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">rootProject&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">name&lt;/span>
+&lt;span class="n">version&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">project&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">version&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">toString&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;span class="n">from&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">components&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;java&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="n">artifact&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tasks&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;sourcesJar&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="n">artifact&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tasks&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;javadocJar&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="c1">// POM metadata
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">pom&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">description&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Steam WebAPI wrapper in Kotlin and Ktor&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">licenses&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">license&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;MIT&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://opensource.org/licenses/MIT&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">developers&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">developer&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">id&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;j4ckofalltrades&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">name&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;Jordan Duabe&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">email&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;me@jduabe.dev&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">scm&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">connection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;scm:git:git://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">developerConnection&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;scm:git:ssh://github.com/j4ckofalltrades/steam-webapi-kt.git&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="k">set&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="n">repositories&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="c1">// Maven Central
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">maven&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;OSSRH&amp;#34;&lt;/span>
+&lt;span class="n">url&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">credentials&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">username&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;OSSRH_USERNAME&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">password&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;OSSRH_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// GitHub Packages
+&lt;/span>&lt;span class="c1">&lt;/span> &lt;span class="n">maven&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">name&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;GitHubPackages&amp;#34;&lt;/span>
+&lt;span class="n">url&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">uri&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;https://maven.pkg.github.com/j4ckofalltrades/steam-webapi-kt&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">credentials&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">username&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GITHUB_ACTOR&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">password&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;GITHUB_TOKEN&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;span class="c1">// sign artifact
+&lt;/span>&lt;span class="c1">&lt;/span>&lt;span class="n">signing&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;span class="n">setRequired&lt;/span>&lt;span class="p">({&lt;/span>
+&lt;span class="n">gradle&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">taskGraph&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">hasTask&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;publishMavenJavaToOSSRHRepository&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="p">})&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">signingKey&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;SIGNING_KEY&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="k">val&lt;/span> &lt;span class="py">signingPassword&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="n">System&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">getenv&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;SIGNING_PASSWORD&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">useInMemoryPgpKeys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">signingKey&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">signingPassword&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;span class="n">sign&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">publishing&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="n">publications&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;mavenJava&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;span class="p">}&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="publishing-artifacts">
+Publishing artifacts
+&lt;a class="heading-link" href="#publishing-artifacts">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>The configuration above uses the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html#sec:in-memory-keys]" class="external-link" target="_blank" rel="noopener">in-memory ascii-armored keys&lt;/a>
+approach for signing artifacts. Check out the docs for the &lt;a href="https://docs.gradle.org/current/userguide/signing_plugin.html" class="external-link" target="_blank" rel="noopener">Gradle Signing
+Plugin&lt;/a> to find
+out what best suits your use case.&lt;/p>
+&lt;p>Once everything is configured, publishing the articats is as simple as running:&lt;/p>
+&lt;p>&lt;code>$ gradle publish&lt;/code>&lt;/p>
+&lt;p>Note that this will publish your artifacts to &lt;strong>all&lt;/strong> target repositories, in
+order to publish to a specific repository you need to specify the repo &lt;em>name&lt;/em>.
+Using the above configuration as an example:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># publish to Maven Central&lt;/span>
+$ gradle publishMavenJavaPublicationToOSSRHRepository
+&lt;span class="c1"># publish to GitHub Packages&lt;/span>
+$ gradle publishMavenJavaPublicationToGitHubPackagesToRepository
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="releasing-artifacts">
+Releasing artifacts
+&lt;a class="heading-link" href="#releasing-artifacts">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>Login to the &lt;a href="https://s01.oss.sonatype.org/#stagingRepositories" class="external-link" target="_blank" rel="noopener">Nexus staging repository&lt;/a>,
+where you should be able to see your &lt;code>groupId&lt;/code> listed. In order to &lt;em>sync&lt;/em> the
+artifacts to the Central Repository you&amp;rsquo;ll need to click on the &lt;code>Close&lt;/code> button
+which will close said staging repository.&lt;/p>
+&lt;p>The close operation will run a series of checks to ensure that the uploaded
+artifacts meet the &lt;a href="#configure-build-script" >requirements&lt;/a>.&lt;/p>
+&lt;p>If the release was successful, you should be able to see your artifacts in the
+Central Repository at &lt;a href="https://repo1.maven.org/maven2/" class="external-link" target="_blank" rel="noopener">https://repo1.maven.org/maven2/&lt;/a> typically within ~30
+minutes. Updates to &lt;a href="https://search.maven.org" class="external-link" target="_blank" rel="noopener">https://search.maven.org&lt;/a> can take up to a couple of hours.&lt;/p>
+&lt;h2 id="optional-automation-with-github-packages">
+(Optional) Automation with GitHub Packages
+&lt;a class="heading-link" href="#optional-automation-with-github-packages">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>You&amp;rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
+Here&amp;rsquo;s how to set it up using GitHub Actions.&lt;/p>
+&lt;p>You&amp;rsquo;ll need to add your OSSRH credentials, and signing key details as secrets
+to your repository, you can find this under Settings &amp;gt; Secrets.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Publish to OSSRH and GitHub Package Registry&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">release&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">types&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">created]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">publish&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/setup-java@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">distribution&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;adopt-openj9&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">java-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;11&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./gradlew publish&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_ACTOR&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ github.actor }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">GITHUB_TOKEN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.GITHUB_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">OSSRH_USERNAME&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.OSSRH_USERNAME }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">OSSRH_PASSWORD&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.OSSRH_PASSWORD }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">SIGNING_KEY&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.SIGNING_KEY }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">SIGNING_PASSWORD&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.SIGNING_PASSWORD }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The configuration samples used here can also be checked out in full at this &lt;a href="https://github.com/j4ckofalltrades/steam-webapi-kt" class="external-link" target="_blank" rel="noopener">GitHub
+repository&lt;/a>.&lt;/p>
+&lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p></description></item><item><title>Publishing to the npm registry</title><link>https://jduabe.dev/posts/2021/npm-publish/</link><pubDate>Sat, 19 Jun 2021 13:43:02 +0800</pubDate><guid>https://jduabe.dev/posts/2021/npm-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png" alt="npm">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
+&lt;a href="https://npmjs.com" class="external-link" target="_blank" rel="noopener">npm registry&lt;/a> with some recommendations along the way.&lt;/p>
+&lt;h2 id="setup-npm-account">
+Setup npm account
+&lt;a class="heading-link" href="#setup-npm-account">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>Register for an &lt;a href="https://npmjs.com/signup" class="external-link" target="_blank" rel="noopener">npm account&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Test your account by logging in using &lt;code>npm&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="c1"># you should be prompted for your username, password, and email address&lt;/span>
+&lt;span class="c1"># and an OTP if you&amp;#39;ve enabled 2FA&lt;/span>
+$ npm login
+&lt;span class="c1"># this should print out your npm username&lt;/span>
+$ npm whoami
+&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
+&lt;/ol>
+&lt;h2 id="dry-run-testing-your-package-locally">
+Dry-run (Testing your package locally)
+&lt;a class="heading-link" href="#dry-run-testing-your-package-locally">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>Test out your package locally to ensure that everything works before publihsing
+it to the npm registry. You can do this by invoking &lt;code>npm install&lt;/code> and providing
+the path to your package e.g.:&lt;/p>
+&lt;p>&lt;code>$ npm install /path/to/your/package&lt;/code>&lt;/p>
+&lt;p>Another thing to do is to review the contents of the published package to make
+sure that it doesn&amp;rsquo;t include any sensitive or unnecessary information. You can
+perform a &lt;code>dry-run&lt;/code> with:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">$ npm publish --dry-run
+&lt;span class="c1"># output should look something like&lt;/span>
+npm notice
+npm notice &amp;lt;package_name@version&amp;gt;
+npm &lt;span class="nv">notice&lt;/span> &lt;span class="o">===&lt;/span> Tarball &lt;span class="nv">Contents&lt;/span> &lt;span class="o">===&lt;/span>
+npm notice &amp;lt;tarball_contents_here&amp;gt;
+npm &lt;span class="nv">notice&lt;/span> &lt;span class="o">===&lt;/span> Tarball &lt;span class="nv">Details&lt;/span> &lt;span class="o">===&lt;/span>
+npm notice &amp;lt;tarball_details_here&amp;gt;
+npm notice
++ &amp;lt;package_name@version&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Additionally you can create a &lt;code>.npmignore&lt;/code> file to exclude files that you don&amp;rsquo;t
+want to publish to the registry.&lt;/p>
+&lt;h2 id="publishing-to-the-npm-registry">
+Publishing to the npm registry
+&lt;a class="heading-link" href="#publishing-to-the-npm-registry">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>In your package&amp;rsquo;s root directory, execute:&lt;/p>
+&lt;p>&lt;code>$ npm publish&lt;/code>&lt;/p>
+&lt;p>If publishing a scoped public package, execute:&lt;/p>
+&lt;p>&lt;code>$ npm publish --access public&lt;/code>&lt;/p>
+&lt;p>When the publish process finishes, you should be able to see your public
+package page at npmjs.com/package/your-package-name.&lt;/p>
+&lt;p>Congrats, you&amp;rsquo;ve successfully published your package to the npm registry. 🎉&lt;/p>
+&lt;h2 id="bonus-automation-with-github-packages">
+Bonus: Automation with GitHub Packages
+&lt;a class="heading-link" href="#bonus-automation-with-github-packages">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>You&amp;rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
+Here&amp;rsquo;s how to set it up using GitHub Actions.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Create a &lt;a href="https://docs.npmjs.com/creating-and-viewing-access-tokens" class="external-link" target="_blank" rel="noopener">new npm access token&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add the access token as a secret to your target GitHub repository. You can
+find this under Settings &amp;gt; Secrets for your repo. Give the secret a name e.g.
+&lt;code>NPM_TOKEN&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a GitHub action workflow file in your repo at
+&lt;code>.github/workflows/npm-publish.yml&lt;/code> with the following contents:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Publish package to npm&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">release&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">types&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">created]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">build&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">permissions&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">contents&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">read&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">packages&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">write&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/setup-node@v1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">node-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;14.x&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">registry-url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;https://registry.npmjs.org&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">npm install&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">npm test&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">npm run build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Publish to npm (append `--access public` for scoped packages)&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">npm publish&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">NODE_AUTH_TOKEN&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.NPM_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This workflow is triggered when a new release is created but you can also
+configure it to be triggered when a different event happens e.g. when a
+new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions" class="external-link" target="_blank" rel="noopener">GitHub Actions documentation&lt;/a>
+for more configuration options.&lt;/p>
+&lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p>
+&lt;/li>
+&lt;/ol></description></item><item><title>Publishing to PyPI</title><link>https://jduabe.dev/posts/2021/pypi-publish/</link><pubDate>Sun, 13 Jun 2021 22:08:53 +0800</pubDate><guid>https://jduabe.dev/posts/2021/pypi-publish/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png" alt="pypi">&lt;/p>
+&lt;p>This guide walks you through the necessary steps to upload your package to the
+🐍 Python Package Index (PyPI) with some recommendations along the way.&lt;/p>
+&lt;h2 id="dry-run-publishing-to-testpypi">
+Dry-run (Publishing to TestPyPI)
+&lt;a class="heading-link" href="#dry-run-publishing-to-testpypi">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>&lt;em>This step is optional but recommended.&lt;/em>&lt;/p>
+&lt;p>&lt;a href="https://test.pypi.org" class="external-link" target="_blank" rel="noopener">TestPyPI&lt;/a> is a separate instance of the &lt;em>real&lt;/em> package
+index which is intended for testing and experimentation. This is a good way to
+test out your package before uploading to the real index.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Register an account for &lt;a href="https://test.pypi.org/account/register" class="external-link" target="_blank" rel="noopener">TestPyPI&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a &lt;a href="https://test.pypi.org/manage/account/#api-tokens" class="external-link" target="_blank" rel="noopener">TestPyPI API token&lt;/a>
+&amp;ndash; make sure to set the scope to &amp;ldquo;Entire account&amp;rdquo;&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Use &lt;a href="https://packaging.python.org/key_projects/#twine" class="external-link" target="_blank" rel="noopener">twine&lt;/a> to upload your
+package&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install --upgrade twine
+&lt;span class="c1"># replace dist with the directory where your distribution archive is located&lt;/span>
+$ python3 -m twine upload --repository testpypi dist/*
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will be prompted for your TestPyPI username and password. Use the
+following values.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>username&lt;/th>
+&lt;th>password&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>__token__&lt;/code>&lt;/td>
+&lt;td>API token including the &lt;code>pypi-&lt;/code> prefix&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
+indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
+a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="o">[&lt;/span>testpypi&lt;span class="o">]&lt;/span>
+&lt;span class="nv">username&lt;/span>&lt;span class="o">=&lt;/span>__token__
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
+recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
+credentials such as API tokens and passwords. You can do so with:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">keyring &lt;span class="nb">set&lt;/span> https://test.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the upload process has finished, you should be able to view your
+package on TestPyPI at &lt;a href="https://test.pypi.org/project/your-package-name" class="external-link" target="_blank" rel="noopener">https://test.pypi.org/project/your-package-name&lt;/a>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Installing and testing out your package&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ python3 -m pip install &lt;span class="se">\
+&lt;/span>&lt;span class="se">&lt;/span>--index-url https://test.pypi.org/simple/ --no-deps your-package
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the &lt;code>no-deps&lt;/code> flag is specified as one or more of your package&amp;rsquo;s
+dependencies might not be present in TestPyPI and may cause the installation
+to fail.&lt;/p>
+&lt;p>Once the installation has finished you can test it out by importing your
+package.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ python3
+&amp;gt;&amp;gt;&amp;gt; from example_package import your_function
+&amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span class="o">()&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note that the import package will always be &lt;code>example_package&lt;/code> regardless of
+the &lt;code>name&lt;/code> you&amp;rsquo;ve configured for your package.&lt;/p>
+&lt;p>That&amp;rsquo;s it, you can now try and upload your package to the &lt;em>real&lt;/em> index.&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="publishing-to-pypi">
+Publishing to PyPI
+&lt;a class="heading-link" href="#publishing-to-pypi">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>The &lt;a href="#dry-run-publishing-to-testpypi" >steps&lt;/a> are identical with how you would
+upload a package to TestPyPI. The main difference is that you&amp;rsquo;ll have to
+register an account and create an API token at &lt;a href="https://pypi.org" class="external-link" target="_blank" rel="noopener">PyPI&lt;/a>, as the
+former is a separate instance of PyPI.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Register an account for &lt;a href="https://pypi.org/account/register" class="external-link" target="_blank" rel="noopener">PyPI&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a &lt;a href="https://pypi.org/manage/account/#api-tokens" class="external-link" target="_blank" rel="noopener">PyPI API token&lt;/a>
+&amp;ndash; make sure to set the scope to &amp;ldquo;Entire account&amp;rdquo;&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Use &lt;a href="https://packaging.python.org/key_projects/#twine" class="external-link" target="_blank" rel="noopener">twine&lt;/a> to upload your
+package&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">$ python3 -m pip install --upgrade twine
+&lt;span class="c1"># replace dist with the directory where your distribution archive is located&lt;/span>
+$ python3 -m twine upload --repository pypi dist/*
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You will be prompted for your PyPI username and password. Use the
+following values.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>username&lt;/th>
+&lt;th>password&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>__token__&lt;/code>&lt;/td>
+&lt;td>API token including the &lt;code>pypi-&lt;/code> prefix&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Alternatively you can also use a &lt;code>.pypirc&lt;/code> file to define your package
+indexes config i.e. TestPyPI, PyPi. If you choose to go this route, create
+a &lt;code>$HOME/.pypirc&lt;/code> file with the following contents:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="o">[&lt;/span>pypi&lt;span class="o">]&lt;/span>
+&lt;span class="nv">username&lt;/span>&lt;span class="o">=&lt;/span>__token__
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>You can also use the &lt;code>password&lt;/code> field and paste in your API token but the
+recommended way is to use &lt;code>keyring&lt;/code> (which is installed by Twine) for saving
+credentials such as API tokens and passwords. You can do so with:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">keyring &lt;span class="nb">set&lt;/span> https://upload.pypi.org/legacy/ &amp;lt;value_of_api_token&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>When the upload process finishes, you should be able to view your package
+on PyPI at &lt;a href="https://pypi.org/project/your-package-name" class="external-link" target="_blank" rel="noopener">https://pypi.org/project/your-package-name&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Installing and testing out your package&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">python3 -m pip install your-package
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Once the installation has finished you can test it out by importing your
+package.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">$ python3
+&amp;gt;&amp;gt;&amp;gt; from example_package import your_function
+&amp;gt;&amp;gt;&amp;gt; your_function.do_something&lt;span class="o">()&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Congrats, you&amp;rsquo;ve successfully published your pacakge to PyPI. 🎉&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="bonus-automation-with-github-packages">
+Bonus: Automation with GitHub Packages
+&lt;a class="heading-link" href="#bonus-automation-with-github-packages">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>You&amp;rsquo;ll probably want to automate this process as part of your CI/CD pipeline.
+Here&amp;rsquo;s how to set it up using GitHub Actions.&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Create a &lt;a href="https://pypi.org/manage/account/#api-tokens" class="external-link" target="_blank" rel="noopener">new PyPI API token&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Add the API token as a secret to your target GitHub repository. You can find
+this under Settings &amp;gt; Secrets for your repo. Give the secret a name e.g.
+&lt;code>PYPI_API_TOKEN&lt;/code>.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Create a GitHub action workflow file in your repo at
+&lt;code>.github/workflows/pypi-publish.yml&lt;/code> with the following contents:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Publish package to PyPI&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">release&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">types&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">created]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">&lt;/span>&lt;span class="nt">build-n-publish&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Build and publish to PyPI&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-18.04&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@master&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Set up Python 3.7&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/setup-python@v1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">python-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">3.7&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Install pypa/build&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">&amp;gt;-&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;span class="sd"> python -m
+&lt;/span>&lt;span class="sd"> pip install
+&lt;/span>&lt;span class="sd"> build
+&lt;/span>&lt;span class="sd"> --user&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Build a binary wheel and a source tarball&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">&amp;gt;-&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;span class="sd"> python -m
+&lt;/span>&lt;span class="sd"> build
+&lt;/span>&lt;span class="sd"> --sdist
+&lt;/span>&lt;span class="sd"> --wheel
+&lt;/span>&lt;span class="sd"> --outdir dist/
+&lt;/span>&lt;span class="sd"> .&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Publish package&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">pypa/gh-action-pypi-publish@release/v1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="nt">password&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.PYPI_API_TOKEN }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This workflow is triggered when a new release is created but you can also
+configure it to be triggered when a different event happens e.g. when a
+new tag gets pushed. Refer to the &lt;a href="https://docs.github.com/en/actions" class="external-link" target="_blank" rel="noopener">GitHub Actions documentation&lt;/a>
+for more configuration options.&lt;/p>
+&lt;p>That&amp;rsquo;s it, time to get publishing.&lt;/p>
+&lt;/li>
+&lt;/ol></description></item></channel></rss>

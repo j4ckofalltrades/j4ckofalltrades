@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/jordan</title><link>https://jduabe.dev/</link><description>Recent content on /home/jordan</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 18 Jun 2023 13:00:00 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>WAMK Meetup 2023</title><link>https://jduabe.dev/posts/2023/wamk-2023-meetup/</link><pubDate>Sun, 18 Jun 2023 13:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/wamk-2023-meetup/</guid><description>&lt;p>I brought my Preonic and StackOverflow The Key macropad to the meetup, as well a &lt;a href="https://shop.pimoroni.com/products/badger-2040" class="external-link" target="_blank" rel="noopener">Badger2040&lt;/a>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>/home/jordan</title><link>https://jduabe.dev/</link><description>Recent content on /home/jordan</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sun, 18 Jun 2023 13:00:00 +0800</lastBuildDate><atom:link href="https://jduabe.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Projects</title><link>https://jduabe.dev/projects/</link><pubDate>Sat, 14 Oct 2023 18:53:00 +0800</pubDate><guid>https://jduabe.dev/projects/</guid><description>&lt;p>OSS (Open Source Software) projects that I work on, usually for fun. This list also includes other OSS projects that I contribute to and help maintain.&lt;/p>
+&lt;h2 id="libraries">
+Libraries
+&lt;a class="heading-link" href="#libraries">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://npmjs.com/package/grpc-web-rx" class="external-link" target="_blank" rel="noopener">grpc-web-rx&lt;/a> &amp;ndash; TypeScript library that integrates gRPC-Web with RxJS&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/vite-grpc-web-reactive" class="external-link" target="_blank" rel="noopener">vite-grpc-web-reactive&lt;/a> &amp;ndash; Template for building React apps with gRPC-web and ReactiveX libraries&lt;/li>
+&lt;/ul>
+&lt;h2 id="command-line-utilities">
+Command-line utilities
+&lt;a class="heading-link" href="#command-line-utilities">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/git-branch-win-title" class="external-link" target="_blank" rel="noopener">git-branch-win-title&lt;/a> &amp;ndash; Bash script that appends the current &lt;code>git&lt;/code> branch name to the terminal emulator window title&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/powerline-k8s" class="external-link" target="_blank" rel="noopener">powerline-k8s&lt;/a> &amp;ndash; Powerline plugin that shows the current &lt;code>k8s&lt;/code> context and namespace&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/powerline-podman" class="external-link" target="_blank" rel="noopener">powerline-podman&lt;/a> &amp;ndash; Powerline plugin that shows the current state of &lt;code>Podman&lt;/code> containers&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/powerline-keebs" class="external-link" target="_blank" rel="noopener">powerline-keebs&lt;/a> &amp;ndash; Powerline plugin that displays the currently connected keyboard(s)&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/kbdetector" class="external-link" target="_blank" rel="noopener">kbdetector&lt;/a> &amp;ndash; Python script that detects and prints out connected keyboards&lt;/li>
+&lt;li>&lt;a href="https://gist.github.com/j4ckofalltrades/a4ec95b3e077fd7c294d20ef8095f480" class="external-link" target="_blank" rel="noopener">badge.py&lt;/a> &amp;ndash; Python script that demos how to draw shapes on a &lt;a href="https://shop.pimoroni.com/products/badger-2040" class="external-link" target="_blank" rel="noopener">Badger2040&lt;/a> (and how to use it as a digital badge)&lt;/li>
+&lt;li>&lt;a href="https://gist.github.com/j4ckofalltrades/d7aac303466746e67287441e4fb9e0fe" class="external-link" target="_blank" rel="noopener">jetbrains-ide-actions.sh&lt;/a> &amp;ndash; Bash script that runs commands on JetBrains IDEs&lt;/li>
+&lt;/ul>
+&lt;h2 id="gis-geographic-information-systems">
+GIS (Geographic Information Systems)
+&lt;a class="heading-link" href="#gis-geographic-information-systems">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/bukid" class="external-link" target="_blank" rel="noopener">bukid&lt;/a> &amp;ndash; Interactive map for Philippine mountains&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/bulkan" class="external-link" target="_blank" rel="noopener">bulkan&lt;/a> &amp;ndash; Interactive map for Philippine volcanoes&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/phl-mountains" class="external-link" target="_blank" rel="noopener">phl-mountains&lt;/a> &amp;ndash; &lt;code>{Geo,Topo}JSON&lt;/code> dataset for Philippine mountains&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/phl-volcanoes" class="external-link" target="_blank" rel="noopener">phl-volcanoes&lt;/a> &amp;ndash; &lt;code>{Geo,Topo}JSON&lt;/code> dataset for Philippine volcanoes&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/phl-volcanoes" class="external-link" target="_blank" rel="noopener">interactive-map&lt;/a> &amp;ndash; Template for visualizing &lt;code>{Geo,Topo}JSON&lt;/code> datasets&lt;/li>
+&lt;/ul>
+&lt;h2 id="game-state-integration-and-api-libraries">
+Game State Integration and API libraries
+&lt;a class="heading-link" href="#game-state-integration-and-api-libraries">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/steam-webapi-kt" class="external-link" target="_blank" rel="noopener">steam-webapi-kt&lt;/a> &amp;ndash; Steam WebAPI wrapper library written in Kotlin and Ktor&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/steam-webapi-ts" class="external-link" target="_blank" rel="noopener">steam-webapi-ts&lt;/a> &amp;ndash; Isomorphic Steam WebAPI wrapper written in TypeScript&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/steam-current-game" class="external-link" target="_blank" rel="noopener">steam-current-game&lt;/a> &amp;ndash; Image generator that integrates with the Steam WebAPI to show the current game being played&lt;/li>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/fog-of-war" class="external-link" target="_blank" rel="noopener">fog-of-war&lt;/a> &amp;ndash; DotA 2 game state integration library written in TypeScript&lt;/li>
+&lt;/ul>
+&lt;h2 id="stream-deck-plugins">
+Stream Deck plugins
+&lt;a class="heading-link" href="#stream-deck-plugins">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/obsideck" class="external-link" target="_blank" rel="noopener">obsideck&lt;/a>️ &amp;ndash; Stream Deck plugin that runs commands in Obsidian&lt;/li>
+&lt;/ul>
+&lt;h2 id="linguistics">
+Linguistics
+&lt;a class="heading-link" href="#linguistics">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/tugma" class="external-link" target="_blank" rel="noopener">tugma&lt;/a> &amp;ndash; Word-guessing game using words from the &lt;a href="https://en.wikipedia.org/wiki/Hiligaynon_language" class="external-link" target="_blank" rel="noopener">Hiligaynon&lt;/a> language&lt;/li>
+&lt;/ul></description></item><item><title>WAMK Meetup 2023</title><link>https://jduabe.dev/posts/2023/wamk-2023-meetup/</link><pubDate>Sun, 18 Jun 2023 13:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2023/wamk-2023-meetup/</guid><description>&lt;p>I brought my Preonic and StackOverflow The Key macropad to the meetup, as well a &lt;a href="https://shop.pimoroni.com/products/badger-2040" class="external-link" target="_blank" rel="noopener">Badger2040&lt;/a>
 I configured as a digital lanyard.&lt;/p>
 &lt;figure>
 &lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_scale,q_auto,w_1024/v1688804851/blog/wamk-2023/IMG_1532_uow8at.jpg">

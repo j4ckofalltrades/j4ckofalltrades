@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Custom mechanical keyboard builds on /home/jordan</title><link>https://jduabe.dev/series/custom-mechanical-keyboard-builds/</link><description>Recent content in Custom mechanical keyboard builds on /home/jordan</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Sat, 18 Feb 2023 12:21:19 +0800</lastBuildDate><atom:link href="https://jduabe.dev/series/custom-mechanical-keyboard-builds/index.xml" rel="self" type="application/rss+xml"/><item><title>Ikki68 Aurora build</title><link>https://jduabe.dev/posts/2023/ikki68_aurora/</link><pubDate>Sat, 18 Feb 2023 12:21:19 +0800</pubDate><guid>https://jduabe.dev/posts/2023/ikki68_aurora/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1676740613/keebs/ikki68_aurora_xa8pcq.jpg" alt="keeb">&lt;/p>
+&lt;blockquote>
+&lt;p>Ikki68 Aurora is an affordable, injection molded, polycarbonate case, gasket-mount keyboard kit from Wuque Studio, the people behind Ikki68, OA Switches and more!&lt;/p>
+&lt;p>Every Aurora comes with a multi-layout, hot swap PCB powered by QMK and VIA. You can choose any or all of the following: split backspace, split right shift, split left shift, split spacebars and ISO enter&amp;hellip;no soldering required!&lt;/p>
+&lt;p>The Aurora uses a variable gasket structure where you can choose how many mounting points to use in order to adjust the amount of bounce / firmness to your liking. You can also customize the keyboard with one of many extra badge designs in several different colors!&lt;/p>
+&lt;/blockquote>
+&lt;p>This board is great bang for your buck, with a lot of configuration options with regards to mounting points &amp;ndash; it also has custom badges for more personalization.&lt;/p>
+&lt;p>For this build I used some &lt;strong>Akko Diced Fruit Kiwi&lt;/strong> switches that I won from a raffle at a meetup I attended from a while back. The switches came lubed and filmed, so that saved me a fair chunk of time. I really like the feel of these switches, very smooth to type on yet still being tactile &amp;ndash; you still feel that &lt;em>bump&lt;/em> that let&amp;rsquo;s you know your keypress has been registered.&lt;/p>
+&lt;p>As for the keycaps, the &lt;strong>DCS Solarized Dark&lt;/strong> really fits in well with the blue polycarbonate case. I&amp;rsquo;m a big fan of the color theme, and just had to get these &amp;ndash; one thing to note is that the keycaps are quite a bit thinner than the others that I have used though the overall look and feel is good.&lt;/p>
+&lt;p>Keyboard layout is a standard-ish 65%, with some common customizations I configured for most of my other boards:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Caps Lock&lt;/code> remapped as soft escape (Esc when held, Ctrl when tapped)&lt;/li>
+&lt;li>Vim-style arrow keys&lt;/li>
+&lt;li>Media player controls&lt;/li>
+&lt;/ul>
+&lt;p>As well as home-row modifiers which I&amp;rsquo;ve adopted to all my other boards (since building the &lt;a href="https://jduabe.dev/posts/2022/ncr-80" >NCR-80&lt;/a>).&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># left side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_LCTL, KC_S&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LGUI, KC_D&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LALT, KC_F&lt;span class="o">)&lt;/span>
+&lt;span class="c1"># right side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_RALT, KC_J&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RGUI, KC_K&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RCTL, KC_L&lt;span class="o">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>NCR-80 build</title><link>https://jduabe.dev/posts/2022/ncr-80/</link><pubDate>Fri, 18 Feb 2022 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2022/ncr-80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1645196848/keebs/ncr80/ncr-80_vnf9hq.jpg" alt="keeb">&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;em>NCR-80 is a reimagination of the classic rebranded Cherry G81-3000 by NCR&lt;/em>&lt;/p>
+&lt;/blockquote>
+&lt;p>I used &lt;strong>Durock Shrimp&lt;/strong> switches for this build, just spring-lubed with &lt;strong>Krytox 205g0&lt;/strong>, and &lt;strong>Katha Baybayin&lt;/strong> keycaps.&lt;/p>
+&lt;p>I had to be a little bit creative with the keymaps, given I generally use Ctrl, Alt, and Meta keys for keyboard shortcuts. I used Mod-Tap on the home row keys to work around this.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-bash" data-lang="bash">&lt;span class="c1"># left side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_LCTL, KC_S&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LGUI, KC_D&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_LALT, KC_F&lt;span class="o">)&lt;/span>
+&lt;span class="c1"># right side modifiers&lt;/span>
+MT&lt;span class="o">(&lt;/span>MOD_RALT, KC_J&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RGUI, KC_K&lt;span class="o">)&lt;/span>, MT&lt;span class="o">(&lt;/span>MOD_RCTL, KC_L&lt;span class="o">)&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>Caps Lock&lt;/code> remapped as soft escape (Esc when held, Ctrl when tapped)&lt;/li>
+&lt;li>Vim-style arrow keys&lt;/li>
+&lt;li>Layers for Linux/Win and Mac&lt;/li>
+&lt;li>Home row modifiers e.g. &lt;code>MT(MOD_LCT , KC_A)&lt;/code>&lt;/li>
+&lt;/ul></description></item><item><title>Preonic build</title><link>https://jduabe.dev/posts/2022/preonic/</link><pubDate>Sun, 13 Feb 2022 20:12:42 +0800</pubDate><guid>https://jduabe.dev/posts/2022/preonic/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1644727344/keebs/preonic/preonic_lmffaq.jpg" alt="keeb">&lt;/p>
+&lt;blockquote>
+&lt;p>The original Preonic keyboard was praised for its build quality, compact form factor, and intuitive layout—and the new version is no different. However, this time around we&amp;rsquo;re offering the CNC-aluminum case in your choice of five colors, including the striking new purple colorway. What&amp;rsquo;s more, this version has a new ARM STM32 processor that provides more power to the PCBA and the USB-C connector. Another upgrade? The new Preonic has Kaihua hotswap sockets (which support grid 2x1u, 1x2u, and 2x2u bottom row layouts) so you can swap out your switches whenever you want without even picking up a soldering iron. Plus, If you’re new to keyboard kits, the compact Preonic is a great way to learn about keyboard programming.&lt;/p>
+&lt;/blockquote>
+&lt;p>This is another ortholinear build, having tried the Sofle a couple of months back. This one is easier to learn though as it isn&amp;rsquo;t split, though the limited number of keys still requires a bit of gettings used to.&lt;/p>
+&lt;p>Used &lt;strong>C3 Equalz Kiwi&lt;/strong> switches lubed with &lt;strong>Krytox 205g0&lt;/strong>. and &lt;strong>MT3 Susuwatari&lt;/strong> keycpaps. The board looks nice, and has a bit of heft to it. Ideal as a travel board for me, once you get used to the layout.&lt;/p>
+&lt;p>Custom keymap takes a bit of getting used to, as the limited number of keys means most special characters will need to be assigned in another layer.&lt;/p>
+&lt;p>Features / customizations as follows:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>Caps Lock&lt;/code> remapped as soft escape (Esc when held, Ctrl when tapped)&lt;/li>
+&lt;li>Vim-style arrow keys&lt;/li>
+&lt;li>Media player controls&lt;/li>
+&lt;/ul>
+&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/da3d61376c9baa30491ca660bd1a2565" class="external-link" target="_blank" rel="noopener">Keyboard Layout Editor&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/preonic/assets/preonic.png" alt="Preonic custom keymap">&lt;/p></description></item><item><title>ID80 build</title><link>https://jduabe.dev/posts/2022/id80/</link><pubDate>Sun, 23 Jan 2022 22:00:00 +0800</pubDate><guid>https://jduabe.dev/posts/2022/id80/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1642946766/keebs/id80/id80_lxezxv.jpg" alt="keeb">&lt;/p>
+&lt;blockquote>
+&lt;p>Sized just right at a 75%—a compact configuration to feature the top function row — the ID80 mechanical keyboard kit from IDOBAO makes a great fit on any desk. This board is both durable and easy to build. Its PCB also features Kailh hot-swap sockets, which allow users to quickly change switches without a soldering.
+Featuring a seamless case design made from anodized aluminum, it also incorporates an integrated plate which holds switches in place. QMK programmable for custom key commands, and outfitted with a USB-C port for fast connectivity, this board is ready for work or play.&lt;/p>
+&lt;/blockquote>
+&lt;p>The 75% is a very popular keyboard layout, in part to its aesthetic and also functional &amp;ndash; just a tad bit wider than a 65% but with a full function row. The function row is especially enticing to me as most IDE shortcuts require function keys, and I don&amp;rsquo;t really use the arrow keys or the navigation cluster all that much.&lt;/p>
+&lt;p>I went for a clean, simple aesthetic for this build; an all black build with the aluminimum case and &lt;strong>ePBT Black on White&lt;/strong> keycaps.&lt;/p>
+&lt;p>Used the highly rated &lt;strong>Boba U4T&lt;/strong> switches, and &lt;strong>Durock v2&lt;/strong> stabilizers for this build, both lubed with &lt;strong>Krytox 205g0&lt;/strong>.&lt;/p>
+&lt;p>Custom keymap not too far off from the default / standard 75% layout, just had a couple of small quality of life modifications:&lt;/p>
+&lt;ul>
+&lt;li>Soft escape (Esc when help, Ctrl when tapped)&lt;/li>
+&lt;li>Media controls on layer 1&lt;/li>
+&lt;/ul></description></item><item><title>Anne Pro 2 build</title><link>https://jduabe.dev/posts/2021/annepro2/</link><pubDate>Sun, 10 Oct 2021 18:41:15 +0800</pubDate><guid>https://jduabe.dev/posts/2021/annepro2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg" alt="kb">&lt;/p>
+&lt;h2 id="mods">
+Mods
+&lt;a class="heading-link" href="#mods">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>&lt;strong>Case&lt;/strong>: 60% Wooden Case (Walnut)&lt;/p>
+&lt;p>&lt;strong>Keycaps&lt;/strong>: Light Gray and Milky Blanks (DSA)&lt;/p>
+&lt;h2 id="firmware">
+Firmware
+&lt;a class="heading-link" href="#firmware">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;p>Modified version of default keymap plus some Vim-inspired features
+e.g. soft escape (Esc when held, Ctrl when tapped), and media controls.&lt;/p>
+&lt;p>Refer to &lt;a href="https://openannepro.github.io/install/" class="external-link" target="_blank" rel="noopener">Open Anne Pro&lt;/a>
+for installation / flashing instructions.&lt;/p>
+&lt;h3 id="layout">
+Layout
+&lt;a class="heading-link" href="#layout">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h3>
+&lt;p>View in &lt;a href="http://www.keyboard-layout-editor.com/#/gists/f1c23fc1769c9bb0b1872d2272a1f268" class="external-link" target="_blank" rel="noopener">Keyboard Layout Editor&lt;/a>&lt;/p>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/anne-pro-2/assets/annepro2.png" alt="SofleKeyboard custom keymap">&lt;/p>
+&lt;h3 id="features">
+Features
+&lt;a class="heading-link" href="#features">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Mode for soft escape (&lt;code>Esc&lt;/code> when tapped, &lt;code>Ctrl&lt;/code> when held)&lt;/li>
+&lt;li>Toggling &lt;code>Ctrl&lt;/code> and &lt;code>Cmd&lt;/code> modifiers (Linux or Win vs Mac)&lt;/li>
+&lt;li>Media player controls&lt;/li>
+&lt;/ul></description></item><item><title>Sofle v2 build</title><link>https://jduabe.dev/posts/2021/sofle-v2/</link><pubDate>Mon, 27 Sep 2021 20:24:42 +0800</pubDate><guid>https://jduabe.dev/posts/2021/sofle-v2/</guid><description>&lt;p>&lt;img src="https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900/v1631712479/keebs/sofle/sofle_t9qeaa.jpg" alt="keeb">&lt;/p>
+&lt;blockquote>
+&lt;p>The &lt;a href="https://josef-adamcik.cz/electronics/let-me-introduce-you-sofle-keyboard-split-keyboard-based-on-lily58.html" class="external-link" target="_blank" rel="noopener">SofleKeyboard&lt;/a>
+is a 6×4+5 keys column-staggered split keyboard with encoder support. Based on the Lily58, Corne, and Helix keyboards.&lt;/p>
+&lt;/blockquote>
+&lt;p>First time trying out ortholinear and split mechanical keyboards with this build.&lt;/p>
+&lt;p>I generally prefer tactile switches, so I went with &lt;strong>AEBoard Naevy v1&lt;/strong>&amp;rsquo;s lubed with &lt;strong>Krytox 205g0&lt;/strong> for this build.
+Tried out &lt;strong>Katha Baybayin&lt;/strong> (KAT), and &lt;strong>Blank Ergo&lt;/strong> (DSA) keycaps; both looked good but settled with the latter.&lt;/p>
+&lt;p>I think I spent more time messing around with my custom keymap than building the keyboard.
+Coming from mostly TKL layouts, it was going to take a bit of experimenting to find the
+sweet spot when dealing with fewer keys.&lt;/p>
+&lt;p>I settled on a layout not too far off from the default one, some notable additions were:&lt;/p>
+&lt;ul>
+&lt;li>Mode for soft escape (&lt;code>Esc&lt;/code> when tapped, &lt;code>Ctrl&lt;/code> when held)&lt;/li>
+&lt;li>Vim-style navigation (&lt;code>h&lt;/code> &lt;code>j&lt;/code> &lt;code>k&lt;/code> &lt;code>l&lt;/code> as arrow keys)&lt;/li>
+&lt;li>Mode for standard navigation cluster&lt;/li>
+&lt;li>Toggling between layers when encoders are pressed&lt;/li>
+&lt;li>Encoder controls (additional layer/s when &lt;code>Ctrl&lt;/code> or &lt;code>Shift&lt;/code> is held)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;img src="https://raw.githubusercontent.com/j4ckofalltrades/keebs/master/sofle-v2/assets/soflekeyboard.png" alt="SofleKeyboard custom keymap">&lt;/p>
+&lt;p>Aside from configuring the encoder actions (clockwise/counter-clockwise), it is also possible
+to add extra &amp;ldquo;layers&amp;rdquo; by combining them with modifiers.&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>modifier&lt;/th>
+&lt;th>encoder&lt;/th>
+&lt;th>action&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>N/A&lt;/td>
+&lt;td>Left&lt;/td>
+&lt;td>Mouse wheel L/R&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>N/A&lt;/td>
+&lt;td>Right&lt;/td>
+&lt;td>PgUp/PgDn&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Ctrl&lt;/td>
+&lt;td>Left&lt;/td>
+&lt;td>VolUp/VolUp&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Ctrl&lt;/td>
+&lt;td>Right&lt;/td>
+&lt;td>Brightness Up/Dn&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Shift&lt;/td>
+&lt;td>Left&lt;/td>
+&lt;td>Mouse cursor L/R&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Shift&lt;/td>
+&lt;td>Right&lt;/td>
+&lt;td>Mouse cursor Up/Dn&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>One other area for tinkering is the OLED displays where you can show text, and even images e.g. &lt;a href="https://docs.qmk.fm/#/feature_oled_driver?id=logo-example" class="external-link" target="_blank" rel="noopener">displaying your own logo&lt;/a>.&lt;/p>
+&lt;p>Check out the full custom keymap &lt;a href="https://github.com/j4ckofalltrades/keebs/tree/master/sofle-v2" class="external-link" target="_blank" rel="noopener">here&lt;/a>.&lt;/p></description></item></channel></rss>
