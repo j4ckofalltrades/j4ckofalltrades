@@ -9,6 +9,8 @@ tags:
 - javascript
 - npm
 - typescript
+series:
+- "Package registry publish guides"
 images:
 - https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1633760759/blog/publish-guides/npm-publish_ssmdeh.png
 ---

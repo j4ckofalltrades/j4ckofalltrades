@@ -9,6 +9,8 @@ tags:
 - ortholinear
 - qmk
 - via
+series:
+- "Custom mechanical keyboard builds"
 images: 
 - https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1644727344/keebs/preonic/preonic_lmffaq.jpg
 ---

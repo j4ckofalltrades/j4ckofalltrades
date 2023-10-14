@@ -8,6 +8,8 @@ categories:
 tags:
 - qmk
 - via
+series:
+- "Custom mechanical keyboard builds"
 images: 
 - https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1645196848/keebs/ncr80/ncr-80_vnf9hq.jpg
 ---

@@ -8,6 +8,8 @@ categories:
 tags:
 - pypi
 - python
+series:
+- "Package registry publish guides"
 images:
 - https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1633760759/blog/publish-guides/powerline-k8s_lfxh1c.png
 ---

@@ -8,6 +8,8 @@ categories:
 tags:
 - 60%
 - qmk
+series:
+- "Custom mechanical keyboard builds"
 images:
 - https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_830/v1633803184/keebs/annepro2/annepro2_xqpg09.jpg
 ---

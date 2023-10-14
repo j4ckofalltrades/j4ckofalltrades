@@ -9,6 +9,8 @@ tags:
 - 65%
 - qmk
 - via
+series:
+- "Custom mechanical keyboard builds"
 images: 
 - https://res.cloudinary.com/j4ckofalltrades/image/upload/c_limit,w_900,g_face/v1676740613/keebs/ikki68_aurora_xa8pcq.jpg
 ---
