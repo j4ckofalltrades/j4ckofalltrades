@@ -28,7 +28,7 @@ OSS (Open Source Software) projects that I work on, usually for fun. This list a
 - [bulkan](https://github.com/j4ckofalltrades/bulkan) -- Interactive map for Philippine volcanoes
 - [phl-mountains](https://github.com/j4ckofalltrades/phl-mountains) -- `{Geo,Topo}JSON` dataset for Philippine mountains
 - [phl-volcanoes](https://github.com/j4ckofalltrades/phl-volcanoes) -- `{Geo,Topo}JSON` dataset for Philippine volcanoes
-- [interactive-map](https://github.com/j4ckofalltrades/phl-volcanoes) -- Template for visualizing `{Geo,Topo}JSON` datasets
+- [interactive-map](https://github.com/j4ckofalltrades/interactive-map) -- Template for visualizing `{Geo,Topo}JSON` datasets
 
 ## Game State Integration and API libraries
 
