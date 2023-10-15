@@ -8,7 +8,7 @@ defaultcontentlanguage = "en"
 enableEmoji=true
 canonifyurls = true
 
-paginate = 20
+paginate = 15
 
 [markup.highlight]
   noClasses = false
