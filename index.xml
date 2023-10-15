@@ -40,6 +40,16 @@ GIS (Geographic Information Systems)
 &lt;li>&lt;a href="https://github.com/j4ckofalltrades/phl-volcanoes" class="external-link" target="_blank" rel="noopener">phl-volcanoes&lt;/a> &amp;ndash; &lt;code>{Geo,Topo}JSON&lt;/code> dataset for Philippine volcanoes&lt;/li>
 &lt;li>&lt;a href="https://github.com/j4ckofalltrades/interactive-map" class="external-link" target="_blank" rel="noopener">interactive-map&lt;/a> &amp;ndash; Template for visualizing &lt;code>{Geo,Topo}JSON&lt;/code> datasets&lt;/li>
 &lt;/ul>
+&lt;h2 id="webhid-api">
+WebHID API
+&lt;a class="heading-link" href="#webhid-api">
+&lt;i class="fa fa-link" aria-hidden="true" title="Link to heading">&lt;/i>
+&lt;span class="sr-only">Link to heading&lt;/span>
+&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/j4ckofalltrades/joy-con-drum-kit" class="external-link" target="_blank" rel="noopener">joy-con-drum-kit&lt;/a> &amp;ndash; A drum kit web app that uses Nintendo Joy-Cons as controllers via the &lt;a href="https://web.dev/hid" class="external-link" target="_blank" rel="noopener">WebHID API&lt;/a>&lt;/li>
+&lt;/ul>
 &lt;h2 id="game-state-integration-and-api-libraries">
 Game State Integration and API libraries
 &lt;a class="heading-link" href="#game-state-integration-and-api-libraries">
