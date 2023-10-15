@@ -30,6 +30,10 @@ OSS (Open Source Software) projects that I work on, usually for fun. This list a
 - [phl-volcanoes](https://github.com/j4ckofalltrades/phl-volcanoes) -- `{Geo,Topo}JSON` dataset for Philippine volcanoes
 - [interactive-map](https://github.com/j4ckofalltrades/interactive-map) -- Template for visualizing `{Geo,Topo}JSON` datasets
 
+## WebHID API
+
+- [joy-con-drum-kit](https://github.com/j4ckofalltrades/joy-con-drum-kit) -- A drum kit web app that uses Nintendo Joy-Cons as controllers via the [WebHID API](https://web.dev/hid)
+
 ## Game State Integration and API libraries
 
 - [steam-webapi-kt](https://github.com/j4ckofalltrades/steam-webapi-kt) -- Steam WebAPI wrapper library written in Kotlin and Ktor
