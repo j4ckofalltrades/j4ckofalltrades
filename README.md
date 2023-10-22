@@ -1,4 +1,6 @@
-# Jordan Duabe -- `@j4ckofalltrades`
+![banner](https://res.cloudinary.com/j4ckofalltrades/image/upload/v1697952247/blog/banner_github_zu8qpi.png)
+
+## About
 
 Polyglot developer with 10+ years of industry experience.
 
@@ -11,7 +13,7 @@ Interests include building custom mechanical keyboards, playing video games,
 and hiking. Also dabbles in GIS (Geographic Information Systems), linguistics,
 and music theory.
 
-## :1234: Stats
+## Stats
 
 [![Top Languages](https://gh-stats-j4ckofalltrades.vercel.app/api/top-langs/?username=j4ckofalltrades&custom_title=Languages&layout=compact&hide=html,css,scss,javascript,vim%20script,makefile&theme=transparent&card_width=467)](https://github.com/j4ckofalltrades/gh-stats)
 
