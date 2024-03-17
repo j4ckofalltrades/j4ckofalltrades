@@ -19,6 +19,7 @@ and music theory.
 
 [![Stats](https://gh-stats-j4ckofalltrades.vercel.app/api?username=j4ckofalltrades&show_icons=true&count_private=true&custom_title=GitHub%20Stats&theme=transparent&rank_icon=github)](https://github.com/j4ckofalltrades/gh-stats)
 
-## Talks
+## Latest Blog Posts
 
-- [Git Deep Dive](https://github.com/j4ckofalltrades/talks/tree/main/git-deep-dive)
+<!-- BLOG-POST-LIST:START -->
+<!-- BLOG-POST-LIST:END -->
