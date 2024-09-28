@@ -1,6 +1,4 @@
-![banner](https://res.cloudinary.com/j4ckofalltrades/image/upload/v1697952247/blog/banner_github_zu8qpi.png)
-
-## About
+# About
 
 Polyglot developer with years of industry experience.
 
