@@ -20,9 +20,9 @@ and music theory.
 ## Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [TIL: Horizontal scrolling](https://jduabe.dev/posts/2024/horizontal-mouse-scroll/)
+- [TIL: Getting permalinks to files in GitHub](https://jduabe.dev/posts/2024/github-permalink/)
 - [WAMK Meetup 2023](https://jduabe.dev/posts/2023/wamk-2023-meetup/)
 - [Playing around with the Badger2040](https://jduabe.dev/posts/2023/programmable-badge/)
 - [Programmatically invoking JetBrains IDE actions](https://jduabe.dev/posts/2023/jetbrains-ide-actions/)
-- [NCR-80 QMK/VIA firmware](https://jduabe.dev/posts/2023/ncr-80-qmk-via/)
-- [Ikki68 Aurora build](https://jduabe.dev/posts/2023/ikki68_aurora/)
 <!-- BLOG-POST-LIST:END -->
