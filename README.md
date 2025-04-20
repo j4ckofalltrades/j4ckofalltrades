@@ -14,9 +14,9 @@ and music theory.
 ## Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [What&#39;s in my .gitconfig?](https://jduabe.dev/posts/2025/git-config/)
 - [WAMK Meetup 2023](https://jduabe.dev/posts/2023/wamk-2023-meetup/)
 - [Playing around with the Badger2040](https://jduabe.dev/posts/2023/programmable-badge/)
 - [Programmatically invoking JetBrains IDE actions](https://jduabe.dev/posts/2023/jetbrains-ide-actions/)
 - [NCR-80 QMK/VIA firmware](https://jduabe.dev/posts/2023/ncr-80-qmk-via/)
-- [Ikki68 Aurora build](https://jduabe.dev/posts/2023/ikki68_aurora/)
 <!-- BLOG-POST-LIST:END -->
