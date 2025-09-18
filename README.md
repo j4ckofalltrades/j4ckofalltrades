@@ -14,9 +14,9 @@ and music theory.
 ## Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [npm package provenance stats](https://jduabe.dev/posts/2025/npm-package-provenance-stats/)
 - [Trusted Publishing &amp; Digital Attestations in the OSS Ecosystem](https://jduabe.dev/posts/2025/trusted-publishing-attestations/)
 - [What&#39;s in my .gitconfig?](https://jduabe.dev/posts/2025/git-config/)
 - [WAMK Meetup 2023](https://jduabe.dev/posts/2023/wamk-2023-meetup/)
 - [Playing around with the Badger2040](https://jduabe.dev/posts/2023/programmable-badge/)
-- [Programmatically invoking JetBrains IDE actions](https://jduabe.dev/posts/2023/jetbrains-ide-actions/)
 <!-- BLOG-POST-LIST:END -->
