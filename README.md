@@ -14,9 +14,9 @@ and music theory.
 ## Latest Blog Posts
 
 <!-- BLOG-POST-LIST:START -->
+- [Hugo alt-text shortcode](https://jduabe.dev/posts/2025/hugo-alt-text/)
 - [Talk: git config --make-git-work-for-you](https://jduabe.dev/posts/2025/git-config-talk/)
 - [Are we Trusted Publishing yet?](https://jduabe.dev/posts/2025/are-we-trusted-publishing-yet/)
 - [npm package provenance stats](https://jduabe.dev/posts/2025/npm-package-provenance-stats/)
 - [Trusted Publishing &amp; Digital Attestations in the OSS Ecosystem](https://jduabe.dev/posts/2025/trusted-publishing-attestations/)
-- [What&#39;s in my .gitconfig?](https://jduabe.dev/posts/2025/git-config/)
 <!-- BLOG-POST-LIST:END -->
